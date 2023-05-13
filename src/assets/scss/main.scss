@@ -1,0 +1,60 @@
+// we're importing here main style variables from theme
+@import "@theme/assets/scss/main";
+
+html, body {
+    font-family: 'Noto Sans', sans-serif !important;;
+}
+
+#app {
+    font-family: 'Noto Sans', sans-serif !important;;
+}
+.content {
+    max-width: 1600px;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+.green {
+    background: #CCD96A;
+  }
+  
+  .blue {
+    background: #D5E7F2;
+  }
+  
+  .beige {
+    background: #EDEADE;
+  }
+  
+  .pink {
+    background: #F2CED5;
+  }
+  
+  .yellow {
+    background: #F2CF63;
+  }
+  
+  .grey {
+    background: #F5F5F5;
+  }
+  
+  .red {
+    background: #D95A4E;
+  }
+
+// Here you can override you global styles.
+// It will be included once on webside and visible unless some more specific styles in components will extend that
+//
+// note: To override global variables go to variables.scss
+
+// example of global styles you may want to override
+// body {
+//   font-family: var(--font-family-primary);
+//   font-weight: var(--font-light);
+//   font-size: var(--font-size-base);
+//   line-height: 1.6;
+// }
