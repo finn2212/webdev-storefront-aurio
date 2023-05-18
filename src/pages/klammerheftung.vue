@@ -69,7 +69,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         Formate: DIN A4 / 19 x 27 cm / 22,8 x 30,5 (»Concertformat«)
                                     </p>
                                 </div>
@@ -78,7 +78,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         Für Notenhefte als Broschüre im Hochformat mit und ohne Umschlag
                                     </p>
                                 </div>
@@ -87,7 +87,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         Seitenumfang bis 88 Seiten + Umschlag machbar
                                     </p>
                                 </div>
@@ -96,7 +96,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         Hervorragendes Aufschlagverhalten
                                     </p>
                                 </div>
@@ -105,7 +105,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         Auflage 1 bis 250 Exemplare günstig drucken
                                     </p>
                                 </div>
@@ -114,7 +114,7 @@
                                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                 </div>
                                 <div class="col">
-                                    <p class="card-text">
+                                    <p class="">
                                         1–3 Werktage Produktionszeit
                                     </p>
                                 </div>
@@ -130,28 +130,70 @@
             <div class="row pt-4">
 
                 <div class="col-4   mrc">
-                    <div class="row align-items-start"  >
+                    <div class="row align-items-start">
                         <h1>
                             Direkt zu den Topsellern
-                           
-                        </h1>
-                        <p >
-                            Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
-                            her.
-                        </p >
 
-                    </div>
-                    <div class="row align-items-end grey p-4" style="margin-top:140%">
+                        </h1>
                         <p>
                             Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
                             her.
                         </p>
+
                     </div>
-
-
-
                 </div>
-                <div class="col mrc blue" style="padding-left: 0px !important; padding-right: 0px !important">
+                <div class="col mrc blue"
+                    style="padding-left: 0px !important; padding-right: 0px !important; margin-left: -7px ">
+                    <div class="row">
+                        <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
+                    </div>
+                    <div class="row p-4">
+                        <h2 class="mb-4">Notenheft DIN A4
+                            Klammerheftung</h2>
+                        <div class="row mt-5">
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    Umschlag aus matt-brillantem Chromokarton mit 240g Stärke
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    Innenteil mit klassisch gelblichem Notenpapier
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+
+                                <p class="">
+                                    Rechteckiger Heftrücken für ein hochprofessionelles Aussehen
+                                </p>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-8 mt-1">
+                                    <button type="button" class="btn btn-dark mt-3">
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                        Drucken
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mrc blue"
+                    style="padding-left: 0px !important; padding-right: 0px !important; margin-right: 20px;">
                     <div class="row">
                         <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
                     </div>
@@ -164,7 +206,7 @@
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
-                                <p class="card-text">
+                                <p class="">
                                     Blendfreies & raschelarmes Notenpapier mit gelblicher Färbung
                                 </p>
                             </div>
@@ -174,7 +216,7 @@
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
-                                <p class="card-text">
+                                <p class="">
                                     Gestochen scharfer Notentext in sattem Schwarz
                                 </p>
                             </div>
@@ -184,51 +226,18 @@
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
-                                <p class="card-text">
+                                <p class="">
                                     Hergestellt nach den strengen Regularien der Deutschen Orchestervereinigung e.V.
                                 </p>
-                                <a href="#" class="btn btn-primary mt-4">Jetzt drucken</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mrc blue" style="padding-left: 0px !important; padding-right: 0px !important">
-                    <div class="row">
-                        <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
-                    </div>
-                    <div class="row p-4">
-                        <h2>Stimmenheft DIN A4
-                            Klammerheftung
-                            ohne Umschlag</h2>
-                        <div class="row mt-4">
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p class="card-text">
-                                    Blendfreies & raschelarmes Notenpapier mit gelblicher Färbung
-                                </p>
+
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p class="card-text">
-                                    Gestochen scharfer Notentext in sattem Schwarz
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p class="card-text">
-                                    Hergestellt nach den strengen Regularien der Deutschen Orchestervereinigung e.V.
-                                </p>
-                                <a href="#" class="btn btn-primary mt-4">Jetzt drucken</a>
+                            <div class="col-8 mt-4">
+                                <button type="button" class="btn btn-dark ">
+                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                    Drucken
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -240,41 +249,115 @@
         <section class="pt-5">
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col p-4" style="padding-left: 0px !important; margin-right:30px ">
-                        <h2 class="heading-grid">
-                            Notenbuch Spiralbindung Hochformat
-                        </h2>
-                        <p class="p-grid">
-                            Mit unserer hochwertigen Coilbindung für Musiknoten bist du größtmöglich flexibel.
-                        </p>
+                    <div class="col p-4" style="padding: 0px !important; margin-right:30px ">
+                        <div class="row">
+                            <h2 class="heading-grid">
+                                Notenbuch Spiralbindung Hochformat
+                            </h2>
+                            <p class="p-grid">
+                                Du kannst gängige Sonderformate für Musikalien produzieren lassen.
+                            </p>
+                        </div>
+                        <div class="row grey p-4 pt-4 colfreeKlammer">
+                            <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?Í</p>
+                            <div class="col-8">
+                                <h3>
+                                    Zu den
+                                    Notenheften mit Spiralbindung
+                                </h3>
+
+                            </div>
+                            <div class="col mb-2 align-self-end">
+                                <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col mrc pl-5  p-4 beige">
-                        <img src="@/assets/svg/animation.svg" alt="Avatar" style="margin-bottom: 25px;">
+
                         <h2 class="heading-grid">
-                            Noten mit Klammerheftung
-                            drucken
+                            Notenheft 19 x 27 cm
+                            »Peters«
                         </h2>
-                        <p class="p-grid">
-                            Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten
-                            Inhalt.
-                        </p>
-                        <button type="button" class="btn btn-dark">
-                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
-                        </button>
+                        <div class="row mt-4">
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                </p>
+
+                            </div>
+                            <div class="w-100 pt-3"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Innenteil mit klassisch gelblichem Notenpapier
+                                </p>
+                            </div>
+                            <div class="w-100 pt-3"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 mt-4">
+                                    <button type="button" class="btn btn-dark mt-3">
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                        Drucken
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col pl-5  p-4 mrc pink">
-                        <img src="@/assets/svg/menu_book.svg" alt="Avatar" style="margin-bottom: 25px;">
                         <h2 class="heading-grid">
-                            Noten mit Klammerheftung
-                            drucken
+                            Notenheft 19 x 27 cm
+                            »Peters«
                         </h2>
-                        <p class="p-grid">
-                            Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten
-                            Inhalt.
-                        </p>
-                        <button type="button" class="btn btn-dark">
-                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
-                        </button>
+                        <div class="row mt-4">
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    Klassisches Musikalien-Überformat, geeignet für Solo- und Kammermusik
+                                </p>
+                            </div>
+                            <div class="w-100 pt-3"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    Beliebt auch für Orchesterstimmen & ähnliche Zwecke
+                                </p>
+                            </div>
+                            <div class="w-100 pt-3"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    Bekannt von EDITION PETERS, SCHOTT Music u.v.a.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <button type="button" class="btn btn-dark mt-3">
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                        Drucken
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,4 +452,5 @@ export default {
     .btn {
         margin-top: 0%;
     }
-}</style>
+}
+</style>

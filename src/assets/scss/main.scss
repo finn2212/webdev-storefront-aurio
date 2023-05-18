@@ -49,21 +49,49 @@ h6 {
 .pdc {
   padding: 20px;
 }
+
 .card {
   margin: 0px;
   border-radius: 0px;
   padding: 0px;
   border-width: 0px !important;
 }
+
 .card-img-top {
   border-radius: 0px;
+}
+.dropdownStyle{
+  background: white !important;
+  color: black !important;
+  border: 0px !important;
+}
+
+.colfreeKlammer {
+  margin-top: 18%  !important;
+  padding-right: 0px !important;
+  width: 425px;
+}
+@media only screen and (max-width: 1400px) {
+  .colfreeKlammer {
+    margin-top: 10%  !important;
+    padding-right: 0px !important;
+    width: 363px
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .colfreeKlammer {
+    margin-top: 10%  !important;
+    padding-right: 0px !important;
+    width: 305px
+  }
 }
 
 
 .darkblue {
   background: #696E8B;
 }
-.brwon{
+
+.brwon {
   background: #EDEADE;
 
 }

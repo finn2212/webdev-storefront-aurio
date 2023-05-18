@@ -1,6 +1,6 @@
 <template>
   <div>
-    hallo
+    
   <div class="">
     <SfComponentSelect
       v-if="options.length"

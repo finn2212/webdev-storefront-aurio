@@ -1,8 +1,6 @@
 <template>
   <div>
-<div>
-  Hallo Welt
-</div>
+
 
     <div
       class="flex flex-col min-w-[325px] max-w-[375px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl">
