@@ -1,5 +1,6 @@
 <template>
     <div ref="navigation" class="sw-top-navigation" data-testid="top-navigation"
+    
         v-if="visibleCategories && visibleCategories.length">
         <SwPluginSlot name="sw-top-navigation-before" />
         <div class="row">
@@ -16,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col">
                 <div class="dropdown ">
                     <button class="btn btn-secondary dropdown-toggle dropdownStyle" type="button" id="dropdownMenuBtn2"
@@ -43,12 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <button class="btn btn-secondary dropdownStyle" type="button" id="dropdownMenuBtn4"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Wissenswertes
-                </button>
-            </div>
+            
         </div>
 
         <SwPluginSlot name="sw-top-navigation-after" />
@@ -61,7 +57,8 @@ import {
     useSharedState,
     useUIState,
 } from "@shopware-pwa/composables"
-
+import Popper from 'vue-popperjs';
+import 'vue-popperjs/dist/vue-popper.css';
 import SwMegaMenu from "@/components/SwMegaMenu.vue"
 import { ref, watch, computed } from "@vue/composition-api"
 import { getCategoryUrl, isLinkCategory } from "@shopware-pwa/helpers"
@@ -75,6 +72,7 @@ export default {
         SwMegaMenu,
         SwPluginSlot,
         SwTopNavigationShowMore,
+        'popper': Popper
     },
     setup() {
         const { switchState: switchOverlay } = useUIState({
@@ -181,7 +179,6 @@ export default {
 .sw-top-navigation {
     display: flex;
     flex-wrap: wrap;
-    --search-bar-width: 100%;
     --header-container-padding: 0 var(--spacer-base);
     --header-navigation-item-margin: 0 1rem 0 0;
     --heading-title-font-size: 16px;

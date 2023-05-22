@@ -31,6 +31,37 @@ h6 {
   height: 100%;
 }
 
+.customBorder {
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+}
+
+.blockStart {
+  padding-left: 0px !important;
+  padding-right: 10px !important;
+}
+
+.blockStartMarign {
+  padding-left: 0px !important;
+  padding-right: 10px !important;
+  margin-right: 40px !important;
+}
+
+.btn {
+  background: #000000;
+  border-radius: 100px;
+}
+
+.table>:not(caption)>*>* {
+  border-bottom-width: 0px !important;
+}
+
+.a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
 
 .heading-grid {
 
@@ -60,30 +91,38 @@ h6 {
 .card-img-top {
   border-radius: 0px;
 }
-.dropdownStyle{
+
+.dropdownStyle {
   background: white !important;
   color: black !important;
   border: 0px !important;
 }
 
 .colfreeKlammer {
-  margin-top: 18%  !important;
+  margin-top: 18% !important;
   padding-right: 0px !important;
   width: 425px;
 }
+
 @media only screen and (max-width: 1400px) {
   .colfreeKlammer {
-    margin-top: 10%  !important;
+    margin-top: 10% !important;
     padding-right: 0px !important;
     width: 363px
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .colfreeKlammer {
-    margin-top: 10%  !important;
+    margin-top: 10% !important;
     padding-right: 0px !important;
     width: 305px
   }
+}
+
+.btn {
+  background: #000000;
+  border-radius: 100px !important;
 }
 
 
@@ -113,6 +152,12 @@ h6 {
   background: #EDEADE;
 }
 
+.orange {
+  background: #F29C50;
+}
+
+
+
 .pink {
   background: #F2CED5;
 }
@@ -123,6 +168,20 @@ h6 {
 
 .grey {
   background: #F5F5F5;
+}
+
+.uploadBtn {
+  background-color: #F5F5F5 !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: black !important;
+}
+
+.selectBtn {
+  background-color: #F5F5F5 !important;
+  border-radius: 7px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .red {
@@ -137,6 +196,10 @@ h6 {
   color: var(--bs-accordion-color);
   background-color: #D95A4E !important;
   border: 0 !important;
+}
+
+.noborder {
+  border: 0px
 }
 
 // Here you can override you global styles.
