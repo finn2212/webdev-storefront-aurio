@@ -20,14 +20,6 @@ export default extendNuxtConfig({
       */
       extend(config, ctx) {
       },
-      plugins: [
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery',
-          'window.jQuery': 'jquery',
-          Popper: ['popper.js', 'default'],
-        }),
-      ],
     }
   },
 })

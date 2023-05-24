@@ -606,7 +606,6 @@ import { getApplicationContext } from "@shopware-pwa/composables"
 import SwButton from "@/components/atoms/SwButton.vue"
 import { invokePost } from "@shopware-pwa/shopware-6-client"
 import { onMounted, ref } from "@vue/composition-api"
-import 'vue-popperjs/dist/vue-popper.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 

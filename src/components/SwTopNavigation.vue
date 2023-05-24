@@ -57,7 +57,6 @@ import {
     useSharedState,
     useUIState,
 } from "@shopware-pwa/composables"
-import 'vue-popperjs/dist/vue-popper.css';
 import SwMegaMenu from "@/components/SwMegaMenu.vue"
 import { ref, watch, computed } from "@vue/composition-api"
 import { getCategoryUrl, isLinkCategory } from "@shopware-pwa/helpers"
@@ -71,7 +70,6 @@ export default {
         SwMegaMenu,
         SwPluginSlot,
         SwTopNavigationShowMore,
-        'popper': Popper
     },
     setup() {
         const { switchState: switchOverlay } = useUIState({
