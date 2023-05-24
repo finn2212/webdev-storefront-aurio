@@ -57,7 +57,6 @@ import {
     useSharedState,
     useUIState,
 } from "@shopware-pwa/composables"
-import Popper from 'vue-popperjs';
 import 'vue-popperjs/dist/vue-popper.css';
 import SwMegaMenu from "@/components/SwMegaMenu.vue"
 import { ref, watch, computed } from "@vue/composition-api"
