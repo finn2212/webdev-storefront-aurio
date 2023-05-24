@@ -81,11 +81,10 @@
                                 <p>Seitenanzahl Inhalt:</p>
                             </div>
                             <div class="col pt-5">
-                                <select class="custom-select selectBtn" id="inputGroupSelect01">
-                                    <option selected>Bitte Wählen...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+
+                                <select id="mySelect" class="custom-select selectBtn" v-model="selected">
+                                    <option v-for="page in pages" v-bind:value="{ val: page.val }">{{ page.val }}
+                                    </option>
                                 </select>
                             </div>
                             <div class="w-100 pt-5"></div>
@@ -100,8 +99,8 @@
                                 <p>Ohne Umschlag:</p>
                             </div>
                             <div class="col pt-5">
-                                <p><input type="checkbox" aria-label="Checkbox for following text input"></p>
-                                <p><input type="checkbox" aria-label="Checkbox for following text input"></p>
+                                <p><input type="radio" id="one" value="true" v-model="enveloped" /></p>
+                                <p><input type="radio" id="two" value="false" v-model="enveloped" /></p>
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
@@ -141,8 +140,7 @@
                         <div class="row">
                             <div class="col">
                                 <p>Dein Preis pro Stück:</p>
-                                <h1>€ 2,67</h1>
-
+                                <h1>€ {{ price.toFixed(2) }}</h1>
                                 <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
 
                             </div>
@@ -151,18 +149,19 @@
                         <div class="row">
                             <div class="col">
                                 <p>Deine Auflage:</p>
+
                                 <div class="input-group plus-minus-input">
                                     <div class="input-group-button">
-                                        <button type="button" class="button noborder green" data-field="quantity">
+                                        <button @click="count(false)" type="button" class="button noborder green"
+                                            data-field="quantity">
                                             <img src="@/assets/svg/remove.svg" alt="Avatar">
                                         </button>
                                     </div>
+                                    <input class="input" max="300" type="number" v-model="quantitiy">
 
-                                    <input class="input-group-field noborder green" type="number" name="quantity" value="50"
-                                        style="width: 50px; font-size: xx-large;">
                                     <div class="input-group-button">
-                                        <button type="button" class="button noborder green" data-quantity="plus"
-                                            data-field="quantity">
+                                        <button @click="count(true)" type="button" class="button noborder green"
+                                            data-quantity="plus" data-field="quantity">
                                             <img src="@/assets/svg/add.svg" alt="Avatar">
                                         </button>
                                     </div>
@@ -176,7 +175,7 @@
                         </div>
                         <div class="row">
                             <div class="col align-self-center">
-                                <button @click="count" type="button" class="btn btn-dark mt-3">
+                                <button type="button" class="btn btn-dark mt-3">
                                     <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
                                     In den Warenkorb legen
                                 </button>
@@ -192,55 +191,55 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr id="discountgroup1">
                                         <th scope="row">Bis 1</th>
-                                        <td>{{ price }}</td>
-                                        <td>45%</td>
+                                        <td>€ {{ singlePrice.toFixed(2) }}</td>
+                                        <td>0%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup2">
                                         <th scope="row">Bis 9</th>
-                                        <td>€ 7,00</td>
-                                        <td>55%</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.45)).toFixed(2) }}</td>
+                                        <td>45%</td>
 
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup3">
                                         <th scope="row">Bis 24</th>
-                                        <td>€ 7,00</td>
-                                        <td>63%</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.55)).toFixed(2) }}</td>
+                                        <td>55%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup4">
                                         <th scope="row">Bis 49</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.63)).toFixed(2) }}</td>
                                         <td>68%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup5">
                                         <th scope="row">Bis 74</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.68)).toFixed(2) }}</td>
                                         <td>70%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup6">
                                         <th scope="row">Bis 99</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.7)).toFixed(2) }}</td>
                                         <td>72%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup7">
                                         <th scope="row">Bis 149</th>
-                                        <td>€ 7,00</td>
-                                        <td>49%</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.72)).toFixed(2) }}</td>
+                                        <td>72%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup8">
                                         <th scope="row">Bis 199</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.74)).toFixed(2) }}</td>
                                         <td>74%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup9">
                                         <th scope="row">Bis 249</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.75)).toFixed(2) }}</td>
                                         <td>75%</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="discountgroup10">
                                         <th scope="row">Ab 250</th>
-                                        <td>€ 7,00</td>
+                                        <td>€ {{ (singlePrice * (1 - 0.76)).toFixed(2) }}</td>
                                         <td>76%</td>
                                     </tr>
                                 </tbody>
@@ -482,8 +481,6 @@
                                 </div>
                                 <div class="col">
                                     <p class="">
-
-
                                         Noch ein weiteres zweizeiliges tolles Alleinstellungsmerkmal
                                     </p>
                                 </div>
@@ -503,7 +500,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 </template>
    
@@ -518,19 +514,137 @@ export default {
     components: {
 
     },
-    data: {
-        price: 5,
-        image: '@/assets/images/Booklet_machine.png'
+    data() {
+        return {
+            price: 4.29,
+            enveloped: false,
+            discount: 1,
+            pagesQuantitiy: 4,
+            selected: '',
+            basePrice: 3.85,
+            singlePrice: 4.29,
+            pagePrice: 0.11,
+            quantitiy: 1,
+            pages: [
+                { val: 4 },
+                { val: 8 },
+                { val: 12 },
+                { val: 14 },
+                { val: 18 },
+                { val: 22 },
+                { val: 24 },
+                { val: 28 },
+                { val: 32 },
+                { val: 36 },
+                { val: 40 },
+                { val: 44 },
+                { val: 48 },
+                { val: 52 },
+                { val: 54 },
+                { val: 58 },
+                { val: 62 },
+                { val: 64 },
+                { val: 68 },
+                { val: 72 },
+                { val: 76 },
+                { val: 80 },
+                { val: 84 },
+                { val: 88 },
+            ]
+        }
     },
-    created() {
+    mounted() {
+        this.calculatePrice();
         debugger
-     this.price == 5;
+        document.querySelector('#mySelect').querySelector('option').selected = 'selected'
     },
     methods: {
-        count(event) {
-            debugger
-            console.log(this.price)
-           this.price == this.price + 1
+        setDiscountGroup: function (id) {
+
+            const element = `discountgroup${id}`
+            for (let i = 1; i < 11; i++) {
+                const elementToDelete = `discountgroup${i}`
+                document.getElementById(elementToDelete).classList.remove('activeDiscount');
+            }
+            document.getElementById(element).classList.add('activeDiscount');
+        },
+        quantitiyInput: function () {
+
+            this.pagesQuantitiy = pages.val
+            this.calculatePrice();
+        },
+        count(isAdd) {
+            if (isAdd) {
+                this.quantitiy++
+            } else {
+                if (this.quantitiy > 1)
+                    this.quantitiy--
+            }
+
+            this.calculatePrice();
+        },
+        calculatePrice: function () {
+            this.calculateDiscount();
+            this.price = this.basePrice + (this.pagePrice * (this.pagesQuantitiy));
+            if (this.discount != 1) {
+                this.price = this.price * (1 - this.discount);
+            }
+            this.singlePrice = this.basePrice + (this.pagePrice * (this.pagesQuantitiy));
+
+        },
+        calculateDiscount: function () {
+            if (this.quantitiy == 1) {
+                this.discount = 1
+                this.setDiscountGroup(1);
+            } else if (this.quantitiy > 1 && this.quantitiy < 9) {
+                this.discount = 0.45
+                this.setDiscountGroup(2);
+            } else if (this.quantitiy >= 9 && this.quantitiy < 24) {
+                this.discount = 0.55
+                this.setDiscountGroup(3);
+            } else if (this.quantitiy >= 24 && this.quantitiy < 49) {
+                this.discount = 0.63
+                this.setDiscountGroup(4);
+            } else if (this.quantitiy >= 49 && this.quantitiy < 74) {
+                this.discount = 0.68
+                this.setDiscountGroup(5);
+            } else if (this.quantitiy >= 74 && this.quantitiy < 99) {
+                this.discount = 0.70
+                this.setDiscountGroup(6);
+            } else if (this.quantitiy >= 99 && this.quantitiy < 149) {
+                this.discount = 0.72
+                this.setDiscountGroup(7);
+            } else if (this.quantitiy >= 149 && this.quantitiy < 199) {
+                this.discount = 0.74
+                this.setDiscountGroup(8);
+            } else if (this.quantitiy >= 199 && this.quantitiy < 249) {
+                this.discount = 0.75
+                this.setDiscountGroup(9);
+            } else if (this.quantitiy >= 249) {
+                this.discount = 0.76
+                this.setDiscountGroup(10);
+            }
+        }
+    },
+    watch: {
+        enveloped: function (val) {
+            if (val) {
+                if (val == "true") {
+                    this.price = this.price + 0.23
+                } if (val == "false") {
+                    this.price = this.price - 0.23
+                }
+
+            }
+        },
+        selected: function (pages) {
+            if (pages) {
+                this.pagesQuantitiy = pages.val
+                this.calculatePrice();
+            }
+        },
+        quantitiy: function () {
+            this.calculatePrice();
         }
     }
 }
@@ -598,6 +712,16 @@ export default {
     }
 }
 
+.input {
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 3px;
+    background-color: #CCD96A;
+    border: 0px;
+    text-align: center;
+    font-size: xx-large;
+}
+
 .file-upload {
     padding: 3px;
 }
@@ -605,6 +729,11 @@ export default {
 .file-upload input {
     overflow: hidden;
     width: 0;
+}
+
+.activeDiscount {
+    background-color: white;
+    border: 1pt solid black !important;
 }
 
 .plus-minus-input {

@@ -613,10 +613,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default {
   name: "home",
-  components: {
-    SwButton,
-    'popper': Popper
-  },
   setup(props, { root }) {
     // get the configured api client
     const { apiInstance } = getApplicationContext(root, "home")
@@ -628,7 +624,6 @@ export default {
     isOpenFour: false,
     isOpenFive: false,
     slideIndex: 1
-
   },
   methods: {
     open: function (num) {

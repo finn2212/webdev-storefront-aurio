@@ -1,6 +1,6 @@
 module.exports = {
-  shopwareEndpoint: 'http://localhost/',
-	  shopwareAccessToken: "SWSCWXLXOVLMAMV6SNRZS2NWSG",
+  shopwareEndpoint: 'https://26485.s15269.creoline.cloud',
+	  shopwareAccessToken: "SWSCCGJXNTJGA2PVWVZFYNB5RQ",
   shopwareApiClient: {
      // optional, allow to override the default settings
      timeout: 5000, // timeout limit in ms

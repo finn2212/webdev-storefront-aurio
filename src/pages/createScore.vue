@@ -46,34 +46,48 @@
                 </table>
             </div>
         </div>
+        <div>
+            <button @click="click1">choose a photo</button>
+            <input type="file" ref="input1" style="display: none" @change="previewImage" accept="image/*">
+        </div>
+
+        <div v-if="imageData != null">
+            <img class="preview" height="268" width="356" :src="img1">
+            <br>
+        </div>
     </div>
 </template>
 <script>
 import { db } from '../firebaseDb';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'firebase/storage';
+import firebase from 'firebase';
 export default {
     data() {
         return {
             user: {
             },
-            Users: []
+            Users: [],
+            caption: '',
+            img1: '',
+            imageData: null
 
         }
 
     },
     created() {
-            db.collection('users').onSnapshot((snapshotChange) => {
-                this.Users = [];
-                snapshotChange.forEach((doc) => {
-                    this.Users.push({
-                        key: doc.id,
-                        name: doc.data().name,
-                        email: doc.data().email,
-                        phone: doc.data().phone
-                    })
-                });
-            })
-        },
+        db.collection('users').onSnapshot((snapshotChange) => {
+            this.Users = [];
+            snapshotChange.forEach((doc) => {
+                this.Users.push({
+                    key: doc.id,
+                    name: doc.data().name,
+                    email: doc.data().email,
+                    phone: doc.data().phone
+                })
+            });
+        })
+    },
     methods: {
         onFormSubmit(event) {
             event.preventDefault()
@@ -85,7 +99,33 @@ export default {
             }).catch((error) => {
                 console.log(error);
             });
-        }
+        },
+        click1() {
+            this.$refs.input1.click()
+        },
+
+        previewImage(event) {
+            this.uploadValue = 0;
+            this.img1 = null;
+            this.imageData = event.target.files[0];
+            this.onUpload()
+        },
+
+        onUpload() {
+            this.img1 = null;
+            const storageRef = db.storage().ref(`${this.imageData.name}`).put(this.imageData);
+            storageRef.on(`state_changed`, snapshot => {
+                this.uploadValue = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            }, error => { console.log(error.message) },
+                () => {
+                    this.uploadValue = 100;
+                    storageRef.snapshot.ref.getDownloadURL().then((url) => {
+                        this.img1 = url;
+                        console.log(this.img1)
+                    });
+                }
+            );
+        },
     }
 }
 </script>
