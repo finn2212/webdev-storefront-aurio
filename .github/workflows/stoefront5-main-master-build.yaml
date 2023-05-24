@@ -27,13 +27,28 @@ jobs:
         with:
           submodules: 'recursive'
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: v16.x
+
+      - name: Build Node assets
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
+        run: |
+          npm install --global yarn
+          npx @shopware-pwa/cli init --ci --sebastian.gabriel --9Pv~H8%Lcg
+          yarn build
+          yarn start
+
 # Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 323c377d-8d12-44c5-a284-e26a81faffca
+          project-id: 40bdbc1b-16f7-4931-9d31-c9e25cb3db9f
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
