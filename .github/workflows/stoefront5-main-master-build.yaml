@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: dist/
+  DEPLOYMENT_FOLDER: dist
 
 jobs:
 # Please do not rename this job
@@ -40,8 +40,7 @@ jobs:
           npm install --global yarn
           npx @shopware-pwa/cli init --ci --finn.stolle --capella2023!
           yarn build
-          nuxt generate
-          nuxt start
+          yarn generate
 
 # Please do not touch the following action
       - name: Store deployment content
@@ -49,7 +48,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 0b20a224-c2b5-4cf3-a31d-675f4e962a32
+          project-id: 524053a4-8e57-49bf-86db-d05e8833db78
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
