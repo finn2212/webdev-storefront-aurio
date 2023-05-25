@@ -191,56 +191,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="discountgroup1">
-                                        <th scope="row">Bis 1</th>
-                                        <td>€ {{ singlePrice.toFixed(2) }}</td>
-                                        <td>0%</td>
-                                    </tr>
-                                    <tr id="discountgroup2">
-                                        <th scope="row">Bis 9</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.45)).toFixed(2) }}</td>
-                                        <td>45%</td>
-
-                                    </tr>
-                                    <tr id="discountgroup3">
-                                        <th scope="row">Bis 24</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.55)).toFixed(2) }}</td>
-                                        <td>55%</td>
-                                    </tr>
-                                    <tr id="discountgroup4">
-                                        <th scope="row">Bis 49</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.63)).toFixed(2) }}</td>
-                                        <td>68%</td>
-                                    </tr>
-                                    <tr id="discountgroup5">
-                                        <th scope="row">Bis 74</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.68)).toFixed(2) }}</td>
-                                        <td>70%</td>
-                                    </tr>
-                                    <tr id="discountgroup6">
-                                        <th scope="row">Bis 99</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.7)).toFixed(2) }}</td>
-                                        <td>72%</td>
-                                    </tr>
-                                    <tr id="discountgroup7">
-                                        <th scope="row">Bis 149</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.72)).toFixed(2) }}</td>
-                                        <td>72%</td>
-                                    </tr>
-                                    <tr id="discountgroup8">
-                                        <th scope="row">Bis 199</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.74)).toFixed(2) }}</td>
-                                        <td>74%</td>
-                                    </tr>
-                                    <tr id="discountgroup9">
-                                        <th scope="row">Bis 249</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.75)).toFixed(2) }}</td>
-                                        <td>75%</td>
-                                    </tr>
-                                    <tr id="discountgroup10">
-                                        <th scope="row">Ab 250</th>
-                                        <td>€ {{ (singlePrice * (1 - 0.76)).toFixed(2) }}</td>
-                                        <td>76%</td>
+                                    <tr style="cursor: pointer;" :id="'discountgroup' + discount.id" v-for="discount in discounts" @click="setAmount(discount.amount)">
+                                        <th scope="row">Bis {{ discount.amount }}</th>
+                                        <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
+                                        <td>{{ (discount.discount*100).toFixed(0) }} %</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -550,6 +504,19 @@ export default {
                 { val: 80 },
                 { val: 84 },
                 { val: 88 },
+            ],
+            discounts: [
+                {id:1, discount: 0, amount: 1},
+                {id:2, discount: 0.45, amount: 2},
+                {id:3, discount: 0.55, amount: 10},
+                {id:4, discount: 0.63, amount: 25},
+                {id:5, discount: 0.68, amount: 50},
+                {id:6, discount: 0.70, amount: 75},
+                {id:7, discount: 0.72, amount: 100},
+                {id:8, discount: 0.74, amount: 150},
+                {id:9, discount: 0.75, amount: 200},
+                {id:10, discount: 0.76, amount: 250}
+
             ]
         }
     },
@@ -567,6 +534,9 @@ export default {
                 document.getElementById(elementToDelete).classList.remove('activeDiscount');
             }
             document.getElementById(element).classList.add('activeDiscount');
+        },
+        setAmount: function (amount) {
+            this.quantitiy = amount;
         },
         quantitiyInput: function () {
 
