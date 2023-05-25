@@ -61,7 +61,7 @@
 import { db } from '../firebaseDb';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'firebase/storage';
-import firebase from 'firebase';
+
 export default {
     data() {
         return {
@@ -76,7 +76,7 @@ export default {
 
     },
     created() {
-        db.collection('users').onSnapshot((snapshotChange) => {
+        db.firestore().collection('users').onSnapshot((snapshotChange) => {
             this.Users = [];
             snapshotChange.forEach((doc) => {
                 this.Users.push({
@@ -91,7 +91,7 @@ export default {
     methods: {
         onFormSubmit(event) {
             event.preventDefault()
-            db.collection('users').add(this.user).then(() => {
+            db.firestore().collection('users').add(this.user).then(() => {
                 alert("User successfully created!");
                 this.user.name = ''
                 this.user.email = ''
@@ -109,6 +109,12 @@ export default {
             this.img1 = null;
             this.imageData = event.target.files[0];
             this.onUpload()
+        },
+        onUploaded() {
+            const storageRef = db.storage().ref(this.imageData.name);
+            storageRef.put(this.imageData).then(snapshot => {
+                console.log(snapshot);
+            });
         },
 
         onUpload() {

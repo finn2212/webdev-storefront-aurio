@@ -19,4 +19,4 @@ if (!firebase.apps.length) {
 }else {
     firebaseApp = firebase.app(); // if already initialized, use that one
  }
-export const db = firebaseApp.firestore();
+export const db = firebaseApp
