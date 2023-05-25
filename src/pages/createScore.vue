@@ -68,7 +68,6 @@ export default {
             user: {
             },
             Users: [],
-            caption: '',
             img1: '',
             imageData: null
 
@@ -110,18 +109,12 @@ export default {
             this.imageData = event.target.files[0];
             this.onUpload()
         },
-        onUploaded() {
-            const storageRef = db.storage().ref(this.imageData.name);
-            storageRef.put(this.imageData).then(snapshot => {
-                console.log(snapshot);
-            });
-        },
-
         onUpload() {
             this.img1 = null;
-            const storageRef = db.storage().ref(`${this.imageData.name}`).put(this.imageData);
+            const storageRef = db.storage().ref(`uploads/${this.imageData.name}`).put(this.imageData);
             storageRef.on(`state_changed`, snapshot => {
                 this.uploadValue = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(this.uploadValue);
             }, error => { console.log(error.message) },
                 () => {
                     this.uploadValue = 100;

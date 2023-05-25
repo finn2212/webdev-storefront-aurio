@@ -69,7 +69,6 @@
                         Konfiguriere dein Notenheft
                     </h1>
                     <div class="col-8 customBorder  pl-5  p-4 grey">
-
                         <div class="row">
                             <div class="col-7">
                                 <h1>1. Wähle die Seitenanzahl</h1>
@@ -103,37 +102,89 @@
                                 <p><input type="radio" id="two" value="false" v-model="enveloped" /></p>
                             </div>
                             <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <h1>3. Lade deine Noten hoch</h1>
                                 <p>Hier lädst du nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Deine Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns bei dir per E-Mail, falls etwas nicht
                                     passen sollte.</p>
                             </div>
-                            <div class="col pt-5" style="margin-top: 15px;">
-                                <p>Noten-PDF / Inhalt:</p>
-                                <p style="margin-top: 40px;">Noten-PDF / Inhalt:</p>
+                            <div class="col mt-5">
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Noten-PDF / Inhalt:</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div v-if="pdfData1 == null" class="row">
+                                            <div>
+                                                <button class="btn btn uploadBtn" @click="click1"> <img
+                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="margin-right: 5px;">Wähle
+                                                    Noten</button>
+                                                <input type="file" ref="input1" style="display: none" @change="previewImage"
+                                                    accept="application/pdf">
+                                            </div>
+                                        </div>
+                                        <div v-if="pdfData1 != null && isUpload1 == false" class="row">
+                                            <div class="col-8">
+                                                {{ pdfData1.name }}
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn btn uploadBtn" @click="deletePdf"
+                                                    style="margin-left:5px">
+                                                    <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="transform: rotate(45deg);">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div v-if="isUpload1 == true" class="row mt-3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                    :style="{ width: uploadValue + '%' }" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <p>Noten-PDF / Inhalt:</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div v-if="pdfData2 == null" class="row">
+                                            <div class="" v-if="pdfData2 == null">
+                                                <button class="btn btn uploadBtn" @click="click2"> <img
+                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="margin-right: 5px;">Wähle
+                                                    Noten
+                                                </button>
+                                                <input type="file" ref="input2" style="display: none"
+                                                    @change="previewImage2" accept="application/pdf">
+                                            </div>
+                                        </div>
+                                        <div v-if="pdfData2 != null && isUpload2 == false" class="row">
+                                            <div class="col-8">
+                                                {{ pdfData2.name }}
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn btn uploadBtn" @click="deletePdf2"
+                                                    style="margin-left:5px">
+                                                    <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="transform: rotate(45deg);">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div v-if="isUpload2 == true" class="row mt-3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                    :style="{ width: uploadValue2 + '%' }" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col pt-5">
-                                <!--onclick="document.getElementById('selectedFile').click();"-->
-                                <button type="button" class="btn btn uploadBtn">
-                                    <img src="@/assets/svg/plusBlack.svg" alt="Avatar"><label class="file-upload"
-                                        style="border: 0px;">
-                                        <input type="file" multiple="multiple" name="fileToUpload" id="fileToUpload">
-                                        Datei Wählen
-                                    </label>
-                                </button>
-                                <button type="button" class="btn btn mt-3 uploadBtn">
-                                    <img src="@/assets/svg/plusBlack.svg" alt="Avatar"><label class="file-upload"
-                                        style="border: 0px;">
-                                        <input type="file" multiple="multiple" name="fileToUpload" id="fileToUpload">
-                                        Datei Wählen
-                                    </label>
-                                </button>
-
-
-                            </div>
-
                         </div>
                     </div>
                     <div class="col-4 customBorder  pl-5  p-4 green">
@@ -191,10 +242,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr style="cursor: pointer;" :id="'discountgroup' + discount.id" v-for="discount in discounts" @click="setAmount(discount.amount)">
+                                    <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
+                                        v-for="discount in discounts" @click="setAmount(discount.amount)">
                                         <th scope="row">Bis {{ discount.amount }}</th>
                                         <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
-                                        <td>{{ (discount.discount*100).toFixed(0) }} %</td>
+                                        <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -204,6 +256,7 @@
                 </div>
             </div>
         </section>
+
         <!--Sektion mit 3 Karten und Bider-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -462,6 +515,7 @@ import { getApplicationContext } from "@shopware-pwa/composables"
 import { invokePost } from "@shopware-pwa/shopware-6-client"
 import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { db } from '../firebaseDb';
 
 
 export default {
@@ -479,6 +533,17 @@ export default {
             singlePrice: 4.29,
             pagePrice: 0.11,
             quantitiy: 1,
+            pdf1: '',
+            pdf2: '',
+            pdfData1: null,
+            pdfData2: null,
+            progress1: null,
+            pdfData1: null,
+            pdfData12: null,
+            isUpload1: false,
+            isUpload2: false,
+            uploadValue: 0,
+            uploadValue2: 0,
             pages: [
                 { val: 4 },
                 { val: 8 },
@@ -506,23 +571,22 @@ export default {
                 { val: 88 },
             ],
             discounts: [
-                {id:1, discount: 0, amount: 1},
-                {id:2, discount: 0.45, amount: 2},
-                {id:3, discount: 0.55, amount: 10},
-                {id:4, discount: 0.63, amount: 25},
-                {id:5, discount: 0.68, amount: 50},
-                {id:6, discount: 0.70, amount: 75},
-                {id:7, discount: 0.72, amount: 100},
-                {id:8, discount: 0.74, amount: 150},
-                {id:9, discount: 0.75, amount: 200},
-                {id:10, discount: 0.76, amount: 250}
+                { id: 1, discount: 0, amount: 1 },
+                { id: 2, discount: 0.45, amount: 2 },
+                { id: 3, discount: 0.55, amount: 10 },
+                { id: 4, discount: 0.63, amount: 25 },
+                { id: 5, discount: 0.68, amount: 50 },
+                { id: 6, discount: 0.70, amount: 75 },
+                { id: 7, discount: 0.72, amount: 100 },
+                { id: 8, discount: 0.74, amount: 150 },
+                { id: 9, discount: 0.75, amount: 200 },
+                { id: 10, discount: 0.76, amount: 250 }
 
             ]
         }
     },
     mounted() {
         this.calculatePrice();
-        debugger
         document.querySelector('#mySelect').querySelector('option').selected = 'selected'
     },
     methods: {
@@ -594,7 +658,70 @@ export default {
                 this.discount = 0.76
                 this.setDiscountGroup(10);
             }
-        }
+        },
+        deletePdf: function () {
+            db.storage().ref(`uploads/${this.pdfData1.name}`).delete();
+            this.pdfData1 = null;
+        },
+        deletePdf2: function () {
+            db.storage().ref(`uploads/${this.pdfData2.name}`).delete();
+            this.pdfData2 = null;
+        },
+        click1() {
+            this.$refs.input1.click()
+        },
+        click2() {
+            this.$refs.input2.click()
+        },
+        previewImage(event) {
+            this.pdfData1 = 0;
+            this.pdf1 = null;
+            this.pdfData1 = event.target.files[0];
+            this.onUpload()
+        },
+        previewImage2(event) {
+            this.pdfData2 = 0;
+            this.pdf2 = null;
+            this.pdfData2 = event.target.files[0];
+            this.onUpload2()
+        },
+
+        onUpload() {
+            this.pdf1 = null;
+            this.isUpload1 = true;
+            const storageRef = db.storage().ref(`uploads/${this.pdfData1.name}`).put(this.pdfData1);
+            storageRef.on(`state_changed`, snapshot => {
+                this.uploadValue = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(this.uploadValue);
+            }, error => { console.log(error.message) },
+                () => {
+                    this.uploadValue = 100;
+                    storageRef.snapshot.ref.getDownloadURL().then((url) => {
+                        this.pdf1 = url;
+                        console.log(this.pdf1);
+                        this.isUpload1 = false;
+                    });
+                }
+            );
+        },
+        onUpload2() {
+            this.pdf2 = null;
+            this.isUpload2 = true;
+            const storageRef = db.storage().ref(`uploads/${this.pdfData2.name}`).put(this.pdfData2);
+            storageRef.on(`state_changed`, snapshot => {
+                this.uploadValue2 = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log("uploadvalue2:" + this.uploadValue2);
+            }, error => { console.log(error.message) },
+                () => {
+                    this.uploadValue2 = 100;
+                    storageRef.snapshot.ref.getDownloadURL().then((url) => {
+                        this.pdf2 = url;
+                        console.log(this.pdf2);
+                        this.isUpload2 = false;
+                    });
+                }
+            );
+        },
     },
     watch: {
         enveloped: function (val) {
@@ -615,7 +742,7 @@ export default {
         },
         quantitiy: function () {
             this.calculatePrice();
-        }
+        },
     }
 }
 </script>
