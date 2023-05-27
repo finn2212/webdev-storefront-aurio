@@ -27,7 +27,7 @@
     "vue-material-design-icons": "^5.2.0"
   },
   "devDependencies": {
-    "@shopware-pwa/nuxt-module": "^1.6.2-canary.1723",
+    "@shopware-pwa/nuxt-module": "^1.6.1",
     "@storefront-ui/vue": "0.13.2",
     "@vue/test-utils": "^2.0.0",
     "@vuelidate/core": "2.0.0",

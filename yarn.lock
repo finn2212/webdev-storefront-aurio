@@ -2239,12 +2239,12 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==
 
-"@shopware-pwa/cli@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/cli/-/cli-1.6.2-canary.1723.tgz#c457985729c6d414c0a1c32f31a877a2608ce049"
-  integrity sha512-rZABZxTTLQURFipZY9wwA5YhVJrrhMKjnuDG4bLlr8++Q/4WaEgILYbqapqZWJ6Ds4x2mdeXfNdFjJYkes9qAA==
+"@shopware-pwa/cli@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/cli/-/cli-1.6.1.tgz#09d13adab35f6bcd5d6537ee301e8facdf65ba97"
+  integrity sha512-Kpki1Zv8/Ua1rIgCYf8hZnhMUGWnmHAvqkHX9GZRLUg3AystI4AesQ0ZbKJF+3HKlCRXfqj9YEQDK/MAcvs0xA==
   dependencies:
-    "@shopware-pwa/shopware-6-client" "1.6.2-canary.1723"
+    "@shopware-pwa/shopware-6-client" "1.6.1"
     chokidar "^3.5.3"
     dotenv "^16.0.3"
     gluegun "^5.1.2"
@@ -2253,13 +2253,13 @@
     unzipper "^0.10.11"
     validate-npm-package-name "^3.0.0"
 
-"@shopware-pwa/composables@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/composables/-/composables-1.6.2-canary.1723.tgz#7262c08674eadb6ffef885d85467fa855e4ec4d1"
-  integrity sha512-6PF5PSYgqrw+q2fZI13GPlFRIQlfI8cVppHmESDj4qVSQPcdYkeJUq2LzKbrpm3S4QKXKurZCqmnYHoZCi331w==
+"@shopware-pwa/composables@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/composables/-/composables-1.6.1.tgz#6cf72f56ed0cf8855108bec62b655ee94fc376e7"
+  integrity sha512-9yAhbYdYXZFnr4DPraQyIqEw8G6IO1lY9FVNMMDCmu9qPNrriKQhzBjwYluYXpgvnIdqTMVHxXR8gtzcA6KdZA==
   dependencies:
-    "@shopware-pwa/helpers" "1.6.2-canary.1723"
-    "@shopware-pwa/shopware-6-client" "1.6.2-canary.1723"
+    "@shopware-pwa/helpers" "1.6.1"
+    "@shopware-pwa/shopware-6-client" "1.6.1"
     "@vue/devtools-api" "6.5.0"
     axios "^0.27.2"
     cookie-universal "^2.2.2"
@@ -2267,16 +2267,16 @@
     query-string "^7.1.1"
     vue-demi "^0.13.11"
 
-"@shopware-pwa/default-theme@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/default-theme/-/default-theme-1.6.2-canary.1723.tgz#6e30c1e773f12aac61429f05ed9f88687c1b4f33"
-  integrity sha512-zLt2weldoxt8t+cdfwuFiHIKeHxWSAfCVP2sv4irYGUUq9IrXoMUz48m0xQ9A/98H2ow7jia5D2NxPN43aoTwg==
+"@shopware-pwa/default-theme@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/default-theme/-/default-theme-1.6.1.tgz#0a5442db71c56ebe0ed6ff2a2eea3c31715e41e6"
+  integrity sha512-I9ftImy0VavNQfh40azhvp85w2n++c9M1wf6lr1PZ3tIE0SeN0gnKvmtLNv3a1Nbgg2Mcu23N5UxgXCDp8rrHw==
   dependencies:
-    "@shopware-pwa/cli" "1.6.2-canary.1723"
-    "@shopware-pwa/theme-base" "1.6.2-canary.1723"
+    "@shopware-pwa/cli" "1.6.1"
+    "@shopware-pwa/theme-base" "1.6.1"
     "@storefront-ui/vue" "0.13.2"
-    "@vuelidate/core" "2.0.0"
-    "@vuelidate/validators" "2.0.0"
+    "@vuelidate/core" "^2.0.0-alpha.41"
+    "@vuelidate/validators" "^2.0.0-alpha.29"
     dayjs "^1.11.2"
     html-to-vue "^1.4.0"
     sass-loader "^10.0.3"
@@ -2284,17 +2284,17 @@
     vue-vimeo-player "^0.2.2"
     vue-youtube-embed "^2.2.2"
 
-"@shopware-pwa/helpers@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/helpers/-/helpers-1.6.2-canary.1723.tgz#1f59ee963560b91578d6149c01e7534b306473c1"
-  integrity sha512-FrJAo7xerUsoWkG2kK8a5Dg1++8Q44jFgowvJxQWi5Pf9TFuRv4pvD8R1qgrm407smP3WnXHeXxglf2dIBNe4g==
+"@shopware-pwa/helpers@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/helpers/-/helpers-1.6.1.tgz#ff956e39e17c3c7721b5c8cccc33d4225750ed8a"
+  integrity sha512-n89uM+onnSabJDMCPb9XdEEfI831Kv+wSg5xYnr+ZpsP2+I3GWicLf6KduvRWNDzGvK/G4MpO5jWWqr9T6i66w==
   dependencies:
     query-string "^7.1.1"
 
-"@shopware-pwa/nuxt-module@^1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/nuxt-module/-/nuxt-module-1.6.2-canary.1723.tgz#4ff27c69dc5bf4157136ac36ce0bfe7d11fb3720"
-  integrity sha512-DZ4t8R/E2W/WLA30JO5o3WgwRQaE3eSS2avNUbTTWNRNcXPfs/cvvPbuFTKqI75g173TkIA8s9CxzrRoDHORlQ==
+"@shopware-pwa/nuxt-module@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/nuxt-module/-/nuxt-module-1.6.1.tgz#64e4b23ca37bcd9dbf6a22953943709849e9e927"
+  integrity sha512-5JtVS9/6HUNbmwyKkWyfcFNA0JVzVHYCRHvKnchD81TK2/xd2oLRk59tN6SmS8jct909DkEGQIO8Ebvv8miamQ==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.17.12"
     "@babel/plugin-proposal-optional-chaining" "^7.17.12"
@@ -2302,11 +2302,11 @@
     "@nuxt/typescript-build" "^2.1.0"
     "@nuxt/typescript-runtime" "^2.1.0"
     "@nuxt/utils" "^2.15.8"
-    "@shopware-pwa/cli" "1.6.2-canary.1723"
-    "@shopware-pwa/composables" "1.6.2-canary.1723"
-    "@shopware-pwa/default-theme" "1.6.2-canary.1723"
-    "@shopware-pwa/helpers" "1.6.2-canary.1723"
-    "@shopware-pwa/shopware-6-client" "1.6.2-canary.1723"
+    "@shopware-pwa/cli" "1.6.1"
+    "@shopware-pwa/composables" "1.6.1"
+    "@shopware-pwa/default-theme" "1.6.1"
+    "@shopware-pwa/helpers" "1.6.1"
+    "@shopware-pwa/shopware-6-client" "1.6.1"
     chokidar "^3.5.3"
     cookie-universal "^2.2.1"
     cosmiconfig "^7.0.1"
@@ -2322,19 +2322,19 @@
     vue-server-renderer "2.6.14"
     vue-template-compiler "2.6.14"
 
-"@shopware-pwa/shopware-6-client@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/shopware-6-client/-/shopware-6-client-1.6.2-canary.1723.tgz#670e72cfd31cd8226befcf67822a3fb061b335ba"
-  integrity sha512-APY8E0E30F+p1OsXjhcEgNU+D+t7Uzaj87yauaxZPJA9mKG7i9wjS5t16bpRepL0TsX8AyYU0dCOYMMGY08qEQ==
+"@shopware-pwa/shopware-6-client@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/shopware-6-client/-/shopware-6-client-1.6.1.tgz#c46faafecff0e0550674b24e18862f2ed52f75e4"
+  integrity sha512-SdBuC9nXU4xKzuuhKwGe3qCyUTCgjE8T2mO06FqAOjvxSyomDTZYVCknTe9f1FHxkdvAxMPi/g6HLf1qq2n92Q==
   dependencies:
     axios "^0.27.2"
     lodash "^4.17.21"
     query-string "^7.1.1"
 
-"@shopware-pwa/theme-base@1.6.2-canary.1723":
-  version "1.6.2-canary.1723"
-  resolved "https://registry.yarnpkg.com/@shopware-pwa/theme-base/-/theme-base-1.6.2-canary.1723.tgz#8c73b7a9885c7489a040fe2a9e98772c956da99e"
-  integrity sha512-tlbDDOGmmDPOoy44SXof8jwzLJM+HDMr7AC+WEiRICz6tKBYyC0+DFx/WCnBXf0y3BHh9ehl2hA+PF7lnbscAQ==
+"@shopware-pwa/theme-base@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@shopware-pwa/theme-base/-/theme-base-1.6.1.tgz#cd29253ac425dfb52306bfa67ee2338d5a2b3f97"
+  integrity sha512-Lu9HmmwiPqVomqSbJt6cx02rll/Mbrkyp3KrGj+BocN0aVf0AK6kmuf+/MxCektKLbC4Lu/tnD6GSFVYLESrIQ==
   dependencies:
     currency.js "^2.0.4"
 
@@ -2871,10 +2871,24 @@
   dependencies:
     vue-demi "^0.13.11"
 
+"@vuelidate/core@^2.0.0-alpha.41":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@vuelidate/core/-/core-2.0.2.tgz#e874afc830ccc5295e83a0c0a0f0621e084348c9"
+  integrity sha512-aG1OZWv6xVws3ljyKy/pyxq1rdZZ2ryj+FEREcC9d4GP4qOvNHHZUl/NQxa0Bck3Ooc0RfXU8vwCA9piRoWy6w==
+  dependencies:
+    vue-demi "^0.13.11"
+
 "@vuelidate/validators@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@vuelidate/validators/-/validators-2.0.0.tgz#1ddd86c6c81b2cfbb5720961e951cc53ec0a80be"
   integrity sha512-fQQcmDWfz7pyH5/JPi0Ng2GEgNK1pUHn/Z/j5rG/Q+HwhgIXvJblTPcZwKOj1ABL7V4UVuGKECvZCDHNGOwdrg==
+  dependencies:
+    vue-demi "^0.13.11"
+
+"@vuelidate/validators@^2.0.0-alpha.29":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@vuelidate/validators/-/validators-2.0.2.tgz#8b372b7d6f056d161f1fb551f063e3c83cb97d5e"
+  integrity sha512-6y6QLoK567XVmaLP3Paf1vkg6K2zO6xax3yTyczy1RnJ4PsLDLLGzP1PFzSpwb16aw4CKduBgI63HvIuctJhQg==
   dependencies:
     vue-demi "^0.13.11"
 
