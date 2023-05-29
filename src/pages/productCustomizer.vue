@@ -1,5 +1,12 @@
 <template>
     <div class="container">
+        <div id="overlay">
+            <div class="container justify-content-center">
+                <div class="spinner-border" role="status" style="margin-top: 30%; margin-left: 50%;">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+        </div>
         <!--Sektion mit 3 Karten und Bider-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -589,10 +596,12 @@ export default {
     },
     mounted() {
         this.calculatePrice();
-        document.querySelector('#mySelect').querySelector('option').selected = 'selected'
+
     },
     methods: {
         createUuid() {
+            document.getElementById("overlay").style.display = "block";
+            debugger
             axios({
                 url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
                 method: 'GET',
@@ -697,7 +706,7 @@ export default {
                     ]
                 }
             }).then((res) => {
-
+                document.getElementById("overlay").style.display = "none";
                 window.location.reload()
             });
         },
@@ -944,6 +953,106 @@ export default {
     border: 1pt solid black !important;
 }
 
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.spanner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #2a2a2a55;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 300px;
+    color: #FFF;
+    transform: translateY(-50%);
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+
+.loader {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 80px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.loader:after {
+    left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+@keyframes load7 {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
 .plus-minus-input {
     align-items: center;
 
@@ -955,5 +1064,26 @@ export default {
             appearance: none;
         }
     }
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
 }
 </style>
