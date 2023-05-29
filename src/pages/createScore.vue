@@ -58,7 +58,7 @@
             <button @click="createNewProductInStore">API CALL</button>
         </div>
         <div>
-            <button @click="getCreatedProduct(333)">Get</button>
+            <button @click="createUuid">Get</button>
         </div>
 
 
@@ -87,7 +87,8 @@ export default {
             imageData: null,
             product: null,
             productName:"",
-            quantity: 0
+            quantity: 0,
+            price: 0
 
         }
 
@@ -107,8 +108,18 @@ export default {
 
     },
     methods: {
-        createNewProductInStore() {
-            const productNumber = '999'
+        createUuid() {
+            axios({
+                url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
+                method: 'GET',
+            }).then((res) => {
+               this.createNewProductInStore(res.data[0]); 
+            });
+
+
+        },
+        createNewProductInStore(productNumber) {
+           // const productNumber = 'xxx'
             axios({
                 url: 'https://26485.s15269.creoline.cloud/api/oauth/token', // File URL Goes Here
                 method: 'POST',
@@ -170,10 +181,10 @@ export default {
                 },
                 data: {
                     "search": productNumber
-
                 }
             }).then((res) => {
-                debugger
+                debugger 
+                console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
                 this.add(res.data.elements[0]._uniqueIdentifier)
             });
@@ -182,8 +193,6 @@ export default {
         },
         add(id) {
             const contextToken = this.$cookies.get("sw-context-token") || "";
-            console.log(contextToken)
-
             axios({
                 url: 'https://26485.s15269.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
                 method: 'POST',
@@ -191,7 +200,7 @@ export default {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
                     "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW',
-                    "sw-context-token": "S1z7EsuGS9ulJwRA4ZyJSFDEuDbK2GOV"
+                    "sw-context-token": contextToken
                 },
                 data: {
                     "items": [
@@ -205,7 +214,7 @@ export default {
                 }
             }).then((res) => {
                 
-                window.location.reload()
+               window.location.reload()
             });
         },
         onFormSubmit(event) {
