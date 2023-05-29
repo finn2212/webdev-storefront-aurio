@@ -226,7 +226,7 @@
                         </div>
                         <div class="row">
                             <div class="col align-self-center">
-                                <button type="button" class="btn btn-dark mt-3">
+                                <button @click="createUuid" type="button" class="btn btn-dark mt-3">
                                     <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
                                     In den Warenkorb legen
                                 </button>
@@ -516,6 +516,7 @@ import { invokePost } from "@shopware-pwa/shopware-6-client"
 import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { db } from '../firebaseDb';
+import axios from 'axios';
 
 
 export default {
@@ -544,6 +545,7 @@ export default {
             isUpload2: false,
             uploadValue: 0,
             uploadValue2: 0,
+            productName: "Notenbuch Klammerheftung",
             pages: [
                 { val: 4 },
                 { val: 8 },
@@ -590,6 +592,115 @@ export default {
         document.querySelector('#mySelect').querySelector('option').selected = 'selected'
     },
     methods: {
+        createUuid() {
+            axios({
+                url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
+                method: 'GET',
+            }).then((res) => {
+                this.createNewProductInStore(res.data[0]);
+            });
+
+
+        },
+        createNewProductInStore(productNumber) {
+            // const productNumber = 'xxx'
+            axios({
+                url: 'https://26485.s15269.creoline.cloud/api/oauth/token', // File URL Goes Here
+                method: 'POST',
+                data: {
+                    grant_type: 'client_credentials',
+                    client_id: 'SWIAUGVGATL1T0TKA0VBNNRSNQ',
+                    client_secret: 'blJmVmpFWTRpTzlVVHN5bVhRMnJWZlZOck1tQklaMEdIZ0hVNXo'
+                },
+            }).then((res) => {
+                console.log(res.data.access_token)
+                axios({
+                    url: 'https://26485.s15269.creoline.cloud/api/product',
+                    headers: {
+                        "Accept": 'application/json',
+                        "Authorization": res.data.access_token,
+                        "Content-Type": 'application/json',
+                    },
+                    method: 'POST',
+                    data: {
+                        "name": this.productName,
+                        "productNumber": productNumber,
+                        "stock": 10,
+                        "taxId": "49ad39168485457a836441d13c6bd473",
+                        "active": true,
+                        "keywords": "2212",
+                        "price": [
+                            {
+                                "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+                                "gross": this.singlePrice,
+                                "net": this.singlePrice,
+                                "linked": false
+                            }
+
+                        ],
+                        'visibilities': [
+                            {
+                                'salesChannelId': 'fac913bddf1244098e07a811fd301f75',
+                                'visibility': 30
+                            }
+
+                        ]
+                    },
+                })
+            }).then((res) => {
+
+                setTimeout(() => this.getCreatedProduct(productNumber), 1000);
+
+
+            });
+        },
+        getCreatedProduct(productNumber) {
+            axios({
+                url: 'https://26485.s15269.creoline.cloud/store-api/search', // File URL Goes Here
+                method: 'POST',
+                headers: {
+                    "Accept": 'application/json',
+                    "Content-Type": 'application/json',
+                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW'
+                },
+                data: {
+                    "search": productNumber
+                }
+            }).then((res) => {
+                debugger
+                console.log('res.data.elements[0]._uniqueIdentifier');
+                console.log(res.data.elements[0]._uniqueIdentifier);
+                this.add(res.data.elements[0]._uniqueIdentifier)
+            });
+
+
+        },
+        add(id) {
+            const contextToken = this.$cookies.get("sw-context-token") || "";
+            axios({
+                url: 'https://26485.s15269.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+                method: 'POST',
+                headers: {
+                    "Accept": 'application/json',
+                    "Content-Type": 'application/json',
+                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW',
+                    "sw-context-token": contextToken
+                },
+                data: {
+                    "items": [
+                        {
+                            id: id,
+                            quantity: this.quantitiy,
+                            referencedId: id,
+                            type: "product",
+                        }
+                    ]
+                }
+            }).then((res) => {
+
+                window.location.reload()
+            });
+        },
         setDiscountGroup: function (id) {
 
             const element = `discountgroup${id}`
