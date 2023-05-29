@@ -24,6 +24,7 @@
     "core-js": "^3.22.7",
     "firebase": "^8.10.0",
     "nuxt": "^2.15.8",
+    "vue-axios": "^3.5.2",
     "vue-material-design-icons": "^5.2.0"
   },
   "devDependencies": {
