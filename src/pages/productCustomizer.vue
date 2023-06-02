@@ -614,17 +614,17 @@ export default {
         createNewProductInStore(productNumber) {
             // const productNumber = 'xxx'
             axios({
-                url: 'https://26485.s15269.creoline.cloud/api/oauth/token', // File URL Goes Here
+                url: 'https://s23511.creoline.cloud/api/oauth/token', // File URL Goes Here
                 method: 'POST',
                 data: {
                     grant_type: 'client_credentials',
-                    client_id: 'SWIAUGVGATL1T0TKA0VBNNRSNQ',
-                    client_secret: 'blJmVmpFWTRpTzlVVHN5bVhRMnJWZlZOck1tQklaMEdIZ0hVNXo'
+                    client_id: 'SWIAEJZYQ09VBFPSNZZ0T0VLUG',
+                    client_secret: 'cTAxWmRsZ2kxaHppRjN1WldrUTBIYWoyS1czUHV0TlJzdWVMZWM'
                 },
             }).then((res) => {
                 console.log(res.data.access_token)
                 axios({
-                    url: 'https://26485.s15269.creoline.cloud/api/product',
+                    url: 'https://s23511.creoline.cloud/api/product',
                     headers: {
                         "Accept": 'application/json',
                         "Authorization": res.data.access_token,
@@ -665,12 +665,12 @@ export default {
         },
         getCreatedProduct(productNumber) {
             axios({
-                url: 'https://26485.s15269.creoline.cloud/store-api/search', // File URL Goes Here
+                url: 'https://s23511.creoline.cloud/store-api/search', // File URL Goes Here
                 method: 'POST',
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW'
+                    "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW'
                 },
                 data: {
                     "search": productNumber
@@ -687,12 +687,12 @@ export default {
         add(id) {
             const contextToken = this.$cookies.get("sw-context-token") || "";
             axios({
-                url: 'https://26485.s15269.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+                url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
                 method: 'POST',
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW',
+                    "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
                     "sw-context-token": contextToken
                 },
                 data: {
