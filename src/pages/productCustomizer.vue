@@ -88,11 +88,12 @@
                             </div>
                             <div class="col pt-5">
 
-                                <select id="mySelect" class="custom-select selectBtn">
-                                 
-                                    <option  v-for="page in pages"  v-if="page == 4" selected v-bind:value="{ val: page.val }">{{ page.val }}
+                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedValue">
+                                    <option selected  v-bind:value="4"> 4
                                     </option>
-                                    <option v-for="page in pages" v-bind:value="{ val: page.val }">{{ page.val }}
+                                    <option v-for="item in pages"
+                                        v-bind:value="item"
+                                      >{{ item.val }}
                                     </option>
                                 </select>
                             </div>
@@ -539,7 +540,7 @@ export default {
             enveloped: false,
             discount: 1,
             pagesQuantitiy: 4,
-            selected: '',
+            selectedValue: 4,
             basePrice: 3.85,
             singlePrice: 4.29,
             pagePrice: 0.11,
@@ -557,7 +558,6 @@ export default {
             uploadValue2: 0,
             productName: "Notenbuch Klammerheftung",
             pages: [
-                { val: 4 },
                 { val: 8 },
                 { val: 12 },
                 { val: 14 },
@@ -599,6 +599,8 @@ export default {
     },
     mounted() {
         this.calculatePrice();
+        this.selectedValue = 4;
+        debugger
 
     },
     methods: {
@@ -873,8 +875,11 @@ export default {
 
             }
         },
-        selected: function (pages) {
-            if (pages) {
+        selectedValue: function (pages) {
+            if (pages == 4) {
+                this.pagesQuantitiy = 4
+                this.calculatePrice();
+            } else{
                 this.pagesQuantitiy = pages.val
                 this.calculatePrice();
             }

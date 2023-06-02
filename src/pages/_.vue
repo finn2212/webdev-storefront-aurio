@@ -9,9 +9,8 @@
           </div>
           <div class="col green p-5 customBorder">
             <h2 class="heading-grid">
-              Deine Partituren, perfekt gedruckt.
-
-
+              <i18n path="your score printed" :tag="false">
+          </i18n>
             </h2>
             <p class="p-grid">
               Jetzt neu:
