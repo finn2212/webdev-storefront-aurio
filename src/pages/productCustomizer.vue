@@ -607,7 +607,11 @@ export default {
                 method: 'GET',
             }).then((res) => {
                 this.createNewProductInStore(res.data[0]);
-            });
+            }).catch((error) => {
+                //try to fix the error or
+                //notify the users about somenthing went wrong
+                console.log(error.message)
+            });;
 
 
         },
@@ -661,6 +665,10 @@ export default {
                 setTimeout(() => this.getCreatedProduct(productNumber), 1000);
 
 
+            }).catch((error) => {
+                //try to fix the error or
+                //notify the users about somenthing went wrong
+                console.log(error.message)
             });
         },
         getCreatedProduct(productNumber) {
@@ -680,6 +688,10 @@ export default {
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
                 this.add(res.data.elements[0]._uniqueIdentifier)
+            }).catch((error) => {
+                //try to fix the error or
+                //notify the users about somenthing went wrong
+                console.log(error.message)
             });
 
 
@@ -708,6 +720,10 @@ export default {
             }).then((res) => {
                 document.getElementById("overlay").style.display = "none";
                 window.location.reload()
+            }).catch((error) => {
+                //try to fix the error or
+                //notify the users about somenthing went wrong
+                console.log(error.message)
             });
         },
         setDiscountGroup: function (id) {
