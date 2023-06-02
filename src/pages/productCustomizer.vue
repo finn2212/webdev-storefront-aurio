@@ -88,7 +88,10 @@
                             </div>
                             <div class="col pt-5">
 
-                                <select id="mySelect" class="custom-select selectBtn" v-model="selected">
+                                <select id="mySelect" class="custom-select selectBtn">
+                                 
+                                    <option  v-for="page in pages"  v-if="page == 4" selected v-bind:value="{ val: page.val }">{{ page.val }}
+                                    </option>
                                     <option v-for="page in pages" v-bind:value="{ val: page.val }">{{ page.val }}
                                     </option>
                                 </select>
@@ -609,7 +612,7 @@ export default {
                 this.createNewProductInStore(res.data[0]);
             }).catch((error) => {
                 //try to fix the error or
-                //notify the users about somenthing went wrong
+                document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });;
 
@@ -645,8 +648,8 @@ export default {
                         "price": [
                             {
                                 "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
-                                "gross": this.singlePrice,
-                                "net": this.singlePrice,
+                                "gross": this.price,
+                                "net": this.price,
                                 "linked": false
                             }
 
@@ -667,7 +670,7 @@ export default {
 
             }).catch((error) => {
                 //try to fix the error or
-                //notify the users about somenthing went wrong
+                document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });
         },
@@ -690,7 +693,7 @@ export default {
                 this.add(res.data.elements[0]._uniqueIdentifier)
             }).catch((error) => {
                 //try to fix the error or
-                //notify the users about somenthing went wrong
+                document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });
 
@@ -722,7 +725,7 @@ export default {
                 window.location.reload()
             }).catch((error) => {
                 //try to fix the error or
-                //notify the users about somenthing went wrong
+                document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });
         },
