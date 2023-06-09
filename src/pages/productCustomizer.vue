@@ -89,11 +89,9 @@
                             <div class="col pt-5">
 
                                 <select id="mySelect" class="custom-select selectBtn" v-model="selectedValue">
-                                    <option selected  v-bind:value="4"> 4
+                                    <option selected v-bind:value="4"> 4
                                     </option>
-                                    <option v-for="item in pages"
-                                        v-bind:value="item"
-                                      >{{ item.val }}
+                                    <option v-for="item in pages" v-bind:value="item">{{ item.val }}
                                     </option>
                                 </select>
                             </div>
@@ -518,6 +516,18 @@
                 </div>
             </div>
         </section>
+        <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
+            aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
+            <header>
+               
+                <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
+                    Bitte laden Sie eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen
+                </p>
+                <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
+                    Schließen
+                </SfButton>
+            </header>
+        </SfModal>
     </div>
 </template>
    
@@ -528,15 +538,18 @@ import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { db } from '../firebaseDb';
 import axios from 'axios';
+import { SfModal, SfButton} from "@storefront-ui/vue"
 
 
 export default {
     components: {
-
+        SfModal,
+        SfButton,
     },
     data() {
         return {
             price: 4.29,
+            isOpen: false,
             enveloped: false,
             discount: 1,
             pagesQuantitiy: 4,
@@ -554,7 +567,7 @@ export default {
             pdfData12: null,
             isUpload1: false,
             isUpload2: false,
-            access_token:'',
+            access_token: '',
             uploadValue: 0,
             uploadValue2: 0,
             productName: "Notenbuch Klammerheftung",
@@ -601,22 +614,30 @@ export default {
     mounted() {
         this.calculatePrice();
         this.selectedValue = 4;
-
     },
     methods: {
+        close() {
+            this.isOpen = false
+        },
+        open() {
+            this.isOpen = true;
+        },
         createUuid() {
-            document.getElementById("overlay").style.display = "block";
-            axios({
-                url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
-                method: 'GET',
-            }).then((res) => {
-                this.createNewProductInStore(res.data[0]);
-            }).catch((error) => {
-                //try to fix the error or
-                document.getElementById("overlay").style.display = "none";
-                console.log(error.message)
-            });;
-
+            if (this.pdfData1) {
+                document.getElementById("overlay").style.display = "block";
+                axios({
+                    url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
+                    method: 'GET',
+                }).then((res) => {
+                    this.createNewProductInStore(res.data[0]);
+                }).catch((error) => {
+                    //try to fix the error or
+                    document.getElementById("overlay").style.display = "none";
+                    console.log(error.message)
+                });
+            } else {
+                this.isOpen = true;
+            }
 
         },
         createNewProductInStore(productNumber) {
@@ -646,6 +667,7 @@ export default {
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
                         "keywords": "2212",
+                        "description": this.pdf1 +  ' \n ' + this.pdf2,
                         "price": [
                             {
                                 "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
@@ -719,7 +741,8 @@ export default {
                 }
             }).then((res) => {
                 document.getElementById("overlay").style.display = "none";
-                window.location.reload()
+                debugger
+                window.location.reload();
             }).catch((error) => {
                 //try to fix the error or
                 document.getElementById("overlay").style.display = "none";
@@ -727,7 +750,6 @@ export default {
             });
         },
         setDiscountGroup: function (id) {
-
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
                 const elementToDelete = `discountgroup${i}`
@@ -833,8 +855,7 @@ export default {
                 () => {
                     this.uploadValue = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
-                        this.pdf1 = url;
-                        console.log(this.pdf1);
+                        this.pdf1 = "Notendatei: " + url;
                         this.isUpload1 = false;
                     });
                 }
@@ -851,8 +872,7 @@ export default {
                 () => {
                     this.uploadValue2 = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
-                        this.pdf2 = url;
-                        console.log(this.pdf2);
+                        this.pdf2 = "Umschlagdatei: " + url;
                         this.isUpload2 = false;
                     });
                 }
@@ -874,7 +894,7 @@ export default {
             if (pages == 4) {
                 this.pagesQuantitiy = 4
                 this.calculatePrice();
-            } else{
+            } else {
                 this.pagesQuantitiy = pages.val
                 this.calculatePrice();
             }
@@ -918,6 +938,7 @@ export default {
 .card-img-top {
     border-radius: 0px;
 }
+
 @media only screen and (max-width: 1024px) {
     .card-img-top {
         margin-top: 0%;

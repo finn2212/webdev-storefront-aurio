@@ -65,8 +65,19 @@
         <div>
             <button @click="add('S1z7EsuGS9ulJwRA4ZyJSFDEuDbK2GOV')">API CALL</button>
         </div>
+        <button type="button" @click="open">To Checkout</button>
 
-
+        <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
+            aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
+            <header>
+                <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
+                    close
+                </SfButton>
+                <h3 id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
+                    You might miss out on great deals
+                </h3>
+            </header>
+        </SfModal>
     </div>
 </template>
 <script>
@@ -74,19 +85,25 @@ import { db } from '../firebaseDb';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'firebase/storage';
 import axios from 'axios';
-
-
+import { SfModal, SfButton
+} from "@storefront-ui/vue"
 
 export default {
+    components: {
+     SfModal,
+    SfButton,
+
+  },
     data() {
         return {
+            isOpen: false,
             user: {
             },
             Users: [],
             img1: '',
             imageData: null,
             product: null,
-            productName:"",
+            productName: "",
             quantity: 0,
             price: 0
 
@@ -108,18 +125,24 @@ export default {
 
     },
     methods: {
+        close(){
+            this.isOpen= false
+        },
+        open(){
+            this.isOpen = true;
+        },
         createUuid() {
             axios({
                 url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
                 method: 'GET',
             }).then((res) => {
-               this.createNewProductInStore(res.data[0]); 
+                this.createNewProductInStore(res.data[0]);
             });
 
 
         },
         createNewProductInStore(productNumber) {
-           // const productNumber = 'xxx'
+            // const productNumber = 'xxx'
             axios({
                 url: 'https://26485.s15269.creoline.cloud/api/oauth/token', // File URL Goes Here
                 method: 'POST',
@@ -164,9 +187,9 @@ export default {
                     },
                 })
             }).then((res) => {
-                
-                    setTimeout(() => this.getCreatedProduct(productNumber), 1000);
-                
+
+                setTimeout(() => this.getCreatedProduct(productNumber), 1000);
+
 
             });
         },
@@ -183,7 +206,7 @@ export default {
                     "search": productNumber
                 }
             }).then((res) => {
-                debugger 
+                debugger
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
                 this.add(res.data.elements[0]._uniqueIdentifier)
@@ -213,8 +236,8 @@ export default {
                     ]
                 }
             }).then((res) => {
-                
-               window.location.reload()
+
+                window.location.reload()
             });
         },
         onFormSubmit(event) {

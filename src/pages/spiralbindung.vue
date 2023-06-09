@@ -811,13 +811,12 @@ export default {
     },
     methods: {
         sizeHeights(e) {
-            if (document.getElementById("boxHeight").offsetWidth) {
+            if (document.getElementById("boxHeight")) {
                 let width = document.getElementById("boxHeight").offsetWidth;
                 if (width == 432) {
                     this.dynamicHeight = "margin-top: 390px";
                 } else if (width == 372) {
                     this.dynamicHeight = "margin-top: 297px";
-                    console.log(width)
                 } else if (width == 312) {
                     this.dynamicHeight = "margin-top: 384px";
                     console.log(width)
