@@ -5,17 +5,17 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-2 p-4 pink customBorder">
+                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 pink customBorder">
                         <h1 style="color: white;">
                             Carpe diem!
                         </h1>
-                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-5">
-                        <h2 class="pt-3" style="color: white;">
+                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-1 pt-md-3">
+                        <h2 class="pt-1 pt-md-3" style="color: white;">
                             10% Rabatt
                             6–10 Uhr
                         </h2>
                     </div>
-                    <div class="col customBorder "
+                    <div class="col customBorder" style="min-height: 300px;"
                         v-bind:style="{ 'background-image': 'url(' + require('../assets/images/spiralheader.png') + ')' }">
                         <div class="row align-items-end" style="height: 100%">
                             <div class="col align-self-end">
@@ -33,7 +33,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row pt-4">
-                    <div class="col-4 customBorder blockStart">
+                    <div class="col-12 col-lg-4 customBorder blockStart">
                         <h1>
                             Notenbuch mit Spiralbindung günstig drucken lassen
                         </h1>
@@ -140,7 +140,7 @@
             <div class="container justify-content-center">
                 <div class="row pt-4">
 
-                    <div class="col-4 customBorder blockStart">
+                    <div class="col-12 col-lg-4 customBorder blockStart">
                         <div class="row align-items-start">
                             <h1>
                                 Direkt zu den Topsellern
@@ -152,7 +152,7 @@
                             </p>
 
                         </div>
-                        <div class="row align-items-end" style="margin-top:110%;">
+                        <div class="row align-items-end" v-bind:style="dynamicHeight">
                             <div class="col p-4 grey" style="margin-left: 10px;">
 
 
@@ -170,7 +170,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
+                    <div class="col-12 col-lg-4 customBorder blue" id="boxHeight"
+                        style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
                             <img class="card-img-top" src="@/assets/images/pic7.png" alt="Card image cap">
                         </div>
@@ -220,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px">
+                    <div class="col-12 col-lg-4 customBorder blue" style="padding-left: 0px !important; padding-right: 0px">
                         <div class="row">
                             <img class="card-img-top" src="@/assets/images/pic8.png" alt="Card image cap">
                         </div>
@@ -777,8 +778,6 @@
                 </div>
             </div>
         </section>
-
-
     </div>
 </template>
    
@@ -797,11 +796,37 @@ export default {
         // get the configured api client
         const { apiInstance } = getApplicationContext(root, "home")
     },
-    data: {
-        image: '@/assets/images/Booklet_machine.png'
+    mounted() {
+        window.addEventListener("resize", this.sizeHeights);
+        this.sizeHeights();
+    },
+    unmounted() {
+        window.removeEventListener("resize", this.sizeHeights);
+    },
+    data() {
+        return {
+            image: '@/assets/images/Booklet_machine.png',
+            dynamicHeight: "margin-top: 200px"
+        }
+    },
+    methods: {
+        sizeHeights(e) {
+            if (document.getElementById("boxHeight").offsetWidth) {
+                let width = document.getElementById("boxHeight").offsetWidth;
+                if (width == 432) {
+                    this.dynamicHeight = "margin-top: 390px";
+                } else if (width == 372) {
+                    this.dynamicHeight = "margin-top: 297px";
+                    console.log(width)
+                } else if (width == 312) {
+                    this.dynamicHeight = "margin-top: 384px";
+                    console.log(width)
+                } else if (width == 696) {
+                    this.dynamicHeight = "margin-top: 0px";
+                }
+            }
+        }
     }
-
-
 }
 </script>
    
@@ -810,22 +835,6 @@ export default {
     box-sizing: border-box;
 }
 
-
-@media only screen and (min-width: 1024px) {
-    .imgcard {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .imgcard {
-        float: left;
-        margin-right: 25px;
-        max-height: 300px;
-    }
-}
-
-
 .btn-primary {
     border-color: black;
 }
@@ -833,6 +842,14 @@ export default {
 
 .card-img-top {
     border-radius: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .card-img-top {
+        margin-top: 0%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 

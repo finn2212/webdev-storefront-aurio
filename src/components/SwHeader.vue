@@ -5,43 +5,31 @@
     <SwCookieBar />
 
     <SwTopBar />
-    <div class="container justify-content-between">
-      <div class="row mt-2" >
+    <div class="container justify-content-between menueBigScreen">
+      <div class="row mt-2">
         <div class="col">
           <NuxtLink class="a" to="/">
             <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar">
-              </NuxtLink>
-         
+          </NuxtLink>
+
         </div>
         <div class="col" style="margin-top: 6px;">
           <NuxtLink class="a" to="/klammerheftung">
-                Noten mit Klammerheftung
-              </NuxtLink>
+            Noten mit Klammerheftung
+          </NuxtLink>
         </div>
 
         <div class="col" style="margin-top: 6px;">
           <NuxtLink class="a" to="/spiralbindung">
-                Noten mit Spiralbindung
-              </NuxtLink>
+            Noten mit Spiralbindung
+          </NuxtLink>
         </div>
         <div class="col" style="margin-top: 6px;">
-          <div class="dropdown ">
-            <NuxtLink class="a" to="/klammerheftung">
-                Noten mit Layflatbindung
-              </NuxtLink>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-              <button class="dropdown-item" type="button">Action</button>
-              <button class="dropdown-item" type="button">Another action</button>
-              <button class="dropdown-item" type="button">Something else here</button>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="margin-top: 6px;">
-          <p >
+          <p>
             <NuxtLink class="a" to="/good-to-know">
               Wissenswertes
-              </NuxtLink>
-           
+            </NuxtLink>
+
           </p>
         </div>
         <div class="col-auto">
@@ -85,6 +73,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container justify-content-between menueSmallScreen">
+      <NuxtLink class="a" to="/">
+            <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar">
+          </NuxtLink>
     </div>
   </div>
 </template>
@@ -232,6 +225,18 @@ export default {
     cursor: pointer;
   }
 }
+@media only screen and (max-width: 1023px) {
+  .menueBigScreen {
+   display: none;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .menueSmallScreen {
+   display: none;
+  }
+}
+
+
 
 .sw-header__icons {
   display: flex;
@@ -271,5 +276,6 @@ export default {
   position: absolute;
   bottom: 55%;
   left: 50%;
-}</style>
+}
+</style>
   

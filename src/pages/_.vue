@@ -4,27 +4,25 @@
     <section>
       <div class="container justify-content-center">
         <div class="row">
-          <div class="col-12 p-0 col-md-8 customBorder">
+          <div class="col-12 col-lg-8 p-0 customBorder">
             <img src="@/assets/images/pic1.png" alt="Avatar" class="img">
           </div>
           <div class="col green p-5 customBorder">
             <h2 class="heading-grid">
               <i18n path="your score printed" :tag="false">
-          </i18n>
+              </i18n>
             </h2>
             <p class="p-grid">
-              Jetzt neu:
-              Mit deiner capella-Software bist es gewöhnt, Partituren in bester Notensatzmanier erstellen zu können; mit
-              capellaprint lässt du diese künftig auch in Musikverlagsqualität drucken.
+              <i18n path="now new" :tag="false"> </i18n>
             </p>
             <div class="row align-items-end">
               <div class="col">
                 <NuxtLink class="a" to="/productCustomizer">
                   <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                    <i18n path="start now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
-
               </div>
             </div>
           </div>
@@ -36,9 +34,9 @@
     <section class="pt-5">
       <div class="container justify-content-center">
         <div class="row">
-          <div class="col">
+          <div class="col blockStart">
             <h2>
-              Deine capella-Noten günstig drucken
+              <i18n path="heading your capella" :tag="false"> </i18n>
             </h2>
           </div>
         </div>
@@ -55,7 +53,8 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
+                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
           </div>
@@ -70,7 +69,8 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
+                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
           </div>
@@ -85,7 +85,8 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
+                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
           </div>
@@ -104,7 +105,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-8">
+          <div class="col-12 col-lg-8">
             <div class="row justify-content-center">
               <div class="col customBorder p-5  yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar">
@@ -276,7 +277,8 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">starte jetzt
+                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
           </div>
@@ -288,7 +290,7 @@
     <section class="pt-5">
       <div class="container justify-content-center">
         <div class="row justify-content-center pt-5">
-          <div class="col-8">
+          <div class="col-12 col-xl-8 ">
             <h2 class="heading-grid">
               »Ein attraktiver Service für Musiker«
             </h2>
@@ -300,7 +302,7 @@
           </div>
         </div>
         <div class="row justify-content-center mt-4">
-          <div class="col-8">
+          <div class="col-12 col-lg-8 ">
             <div class="row justify-content-center">
               <div class="col customBorder p-5 yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar">
@@ -457,7 +459,7 @@
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col cardcol customBorder">
+          <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic4.png" alt="Card image cap">
               <div class="card-body blue" style="min-height: 290px;">
@@ -495,14 +497,14 @@
                 </div>
                 <NuxtLink class="a pt-3" to="/productCustomizer">
                   <button type="button" class="btn btn-dark" style="margin-top: 40px;">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                    Drucken
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                    <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
               </div>
             </div>
           </div>
-          <div class="col cardcol customBorder">
+          <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
               <div class="card-body blue" style="min-height: 290px;">
@@ -541,14 +543,14 @@
                 </div>
                 <NuxtLink class="a" to="/productCustomizer">
                   <button type="button" class="btn btn-dark mt-3">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                    Drucken
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                    <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
               </div>
             </div>
           </div>
-          <div class="col cardcol customBorder">
+          <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic6.png" alt="Card image cap">
               <div class="card-body pink " style="min-height: 290px;">
@@ -587,8 +589,8 @@
                 </div>
                 <NuxtLink class="a" to="/productCustomizer">
                   <button type="button" class="btn btn-dark mt-3">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                    Drucken
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                    <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
               </div>
@@ -754,6 +756,13 @@ export default {
 
 .card-img-top {
   border-radius: 0px;
+}
+@media only screen and (max-width: 1024px) {
+    .card-img-top {
+        margin-top: 0%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 .card {

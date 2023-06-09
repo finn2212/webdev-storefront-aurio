@@ -554,6 +554,7 @@ export default {
             pdfData12: null,
             isUpload1: false,
             isUpload2: false,
+            access_token:'',
             uploadValue: 0,
             uploadValue2: 0,
             productName: "Notenbuch Klammerheftung",
@@ -600,13 +601,11 @@ export default {
     mounted() {
         this.calculatePrice();
         this.selectedValue = 4;
-        debugger
 
     },
     methods: {
         createUuid() {
             document.getElementById("overlay").style.display = "block";
-            debugger
             axios({
                 url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
                 method: 'GET',
@@ -666,10 +665,7 @@ export default {
                     },
                 })
             }).then((res) => {
-
-                setTimeout(() => this.getCreatedProduct(productNumber), 1000);
-
-
+                setTimeout(() => this.getCreatedProduct(productNumber), 50);
             }).catch((error) => {
                 //try to fix the error or
                 document.getElementById("overlay").style.display = "none";
@@ -689,7 +685,6 @@ export default {
                     "search": productNumber
                 }
             }).then((res) => {
-                debugger
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
                 this.add(res.data.elements[0]._uniqueIdentifier)
@@ -922,6 +917,13 @@ export default {
 
 .card-img-top {
     border-radius: 0px;
+}
+@media only screen and (max-width: 1024px) {
+    .card-img-top {
+        margin-top: 0%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 

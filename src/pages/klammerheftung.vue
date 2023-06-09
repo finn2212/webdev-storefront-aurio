@@ -5,18 +5,18 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-2 p-4 darkblue customBorder">
+                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 darkblue customBorder">
                         <h1 style="color: white;">
                             Nacht-
                             eule?
                         </h1>
-                        <img src="@/assets/svg/auto_awesome.svg" alt="Avatar" class="pt-5">
+                        <img src="@/assets/svg/auto_awesome.svg" alt="Avatar" class="pt-1 pt-md-5">
                         <h2 style="color: white;">
                             10% Rabatt
                             19–24 Uhr
                         </h2>
                     </div>
-                    <div class="col customBorder "
+                    <div class="col customBorder" style="min-height: 300px;"
                         v-bind:style="{ 'background-image': 'url(' + require('../assets/images/Booklet_machine.png') + ')' }">
                         <div class="row align-items-end" style="height: 100%">
                             <div class="col align-self-end">
@@ -402,8 +402,6 @@ export default {
     },
     data: {
         image: '@/assets/images/Booklet_machine.png'
-
-
     }
 
 
@@ -437,6 +435,13 @@ export default {
 
 .card-img-top {
     border-radius: 0px;
+}
+@media only screen and (max-width: 1024px) {
+    .card-img-top {
+        margin-top: 0%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 

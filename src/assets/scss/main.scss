@@ -1,10 +1,11 @@
 // we're importing here main style variables from theme
 @import "@theme/assets/scss/main";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,100;1,100&display=swap');
 html,
 body {
   font-family: 'Noto Sans', sans-serif !important;
+  color: #000000 !important;
 }
 
 #app {
@@ -24,11 +25,20 @@ h4,
 h5,
 h6 {
   font-family: 'Noto Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+.thick {
+  font-weight: 700;
 }
 
 .img {
   width: 100%;
   height: 100%;
+}
+
+.btnfooter{
+  background-color: #F5F5F5;
+  border: 0px;
 }
 
 .customBorder {
