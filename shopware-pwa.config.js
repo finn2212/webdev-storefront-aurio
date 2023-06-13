@@ -5,5 +5,5 @@ module.exports = {
      // optional, allow to override the default settings
      timeout: 5000, // timeout limit in ms
    },
-   defaultLanguageCode: "en-GB",
+   defaultLanguageCode: "de-DE",
  };
