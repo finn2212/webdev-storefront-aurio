@@ -71,6 +71,7 @@
         <!--Prouct Cusomizer Sections-->
         <section class="pt-5">
             <div class="container justify-content-center">
+
                 <div class="row">
                     <h1 class="blockStartMarign">
                         Konfiguriere dein Notenheft
@@ -78,12 +79,92 @@
                     <div class="col-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
                             <div class="col-7">
-                                <h1>1. Wähle die Seitenanzahl</h1>
+                                <h2 class="blockStartMarign">
+                                    1. Projekttitel
+                                </h2>
+                                <p>Bitte vergib hier einen eindeutigen Projekttitel.</p>
+                            </div>
+                            <div class="col">
+                                <input style="margin-top: 40px;" type="string" v-model="productName">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <h2>2. Ausrichtung des Hefts</h2>
+                                <p>Bitte gib zuerst an, ob die Partituren, die du drucken lassen möchtest, im Hoch– oder im
+                                    Querformat angelegt sind.
+                                </p>
+                                <p>
+                                    Bitte beachte, dass Du innerhalb eines Projekts die Ausrichtungen nicht mischen kannst.
+                                </p>
+                            </div>
+                            <div class="col-3 pt-5">
+                                <p>Notenheft Hochformat</p>
+                                <p>Notenheft Querformat</p>
+                            </div>
+                            <div class="col pt-5">
+                                <p><input type="radio" id="one" value="true" v-model="format" /></p>
+                                <p><input type="radio" id="two" value="false" v-model="format" /></p>
+                            </div>
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>3. Farbigkeit des Inhalts</h2>
+                                <p>Bitte wähle das Format aus, das deine Noten haben. Du kannst zwischen gebräuchlichen
+                                    musikalientypischen Papierformaten wählen.
+                                </p>
+                                <p>
+                                    Bitte beachte: Wenn Du unterschiedliche Formate innerhalb eines Projekts hast (bspw.
+                                    Partitur in DIN A3 und Stimmen in DIN A4), lege bitte für jedes Format ein neues Projekt
+                                    an.
+                                </p>
+                            </div>
+                            <div class="col-3 pt-5">
+                                <p>Nur Schwarzweiß</p>
+                                <p>Farbseiten im Inhalt</p>
+                            </div>
+                            <div class="col pt-5">
+                                <p><input type="radio" id="one" value="false" v-model="color" /></p>
+                                <p><input type="radio" id="two" value="true" v-model="color" /></p>
+                            </div>
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>4. Papierformat</h2>
+                                <p>Bitte wähle das Format aus, das deine Noten haben. Du kannst zwischen gebräuchlichen
+                                    musikalientypischen Papierformaten wählen.
+
+                                </p>
+                                <p>
+                                    Bitte beachte: Wenn Du unterschiedliche Formate innerhalb eines Projekts hast (bspw.
+                                    Partitur in DIN A3 und Stimmen in DIN A4), lege bitte für jedes Format ein neues Projekt
+                                    an.
+
+                                </p>
+                            </div>
+                            <div class="col-3 pt-5">
+                                <p>DIN A4 (21 x 29,7 cm)</p>
+                                <p>Klavierauszug (19 x 27 cm)</p>
+                                <p>Concert (22,8 x 30,5 cm)</p>
+                                <p>DIN B4 (25 x 35,3 cm)</p>
+                                <p>DIN A3 (29,7 x 42 cm)</p>
+                                <p>Farbseiten im Inhalt</p>
+                            </div>
+                            <div class="col pt-5">
+                                <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
+                                <p><input type="radio" id="two" value="2" v-model="paperFormat" /></p>
+                                <p><input type="radio" id="one" value="3" v-model="paperFormat" /></p>
+                                <p><input type="radio" id="two" value="4" v-model="paperFormat" /></p>
+                                <p><input type="radio" id="one" value="5" v-model="paperFormat" /></p>
+                                <p><input type="radio" id="two" value="6" v-model="paperFormat" /></p>
+                            </div>
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>5. Wähle die Seitenanzahl</h2>
                                 <p>Bitte gib die Gesamtseitenanzahl deiner Datei an.
                                     Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
                                     Du kannst zwischen 4 und 88 Seiten Umfang wählen.</p>
                             </div>
-                            <div class="col pt-5">
+                            <div class="col-3 pt-5">
                                 <p>Seitenanzahl Inhalt:</p>
                             </div>
                             <div class="col pt-5">
@@ -97,7 +178,7 @@
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h1>2. Wähle den Umschlag</h1>
+                                <h2>6. Wähle den Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 240g/m2 gibt Farben brillant wieder und besitzt ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
                                     hervorragend bedrucken und bricht auch bei starker Beanspruchung nicht auf.</p>
@@ -112,7 +193,7 @@
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-6">
-                                <h1>3. Lade deine Noten hoch</h1>
+                                <h2>7. Lade deine Noten hoch</h2>
                                 <p>Hier lädst du nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Deine Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns bei dir per E-Mail, falls etwas nicht
@@ -155,7 +236,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row mt-5">
                                     <div class="col">
                                         <p>Noten-PDF / Inhalt:</p>
@@ -195,21 +275,132 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <h2>9. Instrumentalstimmen</h2>
+                                <p>Wenn dein Projekt Instrumentalstimmen enthält, kannst du diese hier konfigurieren.
+                                </p>
+                                <p>
+                                    Bitte gib an, wie viele Seiten die Stimmeneinleger haben.
+                                    Wähle bitte zusätzlich aus, wie viele Exemplare du von jeder Stimme pro Set (also pro
+                                    Heft!) haben möchtest (bspw. Orchestermusik: 8 Erste Violinen)
+                                </p>
+                                <p>
+                                    Bitte beachte, dass wir Instrumentalstimmen, die später in ein Heft eingelegt werden, am
+                                    rechten Rand 3–5 mm kleiner schnneiden, damit diese nicht überstehen.</p>
+                            </div>
+                            <div class="w-100 pt-2"></div>
+                            <div class="col-6">
+                                <p class="blockStartMarign">
+                                    Instrumentalstimme:
+                                </p>
+                                <input type="string" v-model="voiceName">
+                            </div>
+                            <div class="col">
+                                <p>Seitenanzahl Inhalt:</p>
+                                <p>Exemplare pro Set:</p>
+                                <p class="pt-2">Noten-PDF / Inhalt:</p>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    <select id="mySelect" class="custom-select selectBtn" v-model="voicePages">
+                                        <option selected v-bind:value="4"> 4
+                                        </option>
+                                        <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                        </option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <select id="mySelect" class="custom-select selectBtn" v-model="voiceQuantity">
+                                        <option selected v-bind:value="4"> 4
+                                        </option>
+                                        <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                        </option>
+                                    </select>
+                                </p>
+                                <p>
+                                <div v-if="pdfData3 == null" class="row">
+                                    <div class="" v-if="pdfData3 == null">
+                                        <button class="btn btn uploadBtn" @click="voiceUpload"> <img
+                                                src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                style="margin-right: 5px;">Wähle
+                                            Noten
+                                        </button>
+                                        <input type="file" ref="input3" style="display: none" @change="previewImage3"
+                                            accept="application/pdf">
+                                    </div>
+                                </div>
+                                <div v-if="pdfData3 != null && isUpload3 == false" class="row">
+                                    <div class="col">
+                                        {{ pdfData3.name }}
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn uploadBtn" @click="deletePdf3" style="margin-left:5px">
+                                            <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                style="transform: rotate(45deg);">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div v-if="isUpload3 == true" class="row mt-3">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar"
+                                            :style="{ width: uploadValue3 + '%' }" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn uploadBtn" @click="addVoice()"> <img src="@/assets/svg/plusBlack.svg"
+                                        alt="Avatar" style="margin-right: 5px;">Stimme
+                                    Hinzufügen
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row pt-3" v-for="(voice, index) in voices">
+                            <div class="col-2">
+                                <p class="blockStartMarign">
+                                    Stimme:
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <p class="blockStartMarign">
+                                    {{ voice.name }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>Seitenanzahl Inhalt:</p>
+                                <p>Exemplare pro Set:</p>
+                                <p class="pt-2">Noten-PDF / Inhalt:</p>
+                            </div>
+                            <div class="col">
+                                <p>{{ voice.pages }}</p>
+                                <p>{{ voice.quantity }}</p>
+                                <p>{{ voice.uploadName }}</p>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn uploadBtn" @click="removeVoice(index)"> <img
+                                            src="@/assets/svg/plusBlack.svg" alt="Avatar" style="margin-right: 5px;">Stimme
+                                        entfernen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-4 customBorder  pl-5  p-4 green">
                         <div class="row">
                             <div class="col">
                                 <p>Dein Preis pro Stück:</p>
-                                <h1>€ {{ price.toFixed(2) }}</h1>
+                                <h2>€ {{ price.toFixed(2) }}</h2>
                                 <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
-
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col">
                                 <p>Deine Auflage:</p>
-
                                 <div class="input-group plus-minus-input">
                                     <div class="input-group-button">
                                         <button @click="count(false)" type="button" class="button noborder green"
@@ -229,7 +420,7 @@
                             </div>
                             <div class="col">
                                 <p>Produktionsdauer:</p>
-                                <h1>1–3 Tage</h1>
+                                <h2>1–3 Tage</h2>
                                 <p style="font-size: x-small;">zzgl. Postlaufzeit</p>
                             </div>
                         </div>
@@ -265,7 +456,6 @@
                 </div>
             </div>
         </section>
-
         <!--Sektion mit 3 Karten und Bider-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -386,10 +576,10 @@
 
                     <div class="col-4 customBorder blockStart">
                         <div class="row align-items-start">
-                            <h1>
+                            <h2>
                                 Direkt zu den Topsellern
 
-                            </h1>
+                            </h2>
                             <p>
                                 Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
                                 her.
@@ -459,7 +649,6 @@
                                             Drucken
                                         </button>
                                     </NuxtLink>
-
                                 </div>
                             </div>
                         </div>
@@ -519,7 +708,7 @@
         <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
             aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
             <header>
-               
+
                 <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
                     Bitte laden Sie eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen
                 </p>
@@ -538,7 +727,7 @@ import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { db } from '../firebaseDb';
 import axios from 'axios';
-import { SfModal, SfButton} from "@storefront-ui/vue"
+import { SfModal, SfButton } from "@storefront-ui/vue"
 
 
 export default {
@@ -554,6 +743,9 @@ export default {
             discount: 1,
             pagesQuantitiy: 4,
             selectedValue: 4,
+            voiceName: "",
+            voicePages: 4,
+            voiceQuantity: 4,
             basePrice: 3.85,
             singlePrice: 4.29,
             pagePrice: 0.11,
@@ -562,15 +754,23 @@ export default {
             pdf2: '',
             pdfData1: null,
             pdfData2: null,
+            pdfData3: null,
             progress1: null,
-            pdfData1: null,
-            pdfData12: null,
             isUpload1: false,
             isUpload2: false,
+            isUpload3: false,
             access_token: '',
             uploadValue: 0,
             uploadValue2: 0,
-            productName: "Notenbuch Klammerheftung",
+            uploadValue3: 0,
+            productName: "",
+            format: true,
+            paperFormat: 1,
+            color: false,
+            voicePrice: 0,
+            voices: [
+
+            ],
             pages: [
                 { val: 8 },
                 { val: 12 },
@@ -667,7 +867,7 @@ export default {
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
                         "keywords": "2212",
-                        "description": this.pdf1 +  ' \n ' + this.pdf2,
+                        "description": this.pdf1 + ' \n ' + this.pdf2,
                         "price": [
                             {
                                 "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
@@ -825,11 +1025,18 @@ export default {
             db.storage().ref(`uploads/${this.pdfData2.name}`).delete();
             this.pdfData2 = null;
         },
+        deletePdf3: function () {
+            db.storage().ref(`uploads/${this.pdfData3.name}`).delete();
+            this.pdfData3 = null;
+        },
         click1() {
             this.$refs.input1.click()
         },
         click2() {
             this.$refs.input2.click()
+        },
+        voiceUpload() {
+            this.$refs.input3.click()
         },
         previewImage(event) {
             this.pdfData1 = 0;
@@ -842,6 +1049,12 @@ export default {
             this.pdf2 = null;
             this.pdfData2 = event.target.files[0];
             this.onUpload2()
+        },
+        previewImage3(event) {
+            this.pdfData3 = 0;
+            this.pdf3 = null;
+            this.pdfData3 = event.target.files[0];
+            this.onUpload3()
         },
 
         onUpload() {
@@ -878,6 +1091,57 @@ export default {
                 }
             );
         },
+        onUpload3() {
+            this.pdf3 = null;
+            this.isUpload3 = true;
+            const storageRef = db.storage().ref(`uploads/${this.pdfData3.name}`).put(this.pdfData3);
+            storageRef.on(`state_changed`, snapshot => {
+                this.uploadValue3 = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log("uploadvalue3:" + this.uploadValue3);
+            }, error => { console.log(error.message) },
+                () => {
+                    this.uploadValue3 = 100;
+                    storageRef.snapshot.ref.getDownloadURL().then((url) => {
+                        this.pdf3 = "Umschlagdatei: " + url;
+                        this.isUpload3 = false;
+                    });
+                }
+            );
+        },
+        addVoice() {
+            if (this.pdfData3 != null && this.voiceName != "") {
+                let _pages = 0,
+                    _quantity = 0;
+                if (this.voicePages == 4) {
+                    _pages = 4
+                } else {
+                    _pages = this.voicePages.val
+                }
+                if (this.voiceQuantity == 4) {
+                    _quantity = 4
+                } else {
+                    _quantity = this.voiceQuantity.val
+                }
+                this.voices.push(
+                    {
+                        name: this.voiceName,
+                        pages: _pages,
+                        quantity: _quantity,
+                        uploadName: this.pdfData3.name
+                    }
+                )
+                this.voiceName = "";
+                this.voicePages = 4;
+                this.voiceQuantity = 4;
+                this.pdfData3 = null;
+            } else {
+                this.isOpen = true;
+            }
+
+        },
+        removeVoice(n) {
+            this.voices.splice(n, 1);
+        }
     },
     watch: {
         enveloped: function (val) {
