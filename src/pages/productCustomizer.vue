@@ -380,7 +380,10 @@
                                 <p>{{ voice.quantity }}</p>
                                 <p>{{ voice.uploadName }}</p>
                             </div>
-                            <div class="row">
+                            <div class="row justify-content-end">
+                                <div class="col-6">
+
+                                </div>
                                 <div class="col">
                                     <button class="btn btn uploadBtn" @click="removeVoice(index)"> <img
                                             src="@/assets/svg/plusBlack.svg" alt="Avatar" style="margin-right: 5px;">Stimme
