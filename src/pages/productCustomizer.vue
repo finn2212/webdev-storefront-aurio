@@ -170,18 +170,19 @@
                             </div>
                             <div class="col pt-5">
 
-                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedValue">
-                                    <option selected v-bind:value="4"> 4
+                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn" v-model="selectedPagesClip">
+                                    <option  selected v-bind:value="4"> 4
                                     </option>
-                                    <option v-for="item in pages" v-bind:value="item">{{ item.val }}
-                                    </option>
-                                </select>
-                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedValue">
-                                    <option selected v-bind:value="4"> 2
-                                    </option>
-                                    <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                    <option v-for="item in pages" v-bind:value="item">{{ item }}
                                     </option>
                                 </select>
+                                <select v-if="bindingType == 'false'" id="mySelect" class="custom-select selectBtn" v-model="selectedPagesSpiral">
+                                    <option  selected v-bind:value="2"> 2
+                                    </option>
+                                    <option v-for="item in pages" v-bind:value="item">{{ item }}
+                                    </option>
+                                </select>
+                             
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
@@ -331,7 +332,7 @@
                                     <select id="mySelect" class="custom-select selectBtn" v-model="voicePages">
                                         <option selected v-bind:value="4"> 4
                                         </option>
-                                        <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                        <option v-for="item in pages" v-bind:value="item">{{ item }}
                                         </option>
                                     </select>
                                 </p>
@@ -339,7 +340,7 @@
                                     <select id="mySelect" class="custom-select selectBtn" v-model="voiceQuantity">
                                         <option selected v-bind:value="4"> 4
                                         </option>
-                                        <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                        <option v-for="item in pages" v-bind:value="item">{{ item }}
                                         </option>
                                     </select>
                                 </p>
@@ -697,7 +698,8 @@ export default {
             enveloped: false,
             discount: 1,
             pagesQuantitiy: 4,
-            selectedValue: 4,
+            selectedPagesClip: 4,
+            selectedPagesSpiral: 2,
             voiceName: "",
             voicePages: 4,
             voiceQuantity: 4,
@@ -723,72 +725,72 @@ export default {
             paperFormat: 1,
             color: false,
             voicePrice: 0,
-            bindingType: true,
+            bindingType: "true",
             voices: [
 
             ],
             spiralPages: [
-                { val: 4 },
-                { val: 6 },
-                { val: 8 },
-                { val: 10 },
-                { val: 12 },
-                { val: 14 },
-                { val: 18 },
-                { val: 20 },
-                { val: 22 },
-                { val: 24 },
-                { val: 26 },
-                { val: 28 },
-                { val: 30 },
-                { val: 32 },
-                { val: 34 },
-                { val: 36 },
-                { val: 38 },
-                { val: 40 },
-                { val: 42 },
-                { val: 44 },
-                { val: 48 },
-                { val: 50 },
-                { val: 52 },
-                { val: 54 },
-                { val: 56 },
-                { val: 58 },
-                { val: 60 },
-                { val: 62 },
-                { val: 64 },
-                { val: 68 },
-                { val: 70 },
-                { val: 82 },
-                { val: 84 },
-                { val: 86 },
-                { val: 88 },
-                { val: 90 },
+                4,
+                6,
+                8,
+                 10,
+                 12,
+                 14,
+                 18,
+                 20,
+                 22,
+                 24,
+                 26,
+                 28,
+                 30,
+                 32,
+                 34,
+                 36,
+                 38,
+                 40,
+                 42,
+                 44,
+                 48,
+                 50,
+                 52,
+                 54,
+                 56,
+                 58,
+                 60,
+                 62,
+                 64,
+                 68,
+                 70,
+                 82,
+                 84,
+                 86,
+                 88,
+                 90,
             ],
             clipPages: [
-                { val: 8 },
-                { val: 12 },
-                { val: 14 },
-                { val: 18 },
-                { val: 22 },
-                { val: 24 },
-                { val: 28 },
-                { val: 32 },
-                { val: 36 },
-                { val: 40 },
-                { val: 44 },
-                { val: 48 },
-                { val: 52 },
-                { val: 54 },
-                { val: 58 },
-                { val: 62 },
-                { val: 64 },
-                { val: 68 },
-                { val: 72 },
-                { val: 76 },
-                { val: 80 },
-                { val: 84 },
-                { val: 88 },
+                 8,
+                 12,
+                 14,
+                 18,
+                 22,
+                 24,
+                 28,
+                 32,
+                 36,
+                 40,
+                 44,
+                 48,
+                 52,
+                 54,
+                 58,
+                 62,
+                 64,
+                 68,
+                 72,
+                 76,
+                 80,
+                 84,
+                 88
             ],
             pages: [
 
@@ -810,7 +812,6 @@ export default {
     },
     mounted() {
         this.calculatePrice();
-        this.selectedValue = 4;
         this.pages = this.clipPages;
     },
     methods: {
@@ -959,7 +960,7 @@ export default {
         },
         quantitiyInput: function () {
 
-            this.pagesQuantitiy = pages.val
+            this.pagesQuantitiy = pages
             this.calculatePrice();
         },
         count(isAdd) {
@@ -1112,12 +1113,12 @@ export default {
                 if (this.voicePages == 4) {
                     _pages = 4
                 } else {
-                    _pages = this.voicePages.val
+                    _pages = this.voicePages
                 }
                 if (this.voiceQuantity == 4) {
                     _quantity = 4
                 } else {
-                    _quantity = this.voiceQuantity.val
+                    _quantity = this.voiceQuantity
                 }
                 this.voices.push(
                     {
@@ -1151,16 +1152,23 @@ export default {
 
             }
         },
-        selectedValue: function (pages) {
+        selectedPagesClip: function (pages) {
             if (pages == 4) {
                 this.pagesQuantitiy = 4;
                 this.calculatePrice();
-            } else if (pages == 2) {
-                this.pagesQuantitiy = 2;
+            } 
+            else {
+                this.pagesQuantitiy = pages;
                 this.calculatePrice();
             }
+        },
+        selectedPagesSpiral: function (pages) {
+            if (pages == 2) {
+                this.pagesQuantitiy = 2;
+                this.calculatePrice();
+            } 
             else {
-                this.pagesQuantitiy = pages.val;
+                this.pagesQuantitiy = pages;
                 this.calculatePrice();
             }
         },
@@ -1176,11 +1184,15 @@ export default {
             console.log(val);
             if (val == "true") {
                 this.pages = this.clipPages;
-
+                this.pagesQuantitiy = 4;
+               this.calculatePrice();
             }
-            else {
-                this.pages = this.spiralPages;
-
+            else 
+            {
+             this.pages = this.spiralPages;
+             this.pagesQuantitiy = 2;
+             this.calculatePrice();
+                
             }
         }
     }
