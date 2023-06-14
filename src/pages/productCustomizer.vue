@@ -106,6 +106,7 @@
                             <div class="col pt-5">
                                 <p><input type="radio" id="one" value="true" v-model="format" /></p>
                                 <p><input type="radio" id="two" value="false" v-model="format" /></p>
+
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
@@ -175,10 +176,34 @@
                                     <option v-for="item in pages" v-bind:value="item">{{ item.val }}
                                     </option>
                                 </select>
+                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedValue">
+                                    <option selected v-bind:value="4"> 2
+                                    </option>
+                                    <option v-for="item in pages" v-bind:value="item">{{ item.val }}
+                                    </option>
+                                </select>
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h2>6. Wähle den Umschlag</h2>
+                                <h2>6. Bindeart des Hefts</h2>
+                                <p>Hier hast du die Möglicheit, zwischen den verfügbaren Bindearten zu wählen. </p>
+                                <p>
+                                    Bitte beachte, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
+                                    Querformaten und bei mehr als 88 Seiten Inhalt derzeit nur Spiralbindung verfügbar ist.
+                                </p>
+                            </div>
+                            <div class="col pt-5">
+                                <p v-if="format == 'true'">Klammerheftung</p>
+                                <p>Spiralbindung</p>
+                            </div>
+                            <div class="col pt-5">
+                                <p v-if="format == 'true'"><input type="radio" id="one" value="true"
+                                        v-model="bindingType" /></p>
+                                <p><input type="radio" id="two" value="false" v-model="bindingType" /></p>
+                            </div>
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>7. Wähle den Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 240g/m2 gibt Farben brillant wieder und besitzt ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
                                     hervorragend bedrucken und bricht auch bei starker Beanspruchung nicht auf.</p>
@@ -193,7 +218,7 @@
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-6">
-                                <h2>7. Lade deine Noten hoch</h2>
+                                <h2>8. Lade deine Noten hoch</h2>
                                 <p>Hier lädst du nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Deine Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns bei dir per E-Mail, falls etwas nicht
@@ -393,68 +418,129 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 customBorder  pl-5  p-4 green">
-                        <div class="row">
-                            <div class="col">
-                                <p>Dein Preis pro Stück:</p>
-                                <h2>€ {{ price.toFixed(2) }}</h2>
-                                <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p>Deine Auflage:</p>
-                                <div class="input-group plus-minus-input">
-                                    <div class="input-group-button">
-                                        <button @click="count(false)" type="button" class="button noborder green"
-                                            data-field="quantity">
-                                            <img src="@/assets/svg/remove.svg" alt="Avatar">
-                                        </button>
+                    <div class="col-4 customBorder">
+                        <div class="sticky-top">
+                            <div class="p-4 green">
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Dein Preis pro Stück:</p>
+                                        <h2>€ {{ price.toFixed(2) }}</h2>
+                                        <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
                                     </div>
-                                    <input class="input" max="300" type="number" v-model="quantitiy">
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Deine Auflage:</p>
+                                        <div class="input-group plus-minus-input">
+                                            <div class="input-group-button">
+                                                <button @click="count(false)" type="button" class="button noborder green"
+                                                    data-field="quantity">
+                                                    <img src="@/assets/svg/remove.svg" alt="Avatar">
+                                                </button>
+                                            </div>
+                                            <input class="input" max="300" type="number" v-model="quantitiy">
 
-                                    <div class="input-group-button">
-                                        <button @click="count(true)" type="button" class="button noborder green"
-                                            data-quantity="plus" data-field="quantity">
-                                            <img src="@/assets/svg/add.svg" alt="Avatar">
+                                            <div class="input-group-button">
+                                                <button @click="count(true)" type="button" class="button noborder green"
+                                                    data-quantity="plus" data-field="quantity">
+                                                    <img src="@/assets/svg/add.svg" alt="Avatar">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <p>Produktionsdauer:</p>
+                                        <h2>1–3 Tage</h2>
+                                        <p style="font-size: x-small;">zzgl. Postlaufzeit</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col align-self-center">
+                                        <button @click="createUuid" type="button" class="btn btn-dark mt-3">
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                            In den Warenkorb legen
                                         </button>
                                     </div>
                                 </div>
+                                <div class="row pt-4">
+                                    <table class="table" style="font-size:small ; border-style: hidden !important;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Auflage</th>
+                                                <th scope="col">Preis / Stck.</th>
+                                                <th scope="col">Du sparst:</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
+                                                v-for="discount in discounts" @click="setAmount(discount.amount)">
+                                                <th scope="row">Bis {{ discount.amount }}</th>
+                                                <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
+                                                <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                             </div>
-                            <div class="col">
-                                <p>Produktionsdauer:</p>
-                                <h2>1–3 Tage</h2>
-                                <p style="font-size: x-small;">zzgl. Postlaufzeit</p>
+                            <div class="p-4 blue mt-3">
+                                <h2 class="heading-grid">
+                                    <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
+                                    Deine Vorteile
+                                </h2>
+                                <div class="row mt-5">
+                                    <div class="col-2">
+                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                                    </div>
+                                    <div class="col">
+                                        <h5 style="font-weight: bold">Erstklassiger Notendruck</h5>
+                                        Mit elfenbeinfarbigem Notenpapier, einer praktikablen und langlebigen Bindung und
+                                        einer
+                                        gestochen scharfen
+                                        Druckqualität erhältst du eine rundum professionelle Partitur.
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-2">
+                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                                    </div>
+                                    <div class="col">
+                                        <h5 style="font-weight: bold"> Musikalientypische Papierformate</h5>
+
+                                        Musikalientypische Formate vom Klavierauszug (19 x 27 cm), DIN A4, Concertformat /
+                                        NE
+                                        (22,8 x 30,5 cm) und
+                                        darüber hinaus sind unser tägliches Geschäft.
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-2">
+                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                                    </div>
+                                    <div class="col">
+                                        <h5 style="font-weight: bold">Versandfertig in kürzester Zeit</h5>
+
+                                        Wir versenden prestissimo: Die meisten unserer Notenausgaben verlassen innerhalb von
+                                        48
+                                        bis 72 Stunden
+                                        nach
+                                        Bestellung unser Haus.
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-2">
+                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                                    </div>
+                                    <div class="col">
+                                        <h5 style="font-weight: bold">Günstige Druckpreise</h5>
+
+                                        Mit deiner capella-Software erhältst du hohe Qualität zum kleinen Preis.
+                                        Diese Maxime gilt auch hier: Bei uns kannst du dein Notenheft günstig drucken – in
+                                        Topqualität.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col align-self-center">
-                                <button @click="createUuid" type="button" class="btn btn-dark mt-3">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                    In den Warenkorb legen
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <table class="table" style="font-size:small ; border-style: hidden !important;">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Auflage</th>
-                                        <th scope="col">Preis / Stck.</th>
-                                        <th scope="col">Du sparst:</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
-                                        v-for="discount in discounts" @click="setAmount(discount.amount)">
-                                        <th scope="row">Bis {{ discount.amount }}</th>
-                                        <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
-                                        <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                     </div>
                 </div>
             </div>
@@ -573,141 +659,7 @@
             </div>
         </section>
         <!--TSektion Schrift mit 2 Karten-->
-        <section>
-            <div class="container justify-content-center">
-                <div class="row pt-4">
 
-                    <div class="col-4 customBorder blockStart">
-                        <div class="row align-items-start">
-                            <h2>
-                                Direkt zu den Topsellern
-
-                            </h2>
-                            <p>
-                                Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
-                                her.
-                            </p>
-
-                        </div>
-                        <div class="row align-items-end grey p-4" style="margin-top:110%;">
-                            <p>Weniger als 88 Seiten Inhalt? Günstigere Preise gesucht? Instrumentalstimmen?</p>
-                            <div class="col-8">
-                                <h3>
-                                    Zu den
-                                    Notenheften mit Klammerheftung
-                                </h3>
-
-                            </div>
-                            <div class="col mb-2 align-self-end">
-                                <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
-                        <div class="row">
-                            <img class="card-img-top" src="@/assets/images/pic7.png" alt="Card image cap">
-                        </div>
-                        <div class="row p-4">
-                            <h2>Notenbuch DIN A4
-                                Spiralbindung hoch</h2>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-                                        2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-                                        Deckblatt zusätzlich mit transparenter Folie möglich
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-
-                                        Inhalt: 90g Notenpapier elfenbeinfarben, schwarzweiß bedruckbar
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-8 mt-1">
-                                    <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
-                                        </button>
-                                    </NuxtLink>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px">
-                        <div class="row">
-                            <img class="card-img-top" src="@/assets/images/pic8.png" alt="Card image cap">
-                        </div>
-                        <div class="row p-4">
-                            <h2>Notenbuch DIN A4
-                                Spiralbindung quer</h2>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-                                        Perfekt für Orgelnoten geeignet
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-                                        Langlebige und praktikable Qualität der Bindung, geräuscharm umzublättern
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                </div>
-                                <div class="col">
-                                    <p class="">
-                                        Noch ein weiteres zweizeiliges tolles Alleinstellungsmerkmal
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-8 mt-4">
-                                    <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
-                                        </button>
-                                    </NuxtLink>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
             aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
             <header>
@@ -767,14 +719,53 @@ export default {
             uploadValue2: 0,
             uploadValue3: 0,
             productName: "",
-            format: true,
+            format: 'true',
             paperFormat: 1,
             color: false,
             voicePrice: 0,
+            bindingType: true,
             voices: [
 
             ],
-            pages: [
+            spiralPages: [
+                { val: 4 },
+                { val: 6 },
+                { val: 8 },
+                { val: 10 },
+                { val: 12 },
+                { val: 14 },
+                { val: 18 },
+                { val: 20 },
+                { val: 22 },
+                { val: 24 },
+                { val: 26 },
+                { val: 28 },
+                { val: 30 },
+                { val: 32 },
+                { val: 34 },
+                { val: 36 },
+                { val: 38 },
+                { val: 40 },
+                { val: 42 },
+                { val: 44 },
+                { val: 48 },
+                { val: 50 },
+                { val: 52 },
+                { val: 54 },
+                { val: 56 },
+                { val: 58 },
+                { val: 60 },
+                { val: 62 },
+                { val: 64 },
+                { val: 68 },
+                { val: 70 },
+                { val: 82 },
+                { val: 84 },
+                { val: 86 },
+                { val: 88 },
+                { val: 90 },
+            ],
+            clipPages: [
                 { val: 8 },
                 { val: 12 },
                 { val: 14 },
@@ -799,6 +790,9 @@ export default {
                 { val: 84 },
                 { val: 88 },
             ],
+            pages: [
+
+            ],
             discounts: [
                 { id: 1, discount: 0, amount: 1 },
                 { id: 2, discount: 0.45, amount: 2 },
@@ -817,6 +811,7 @@ export default {
     mounted() {
         this.calculatePrice();
         this.selectedValue = 4;
+        this.pages = this.clipPages;
     },
     methods: {
         close() {
@@ -944,7 +939,6 @@ export default {
                 }
             }).then((res) => {
                 document.getElementById("overlay").style.display = "none";
-                debugger
                 window.location.reload();
             }).catch((error) => {
                 //try to fix the error or
@@ -1159,16 +1153,36 @@ export default {
         },
         selectedValue: function (pages) {
             if (pages == 4) {
-                this.pagesQuantitiy = 4
+                this.pagesQuantitiy = 4;
                 this.calculatePrice();
-            } else {
-                this.pagesQuantitiy = pages.val
+            } else if (pages == 2) {
+                this.pagesQuantitiy = 2;
+                this.calculatePrice();
+            }
+            else {
+                this.pagesQuantitiy = pages.val;
                 this.calculatePrice();
             }
         },
         quantitiy: function () {
             this.calculatePrice();
         },
+        format: function (val) {
+            if (val == "false") {
+                this.bindingType = false;
+            }
+        },
+        bindingType: function (val) {
+            console.log(val);
+            if (val == "true") {
+                this.pages = this.clipPages;
+
+            }
+            else {
+                this.pages = this.spiralPages;
+
+            }
+        }
     }
 }
 </script>
