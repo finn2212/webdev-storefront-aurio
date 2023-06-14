@@ -170,19 +170,21 @@
                             </div>
                             <div class="col pt-5">
 
-                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn" v-model="selectedPagesClip">
-                                    <option  selected v-bind:value="4"> 4
+                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn"
+                                    v-model="selectedPagesClip">
+                                    <option selected v-bind:value="4"> 4
                                     </option>
                                     <option v-for="item in pages" v-bind:value="item">{{ item }}
                                     </option>
                                 </select>
-                                <select v-if="bindingType == 'false'" id="mySelect" class="custom-select selectBtn" v-model="selectedPagesSpiral">
-                                    <option  selected v-bind:value="2"> 2
+                                <select v-if="bindingType == 'false'" id="mySelect" class="custom-select selectBtn"
+                                    v-model="selectedPagesSpiral">
+                                    <option selected v-bind:value="2"> 2
                                     </option>
                                     <option v-for="item in pages" v-bind:value="item">{{ item }}
                                     </option>
                                 </select>
-                             
+
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
@@ -385,40 +387,38 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row pt-3" v-for="(voice, index) in voices">
-                            <div class="col-2">
-                                <p class="blockStartMarign">
-                                    Stimme:
-                                </p>
-                            </div>
-                            <div class="col-4">
-                                <p class="blockStartMarign">
-                                    {{ voice.name }}
-                                </p>
-                            </div>
-                            <div class="col">
-                                <p>Seitenanzahl Inhalt:</p>
-                                <p>Exemplare pro Set:</p>
-                                <p class="pt-2">Noten-PDF / Inhalt:</p>
-                            </div>
-                            <div class="col">
-                                <p>{{ voice.pages }}</p>
-                                <p>{{ voice.quantity }}</p>
-                                <p>{{ voice.uploadName }}</p>
-                            </div>
-                            <div class="row justify-content-end">
-                                <div class="col-6">
-
-                                </div>
-                                <div class="col">
-                                    <button class="btn btn uploadBtn" @click="removeVoice(index)"> <img
-                                            src="@/assets/svg/plusBlack.svg" alt="Avatar" style="margin-right: 5px;">Stimme
-                                        entfernen
-                                    </button>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-12 pt-4 ">
+                                <h3 class="ps-2">Hinzugefügte Stimmen:</h3>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Stimmenname:</th>
+                                            <th>Seitenanzahl Inhalt:</th>
+                                            <th>Exemplare pro Set:</th>
+                                            <th>Datei Name:</th>
+                                            <th>Aktion:</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(voice, index) in voices">
+                                            <td>{{  voice.name  }}</td>
+                                            <td>{{ voice.pages }}</td>
+                                            <td>{{ voice.quantity }}</td>
+                                            <td>{{ voice.uploadName }}</td>
+                                            <td>
+                                                <button @click.prevent="removeVoice(index)"
+                                                    class="btn" style="background-color: transparent; padding: 0; margin: 0"><img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                style="transform: rotate(45deg);"></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                      
                     </div>
+                  
                     <div class="col-4 customBorder">
                         <div class="sticky-top">
                             <div class="p-4 green">
@@ -484,63 +484,7 @@
                                 </div>
                                 <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                             </div>
-                            <div class="p-4 blue mt-3">
-                                <h2 class="heading-grid">
-                                    <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
-                                    Deine Vorteile
-                                </h2>
-                                <div class="row mt-5">
-                                    <div class="col-2">
-                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                    </div>
-                                    <div class="col">
-                                        <h5 style="font-weight: bold">Erstklassiger Notendruck</h5>
-                                        Mit elfenbeinfarbigem Notenpapier, einer praktikablen und langlebigen Bindung und
-                                        einer
-                                        gestochen scharfen
-                                        Druckqualität erhältst du eine rundum professionelle Partitur.
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-2">
-                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                    </div>
-                                    <div class="col">
-                                        <h5 style="font-weight: bold"> Musikalientypische Papierformate</h5>
 
-                                        Musikalientypische Formate vom Klavierauszug (19 x 27 cm), DIN A4, Concertformat /
-                                        NE
-                                        (22,8 x 30,5 cm) und
-                                        darüber hinaus sind unser tägliches Geschäft.
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-2">
-                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                    </div>
-                                    <div class="col">
-                                        <h5 style="font-weight: bold">Versandfertig in kürzester Zeit</h5>
-
-                                        Wir versenden prestissimo: Die meisten unserer Notenausgaben verlassen innerhalb von
-                                        48
-                                        bis 72 Stunden
-                                        nach
-                                        Bestellung unser Haus.
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-2">
-                                        <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                                    </div>
-                                    <div class="col">
-                                        <h5 style="font-weight: bold">Günstige Druckpreise</h5>
-
-                                        Mit deiner capella-Software erhältst du hohe Qualität zum kleinen Preis.
-                                        Diese Maxime gilt auch hier: Bei uns kannst du dein Notenheft günstig drucken – in
-                                        Topqualität.
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -730,100 +674,97 @@ export default {
 
             ],
             spiralPages: [
-                4,
-                6,
-                8,
-                 10,
-                 12,
-                 14,
-                 18,
-                 20,
-                 22,
-                 24,
-                 26,
-                 28,
-                 30,
-                 32,
-                 34,
-                 36,
-                 38,
-                 40,
-                 42,
-                 44,
-                 48,
-                 50,
-                 52,
-                 54,
-                 56,
-                 58,
-                 60,
-                 62,
-                 64,
-                 68,
-                 70,
-                 82,
-                 84,
-                 86,
-                 88,
-                 90,
-                 92,
-                 94,
-                 98,
-                 100,
-                 102,
-                 104,
-                 106,
-                 108,
-                 120,
-                 122,
-                 124,
-                 126,
-                 128,
-                 130,
-                 120,
-                 122,
-                 124,
-                 126,
-                 128,
-                 130,
-                 132,
-                 134,
-                 136,
-                 138,
-                 140,
-                 142,
-                 144,
-                 146,
-                 148,
-                 150,
+                4, 6, 8, 10,
+                12,
+                14,
+                18,
+                20,
+                22,
+                24,
+                26,
+                28,
+                30,
+                32,
+                34,
+                36,
+                38,
+                40,
+                42,
+                44,
+                48,
+                50,
+                52,
+                54,
+                56,
+                58,
+                60,
+                62,
+                64,
+                68,
+                70,
+                82,
+                84,
+                86,
+                88,
+                90,
+                92,
+                94,
+                98,
+                100,
+                102,
+                104,
+                106,
+                108,
+                120,
+                122,
+                124,
+                126,
+                128,
+                130,
+                120,
+                122,
+                124,
+                126,
+                128,
+                130,
+                132,
+                134,
+                136,
+                138,
+                140,
+                142,
+                144,
+                146,
+                148,
+                150,
 
 
 
             ],
             clipPages: [
-                 8,
-                 12,
-                 14,
-                 18,
-                 22,
-                 24,
-                 28,
-                 32,
-                 36,
-                 40,
-                 44,
-                 48,
-                 52,
-                 54,
-                 58,
-                 62,
-                 64,
-                 68,
-                 72,
-                 76,
-                 80,
-                 84,
-                 88
+                8,
+                12,
+                14,
+                18,
+                22,
+                24,
+                28,
+                32,
+                36,
+                40,
+                44,
+                48,
+                52,
+                54,
+                58,
+                62,
+                64,
+                68,
+                72,
+                76,
+                80,
+                84,
+                88
             ],
             pages: [
 
@@ -1189,7 +1130,7 @@ export default {
             if (pages == 4) {
                 this.pagesQuantitiy = 4;
                 this.calculatePrice();
-            } 
+            }
             else {
                 this.pagesQuantitiy = pages;
                 this.calculatePrice();
@@ -1199,7 +1140,7 @@ export default {
             if (pages == 2) {
                 this.pagesQuantitiy = 2;
                 this.calculatePrice();
-            } 
+            }
             else {
                 this.pagesQuantitiy = pages;
                 this.calculatePrice();
@@ -1218,14 +1159,13 @@ export default {
             if (val == "true") {
                 this.pages = this.clipPages;
                 this.pagesQuantitiy = 4;
-               this.calculatePrice();
+                this.calculatePrice();
             }
-            else 
-            {
-             this.pages = this.spiralPages;
-             this.pagesQuantitiy = 2;
-             this.calculatePrice();
-                
+            else {
+                this.pages = this.spiralPages;
+                this.pagesQuantitiy = 2;
+                this.calculatePrice();
+
             }
         }
     }
