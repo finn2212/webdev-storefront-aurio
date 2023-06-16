@@ -868,6 +868,10 @@ export default {
 * {
     box-sizing: border-box
 }
+.p-5{
+  padding: 35px !important;
+}
+
 
 .btn {
     background: #000000;

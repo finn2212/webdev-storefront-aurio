@@ -381,6 +381,13 @@ export default {
 }
 </script>
    
-<style lang="scss" scoped>* {
+<style lang="scss" scoped>
+* {
     box-sizing: border-box;
-}</style>
+
+    .p-5 {
+        padding: 35px !important;
+    }
+
+}
+</style>

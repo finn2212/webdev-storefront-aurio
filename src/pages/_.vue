@@ -13,7 +13,11 @@
               </i18n>
             </h2>
             <p class="p-grid">
-              <i18n path="now new" :tag="false"> </i18n>
+            <p class="thick" style="margin:0px">
+              Jetzt neu:
+            </p>
+            Mit Ihrer capella-Software sind Sie es gewohnt, Partituren in bester Notensatzmanier erstellen zu können; mit
+            capellaprint lassen Sie diese künftig auch in Musikverlagsqualität drucken.
             </p>
             <div class="row align-items-end">
               <div class="col">
@@ -34,16 +38,19 @@
     <section class="pt-5">
       <div class="container justify-content-center">
         <div class="row">
-          <div class="col blockStart">
-            <h2>
-              <i18n path="heading your capella" :tag="false"> </i18n>
-            </h2>
-          </div>
-        </div>
+          <div class="col customBorder blockStartMarign">
 
-        <div class="row">
-          <div class="col customBorder p-5 blue">
-            <img src="@/assets/svg/local_library.svg" alt="Avatar" style="margin-bottom: 25px;">
+            <h2 class="heading-grid">
+              Ihr Druckservice für capella-Musiknoten
+            </h2>
+            <p class="p-grid pt-3">
+              capellaprint ist der Druckservice für capella-User: Eine Kooperation von capella-software und AURIOPRINT.
+              Günstig Notenhefte drucken – das ist das Motto dieses neuen Services.
+            </p>
+
+          </div>
+          <div class="col customBorder pl-5  p-5 blue">
+            <img src="@/assets/svg/audio_file.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
               Noten mit Klammerheftung
               drucken
@@ -58,30 +65,16 @@
               </button>
             </NuxtLink>
           </div>
-          <div class="col customBorder pl-5  p-5 beige">
+          <div class="col pl-5  p-5 brwon customBorder">
             <img src="@/assets/svg/animation.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
-              Noten mit Klammerheftung
+              Noten mit
+              Spiralbindung
               drucken
             </h2>
             <p class="p-grid">
-              Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten Inhalt.
-            </p>
-            <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
-                <i18n path="start now" :tag="false"> </i18n>
-              </button>
-            </NuxtLink>
-          </div>
-          <div class="col pl-5  p-5 pink customBorder">
-            <img src="@/assets/svg/menu_book.svg" alt="Avatar" style="margin-bottom: 25px;">
-            <h2 class="heading-grid">
-              Noten mit Klammerheftung
-              drucken
-            </h2>
-            <p class="p-grid">
-              Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten Inhalt.
+              Für die großen Werke: Unsere Coilbindung lässt sich fast geräuschlos umblättern und fasst 400 Seiten bis zu
+              DIN A3+.
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
@@ -98,7 +91,7 @@
     <section class="pt-5">
       <div class="container justify-content-center">
         <div class="row mt-4">
-          <div class="col- customBorder">
+          <div class="col blockStart customBorder">
             <h2>
               Was ist capellaprint?
             </h2>
@@ -107,61 +100,63 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
             <div class="row justify-content-center">
-              <div class="col customBorder p-5  yellow">
+              <div class="col customBorder p-3  yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar">
-                <h2 class="ps-5 heading-grid">
-                  »Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«
-                </h2>
-                <p class="ps-5"> Alexander Mottok – Chefdirigent, Deutsches Ärzteorchester</p>
+                <div class="slideshow-container">
+                  <div class="mySlides">
+                    <div style="padding: 60px">
+                      <p class="p-grid">
+                      <h2>»Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«</h2>
+                      <p class="thick" style="margin:0px;  display: inline;">
+                        Alexander Mottok
+                      </p>
+                      – Chefdirigent, Deutsches Ärzteorchester
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mySlides">
+                    <div style="padding-left: 20px">
+                      <div style="padding: 60px">
+                        <p class="p-grid">
+                        <h2>»Voll krasse Quailität.«</h2>
+                        <p class="thick" style="margin:0px;  display: inline;">
+                          Peter Meyer
+                        </p>
+                        – Testuser, Deutsches Ärzteorchester
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <a class="prev" style="color: black; font-size: 40px;" @click="plusSlides(-1)">❮</a>
+                  <a class="next" style="color: black; font-size: 40px;" @click="plusSlides(1)">❯</a>
+                </div>
+
               </div>
             </div>
             <div class="row justify-content-center" style="min-height: fit-content;">
               <div class="col  p-0 customBorder">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="First slide"
-                        style="min-height: 500px;">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="Second slide"
-                        style="min-height: 500px;">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="Third slide"
-                        style="min-height: 500px;">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
-                </div>
+
+                <img src="@/assets/images/pic2.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+
               </div>
             </div>
           </div>
-          <div class="col customBorder blue p-4">
+          <div class="col customBorder green p-4">
             <h2 class="heading-grid">
               <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
-              Deine Vorteile
+              Ihre Vorteile
             </h2>
-            <div class="row mt-5">
+            <div class="row" style="margin-top: 120px">
               <div class="col-2">
                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
               </div>
               <div class="col">
-                <h5 style="font-weight: bold">Erstklassiger Notendruck</h5>
-                Mit elfenbeinfarbigem Notenpapier, einer praktikablen und langlebigen Bindung und einer gestochen scharfen
-                Druckqualität erhältst du eine rundum professionelle Partitur.
+                <p class="thick" style="margin: 0px;"> Erstklassiger Notendruck </p>
+                <p>
+                  Mit elfenbeinfarbigem Notenpapier, einer praktikablen und langlebigen Bindung und einer gestochen
+                  scharfen Druckqualität erhalten Sie eine rundum professionelle Partitur.
+                </p>
               </div>
             </div>
             <div class="row mt-2">
@@ -169,10 +164,11 @@
                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
               </div>
               <div class="col">
-                <h5 style="font-weight: bold"> Musikalientypische Papierformate</h5>
-
-                Musikalientypische Formate vom Klavierauszug (19 x 27 cm), DIN A4, Concertformat / NE (22,8 x 30,5 cm) und
-                darüber hinaus sind unser tägliches Geschäft.
+                <p class="thick" style="margin: 0px;">Musikalientypische Papierformate</p>
+                <p>
+                  Musikalientypische Formate vom Klavierauszug (19 x 27 cm), DIN A4, Concertformat / NE (22,8 x 30,5 cm)
+                  und darüber hinaus sind unser tägliches Geschäft.
+                </p>
               </div>
             </div>
             <div class="row mt-2">
@@ -180,11 +176,11 @@
                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
               </div>
               <div class="col">
-                <h5 style="font-weight: bold">Versandfertig in kürzester Zeit</h5>
-
-                Wir versenden prestissimo: Die meisten unserer Notenausgaben verlassen innerhalb von 48 bis 72 Stunden
-                nach
-                Bestellung unser Haus.
+                <p class="thick" style="margin: 0px;">Versandfertig in kürzester Zeit</p>
+                <p>
+                  Wir versenden prestissimo: Die meisten unserer Notenausgaben verlassen innerhalb von 48 bis 72 Stunden
+                  nach Bestellung unser Haus.
+                </p>
               </div>
             </div>
             <div class="row mt-2">
@@ -192,29 +188,28 @@
                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
               </div>
               <div class="col">
-                <h5 style="font-weight: bold">Günstige Druckpreise</h5>
-
-                Mit deiner capella-Software erhältst du hohe Qualität zum kleinen Preis.
-                Diese Maxime gilt auch hier: Bei uns kannst du dein Notenheft günstig drucken – in Topqualität.
+                <p class="thick" style="margin: 0px;">Kauf auf Rechnung & Lastschrift</p>
+                <p>
+                  Die beliebteste Zahlart in Deutschland – natürlich auch bei capellaprint! Mit unserem Paymentpartner
+                  genießen Sie 14 Tage Zahlungsziel nach Warenerhalt.
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col customBorder green p-5">
+          <div class="col customBorder pink p-5">
             <h2 class="heading-grid">
-              Beste Druckqualität für deine Werke – made in Germany.
+              Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
             <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar">
             <div class="row">
-              <div class="col-6 mt-2">
+              <div class="col-7 mt-2">
                 <p class="p-grid">
-                  Für capellaprint haben wir uns mit der spezialisierten Musikaliendruckerei AURIOPRINT aus Bayern
-                  zusammengeschlossen. AURIOPRINT fertigt für Musikverlage, Orchester und Komponisten weltweit Noten.
-                  Unter
-                  der
-                  Marke capellaprint bieten wir dir gemeinsam ab sofort bestmögliche Druckqualität für deine eigenen
-                  Partituren.
+                  Für capellaprint haben sich capella-software und die spezialisierte Musikaliendruckerei AURIOPRINT aus
+                  Bayern zusammengeschlossen. AURIOPRINT fertigt für Musikverlage, Orchester und Komponisten weltweit
+                  Noten. Unter der Marke capellaprint bieten wir Ihnen gemeinsam ab sofort die bestmögliche Druckqualität
+                  für Ihre eigenen Partituren.
                 </p>
               </div>
               <div class="col">
@@ -248,32 +243,30 @@
             <img src="@/assets/svg/function.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
               Schritt 1:
-              Kalkuliere dein
-              Notenprojekt.
+              Notenprojekt kalkulieren.
             </h2>
             <p class="p-grid">
-              Es ist ganz einfach: Mit unserem Kalkulator stellst du dir die perfekte Notenausgabe zusammen.
+              Es ist ganz einfach: Mit unserem Kalkulator stellen Sie sich die perfekte Notenausgabe zusammen.
             </p>
           </div>
           <div class="col customBorder pl-5  p-5 grey">
             <img src="@/assets/svg/backup.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
               Schritt 2:
-              Lade deine Noten bei capellaprint hoch.
+              Laden Sie Ihre Noten-PDF hoch.
             </h2>
             <p class="p-grid">
-              Danach übermittelst du die PDF-Datei(en) deines Werks, die du in capella erstellt hast.
+              Als zweiten Schritt übermitteln Sie uns die PDF-Datei(en) Ihres Werks, die Sie in capella erstellt haben.
             </p>
           </div>
           <div class="col pl-5  p-5 grey customBorder">
             <img src="@/assets/svg/flight.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
               Schritt 3:
-              Bestelle deine Noten –
-              schon fertig!
+              Bestellen – schon fertig!
             </h2>
             <p class="p-grid">
-              Zuletzt bestellst du deine Partituren bequem online. Ein paar Tage später ist die Notenpost schon da!
+              Zuletzt bestellen Sie Ihre Noten ganz bequem online. Ein paar Tage später ist die Musikpost schon da!
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
@@ -306,56 +299,53 @@
             <div class="row justify-content-center">
               <div class="col customBorder p-5 yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar">
-                <h2 class="ps-5 heading-grid">
-                  »Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«
-                </h2>
-                <p class="ps-5"> Dr. Dominik Hörnel & das Team der capella Software AG</p>
-              </div>
-
-            </div>
-            <div class="row justify-content-center">
-              <div class="col p-0 customBorder">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="First slide"
-                        style="min-height: 650px;">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="Second slide"
-                        style="min-height: 650px;">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="@/assets/images/pic1.png" alt="Third slide"
-                        style="min-height: 650px;">
+                <div class="slideshow-container">
+                  <div class="mySlides2">
+                    <div style="padding: 60px">
+                      <p class="p-grid">
+                      <h2>»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren das
+                        Optimum herauszuholen.««</h2>
+                      <p class="thick" style="margin:0px;  display: inline;">
+                        Alexander Mottok
+                      </p>
+                      – Chefdirigent, Deutsches Ärzteorchester
+                      </p>
                     </div>
                   </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
+                  <div class="mySlides2">
+                    <div style="padding-left: 20px">
+                      <div style="padding: 60px">
+                        <p class="p-grid">
+                        <h2>»»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren
+                          das Optimum herauszuholen.««</h2>
+                        <p class="thick" style="margin:0px;  display: inline;">
+                          Peter Meyer
+                        </p>
+                        – Testuser, Deutsches Ärzteorchester
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="prev" style="color: black; font-size: 40px;" @click="plusSlides(-1)">❮</a>
+                  <a class="next" style="color: black; font-size: 40px;" @click="plusSlides(1)">❯</a>
                 </div>
               </div>
             </div>
+            <div class="row justify-content-center">
+              <div class="col p-0 customBorder">
+                <img src="@/assets/images/pic3.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+              </div>
+            </div>
           </div>
-          <div class="col customBorder red p-4">
+          <div class="col customBorder blue p-4">
             <img src="@/assets/svg/redeem.svg" alt="Avatar">
-            <h1 class="mt-5">
+            <h1 class="mt-5" style="font-size: 60px;">
               Musterheft
               anfordern
             </h1>
             <p class="">
-              Damit du nicht die Katze im Sack kaufst, haben wir ein Musterheft vorbereitet, mit dem du dich von der
-              Qualität unseres Notendrucks überzeugen kannst.
+              Damit Sie nicht die Katze im Sack kaufen, haben wir ein Musterheft vorbereitet, mit dem Sie sich von der
+              Qualität unseres Notendrucks überzeugen können.
             </p>
             <div class="row justify-content-end">
               <div class="col mt-3 ">
@@ -368,22 +358,23 @@
             <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-5">
             <div class="accordion  accordion-flush" id="accordionFlushExample">
               <div class="accordion-item ">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header thick">
                   <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed"
-                    type="button">
-                    Gehe ich ein Abonnement ein?
+                    type="button" style="padding-bottom: 0px;"> <p class="thick"> Gehe ich ein Abonnement ein?</p>
+                   
                   </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse open" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess kannst du auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    dich
-                    aber zu nichts und ist jederzeit wieder deaktivierbar.
+                  <div class="accordion-body"><p class="small">
+                    Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                    Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
+                    Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
+                  </p> 
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header thick">
                   <button @click="open(2)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Kann ich vorab Druckmuster bekommen?
@@ -391,14 +382,13 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess kannst du auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    dich
-                    aber zu nichts und ist jederzeit wieder deaktivierbar.
+                    Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte wenden
+                    Sie sich hierfür an info@capellaprint.com. Vielen Dank!
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header thick">
                   <button @click="open(3)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Werden meine Druckdaten kontrolliert?
@@ -406,29 +396,32 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess kannst du auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    dich
-                    aber zu nichts und ist jederzeit wieder deaktivierbar.
+                    Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf. gleich
+                    korrigiert, um ein professionelles Druckbild zu gewährleisten. Sollten Datenfehler ein manuelles
+                    Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit Ihnen per
+                    E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header thick">
                   <button @click="open(4)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Wie erfolgt die Bestellung, was kostet es?
                   </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess kannst du auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    dich
-                    aber zu nichts und ist jederzeit wieder deaktivierbar.
+                  <div class="accordion-body">Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
+                    Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
+                    selbstverständlich kostenfrei.
+
+                    Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
+                    haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header thick">
                   <button @click="open(5)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFiv" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Kann ich gedruckte Noten zurückgeben?
@@ -436,9 +429,9 @@
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess kannst du auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    dich
-                    aber zu nichts und ist jederzeit wieder deaktivierbar.
+                    Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
+                    deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
+                    liefern wir selbstverständlich kostenfrei Ersatz.
                   </div>
                 </div>
               </div>
@@ -614,15 +607,21 @@ export default {
   name: "home",
   setup(props, { root }) {
     // get the configured api client
-    const { apiInstance } = getApplicationContext(root, "home")
+    const { apiInstance } = getApplicationContext(root, "home");
+
   },
-  data: {
-    isOpenOne: true,
-    isOpenTwo: false,
-    isOpenThree: false,
-    isOpenFour: false,
-    isOpenFive: false,
-    slideIndex: 1
+  data() {
+    return {
+      isOpenOne: true,
+      isOpenTwo: false,
+      isOpenThree: false,
+      isOpenFour: false,
+      isOpenFive: false,
+      slideIndex: 1
+    }
+  },
+  mounted() {
+    this.showSlides();
   },
   methods: {
     open: function (num) {
@@ -720,32 +719,35 @@ export default {
 
 
     },
-    plusSlides: function (n) {
-      this.showSlides(this.slideIndex);
+    // Next/previous controls
+    plusSlides(n) {
       this.showSlides(this.slideIndex += n);
     },
-    currentSlide: function (n) {
+    // Thumbnail image controls
+    currentSlide(n) {
+      debugger
       this.showSlides(this.slideIndex = n);
     },
-    showSlides: function (n) {
-      debugger;
+    showSlides(n) {
+      this.slideIndex = 1
       let i;
       let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
+      let slides2 = document.getElementsByClassName("mySlides2");
       if (n > slides.length) { this.slideIndex = 1 }
       if (n < 1) { this.slideIndex = slides.length }
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
       slides[this.slideIndex - 1].style.display = "block";
-      dots[this.slideIndex - 1].className += " active";
+
+      if (n > slides2.length) { this.slideIndex = 1 }
+      if (n < 1) { this.slideIndex = slides.length }
+      for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+      }
+      slides2[this.slideIndex - 1].style.display = "block";
     }
   }
-
-
 }
 </script>
  
@@ -757,12 +759,13 @@ export default {
 .card-img-top {
   border-radius: 0px;
 }
+
 @media only screen and (max-width: 1024px) {
-    .card-img-top {
-        margin-top: 0%;
-        height: 300px;
-        object-fit: cover;
-    }
+  .card-img-top {
+    margin-top: 0%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .card {
@@ -825,6 +828,22 @@ export default {
     margin-top: 45%
   }
 
+}
+
+.p-5 {
+  padding: 35px !important;
+}
+
+
+.btn {
+  background: #000000;
+  border-radius: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .btn {
+    margin-top: 0%;
+  }
 }
 
 * {
@@ -912,7 +931,7 @@ export default {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 30s;
 }
 
 @keyframes fade {
@@ -923,16 +942,4 @@ export default {
   to {
     opacity: 1
   }
-}
-
-.btn {
-  background: #000000;
-  border-radius: 100px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .btn {
-    margin-top: 0%;
-  }
-}
-</style>
+}</style>

@@ -402,25 +402,26 @@
                                     </thead>
                                     <tbody>
                                         <tr v-for="(voice, index) in voices">
-                                            <td>{{  voice.name  }}</td>
+                                            <td>{{ voice.name }}</td>
                                             <td>{{ voice.pages }}</td>
                                             <td>{{ voice.quantity }}</td>
                                             <td>{{ voice.uploadName }}</td>
                                             <td>
-                                                <button @click.prevent="removeVoice(index)"
-                                                    class="btn" style="background-color: transparent; padding: 0; margin: 0"><img src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                style="transform: rotate(45deg);"></button>
+                                                <button @click.prevent="removeVoice(index)" class="btn"
+                                                    style="background-color: transparent; padding: 0; margin: 0"><img
+                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="transform: rotate(45deg);"></button>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                     <div class="col-4 customBorder">
-                        <div class="sticky-top">
+                        <div id="stickyBar" class="sticky-top">
                             <div class="p-4 green">
                                 <div class="row">
                                     <div class="col">
@@ -836,6 +837,11 @@ export default {
                     data: {
                         "name": this.productName,
                         "productNumber": productNumber,
+                        "properties": [
+                            { "id": "4ddf6e278920458cba821346e53b04e9" },
+                            { "id": "6f9359239c994b48b7de282ee19a714d" },
+                            { "id": "c53fa30db00e4a84b4516f6b07c02e8d" }
+                        ],
                         "stock": 10,
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
@@ -1365,6 +1371,10 @@ export default {
         box-shadow: 0 2.5em 0 0;
     }
 }
+.p-5{
+  padding: 35px !important;
+}
+
 
 .plus-minus-input {
     align-items: center;

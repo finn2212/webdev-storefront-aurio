@@ -428,6 +428,9 @@ export default {
     }
 }
 
+.p-5{
+  padding: 35px !important;
+}
 
 .btn-primary {
     border-color: black;
