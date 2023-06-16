@@ -72,10 +72,16 @@ h6 {
 .btn {
   background: #000000;
   border-radius: 100px;
+  font-weight: bold !important;
 }
 
 .table>:not(caption)>*>* {
   border-bottom-width: 0px !important;
+}
+
+.plusBtn{
+  height: 13px;
+  margin-right: 5px
 }
 
 .a {
@@ -87,8 +93,9 @@ h6 {
 .heading-grid {
 
   align-items: center;
-  line-height: 40px;
+  line-height: 36px;
   text-align: left;
+  font-size: 30px;
 }
 
 .p-grid {
@@ -144,7 +151,9 @@ h6 {
 .btn {
   background: #000000;
   border-radius: 100px !important;
+  margin-top: 0px !important;
 }
+
 
 
 .darkblue {

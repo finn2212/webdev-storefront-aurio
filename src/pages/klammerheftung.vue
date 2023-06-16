@@ -67,7 +67,7 @@
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
                                 <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">Datenvorgaben
+                                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Datenvorgaben
                                     (PDF)
                                 </button>
                             </div>
@@ -247,7 +247,7 @@
                                 <div class="col-8 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -325,7 +325,7 @@
                                 <div class="col-8 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -369,7 +369,7 @@
                                 <div class="col-8">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>

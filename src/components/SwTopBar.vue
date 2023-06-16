@@ -1,18 +1,18 @@
 <template class="blue">
-    <div class="blue">
+    <div class="blue" style="margin-bottom: 25px;">
         <div class="container justify-content-center">
-            <div class="row blue pt-2">
-                <div class="col">
-                    <p> <img src="@/assets/svg/military_tech.svg" style="margin-right: 10px;" alt="Avatar">Erstklassige Musikverlagsqualität</p>
+            <div class="row blue pt-1  justify-content-center" >
+                <div class="col-auto">
+                    <p style="margin-bottom: 5px; font-size: 14px; margin-right: 60px;" > <img src="@/assets/svg/military_tech.svg" style="margin-right: 10px;" alt="Avatar">Erstklassige Musikverlagsqualität</p>
                 </div>
-                <div class="col">
-                    <img src="@/assets/svg/sell.svg" style="margin-right: 10px;" alt="Avatar"> Günstige Druckpreise
+                <div class="col-auto">
+                  <p style="margin-bottom: 5px; font-size: 14px; margin-right: 60px;" >     <img src="@/assets/svg/music_video.svg" style="margin-right: 10px;" alt="Avatar">Bühnenerprobte Notenpapiere</p> 
                 </div>
-                <div class="col">
-                    <img src="@/assets/svg/local_shipping.svg" style="margin-right: 10px;" alt="Avatar">Schneller Versand
+                <div class="col-auto">
+                   <p style="margin-bottom: 5px; font-size: 14px; margin-right: 60px;" >  <img src="@/assets/svg/payments.svg" style="margin-right: 10px;" alt="Avatar">Kauf auf Rechnung</p>
                 </div>
-                <div class="col">
-                    <img src="@/assets/svg/music_video.svg" style="margin-right: 10px;" alt="Avatar">  Bühnenerprobte Notenpapiere
+                <div class="col-auto">
+                  <p style="margin-bottom: 5px; font-size: 14px; margin-right: 40px;" >   <img src="@/assets/svg/local_shipping.svg" style="margin-right: 10px;" alt="Avatar">Schneller Versand</p>  
                 </div>
             </div>
         </div>

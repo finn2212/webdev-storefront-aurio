@@ -22,8 +22,8 @@
             <div class="row align-items-end">
               <div class="col">
                 <NuxtLink class="a" to="/productCustomizer">
-                  <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+                  <button type="button" class="btn btn-dark mt-2">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                     <i18n path="start now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
@@ -59,8 +59,8 @@
               Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten Inhalt.
             </p>
             <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+              <button type="button" class="btn btn-dark mt-2">
+                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
@@ -77,8 +77,8 @@
               DIN A3+.
             </p>
             <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+              <button type="button" class="btn btn-dark mt-5">
+               <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
@@ -270,7 +270,7 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">
+               <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
@@ -350,7 +350,7 @@
             <div class="row justify-content-end">
               <div class="col mt-3 ">
                 <button type="button" class="btn btn-dark">
-                  <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">Musterheft kostenfrei bestellen
+                 <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
                 </button>
               </div>
             </div>
@@ -377,13 +377,17 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(2)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Kann ich vorab Druckmuster bekommen?
+                    <p class="thick">  Kann ich vorab Druckmuster bekommen?</p>
+                  
                   </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                  <div class="accordion-body">
+                    <p class="small">
+                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
                     Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte wenden
                     Sie sich hierfür an info@capellaprint.com. Vielen Dank!
+                  </p> 
                   </div>
                 </div>
               </div>
@@ -391,15 +395,20 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(3)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Werden meine Druckdaten kontrolliert?
+                      <p class="thick">  Werden meine Druckdaten kontrolliert? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                  <div class="accordion-body">
+                    <p class="small">
+                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
                     Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf. gleich
-                    korrigiert, um ein professionelles Druckbild zu gewährleisten. Sollten Datenfehler ein manuelles
+                    korrigiert, um ein professionelles Druckbild zu gewährleisten. 
+                  </p>    <br> <p class="small">
+                    Sollten Datenfehler ein manuelles
                     Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit Ihnen per
                     E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
+                  </p> 
                   </div>
                 </div>
               </div>
@@ -407,16 +416,20 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(4)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Wie erfolgt die Bestellung, was kostet es?
+                    <p class="thick">    Wie erfolgt die Bestellung, was kostet es? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
+                  <p class="small">
+                    Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
                     Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
-                    selbstverständlich kostenfrei.
-
+                    selbstverständlich kostenfrei.</p>
+                    <br>
+                    <p class="small">
                     Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
                     haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
+                  </p> 
+                  <div class="accordion-body">
                   </div>
                 </div>
               </div>
@@ -424,14 +437,17 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(5)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFiv" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Kann ich gedruckte Noten zurückgeben?
+                  <p class="thick">  Kann ich gedruckte Noten zurückgeben? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                  <div class="accordion-body">
+                    <p class="small">
+                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
                     Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
                     deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
                     liefern wir selbstverständlich kostenfrei Ersatz.
+                  </p> 
                   </div>
                 </div>
               </div>
@@ -455,10 +471,10 @@
           <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic4.png" alt="Card image cap">
-              <div class="card-body blue" style="min-height: 290px;">
-                <h5 class="card-title">Notenheft DIN A4
-                  Klammerheftung</h5>
-                <div class="row mt-4">
+              <div class="card-body blue p-5" style="min-height: 290px;">
+                <h2 class="card-title">Notenheft DIN A4
+                  Klammerheftung</h2>
+                <div class="row mt-5">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -468,7 +484,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -478,7 +494,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -488,9 +504,9 @@
                     </p>
                   </div>
                 </div>
-                <NuxtLink class="a pt-3" to="/productCustomizer">
-                  <button type="button" class="btn btn-dark" style="margin-top: 40px;">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                <NuxtLink class="a pt-5" to="/productCustomizer">
+                  <button type="button" class="btn btn-dark mt-5" style="margin-top: 53px !important;">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                     <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
@@ -500,10 +516,10 @@
           <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
-              <div class="card-body blue" style="min-height: 290px;">
-                <h5 class="card-title">Stimmenheft DIN A4
+              <div class="card-body blue p-5" style="min-height: 290px;">
+                <h2 class="card-title">Stimmenheft DIN A4
                   Klammerheftung
-                  ohne Umschlag</h5>
+                  ohne Umschlag</h2>
                 <div class="row mt-4">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
@@ -514,7 +530,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -524,7 +540,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -536,7 +552,7 @@
                 </div>
                 <NuxtLink class="a" to="/productCustomizer">
                   <button type="button" class="btn btn-dark mt-3">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                     <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
@@ -546,11 +562,11 @@
           <div class="col-12 col-lg-4  cardcol customBorder">
             <div class="card">
               <img class="card-img-top" src="@/assets/images/pic6.png" alt="Card image cap">
-              <div class="card-body pink " style="min-height: 290px;">
-                <h5 class="card-title">Notenheft DIN A4
-                  Klammerheftung</h5>
+              <div class="card-body pink p-5 " style="min-height: 290px;">
+                <h2 class="card-title">Notenbuch DIN A4
+Spiralbindung hoch</h2>
 
-                <div class="row mt-4">
+                <div class="row mt-5">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -560,7 +576,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -570,7 +586,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                   </div>
@@ -581,8 +597,8 @@
                   </div>
                 </div>
                 <NuxtLink class="a" to="/productCustomizer">
-                  <button type="button" class="btn btn-dark mt-3">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">
+                  <button type="button" class="btn btn-dark mt-4" style="margin-bottom: 5px;">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                     <i18n path="print now" :tag="false"> </i18n>
                   </button>
                 </NuxtLink>
@@ -927,7 +943,9 @@ export default {
 .dot:hover {
   background-color: #717171;
 }
-
+.accordion-button{
+  padding: 5px;
+}
 /* Fading animation */
 .fade {
   animation-name: fade;

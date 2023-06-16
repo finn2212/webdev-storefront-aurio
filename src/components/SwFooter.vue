@@ -46,7 +46,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink  class="a" to="/payment">
+                            <NuxtLink class="a" to="/payment">
 
                                 Zahlung & Versand
 
@@ -89,26 +89,72 @@
             </div>
             <div class="row pt-4">
                 <div class="col">
-                    <div class="col-4">
+                    <div class="col">
                         <img src="@/assets/svg/local_shipping1.svg" style="margin-right: 10px;" alt="Avatar">
                         <h2 class="pt-4">
                             Versandarten
                         </h2>
+                        <div class="row">
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/rhweb-dhl 1.svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/rhweb-post-germany 1.svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/rhweb-gogreen 1.svg" alt="Avatar">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="col-4">
+                    <div class="col">
                         <img src="@/assets/svg/credit_score.svg" style="margin-right: 10px;" alt="Avatar">
                         <h2 class="pt-4">
                             Zahlungsarten
                         </h2>
+                        <div class="row">
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (6).svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle.svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (1).svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (2).svg" alt="Avatar">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (3).svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (4).svg" alt="Avatar">
+                            </div>
+                            <div class="col-auto" style="padding: 0px !important">
+                                <img src="@/assets/svg/Rectangle (5).svg" alt="Avatar">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="col-4">
+                    <div class="col">
+                        <h5 class="mt-5 pt-3">Wir sind Mitglied im:</h5>
+                        <img src="@/assets/svg/bvdm_logo_transparent 1.svg" style="margin-top: 10px;" alt="Avatar">
+
                     </div>
                 </div>
+            </div>
+            <div class="row" style="margin-top: 300px; padding-bottom: 40px; text-align: center;">
+                <div class="col">
+                    * Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. Versandkosten, wenn nicht anders angegeben.
+                    © 2023 AURIOPRINT – Alle Rechte vorbehalten.
+                </div>
+
             </div>
         </div>
     </div>

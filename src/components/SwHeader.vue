@@ -1,38 +1,38 @@
 <template>
   <div class="sw-top-navigation" data-testid="main-header">
     <SfOverlay :visible="isOpen" class="sw-overlay" />
-
     <SwCookieBar />
-
     <SwTopBar />
     <div class="container justify-content-between menueBigScreen">
       <div class="row mt-2">
-        <div class="col">
+        <div class=" col-1 col-xl-2">
           <NuxtLink class="a" to="/">
-            <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar">
+            <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 100%;">
           </NuxtLink>
 
         </div>
-        <div class="col" style="margin-top: 6px;">
+        <div class="col-auto mt-1 me-2 me-xl-5">
           <NuxtLink class="a" to="/klammerheftung">
             Noten mit Klammerheftung
           </NuxtLink>
         </div>
 
-        <div class="col" style="margin-top: 6px;">
+        <div class="col-auto mt-1 me-2 me-xl-5">
           <NuxtLink class="a" to="/spiralbindung">
             Noten mit Spiralbindung
           </NuxtLink>
         </div>
-        <div class="col" style="margin-top: 6px;">
-          <p>
-            <NuxtLink class="a" to="/good-to-know">
-              Wissenswertes
-            </NuxtLink>
-
-          </p>
+        <div class="col-auto mt-1  me-2 me-xl-5">
+          <NuxtLink class="a" to="/good-to-know">
+            Wissenswertes
+          </NuxtLink>
         </div>
-        <div class="col-auto">
+        <div class="col mt-1">
+          <NuxtLink class="a" to="/spiralbindung">
+            Kontakt
+          </NuxtLink>
+        </div>
+        <div class="col">
           <div class="sf-header__icons desktop-only" style="margin: 0px !important;">
             <div class="sw-header__icons">
               <SwPluginSlot name="top-header-icons-before" />
@@ -76,8 +76,8 @@
     </div>
     <div class="container justify-content-between menueSmallScreen">
       <NuxtLink class="a" to="/">
-            <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar">
-          </NuxtLink>
+        <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 100;">
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -225,14 +225,16 @@ export default {
     cursor: pointer;
   }
 }
+
 @media only screen and (max-width: 1023px) {
   .menueBigScreen {
-   display: none;
+    display: none;
   }
 }
+
 @media only screen and (min-width: 1023px) {
   .menueSmallScreen {
-   display: none;
+    display: none;
   }
 }
 
@@ -276,6 +278,17 @@ export default {
   position: absolute;
   bottom: 55%;
   left: 50%;
+}
+
+@media (min-width: 1400px) {
+  .me-xl-5 {
+    margin-right: 3rem !important;
+  }
+}
+@media (max-width: 1400px) {
+  .me-xl-5 {
+    margin-right: 0.5rem !important;
+  }
 }
 </style>
   
