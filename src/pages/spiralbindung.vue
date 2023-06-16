@@ -5,12 +5,12 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 pink customBorder">
-                        <h1 style="color: white;">
+                    <div class="col-12 col-md-3 col-xl-3 p-2 p-md-4 pink customBorder">
+                        <h1>
                             Carpe diem!
                         </h1>
-                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-1 pt-md-3">
-                        <h2 class="pt-1 pt-md-3" style="color: white;">
+                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-md-5" style="margin-top: 70px;">
+                        <h2 class="pt-1 pt-md-3">
                             10% Rabatt
                             6–10 Uhr
                         </h2>
@@ -34,9 +34,9 @@
             <div class="container justify-content-center">
                 <div class="row pt-4">
                     <div class="col-12 col-lg-4 customBorder blockStart">
-                        <h1>
+                        <h2>
                             Notenbuch mit Spiralbindung günstig drucken lassen
-                        </h1>
+                        </h2>
                         <p>
                             Auch wer Großes vor hat, wird bei AURIOPRINT fündig: Mit unseren Spiralbindungen bekommt auch
                             der
@@ -53,7 +53,7 @@
                         </p>
 
                     </div>
-                    <div class="col customBorder green p-4">
+                    <div class="col customBorder green p-5">
                         <div class="row">
                             <div class="col">
                                 <h1 class="pb-3">
@@ -114,9 +114,9 @@
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
                                     <div class="col">
-                                        <p class="card-text">
-                                            Hochformat und Querformat möglich
-                                        </p>
+
+                                        <p class="thick" style=" display: inline; ">Hochformat und Querformat </p> möglich
+
                                     </div>
                                     <div class="w-100 pt-3"></div>
                                     <div class="col-1">
@@ -142,13 +142,13 @@
 
                     <div class="col-12 col-lg-4 customBorder blockStart">
                         <div class="row align-items-start">
-                            <h1>
+                            <h2>
                                 Direkt zu den Topsellern
 
-                            </h1>
+                            </h2>
                             <p>
-                                Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
-                                her.
+                                Starten Sie mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich
+                                zigfach her.
                             </p>
 
                         </div>
@@ -213,7 +213,7 @@
                                 <div class="col-8 mt-1">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -254,8 +254,6 @@
                                 </div>
                                 <div class="col">
                                     <p class="">
-
-
                                         Noch ein weiteres zweizeiliges tolles Alleinstellungsmerkmal
                                     </p>
                                 </div>
@@ -264,7 +262,7 @@
                                 <div class="col-8 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -283,7 +281,8 @@
                     <div class="col customBorder blockStartMarign ">
                         <div class="row pb-3">
                             <h2 class="heading-grid">
-                                Notenbuch Spiralbindung Hochformat
+                                Notenbuch Spiralbindung
+                                <p style="color: #D95A4E">Hochformat</p>
                             </h2>
                             <p class="p-grid pb-4">
                                 Mit unserer hochwertigen Coilbindung für Musiknoten bist du größtmöglich flexibel.
@@ -295,8 +294,8 @@
                     <div class="col customBorder pl-5  p-4 green">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Peters«
+                            Spiralbindung hoch
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -304,20 +303,11 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 19 x 27 cm hoch
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
@@ -326,11 +316,20 @@
                                     Das bekannte Format der Klavierauszüge der EDITION PETERS
                                 </p>
                             </div>
+                            <div class="w-100 pt-2"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
+                                </p>
+                            </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-3">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -340,8 +339,7 @@
                     </div>
                     <div class="col customBorder pl-5  p-4  pink">
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Concert« Spiralbindung hoch
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -349,32 +347,33 @@
                             </div>
                             <div class="col">
                                 <p class="">
-                                    Klassisches Musikalien-Überformat, geeignet für Solo- und Kammermusik
+                                    Format 22,8 x 30,5 cm hoch
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p class="">
-                                    Beliebt auch für Orchesterstimmen & ähnliche Zwecke
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p class="">
+
                                     Bekannt von EDITION PETERS, SCHOTT Music u.v.a.
+                                </p>
+                            </div>
+                            <div class="w-100 pt-2"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
                                 <div class="col-8">
                                     <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                        <button type="button" class="btn btn-dark" style="margin-top: 30px !important;">
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -392,8 +391,8 @@
                     <div class="col customBorder pl-5  p-4 yellow">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch DIN B4
+                            Spiralbindung hoch
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -401,33 +400,33 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 25 x 35,3 cm hoch
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Hervorragend für Dirigierpartituren geeignet
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-2">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -438,8 +437,8 @@
                     <div class="col customBorder pl-5  p-4 orange">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch DIN A3
+                            Spiralbindung hoch
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -447,33 +446,33 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 29,7 x 42 cm hoch
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Für große Partituren und Stimmen
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
                                 <div class="col-8 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -484,8 +483,7 @@
                     <div class="col customBorder pl-5  p-4 darkblue">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Dirigent« Spiralbindung hoch
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -493,33 +491,32 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 31,5 x 46 cm hoch
                                 </p>
-
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Der Gigant für die großen Werke!
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
                                 <div class="col-8 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -537,10 +534,10 @@
                     <div class="col customBorder blockStartMarign ">
                         <div class="row pb-3">
                             <h2 class="heading-grid">
-                                Weitere Heftformate
+                                Notenbuch Spiralbindung <p style="color: #D95A4E">Querformat</p>
                             </h2>
                             <p class="p-grid pb-4">
-                                Du kannst gängige Sonderformate für Musikalien produzieren lassen.
+                                Auch für Notendruck im Querformat ist unsere Spiralbindung hervorragend geeignet.
                             </p>
                         </div>
 
@@ -549,8 +546,8 @@
                     <div class="col customBorder pl-5  p-4 green">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Peters«
+                            Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -558,20 +555,11 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 27 x 19 cm quer
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
@@ -580,11 +568,20 @@
                                     Das bekannte Format der Klavierauszüge der EDITION PETERS
                                 </p>
                             </div>
+                            <div class="w-100 pt-2"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
+                                </p>
+                            </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-3">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -594,8 +591,7 @@
                     </div>
                     <div class="col pl-5  p-4 customBorder pink">
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Concert« Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -603,16 +599,7 @@
                             </div>
                             <div class="col">
                                 <p class="">
-                                    Klassisches Musikalien-Überformat, geeignet für Solo- und Kammermusik
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p class="">
-                                    Beliebt auch für Orchesterstimmen & ähnliche Zwecke
+                                    Format 30,5 x 22,8 cm quer
                                 </p>
                             </div>
                             <div class="w-100 pt-3"></div>
@@ -624,11 +611,20 @@
                                     Bekannt von EDITION PETERS, SCHOTT Music u.v.a.
                                 </p>
                             </div>
+                            <div class="w-100 pt-3"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p class="">
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
+                                </p>
+                            </div>
                             <div class="row">
                                 <div class="col-8">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                           <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             Drucken
                                         </button>
                                     </NuxtLink>
@@ -646,8 +642,8 @@
                     <div class="col customBorder pl-5  p-4 yellow">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch DIN B4
+Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -655,32 +651,32 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 35,3 x 25 cm quer
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Hervorragend für Dirigierpartituren geeignet
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-2">
                                     <button type="button" class="btn btn-dark mt-3">
-                                       <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                         Drucken
                                     </button>
                                 </div>
@@ -690,8 +686,8 @@
                     <div class="col customBorder pl-5  p-4 orange">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch DIN A3
+Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -699,7 +695,7 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 42 x 29,7 cm quer
                                 </p>
 
                             </div>
@@ -709,7 +705,7 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Für große Partituren und Stimmen
                                 </p>
                             </div>
                             <div class="w-100 pt-3"></div>
@@ -718,13 +714,13 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
                                 <div class="col-8 mt-4">
                                     <button type="button" class="btn btn-dark mt-3">
-                                       <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                         Drucken
                                     </button>
                                 </div>
@@ -734,8 +730,7 @@
                     <div class="col customBorder pl-5  p-4 darkblue">
 
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenbuch »Dirigent« Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -743,32 +738,33 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                    Format 46 x 31,5 cm quer
+                                    
                                 </p>
 
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
-                                <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                <p>Der Gigant für die großen Werke!
+                                   
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-2">
                                     <button type="button" class="btn btn-dark mt-3">
-                                       <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                        <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                         Drucken
                                     </button>
                                 </div>
@@ -814,7 +810,7 @@ export default {
             if (document.getElementById("boxHeight")) {
                 let width = document.getElementById("boxHeight").offsetWidth;
                 if (width == 432) {
-                    this.dynamicHeight = "margin-top: 390px";
+                    this.dynamicHeight = "margin-top: 430px";
                 } else if (width == 372) {
                     this.dynamicHeight = "margin-top: 297px";
                 } else if (width == 312) {
@@ -868,8 +864,9 @@ export default {
 * {
     box-sizing: border-box
 }
-.p-5{
-  padding: 35px !important;
+
+.p-5 {
+    padding: 35px !important;
 }
 
 

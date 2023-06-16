@@ -5,7 +5,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 darkblue customBorder">
+                    <div class="col-12 col-md-3 col-xl-3 p-2 p-md-4 darkblue customBorder">
                         <h1 style="color: white;">
                             Nacht-
                             eule?
@@ -35,9 +35,9 @@
             <div class="container justify-content-center">
                 <div class="row pt-4">
                     <div class="col-4 customBorder blockStart">
-                        <h1>
+                        <h2>
                             Notenheft mit Klammerheftung günstig drucken lassen
-                        </h1>
+                        </h2>
                         <p>
                             Der Klassiker: Notenhefte mit Klammerheftung sind der alltägliche Begleiter von Musikern in
                             aller
@@ -60,13 +60,12 @@
                                     <img src="@/assets/svg/info.svg" alt="Avatar" class="pr-3">
                                     Eigenschaften
                                 </h1>
-                                <p>
-                                    Dein Notenheft wird mit einem Squarefold, einem rechteckigen Broschürenrücken versehen,
-                                    der
-                                    dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
+                                <p class="mt-5">
+                                    Ihr Notenheft wird mit einem Squarefold, einem rechteckigen Broschürenrücken versehen,
+                                    der dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
-                                <button type="button" class="btn btn-dark mt-2 mt-xl-5">
+                                <button type="button" class="btn btn-dark mt-4 mt-xl-5">
                                     <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Datenvorgaben
                                     (PDF)
                                 </button>
@@ -141,20 +140,19 @@
 
                     <div class="col-4 customBorder blockStart">
                         <div class="row align-items-start">
-                            <h1>
+                            <h2>
                                 Direkt zu den Topsellern
 
-                            </h1>
+                            </h2>
                             <p>
-                                Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
-                                her.
+                                Starten Sie mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach her.
                             </p>
 
                         </div>
                     </div>
                     <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
-                            <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
+                            <img class="card-img-top" src="@/assets/images/pic4.png" alt="Card image cap">
                         </div>
                         <div class="row p-4">
                             <h2 class="mb-4">Notenheft DIN A4
@@ -193,7 +191,7 @@
                                 <div class="row">
                                     <div class="col-8 mt-1">
                                         <NuxtLink class="a" to="/productCustomizer">
-                                            <button type="button" class="btn btn-dark mt-3">
+                                            <button type="button" class="btn btn-dark" style="margin-top: 55px !important">
                                                 <img src="@/assets/svg/plus.svg" alt="Avatar"
                                                     style="margin-right: 10px;">Jetzt
                                                 Drucken
@@ -269,12 +267,12 @@
                                 Weitere Heftformate
                             </h2>
                             <p class="p-grid pb-4">
-                                Du kannst gängige Sonderformate für Musikalien produzieren lassen.
+                                Sie können gängige Sonderformate für Musikalien produzieren lassen.
                             </p>
                         </div>
-                        <div class="row grey p-4 pt-4 colfreeKlammer">
-                            <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?Í</p>
-                            <div class="col-8">
+                        <div class="row grey p-4 pt-5 colfreeKlammer">
+                            <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?</p>
+                            <div class="col-9">
                                 <h3>
                                     Zu den
                                     Notenheften mit Spiralbindung
@@ -309,7 +307,7 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
                                 </p>
                             </div>
                             <div class="w-100 pt-3"></div>
@@ -318,7 +316,7 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    Innenteil mit klassisch gelblichem Notenpapier
                                 </p>
                             </div>
                             <div class="row">
@@ -335,8 +333,8 @@
                     </div>
                     <div class="col pl-5  p-4 customBorder pink">
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenheft 22,8 x 30,5 cm
+»Concert«
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -365,7 +363,7 @@
                                     Bekannt von EDITION PETERS, SCHOTT Music u.v.a.
                                 </p>
                             </div>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-8">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
@@ -428,8 +426,8 @@ export default {
     }
 }
 
-.p-5{
-  padding: 35px !important;
+.p-5 {
+    padding: 35px !important;
 }
 
 .btn-primary {
@@ -439,6 +437,7 @@ export default {
 .card-img-top {
     border-radius: 0px;
 }
+
 @media only screen and (max-width: 1024px) {
     .card-img-top {
         margin-top: 0%;
