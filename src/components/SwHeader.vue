@@ -11,24 +11,24 @@
           </NuxtLink>
 
         </div>
-        <div class="col-auto mt-1 me-2 me-xl-5">
+        <div class="col-auto mt-3 me-2 me-xl-5">
           <NuxtLink class="a" to="/klammerheftung">
             Noten mit Klammerheftung
           </NuxtLink>
         </div>
 
-        <div class="col-auto mt-1 me-2 me-xl-5">
+        <div class="col-auto mt-3 me-2 me-xl-5">
           <NuxtLink class="a" to="/spiralbindung">
             Noten mit Spiralbindung
           </NuxtLink>
         </div>
-        <div class="col-auto mt-1  me-2 me-xl-5">
+        <div class="col-auto mt-3  me-2 me-xl-5">
           <NuxtLink class="a" to="/good-to-know">
             Wissenswertes
           </NuxtLink>
         </div>
-        <div class="col mt-1">
-          <NuxtLink class="a" to="/spiralbindung">
+        <div class="col mt-3">
+          <NuxtLink class="a" to="/contact">
             Kontakt
           </NuxtLink>
         </div>

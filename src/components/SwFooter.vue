@@ -10,9 +10,9 @@
                     <p>
                         Unterstützung und Beratung unter:
                         <br>
-                    <h2 class="pt-2 thick">
-                        0180 - 000000
-                    </h2>
+                    <p class="pt-2 thick">
+                        +49 180 - 000000
+                    </p>
                     <br>
 
                     Mo-Fr, 09:00 - 17:00 Uhr
