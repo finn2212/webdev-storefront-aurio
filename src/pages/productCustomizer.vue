@@ -107,7 +107,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
+                                        <p><input type="radio" id="one" value="1" v-model="projectType" /></p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -117,7 +117,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="2" v-model="paperFormat" /></p>
+                                        <p><input type="radio" id="two" value="2" v-model="projectType" /></p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -126,7 +126,7 @@
                                         <p>Stimmensatz / Chorsatz</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="3" v-model="paperFormat" /></p>
+                                        <p><input type="radio" id="one" value="3" v-model="projectType" /></p>
                                     </div>
                                 </div>
 
@@ -135,8 +135,8 @@
 
                             </div>
 
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div  v-if="projectType != 3" class="col-7">
                                 <h2>3. Ausrichtung des Hefts</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
@@ -146,7 +146,7 @@
                                     können.
                                 </p>
                             </div>
-                            <div class="col pt-5">
+                            <div  v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>Notenheft Hochformat</p>
@@ -165,8 +165,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>4. Farbigkeit des Inhalts</h2>
                                 <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
 
@@ -177,7 +177,7 @@
                                     Instrumentalstimmen werden generell schwarzweiß gedruckt.
                                 </p>
                             </div>
-                            <div class="col pt-5">
+                            <div v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>Nur Schwarzweiß</p>
@@ -197,8 +197,8 @@
                                 </div>
                             </div>
 
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>5. Papierformat</h2>
                                 <p>Bitte wählen Sie das Format aus, das die Noten haben.
                                     Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
@@ -216,7 +216,7 @@
                                 <li> »Klavierauszug Chorheft Cäcilia«, Concertformat</li>
                                 <li> »Chorsatz Chorheft Cäcilia«, DIN A4</li>
                             </div>
-                            <div class="col pt-4">
+                            <div v-if="projectType != 3" class="col pt-4">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>DIN A4 (21 x 29,7 cm)</p>
@@ -273,8 +273,8 @@
                             </div>
 
 
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>6. Wähle die Seitenanzahl</h2>
                                 <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
                                     Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
@@ -282,12 +282,13 @@
                                 </p>
                                 <p>Sie können zwischen 2 und 400 Seiten Umfang wählen.</p>
                             </div>
-                            <div class="col-3 pt-5">
+                            <div v-if="projectType != 3" class="col-3 pt-5">
                                 <p>Seitenanzahl Inhalt:</p>
                             </div>
-                            <div class="col pt-5">
+                            <div v-if="projectType != 3" class="col pt-5">
 
-                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedPagesClip">
+                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn"
+                                    v-model="selectedPagesClip">
                                     <option selected v-bind:value="4"> 4
                                     </option>
                                     <option v-for="item in pages" v-bind:value="item">{{ item }}
@@ -302,8 +303,8 @@
                                 </select>
 
                             </div>
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>7. Bindeart des Hefts</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
@@ -313,7 +314,7 @@
 
                                 </p>
                             </div>
-                            <div class="col pt-5">
+                            <div v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3" v-if="format == 'true'">
                                     <div class="col-8">
                                         <p v-if="format == 'true'">Klammerheftung</p>
@@ -334,15 +335,15 @@
                                 </div>
                             </div>
 
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>8. Wähle den Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 260g/m&#178; gibt Farben brillant wieder und besitzt
                                     ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
                                     hervorragend bedrucken und bricht auch bei starker Beanspruchung nicht auf.</p>
                             </div>
-                            <div class="col pt-5">
+                            <div  v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>Mit Umschlag:</p>
@@ -362,15 +363,15 @@
                                 </div>
                             </div>
 
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>9. Lade deine Noten hoch</h2>
                                 <p>Hier laden Sie nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Ihre Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns ggf. per E-Mail, falls etwas nicht
                                     passen sollte.</p>
                             </div>
-                            <div class="col mt-4">
+                            <div v-if="projectType != 3" class="col mt-4">
                                 <div class="row">
                                     <div class="col">
                                         <p>Noten-PDF /Inhalt:</p>
@@ -380,8 +381,7 @@
                                             <div>
                                                 <button class="btn btn uploadBtn" @click="click1"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                        style="margin-right: 5px;">Wähle
-                                                    Noten</button>
+                                                        style="margin-right: 5px;">Datei wählen</button>
                                                 <input type="file" ref="input1" style="display: none" @change="previewImage"
                                                     accept="application/pdf">
                                             </div>
@@ -416,8 +416,7 @@
                                             <div class="" v-if="pdfData2 == null">
                                                 <button class="btn btn uploadBtn" @click="click2"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                        style="margin-right: 5px;">Wähle
-                                                    Noten
+                                                        style="margin-right: 5px;">Datei wählen
                                                 </button>
                                                 <input type="file" ref="input2" style="display: none"
                                                     @change="previewImage2" accept="application/pdf">
@@ -446,9 +445,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row pt-5" v-if="projectType != 1">
                             <div class="col-7">
-                                <h2>10. Instrumentalstimmen</h2>
+                                <h2 v-if="projectType == 2">10. Instrumentalstimmen</h2>
+                                <h2 v-if="projectType == 3">3. Instrumentalstimmen</h2>
                                 <p>Wenn Ihr Projekt Instrumentalstimmen enthält, können Sie diese hier konfigurieren.
                                 </p>
                                 <p>
@@ -551,7 +551,7 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row" v-if="projectType != 1">
                             <div class="col-md-12 pt-4 ">
                                 <h3 class="ps-2">Hinzugefügte Stimmen:</h3>
                                 <table class="table table-striped">
@@ -698,10 +698,10 @@
                         </h2>
                         <p> Kommen SIe nicht weiter? Gerne sind wir für Sie da. Bitte schreiben Sie uns eine E-Mail:
                         </p>
-<p class="thick">   fragen@capellaprint.com
-</p>
-                      <p>    Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
-                    
+                        <p class="thick"> fragen@capellaprint.com
+                        </p>
+                        <p> Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
+
                     </div>
                     <div class="col-4">
 
@@ -768,6 +768,7 @@ export default {
             isUpload2: false,
             isUpload3: false,
             access_token: '',
+            projectType: 1,
             uploadValue: 0,
             uploadValue2: 0,
             uploadValue3: 0,
