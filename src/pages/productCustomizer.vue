@@ -473,7 +473,7 @@
                                 </p>
                                 <input type="string" class="grey p-3" placeholder="Stimmenname eingeben ..."
                                     v-model="voiceName"
-                                    style="    width: 300px;border-width: 1px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;">
+                                    style="    width: 250px;border-width: 1px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;">
                             </div>
                             <div class="col">
                                 <div class="row">
@@ -898,10 +898,12 @@ export default {
     },
     methods: {
         close() {
-            this.isOpen = false
+            this.isOpen = false;
+            document.getElementById("stickyBar").classList.add('sticky-top');
         },
         open() {
             this.isOpen = true;
+            document.getElementById("stickyBar").classList.remove('sticky-top');
         },
         createUuid() {
             if (this.pdfData1) {
