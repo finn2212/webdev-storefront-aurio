@@ -28,7 +28,7 @@
                     </h2>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/impressum">
+                            <NuxtLink class="a" to="/contact">
 
                                 Impressum
 
@@ -37,7 +37,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/AGBs">
+                            <NuxtLink class="a" to="/contact">
 
                                 Allgemeine Gechäftsbedingungen
 
@@ -46,7 +46,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/payment">
+                            <NuxtLink class="a" to="/shipping">
 
                                 Zahlung & Versand
 
@@ -55,7 +55,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/dataSecurity">
+                            <NuxtLink class="a" to="/contact">
 
                                 Datenschutz
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/disclaimer">
+                            <NuxtLink class="a" to="/contact">
 
                                 Widerrufserklärung
 

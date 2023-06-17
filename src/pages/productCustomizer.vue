@@ -12,48 +12,44 @@
             <div class="container justify-content-center">
                 <div class="row">
                     <div class="col-4 customBorder  p-4 blue">
-                        <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                        <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
+                        <h2 class="heading-grid mt-3">
+                            Ihre Vorteile bei capellaprint
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
-                                <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
+                                <p> Erstklassiger Notendruck
                                 </p>
-
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Musikalientypische Papierformate
                                 </p>
                             </div>
-                            <div class="w-100 pt-3"></div>
+                            <div class="w-100 pt-2"></div>
                             <div class="col-1">
                                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    Prestissimo versandfertig
                                 </p>
                             </div>
-                            <div class="row">
-                                <div class="col-8 mt-4">
-                                    <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
-                                        </button>
-                                    </NuxtLink>
-
-                                </div>
+                            <div class="w-100 pt-2"></div>
+                            <div class="col-1">
+                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Kauf auf Rechnung möglich
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -73,7 +69,7 @@
             <div class="container justify-content-center">
 
                 <div class="row">
-                    <h1 class="blockStartMarign">
+                    <h1 class="">
                         Konfiguriere dein Notenheft
                     </h1>
                     <div class="col-8 customBorder  pl-5  p-4 grey">
@@ -85,93 +81,213 @@
                                 <p>Bitte vergib hier einen eindeutigen Projekttitel.</p>
                             </div>
                             <div class="col">
-                                <input style="margin-top: 40px;" type="string" v-model="productName">
+                                <input placeholder="Projekttitel eingeben ..." class="grey p-3"
+                                    style="border-width: 1px;  width: 300px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;"
+                                    type="string" v-model="productName">
                             </div>
-
                         </div>
                         <div class="row">
-                            <div class="col-7">
-                                <h2>2. Ausrichtung des Hefts</h2>
-                                <p>Bitte gib zuerst an, ob die Partituren, die du drucken lassen möchtest, im Hoch– oder im
-                                    Querformat angelegt sind.
+                            <div class="col-7 pt-4">
+                                <h2>2. Art des Projekts</h2>
+                                <p>Zu Beginn ist es notwendig, zu wissen, um welche Art von Notenprojekt es sich handelt.
                                 </p>
                                 <p>
-                                    Bitte beachte, dass Du innerhalb eines Projekts die Ausrichtungen nicht mischen kannst.
-                                </p>
-                            </div>
-                            <div class="col-3 pt-5">
-                                <p>Notenheft Hochformat</p>
-                                <p>Notenheft Querformat</p>
+                                    Wählen Sie zwischen den gebräuchlichsten Formen: </p>
+                                <ul>
+                                    <li>Partitur ohne Instrumentalstimmen</li>
+                                    <li>Partitur mit Stimmeneinlegern (oder mit Stimmenset, bspw. bei Dirigierpartituren +
+                                        Orchestermaterial)</li>
+                                    <li> Reiner Stimmensatz ohne Partitur, bspw. Chorsätze</li>
+                                </ul>
                             </div>
                             <div class="col pt-5">
-                                <p><input type="radio" id="one" value="true" v-model="format" /></p>
-                                <p><input type="radio" id="two" value="false" v-model="format" /></p>
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Notenheft ohne
+                                            Instrumentalstimmen</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
 
+                                        <p>Notenheft mit
+                                            Instrumentalstimmen</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="2" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Stimmensatz / Chorsatz</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="3" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>3. Ausrichtung des Hefts</h2>
+                                <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
+
+                                </p>
+                                <p>
+                                    Bitte beachten Sie, dass Sie innerhalb eines Projekts die Ausrichtungen nicht mischen
+                                    können.
+                                </p>
+                            </div>
+                            <div class="col pt-5">
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Notenheft Hochformat</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="true" v-model="format" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Notenheft Querformat</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="false" v-model="format" /></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h2>3. Farbigkeit des Inhalts</h2>
-                                <p>Bitte wähle das Format aus, das deine Noten haben. Du kannst zwischen gebräuchlichen
-                                    musikalientypischen Papierformaten wählen.
-                                </p>
-                                <p>
-                                    Bitte beachte: Wenn Du unterschiedliche Formate innerhalb eines Projekts hast (bspw.
-                                    Partitur in DIN A3 und Stimmen in DIN A4), lege bitte für jedes Format ein neues Projekt
-                                    an.
-                                </p>
-                            </div>
-                            <div class="col-3 pt-5">
-                                <p>Nur Schwarzweiß</p>
-                                <p>Farbseiten im Inhalt</p>
-                            </div>
-                            <div class="col pt-5">
-                                <p><input type="radio" id="one" value="false" v-model="color" /></p>
-                                <p><input type="radio" id="two" value="true" v-model="color" /></p>
-                            </div>
-                            <div class="w-100 pt-5"></div>
-                            <div class="col-7">
-                                <h2>4. Papierformat</h2>
-                                <p>Bitte wähle das Format aus, das deine Noten haben. Du kannst zwischen gebräuchlichen
-                                    musikalientypischen Papierformaten wählen.
+                                <h2>4. Farbigkeit des Inhalts</h2>
+                                <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
+
 
                                 </p>
                                 <p>
-                                    Bitte beachte: Wenn Du unterschiedliche Formate innerhalb eines Projekts hast (bspw.
-                                    Partitur in DIN A3 und Stimmen in DIN A4), lege bitte für jedes Format ein neues Projekt
-                                    an.
-
+                                    Falls Ihr Notenprojekt einen Umschlag hat, wird dieser ohne Aufpreis farbig gedruckt.
+                                    Instrumentalstimmen werden generell schwarzweiß gedruckt.
                                 </p>
                             </div>
-                            <div class="col-3 pt-5">
-                                <p>DIN A4 (21 x 29,7 cm)</p>
-                                <p>Klavierauszug (19 x 27 cm)</p>
-                                <p>Concert (22,8 x 30,5 cm)</p>
-                                <p>DIN B4 (25 x 35,3 cm)</p>
-                                <p>DIN A3 (29,7 x 42 cm)</p>
-                                <p>Farbseiten im Inhalt</p>
-                            </div>
                             <div class="col pt-5">
-                                <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
-                                <p><input type="radio" id="two" value="2" v-model="paperFormat" /></p>
-                                <p><input type="radio" id="one" value="3" v-model="paperFormat" /></p>
-                                <p><input type="radio" id="two" value="4" v-model="paperFormat" /></p>
-                                <p><input type="radio" id="one" value="5" v-model="paperFormat" /></p>
-                                <p><input type="radio" id="two" value="6" v-model="paperFormat" /></p>
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Nur Schwarzweiß</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="false" v-model="color" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Farbseiten im Inhalt</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="true" v-model="color" /></p>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h2>5. Wähle die Seitenanzahl</h2>
-                                <p>Bitte gib die Gesamtseitenanzahl deiner Datei an.
-                                    Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
-                                    Du kannst zwischen 4 und 88 Seiten Umfang wählen.</p>
+                                <h2>5. Papierformat</h2>
+                                <p>Bitte wählen Sie das Format aus, das die Noten haben.
+                                    Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
+
+
+
+
+
+                                </p>
+                                <p> Bitte beachten Sie: Wenn Sie unterschiedliche Formate innerhalb eines Projekts haben
+                                    (bspw. Partitur in DIN A3 und Stimmen in DIN A4), legen Sie bitte für jedes Format ein
+                                    neues Projekt an.
+                                </p>
+                                <p class="m-0">Beispiel:</p>
+                                <li> »Klavierauszug Chorheft Cäcilia«, Concertformat</li>
+                                <li> »Chorsatz Chorheft Cäcilia«, DIN A4</li>
+                            </div>
+                            <div class="col pt-4">
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>DIN A4 (21 x 29,7 cm)</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Klavierauszug (19 x 27 cm)</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="2" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Concert (22,8 x 30,5 cm)</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="3" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>DIN B4 (25 x 35,3 cm)</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="4" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>DIN A3 (29,7 x 42 cm)</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="5" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Farbseiten im Inhalt</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="6" v-model="paperFormat" /></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="w-100 pt-5"></div>
+                            <div class="col-7">
+                                <h2>6. Wähle die Seitenanzahl</h2>
+                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
+                                    Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
+                                    (Klammerheftung) teilbar sein.
+                                </p>
+                                <p>Sie können zwischen 2 und 400 Seiten Umfang wählen.</p>
                             </div>
                             <div class="col-3 pt-5">
                                 <p>Seitenanzahl Inhalt:</p>
                             </div>
                             <div class="col pt-5">
 
-                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn"
-                                    v-model="selectedPagesClip">
+                                <select id="mySelect" class="custom-select selectBtn" v-model="selectedPagesClip">
                                     <option selected v-bind:value="4"> 4
                                     </option>
                                     <option v-for="item in pages" v-bind:value="item">{{ item }}
@@ -188,49 +304,76 @@
                             </div>
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h2>6. Bindeart des Hefts</h2>
-                                <p>Hier hast du die Möglicheit, zwischen den verfügbaren Bindearten zu wählen. </p>
+                                <h2>7. Bindeart des Hefts</h2>
+                                <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
-                                    Bitte beachte, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
-                                    Querformaten und bei mehr als 88 Seiten Inhalt derzeit nur Spiralbindung verfügbar ist.
+
+                                    Bitte beachten Sie, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
+                                    Querformaten und bei mehr als 88 Seiten Inhalt nur Spiralbindung verfügbar ist.</p>
+
                                 </p>
                             </div>
                             <div class="col pt-5">
-                                <p v-if="format == 'true'">Klammerheftung</p>
-                                <p>Spiralbindung</p>
+                                <div class="row mt-3" v-if="format == 'true'">
+                                    <div class="col-8">
+                                        <p v-if="format == 'true'">Klammerheftung</p>
+
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="true" v-model="bindingType" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Spiralbindung</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="false" v-model="bindingType" /></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col pt-5">
-                                <p v-if="format == 'true'"><input type="radio" id="one" value="true"
-                                        v-model="bindingType" /></p>
-                                <p><input type="radio" id="two" value="false" v-model="bindingType" /></p>
-                            </div>
+
                             <div class="w-100 pt-5"></div>
                             <div class="col-7">
-                                <h2>7. Wähle den Umschlag</h2>
-                                <p>Unser hochweißer Umschlagkarton mit 240g/m2 gibt Farben brillant wieder und besitzt ein
+                                <h2>8. Wähle den Umschlag</h2>
+                                <p>Unser hochweißer Umschlagkarton mit 260g/m&#178; gibt Farben brillant wieder und besitzt
+                                    ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
                                     hervorragend bedrucken und bricht auch bei starker Beanspruchung nicht auf.</p>
                             </div>
                             <div class="col pt-5">
-                                <p>Mit Umschlag:</p>
-                                <p>Ohne Umschlag:</p>
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Mit Umschlag:</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="one" value="true" v-model="enveloped" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Ohne Umschlag:</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p><input type="radio" id="two" value="false" v-model="enveloped" /></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col pt-5">
-                                <p><input type="radio" id="one" value="true" v-model="enveloped" /></p>
-                                <p><input type="radio" id="two" value="false" v-model="enveloped" /></p>
-                            </div>
+
                             <div class="w-100 pt-5"></div>
-                            <div class="col-6">
-                                <h2>8. Lade deine Noten hoch</h2>
-                                <p>Hier lädst du nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
-                                    Deine Daten werden verschlüsselt übertragen.
-                                    Wir prüfen diese auf Druckbarkeit und melden uns bei dir per E-Mail, falls etwas nicht
+                            <div class="col-7">
+                                <h2>9. Lade deine Noten hoch</h2>
+                                <p>Hier laden Sie nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
+                                    Ihre Daten werden verschlüsselt übertragen.
+                                    Wir prüfen diese auf Druckbarkeit und melden uns ggf. per E-Mail, falls etwas nicht
                                     passen sollte.</p>
                             </div>
-                            <div class="col mt-5">
+                            <div class="col mt-4">
                                 <div class="row">
                                     <div class="col">
-                                        <p>Noten-PDF / Inhalt:</p>
+                                        <p>Noten-PDF /Inhalt:</p>
                                     </div>
                                     <div class="col-8">
                                         <div v-if="pdfData1 == null" class="row">
@@ -266,7 +409,7 @@
                                 </div>
                                 <div class="row mt-5">
                                     <div class="col">
-                                        <p>Noten-PDF / Inhalt:</p>
+                                        <p>Noten-PDF /Inhalt:</p>
                                     </div>
                                     <div class="col-8">
                                         <div v-if="pdfData2 == null" class="row">
@@ -305,88 +448,109 @@
                         </div>
                         <div class="row">
                             <div class="col-7">
-                                <h2>9. Instrumentalstimmen</h2>
-                                <p>Wenn dein Projekt Instrumentalstimmen enthält, kannst du diese hier konfigurieren.
+                                <h2>10. Instrumentalstimmen</h2>
+                                <p>Wenn Ihr Projekt Instrumentalstimmen enthält, können Sie diese hier konfigurieren.
                                 </p>
                                 <p>
-                                    Bitte gib an, wie viele Seiten die Stimmeneinleger haben.
-                                    Wähle bitte zusätzlich aus, wie viele Exemplare du von jeder Stimme pro Set (also pro
-                                    Heft!) haben möchtest (bspw. Orchestermusik: 8 Erste Violinen)
+
+
+                                    Bitte geben Sie an, wie viele Seiten die Stimmeneinleger haben.
+
+                                </p>
+                                <p>Wählen Sie bitte zusätzlich aus, wie viele Exemplare von jeder Stimme pro Set enthalten
+                                    sein sollen (bspw. Orchestermusik: 8 Erste Violinen, 6 Zweite Violinen, etc.).
                                 </p>
                                 <p>
-                                    Bitte beachte, dass wir Instrumentalstimmen, die später in ein Heft eingelegt werden, am
-                                    rechten Rand 3–5 mm kleiner schnneiden, damit diese nicht überstehen.</p>
+                                    Bitte beachten Sie, dass wir Instrumentalstimmen, die später in ein Heft eingelegt
+                                    werden, am rechten Rand 3–5 mm kleiner schneiden, damit diese nicht überstehen.
+                                </p>
                             </div>
                             <div class="w-100 pt-2"></div>
+
                             <div class="col-6">
                                 <p class="blockStartMarign">
-                                    Instrumentalstimme:
+                                <p class="thick inline"> Stimme benennen </p>(bspw. »Violine 1«)
                                 </p>
-                                <input type="string" v-model="voiceName">
+                                <input type="string" class="grey p-3" placeholder="Stimmenname eingeben ..."
+                                    v-model="voiceName"
+                                    style="    width: 300px;border-width: 1px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;">
                             </div>
                             <div class="col">
-                                <p>Seitenanzahl Inhalt:</p>
-                                <p>Exemplare pro Set:</p>
-                                <p class="pt-2">Noten-PDF / Inhalt:</p>
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <select id="mySelect" class="custom-select selectBtn" v-model="voicePages">
-                                        <option selected v-bind:value="4"> 4
-                                        </option>
-                                        <option v-for="item in pages" v-bind:value="item">{{ item }}
-                                        </option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <select id="mySelect" class="custom-select selectBtn" v-model="voiceQuantity">
-                                        <option selected v-bind:value="4"> 4
-                                        </option>
-                                        <option v-for="item in pages" v-bind:value="item">{{ item }}
-                                        </option>
-                                    </select>
-                                </p>
-                                <p>
-                                <div v-if="pdfData3 == null" class="row">
-                                    <div class="" v-if="pdfData3 == null">
-                                        <button class="btn btn uploadBtn" @click="voiceUpload"> <img
-                                                src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                style="margin-right: 5px;">Wähle
-                                            Noten
-                                        </button>
-                                        <input type="file" ref="input3" style="display: none" @change="previewImage3"
-                                            accept="application/pdf">
-                                    </div>
-                                </div>
-                                <div v-if="pdfData3 != null && isUpload3 == false" class="row">
+                                <div class="row">
                                     <div class="col">
-                                        {{ pdfData3.name }}
+                                        <p>Seitenanzahl Inhalt:</p>
+                                        <p>Exemplare pro Set:</p>
+                                        <p class="pt-2">Noten-PDF / Inhalt:</p>
                                     </div>
                                     <div class="col">
-                                        <button class="btn btn uploadBtn" @click="deletePdf3" style="margin-left:5px">
-                                            <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                style="transform: rotate(45deg);">
-                                        </button>
+                                        <p>
+                                            <select id="mySelect" class="custom-select selectBtn" v-model="voicePages">
+                                                <option selected v-bind:value="4"> 4
+                                                </option>
+                                                <option v-for="item in pages" v-bind:value="item">{{ item }}
+                                                </option>
+                                            </select>
+                                        </p>
+                                        <p>
+                                            <select id="mySelect" class="custom-select selectBtn" v-model="voiceQuantity">
+                                                <option selected v-bind:value="4"> 4
+                                                </option>
+                                                <option v-for="item in pages" v-bind:value="item">{{ item }}
+                                                </option>
+                                            </select>
+                                        </p>
+                                        <p>
+                                        <div v-if="pdfData3 == null" class="row">
+                                            <div class="" v-if="pdfData3 == null">
+                                                <button class="btn btn uploadBtn" @click="voiceUpload"> <img
+                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="margin-right: 5px;">Datei wählen
+                                                </button>
+                                                <input type="file" ref="input3" style="display: none"
+                                                    @change="previewImage3" accept="application/pdf">
+                                            </div>
+                                        </div>
+                                        <div v-if="pdfData3 != null && isUpload3 == false" class="row">
+                                            <div class="col">
+                                                {{ pdfData3.name }}
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn btn uploadBtn" @click="deletePdf3"
+                                                    style="margin-left:5px">
+                                                    <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style="transform: rotate(45deg);">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div v-if="isUpload3 == true" class="row mt-3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped" role="progressbar"
+                                                    :style="{ width: uploadValue3 + '%' }" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        </p>
+
                                     </div>
+                                    <button class="btn btn uploadBtn" @click="addVoice()"
+                                        style="background-color: black !important;"> <img src="@/assets/svg/iconWhite.svg"
+                                            alt="Avatar" style="margin-right: 5px;  ">
+                                        <p class="inline mt-1" style="color: white;">
+                                            Stimme
+                                            Hinzufügen
+                                        </p>
+                                    </button>
+                                    <p class="pt-4">
+                                        Sie können beliebig viele weitere
+                                        Instrumentalstimmen hinzufügen.
+                                    </p>
                                 </div>
-                                <div v-if="isUpload3 == true" class="row mt-3">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                                            :style="{ width: uploadValue3 + '%' }" aria-valuenow="0" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
+
                             </div>
+
+
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <button class="btn btn uploadBtn" @click="addVoice()"> <img src="@/assets/svg/plusBlack.svg"
-                                        alt="Avatar" style="margin-right: 5px;">Stimme
-                                    Hinzufügen
-                                </button>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-md-12 pt-4 ">
                                 <h3 class="ps-2">Hinzugefügte Stimmen:</h3>
@@ -485,7 +649,19 @@
                                 </div>
                                 <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                             </div>
+                            <div class="p-4 pink" style="margin-top: 20px;">
 
+                                <h1 class="heading-grid">
+                                    Kostenfreier
+                                    Versand
+                                </h1>
+                                <img src="@/assets/svg/local_shipping.svg" alt="Avatar"
+                                    style=" margin-top: 150px; width: 10%; ">
+                                <h2 class="mt-2">
+                                    Ab 50,- Euro
+                                    Einkaufswert
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -495,112 +671,42 @@
         <section class="pt-5">
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-4 customBorder  pl-5  p-4 red">
-
-                        <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
-                        </h2>
-                        <div class="row mt-4">
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
+                    <div class="col customBorder  pl-5  p-4 red">
+                        <div class="row">
+                            <div class="col-2"> <img src="@/assets/svg/report.svg" class="mr-2" alt="Avatar"></div>
                             <div class="col">
-                                <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
-                                </p>
-
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-8 mt-4">
-                                    <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
-                                        </button>
-                                    </NuxtLink>
-
-                                </div>
+                                <h2>Maßvorgaben</h2>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6 customBorder  pl-5  p-4 yellow">
-
-                        <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
-                        </h2>
-                        <div class="row mt-4">
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Klammerheftung, hervorragend geeignet bspw. für Chorpartituren
-                                </p>
-
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
-                                </p>
-                            </div>
-                            <div class="w-100 pt-3"></div>
-                            <div class="col-1">
-                                <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-8 mt-4">
-                                    <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
-                                        </button>
-                                    </NuxtLink>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2 customBorder  pl-5  p-4 pink">
-
-                        <h2 class="heading-grid">
-                            Kosten-
-                            freier
-                            Versand
-                        </h2>
-                        <p>
-                            Ab 50,- Euro
-                            Einkaufswert
+                        <p style="margin-top: 130px;">Um bestmögliche Qualität in der Druckproduktion zu gewährleisten, ist
+                            es notwendig, dass die
+                            Druckdaten korrekt angelegt sind.
+                            Bitte laden Sie die Maßvorgaben herunter und legen Sie Ihre Druckdaten danach an.
                         </p>
+                        <button type="button" class="btn btn-dark">
+                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Maßvorgaben herunterladen
+                            (PDF)
+                        </button>
+
+
                     </div>
+                    <div class="col customBorder  pl-5  p-4 yellow">
+                        <img src="@/assets/svg/mark_email_read.svg" class="mr-2" alt="Avatar">
+                        <h2 style="margin-top: 60px;">
+                            Sie benötigen Hilfe?
+                            Schreiben Sie uns!
+                        </h2>
+                        <p> Kommen SIe nicht weiter? Gerne sind wir für Sie da. Bitte schreiben Sie uns eine E-Mail:
+                        </p>
+<p class="thick">   fragen@capellaprint.com
+</p>
+                      <p>    Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
+                    
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1371,8 +1477,9 @@ export default {
         box-shadow: 0 2.5em 0 0;
     }
 }
-.p-5{
-  padding: 35px !important;
+
+.p-5 {
+    padding: 35px !important;
 }
 
 
