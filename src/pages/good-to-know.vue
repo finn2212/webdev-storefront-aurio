@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" style="margin-top: 100px;">
 
         <!--Sektion mit 3 Karten und Bider-->
         <section>

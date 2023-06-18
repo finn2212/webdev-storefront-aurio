@@ -32,6 +32,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <client-only>
                         <tr v-for="user in Users" :key="user.key">
                             <td>{{ user.name }}</td>
                             <td>{{ user.email }}</td>
@@ -42,6 +43,7 @@
                                 <button @click.prevent="deleteUser(user.key)" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
+                    </client-only>
                     </tbody>
                 </table>
             </div>

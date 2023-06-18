@@ -156,13 +156,19 @@
     watch: {
       isSidebarOpen(val) {
         if (!val) {
-            document.getElementById("stickyBar").classList.add('sticky-top');
+          if (document.getElementById("stickyBar")) {
+         //   document.getElementById("stickyBar").classList.add('sticky-top');
+          }
+           
           this.$nextTick(() => {
             clearAllBodyScrollLocks()
           })
           document.body.style.overflow = "auto"
         } else {
-            document.getElementById("stickyBar").classList.remove('sticky-top');
+          if (document.getElementById("stickyBar")) {
+         //   document.getElementById("stickyBar").classList.remove('sticky-top');
+          }
+   
         }
       },
     },

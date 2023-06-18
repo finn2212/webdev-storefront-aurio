@@ -1,5 +1,5 @@
 <template>
-    <div class="container justify-content-center">
+    <div class="container justify-content-center" style="margin-top: 100px;">
         <!--Sektion mit 3 Karten und Bider-->
         <section>
             <div class="container justify-content-center">

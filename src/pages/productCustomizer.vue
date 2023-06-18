@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" style="margin-top: 100px;">
         <div id="overlay">
             <div class="container justify-content-center">
                 <div class="spinner-border" role="status" style="margin-top: 30%; margin-left: 50%;">
@@ -107,7 +107,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                             <input type="radio" id="one" value="1" v-model="projectType" />
+                                        <input type="radio" id="one" value="1" v-model="projectType" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -117,7 +117,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                                      <input type="radio" id="two" value="2" v-model="projectType" />
+                                        <input type="radio" id="two" value="2" v-model="projectType" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -183,7 +183,7 @@
                                         <p>Nur Schwarzweiß</p>
                                     </div>
                                     <div class="col-1">
-                                    <input type="radio" id="one" value="false" v-model="color" />
+                                        <input type="radio" id="one" value="false" v-model="color" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -640,12 +640,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
                                             <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
                                                 v-for="discount in discounts" @click="setAmount(discount.amount)">
                                                 <th scope="row">Bis {{ discount.amount }}</th>
                                                 <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
                                                 <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
                                             </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -1042,9 +1044,10 @@ export default {
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
                 const elementToDelete = `discountgroup${i}`
-                document.getElementById(elementToDelete).classList.remove('activeDiscount');
+                debugger
+                document.getElementById(`discountgroup${i}`).classList.remove('activeDiscount');
             }
-            document.getElementById(element).classList.add('activeDiscount');
+            document.getElementById(`discountgroup${id}`).classList.add('activeDiscount');
         },
         setAmount: function (amount) {
             this.quantitiy = amount;
