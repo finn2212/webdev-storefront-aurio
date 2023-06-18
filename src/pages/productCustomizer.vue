@@ -107,7 +107,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="1" v-model="projectType" /></p>
+                             <input type="radio" id="one" value="1" v-model="projectType" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -117,7 +117,7 @@
                                             Instrumentalstimmen</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="2" v-model="projectType" /></p>
+                                      <input type="radio" id="two" value="2" v-model="projectType" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -126,7 +126,7 @@
                                         <p>Stimmensatz / Chorsatz</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="3" v-model="projectType" /></p>
+                                        <input type="radio" id="one" value="3" v-model="projectType" />
                                     </div>
                                 </div>
 
@@ -136,7 +136,7 @@
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div  v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-7">
                                 <h2>3. Ausrichtung des Hefts</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
@@ -146,13 +146,13 @@
                                     können.
                                 </p>
                             </div>
-                            <div  v-if="projectType != 3" class="col pt-5">
+                            <div v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>Notenheft Hochformat</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="true" v-model="format" /></p>
+                                        <input type="radio" id="one" value="true" v-model="format" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -161,7 +161,7 @@
                                         <p>Notenheft Querformat</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="false" v-model="format" /></p>
+                                        <input type="radio" id="two" value="false" v-model="format" />
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +183,7 @@
                                         <p>Nur Schwarzweiß</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="false" v-model="color" /></p>
+                                    <input type="radio" id="one" value="false" v-model="color" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -192,7 +192,7 @@
                                         <p>Farbseiten im Inhalt</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="true" v-model="color" /></p>
+                                        <input type="radio" id="two" value="true" v-model="color" />
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                                         <p>DIN A4 (21 x 29,7 cm)</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="1" v-model="paperFormat" /></p>
+                                        <input type="radio" id="one" value="1" v-model="paperFormat" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -231,7 +231,7 @@
                                         <p>Klavierauszug (19 x 27 cm)</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="2" v-model="paperFormat" /></p>
+                                        <input type="radio" id="one" value="2" v-model="paperFormat" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -240,7 +240,7 @@
                                         <p>Concert (22,8 x 30,5 cm)</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="3" v-model="paperFormat" /></p>
+                                        <input type="radio" id="two" value="3" v-model="paperFormat" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -249,7 +249,7 @@
                                         <p>DIN B4 (25 x 35,3 cm)</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="4" v-model="paperFormat" /></p>
+                                        <input type="radio" id="two" value="4" v-model="paperFormat" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -258,7 +258,7 @@
                                         <p>DIN A3 (29,7 x 42 cm)</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="5" v-model="paperFormat" /></p>
+                                        <input type="radio" id="one" value="5" v-model="paperFormat" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -267,7 +267,7 @@
                                         <p>Farbseiten im Inhalt</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="6" v-model="paperFormat" /></p>
+                                        <input type="radio" id="two" value="6" v-model="paperFormat" />
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +321,7 @@
 
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="true" v-model="bindingType" /></p>
+                                        <input type="radio" id="one" value="true" v-model="bindingType" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -330,7 +330,7 @@
                                         <p>Spiralbindung</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="false" v-model="bindingType" /></p>
+                                        <input type="radio" id="two" value="false" v-model="bindingType" />
                                     </div>
                                 </div>
                             </div>
@@ -343,13 +343,13 @@
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
                                     hervorragend bedrucken und bricht auch bei starker Beanspruchung nicht auf.</p>
                             </div>
-                            <div  v-if="projectType != 3" class="col pt-5">
+                            <div v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
                                         <p>Mit Umschlag:</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="one" value="true" v-model="enveloped" /></p>
+                                        <input type="radio" id="one" value="true" v-model="enveloped" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -358,7 +358,7 @@
                                         <p>Ohne Umschlag:</p>
                                     </div>
                                     <div class="col-1">
-                                        <p><input type="radio" id="two" value="false" v-model="enveloped" /></p>
+                                        <input type="radio" id="two" value="false" v-model="enveloped" />
                                     </div>
                                 </div>
                             </div>
@@ -565,18 +565,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="(voice, index) in voices">
-                                            <td>{{ voice.name }}</td>
-                                            <td>{{ voice.pages }}</td>
-                                            <td>{{ voice.quantity }}</td>
-                                            <td>{{ voice.uploadName }}</td>
-                                            <td>
-                                                <button @click.prevent="removeVoice(index)" class="btn"
-                                                    style="background-color: transparent; padding: 0; margin: 0"><img
-                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                        style="transform: rotate(45deg);"></button>
-                                            </td>
-                                        </tr>
+                                        <client-only>
+                                            <tr v-for="(voice, index) in voices">
+                                                <td>{{ voice.name }}</td>
+                                                <td>{{ voice.pages }}</td>
+                                                <td>{{ voice.quantity }}</td>
+                                                <td>{{ voice.uploadName }}</td>
+                                                <td>
+                                                    <button @click.prevent="removeVoice(index)" class="btn"
+                                                        style="background-color: transparent; padding: 0; margin: 0"><img
+                                                            src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                            style="transform: rotate(45deg);"></button>
+                                                </td>
+                                            </tr>
+                                        </client-only>
                                     </tbody>
                                 </table>
                             </div>

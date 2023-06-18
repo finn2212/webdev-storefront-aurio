@@ -6,7 +6,9 @@ module.exports = {
     timeout: 5000, // timeout limit in ms
   },
   shopwareDomainsAllowList: [
-    "http://localhost:3000",
-    "https://home-5013243924.app-ionos.space"],
+    "http://192.168.2.119",
+    "https://home-5013243924.app-ionos.space",
+    "https://s23511.creoline.cloud"
+  ],
   defaultLanguageCode: "de-DE",
 };
