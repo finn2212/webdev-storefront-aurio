@@ -975,7 +975,7 @@ export default {
                     },
                 })
             }).then((res) => {
-                setTimeout(() => this.getCreatedProduct(productNumber), 150);
+                setTimeout(() => this.getCreatedProduct(productNumber), 50);
             }).catch((error) => {
                 //try to fix the error or
                 document.getElementById("overlay").style.display = "none";
