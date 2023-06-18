@@ -5,7 +5,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-md-3 col-xl-3 p-2 p-md-4 darkblue customBorder">
+                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 midNightBlue customBorder">
                         <h1 style="color: white;">
                             Nacht-
                             eule?
@@ -20,7 +20,7 @@
                         v-bind:style="{ 'background-image': 'url(' + require('../assets/images/Booklet_machine.png') + ')' }">
                         <div class="row align-items-end" style="height: 100%">
                             <div class="col align-self-end">
-                                <h1 style="color: white;" class="pb-3">
+                                <h1 style="color: white;" class="pb-3 ms-4">
                                     Notenheft mit Klammerheftung
                                 </h1>
                             </div>
@@ -80,7 +80,7 @@
                                             Formate: DIN A4 / 19 x 27 cm / 22,8 x 30,5 (»Concertformat«)
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -89,7 +89,7 @@
                                             Für Notenhefte als Broschüre im Hochformat mit und ohne Umschlag
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -98,7 +98,7 @@
                                             Seitenumfang bis 88 Seiten + Umschlag machbar
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -107,7 +107,7 @@
                                             Hervorragendes Aufschlagverhalten
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -116,7 +116,7 @@
                                             Auflage 1 bis 250 Exemplare günstig drucken
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -194,7 +194,7 @@
                                             <button type="button" class="btn btn-dark" style="margin-top: 55px !important">
                                                 <img src="@/assets/svg/plus.svg" alt="Avatar"
                                                     style="margin-right: 10px;">Jetzt
-                                                Drucken
+                                                drucken
                                             </button>
                                         </NuxtLink>
                                     </div>
@@ -246,7 +246,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -270,7 +270,7 @@
                                 Sie können gängige Sonderformate für Musikalien produzieren lassen.
                             </p>
                         </div>
-                        <div class="row grey p-4 pt-5 colfreeKlammer">
+                        <div class="row beige p-4 pt-5 colfreeKlammer">
                             <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?</p>
                             <div class="col-9">
                                 <h3>
@@ -324,7 +324,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -368,7 +368,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>

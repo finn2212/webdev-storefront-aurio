@@ -59,7 +59,7 @@
               Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten Inhalt.
             </p>
             <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-2">
+              <button type="button" class="btn btn-dark mt-5 pt-2">
                 <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
@@ -100,13 +100,13 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
             <div class="row justify-content-center">
-              <div class="col customBorder p-3  yellow">
-                <img src="@/assets/svg/format_quote.svg" alt="Avatar">
-                <div class="slideshow-container">
+              <div class="col customBorder  yellow">
+                <img src="@/assets/svg/format_quote.svg" alt="Avatar" class="ms-5 mt-5">
+                <div class="slideshow-container" >
                   <div class="mySlides">
-                    <div style="padding: 60px">
+                    <div class="ps-5">
                       <p class="p-grid">
-                      <h2>»Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«</h2>
+                      <h5>»Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«</h5>
                       <p class="thick" style="margin:0px;  display: inline;">
                         Alexander Mottok
                       </p>
@@ -116,9 +116,9 @@
                   </div>
                   <div class="mySlides">
                     <div style="padding-left: 20px">
-                      <div style="padding: 60px">
+                      <div class="ps-5">
                         <p class="p-grid">
-                        <h2>»Voll krasse Quailität.«</h2>
+                        <h5>»Voll krasse Quailität.«</h5>
                         <p class="thick" style="margin:0px;  display: inline;">
                           Peter Meyer
                         </p>
@@ -128,8 +128,8 @@
                     </div>
 
                   </div>
-                  <a class="prev" style="color: black; font-size: 40px;" @click="plusSlides(-1)">❮</a>
-                  <a class="next" style="color: black; font-size: 40px;" @click="plusSlides(1)">❯</a>
+                  <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
+                  <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
                 </div>
 
               </div>
@@ -147,7 +147,7 @@
               <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
               Ihre Vorteile
             </h2>
-            <div class="row" style="margin-top: 120px">
+            <div class="row" style="margin-top: 50px">
               <div class="col-2">
                 <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
               </div>
@@ -198,12 +198,15 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col customBorder pink p-5">
+          <div class="col customBorder pink p-3">
             <h2 class="heading-grid">
               Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
-            <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar">
+            
             <div class="row">
+              <div class="col-auto">
+                <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar">
+              </div>
               <div class="col-7 mt-2">
                 <p class="p-grid">
                   Für capellaprint haben sich capella-software und die spezialisierte Musikaliendruckerei AURIOPRINT aus
@@ -297,38 +300,39 @@
         <div class="row justify-content-center mt-4">
           <div class="col-12 col-lg-8 ">
             <div class="row justify-content-center">
-              <div class="col customBorder p-5 yellow">
+              <div class="col customBorder p-3 yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar">
                 <div class="slideshow-container">
                   <div class="mySlides2">
-                    <div style="padding: 60px">
-                      <p class="p-grid">
-                      <h2>»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren das
-                        Optimum herauszuholen.««</h2>
-                      <p class="thick" style="margin:0px;  display: inline;">
+                    <div style="padding: 15px">
+                     
+                      <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren das
+                        Optimum herauszuholen.«</h2>
+                      <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
                         Alexander Mottok
                       </p>
                       – Chefdirigent, Deutsches Ärzteorchester
-                      </p>
+                      
                     </div>
                   </div>
                   <div class="mySlides2">
-                    <div style="padding-left: 20px">
-                      <div style="padding: 60px">
-                        <p class="p-grid">
-                        <h2>»»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren
-                          das Optimum herauszuholen.««</h2>
-                        <p class="thick" style="margin:0px;  display: inline;">
+                    <div >
+                      <div style="padding: 15px">
+                        
+                        <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren
+                          das Optimum herauszuholen.«</h2>
+                        <p class="thick ps-5" style="margin:0px;  display: inline;">
                           Peter Meyer
                         </p>
                         – Testuser, Deutsches Ärzteorchester
-                        </p>
+                        
                       </div>
                     </div>
                   </div>
-                  <a class="prev" style="color: black; font-size: 40px;" @click="plusSlides(-1)">❮</a>
-                  <a class="next" style="color: black; font-size: 40px;" @click="plusSlides(1)">❯</a>
+                  <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
+                  <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
                 </div>
+                
               </div>
             </div>
             <div class="row justify-content-center">

@@ -5,11 +5,11 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-md-3 col-xl-3 p-2 p-md-4 pink customBorder">
+                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 pink customBorder">
                         <h1>
                             Carpe diem!
                         </h1>
-                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-md-5" style="margin-top: 70px;">
+                        <img src="@/assets/svg/wb_twilight.svg" alt="Avatar" class="pt-md-5" style="">
                         <h2 class="pt-1 pt-md-3">
                             10% Rabatt
                             6–10 Uhr
@@ -19,8 +19,8 @@
                         v-bind:style="{ 'background-image': 'url(' + require('../assets/images/spiralheader.png') + ')' }">
                         <div class="row align-items-end" style="height: 100%">
                             <div class="col align-self-end">
-                                <h1 style="color: white;" class="pb-3">
-                                    Notenheft mit Klammerheftung
+                                <h1 style="color: white;" class="pb-3 ms-4">
+                                    Notenbuch mit Spiralbindung
                                 </h1>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
 
                         </div>
                         <div class="row align-items-end" v-bind:style="dynamicHeight">
-                            <div class="col p-4 grey" style="margin-left: 10px;">
+                            <div class="col p-4 beige" style="margin-left: 10px;">
 
 
                                 <p>Weniger als 88 Seiten Inhalt? Günstigere Preise gesucht? Instrumentalstimmen?</p>
@@ -214,7 +214,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -263,7 +263,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -330,7 +330,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -374,7 +374,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark" style="margin-top: 30px !important;">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -427,7 +427,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -473,7 +473,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -517,7 +517,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -582,7 +582,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -625,7 +625,7 @@
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                            Drucken
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -677,7 +677,7 @@ Spiralbindung quer
                                 <div class="col-8 mt-2">
                                     <button type="button" class="btn btn-dark mt-3">
                                         <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                        Drucken
+                                        drucken
                                     </button>
                                 </div>
                             </div>
@@ -721,7 +721,7 @@ Spiralbindung quer
                                 <div class="col-8 mt-4">
                                     <button type="button" class="btn btn-dark mt-3">
                                         <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                        Drucken
+                                        drucken
                                     </button>
                                 </div>
                             </div>
@@ -765,7 +765,7 @@ Spiralbindung quer
                                 <div class="col-8 mt-2">
                                     <button type="button" class="btn btn-dark mt-3">
                                         <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
-                                        Drucken
+                                        drucken
                                     </button>
                                 </div>
                             </div>

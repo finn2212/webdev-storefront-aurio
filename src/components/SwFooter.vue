@@ -1,12 +1,12 @@
 <template>
-    <div class="grey mt-4">
+    <div class="grey" style="margin-top: 100px;">
         <div class="container justify-content-center">
             <div class="row pt-4">
                 <div class="col-4">
                     <img src="@/assets/svg/phone_forwarded.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h2 class="pt-4 thick">
+                    <h5 class="pt-2 thick">
                         Service-Hotline
-                    </h2>
+                    </h5>
                     <p>
                         Unterstützung und Beratung unter:
                         <br>
@@ -23,9 +23,9 @@
                 </div>
                 <div class="col-4">
                     <img src="@/assets/svg/local_police.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h2 class="pt-4 thick">
+                    <h5 class="pt-2 thick">
                         Rechtliches
-                    </h2>
+                    </h5>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
                             <NuxtLink class="a" to="/contact">
@@ -39,7 +39,7 @@
                         <div class="col align-self-start">
                             <NuxtLink class="a" to="/contact">
 
-                                Allgemeine Gechäftsbedingungen
+                                AGB & Widerruf
 
                             </NuxtLink>
                         </div>
@@ -75,9 +75,9 @@
 
                 <div class="col-4">
                     <img src="@/assets/svg/award_star.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h2 class="pt-4">
+                    <h5 class="pt-2">
                         Sicher einkaufen
-                    </h2>
+                    </h5>
                     <p>
                         Bei capellaprint kaufst du sicher ein. Dies wird ermöglicht durch SSL Verschlüsselung,
                         bei der eine sichere Verbindung zwischen dem Webserver und deinem Browser aufgebaut wird.
@@ -91,9 +91,9 @@
                 <div class="col">
                     <div class="col">
                         <img src="@/assets/svg/local_shipping1.svg" style="margin-right: 10px;" alt="Avatar">
-                        <h2 class="pt-4">
+                        <h5 class="pt-2">
                             Versandarten
-                        </h2>
+                        </h5>
                         <div class="row">
                             <div class="col-auto" style="padding: 0px !important">
                                 <img src="@/assets/svg/rhweb-dhl 1.svg" alt="Avatar">
@@ -111,9 +111,9 @@
                 <div class="col">
                     <div class="col">
                         <img src="@/assets/svg/credit_score.svg" style="margin-right: 10px;" alt="Avatar">
-                        <h2 class="pt-4">
+                        <h5 class="pt-2">
                             Zahlungsarten
-                        </h2>
+                        </h5>
                         <div class="row">
                             <div class="col-auto" style="padding: 0px !important">
                                 <img src="@/assets/svg/Rectangle (6).svg" alt="Avatar">
@@ -143,13 +143,13 @@
                 </div>
                 <div class="col">
                     <div class="col">
-                        <h5 class="mt-5 pt-3">Wir sind Mitglied im:</h5>
+                        <h5 class="mt-4 pt-4">Wir sind Mitglied im:</h5>
                         <img src="@/assets/svg/bvdm_logo_transparent 1.svg" style="margin-top: 10px;" alt="Avatar">
 
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: 300px; padding-bottom: 40px; text-align: center;">
+            <div class="row" style="margin-top: 100px; padding-bottom: 40px; text-align: center;">
                 <div class="col">
                     * Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. Versandkosten, wenn nicht anders angegeben.
                     © 2023 AURIOPRINT – Alle Rechte vorbehalten.

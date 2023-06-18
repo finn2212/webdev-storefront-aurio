@@ -157,7 +157,8 @@
       isSidebarOpen(val) {
         if (!val) {
           if (document.getElementById("stickyBar")) {
-         //   document.getElementById("stickyBar").classList.add('sticky-top');
+           document.getElementById("stickyBar").classList.add('sticky-top');
+           document.getElementById("headerNav").classList.add('fixed-top');
           }
            
           this.$nextTick(() => {
@@ -166,7 +167,8 @@
           document.body.style.overflow = "auto"
         } else {
           if (document.getElementById("stickyBar")) {
-         //   document.getElementById("stickyBar").classList.remove('sticky-top');
+           document.getElementById("stickyBar").classList.remove('sticky-top');
+           document.getElementById("headerNav").classList.remove('fixed-top');
           }
    
         }

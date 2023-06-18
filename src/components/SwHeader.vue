@@ -1,5 +1,5 @@
 <template>
-  <div class="sw-top-navigation fixed-top" data-testid="main-header" style="background-color: white;">
+  <div class="sw-top-navigation fixed-top" id="headerNav" data-testid="main-header" style="background-color: white;">
     <SfOverlay :visible="isOpen" class="sw-overlay" />
     <SwCookieBar />
     <SwTopBar />
@@ -7,16 +7,14 @@
       <div class="row mt-2">
         <div class=" col-1 col-xl-2">
           <NuxtLink class="a" to="/">
-            <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 100%;">
+            <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 75%;">
           </NuxtLink>
-
         </div>
         <div class="col-auto mt-3 me-2 me-xl-5">
           <NuxtLink class="a" to="/klammerheftung">
             Noten mit Klammerheftung
           </NuxtLink>
         </div>
-
         <div class="col-auto mt-3 me-2 me-xl-5">
           <NuxtLink class="a" to="/spiralbindung">
             Noten mit Spiralbindung
