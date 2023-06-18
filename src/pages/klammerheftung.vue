@@ -121,7 +121,7 @@
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
                                     <div class="col">
-                                        <p class="">
+                                        <p class=""> 
                                             1–3 Werktage Produktionszeit
                                         </p>
                                     </div>
