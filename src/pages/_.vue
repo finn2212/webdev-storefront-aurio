@@ -4,7 +4,7 @@
     <section>
       <div class="container justify-content-center">
         <div class="row">
-          <div class="col-12 col-lg-8 p-0 customBorder">
+          <div class="col-12 col-xl-8 p-0 customBorder">
             <img src="@/assets/images/pic1.png" alt="Avatar" class="img">
           </div>
           <div class="col green p-5 customBorder">
@@ -98,11 +98,11 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-xl-8">
             <div class="row justify-content-center">
               <div class="col customBorder  yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar" class="ms-5 mt-5">
-                <div class="slideshow-container">
+                <div class="slideshow-container mb-5">
                   <div class="mySlides">
                     <div class="ps-5">
                       <p class="p-grid">
@@ -116,7 +116,7 @@
                   </div>
                   <div class="mySlides">
                     <div style="padding-left: 20px">
-                      <div class="ps-5">
+                      <div class="ps-5 ">
                         <p class="p-grid">
                         <h5>»Voll krasse Quailität.«</h5>
                         <p class="thick" style="margin:0px;  display: inline;">
@@ -285,56 +285,51 @@
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
       <div class="container justify-content-center">
-        <div class="row justify-content-center pt-5">
-          <div class="col-12 col-xl-8 ">
-            <h2 class="heading-grid">
-              »Ein attraktiver Service für Musiker«
-            </h2>
-          </div>
-          <div class="col">
-            <h2 class="heading-grid">
-              Unser Tipp
-            </h2>
-          </div>
-        </div>
-        <div class="row justify-content-center mt-4">
-          <div class="col-12 col-lg-8 ">
-            <div class="row justify-content-center">
-              <div class="col customBorder p-3 yellow">
-                <img src="@/assets/svg/format_quote.svg" alt="Avatar">
-                <div class="slideshow-container">
-                  <div class="mySlides2">
-                    <div style="padding: 15px">
-
-                      <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
-                        Ihren Partituren das
-                        Optimum herauszuholen.«</h2>
-                      <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
-                        Alexander Mottok
-                      </p>
-                      – Chefdirigent, Deutsches Ärzteorchester
-
-                    </div>
-                  </div>
-                  <div class="mySlides2">
-                    <div>
+       
+        <div class="row mt-4">
+          <div class="col-12 col-xl-8">
+            <div class="row">
+              <div class="col p-0">
+                <h2 class="heading-grid">
+                  »Ein attraktiver Service für Musiker«
+                </h2>
+                <div class="yellow customBorder p-3">
+                  <img src="@/assets/svg/format_quote.svg" alt="Avatar">
+                  <div class="slideshow-container">
+                    <div class="mySlides2">
                       <div style="padding: 15px">
 
                         <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
-                          Ihren Partituren
-                          das Optimum herauszuholen.«</h2>
-                        <p class="thick ps-5" style="margin:0px;  display: inline;">
-                          Peter Meyer
+                          Ihren Partituren das
+                          Optimum herauszuholen.«</h2>
+                        <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
+                          Alexander Mottok
                         </p>
-                        – Testuser, Deutsches Ärzteorchester
+                        – Chefdirigent, Deutsches Ärzteorchester
 
                       </div>
                     </div>
-                  </div>
-                  <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
-                  <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
-                </div>
+                    <div class="mySlides2">
+                      <div>
+                        <div style="padding: 15px">
 
+                          <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um
+                            aus
+                            Ihren Partituren
+                            das Optimum herauszuholen.«</h2>
+                          <p class="thick ps-5" style="margin:0px;  display: inline;">
+                            Peter Meyer
+                          </p>
+                          – Testuser, Deutsches Ärzteorchester
+
+                        </div>
+                      </div>
+                    </div>
+                    <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
+                    <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
+                  </div>
+
+                </div>
               </div>
             </div>
             <div class="row justify-content-center">
@@ -343,114 +338,128 @@
               </div>
             </div>
           </div>
-          <div class="col customBorder blue p-4">
-            <img src="@/assets/svg/redeem.svg" alt="Avatar">
-            <h1 class="mt-5" style="font-size: 60px;">
-              Musterheft
-              anfordern
-            </h1>
-            <p class="">
-              Damit Sie nicht die Katze im Sack kaufen, haben wir ein Musterheft vorbereitet, mit dem Sie sich von der
-              Qualität unseres Notendrucks überzeugen können.
-            </p>
-            <div class="row justify-content-end">
-              <div class="col mt-2 ">
-                <button type="button" class="btn btn-dark">
-                  <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
-                </button>
-              </div>
-            </div>
+          <div class="col p-0">
+            <h2 class="heading-grid ms-3">
+              Unser Tipp
+            </h2>
+            <div class="customBorder blue p-4">
 
-            <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-4">
-            <div class="accordion  accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item mt-3">
-                <h2 class="accordion-header thick">
-                  <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed" type="button"
-                    style="padding-bottom: 0px;">
-                    <p class="thick"> Gehe ich ein Abonnement ein?</p>
+              <img src="@/assets/svg/redeem.svg" alt="Avatar">
+              <h1 class="mt-5" style="font-size: 60px;">
+                Musterheft
+                anfordern
+              </h1>
+              <p class="">
+                Damit Sie nicht die Katze im Sack kaufen, haben wir ein Musterheft vorbereitet, mit dem Sie sich von der
+                Qualität unseres Notendrucks überzeugen können.
+              </p>
+              <div class="row justify-content-end">
+                <div class="col mt-2 ">
+                  <button type="button" class="btn btn-dark">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
+                  </button>
+                </div>
+              </div>
 
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse open" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="small">
-                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                      Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                      Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header thick">
-                  <button @click="open(2)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="thick"> Kann ich vorab Druckmuster bekommen?</p>
+              <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-4">
+              <div class="accordion  accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item mt-3">
+                  <h2 class="accordion-header thick">
+                    <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed"
+                      type="button" style="padding-bottom: 0px;">
+                      <p class="thick"> Gehe ich ein Abonnement ein?</p>
 
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="small">
-                      Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte
-                      wenden Sie sich hierfür an info@capellaprint.com. Vielen Dank!
-                    </p>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse open" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="small">
+                        Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                        Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies
+                        verpflichtet
+                        Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header thick">
-                  <button @click="open(3)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <p class="thick"> Werden meine Druckdaten kontrolliert? </p>
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="small">
-                      Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf.
-                      gleich korrigiert, um ein professionelles Druckbild zu gewährleisten. Sollten Datenfehler ein
-                      manuelles Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit
-                      Ihnen per E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
-                    </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header thick">
+                    <button @click="open(2)" class="accordion-button bred collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                      aria-controls="flush-collapseTwo">
+                      <p class="thick"> Kann ich vorab Druckmuster bekommen?</p>
+
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="small">
+                        Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte
+                        wenden Sie sich hierfür an info@capellaprint.com. Vielen Dank!
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header thick">
-                  <button @click="open(4)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="thick"> Wie erfolgt die Bestellung, was kostet es? </p>
-                  </button>
-                </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <p class="small">
-                    Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
-                    Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
-                    selbstverständlich kostenfrei.</p>
-                  <br>
-                  <p class="small">
-                    Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
-                    haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
-                  </p>
-                  <div class="accordion-body">
+                <div class="accordion-item">
+                  <h2 class="accordion-header thick">
+                    <button @click="open(3)" class="accordion-button bred collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                      aria-controls="flush-collapseThree">
+                      <p class="thick"> Werden meine Druckdaten kontrolliert? </p>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="small">
+                        Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf.
+                        gleich korrigiert, um ein professionelles Druckbild zu gewährleisten. Sollten Datenfehler ein
+                        manuelles Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit
+                        Ihnen per E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header thick">
-                  <button @click="open(5)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFiv" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="thick"> Kann ich gedruckte Noten zurückgeben? </p>
-                  </button>
-                </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
+                <div class="accordion-item">
+                  <h2 class="accordion-header thick">
+                    <button @click="open(4)" class="accordion-button bred collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                      aria-controls="flush-collapseTwo">
+                      <p class="thick"> Wie erfolgt die Bestellung, was kostet es? </p>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
                     <p class="small">
-                      Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
-                      deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
-                      liefern wir selbstverständlich kostenfrei Ersatz.
+                      Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
+                      Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
+                      selbstverständlich kostenfrei.</p>
+                    <br>
+                    <p class="small">
+                      Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
+                      haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
                     </p>
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header thick">
+                    <button @click="open(5)" class="accordion-button bred collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapseFiv" aria-expanded="false"
+                      aria-controls="flush-collapseTwo">
+                      <p class="thick"> Kann ich gedruckte Noten zurückgeben? </p>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="small">
+                        Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
+                        deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
+                        liefern wir selbstverständlich kostenfrei Ersatz.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

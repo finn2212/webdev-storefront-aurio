@@ -33,7 +33,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row pt-4">
-                    <div class="col-12 col-lg-4 customBorder blockStart">
+                    <div class="col-12 col-xl-4 customBorder blockStart">
                         <h2>
                             Notenbuch mit Spiralbindung günstig drucken lassen
                         </h2>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col customBorder green p-5">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <h1 class="pb-3">
                                     <img src="@/assets/svg/info.svg" alt="Avatar" class="pr-3">
                                     Eigenschaften

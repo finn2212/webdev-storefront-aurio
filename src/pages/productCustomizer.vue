@@ -11,7 +11,7 @@
         <section class="pt-5">
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-4 customBorder  p-4 blue">
+                    <div class="col-12 col-lg-4 customBorder p-4 blue">
                         <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
                         <h2 class="heading-grid mt-3">
                             Ihre Vorteile bei capellaprint
@@ -53,10 +53,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 customBorder p-0">
+                    <div class="col-12 col-lg-4 customBorder p-0">
                         <img class="card-img-top img" src="@/assets/images/pic9.png" alt="Card image cap">
                     </div>
-                    <div class="col-4 customBorder p-0">
+                    <div class="col-12 col-lg-4 customBorder p-0">
 
                         <img class="card-img-top img" src="@/assets/images/pic10.png" alt="Card image cap">
                     </div>
@@ -72,7 +72,7 @@
                     <h1 class="">
                         Konfiguriere dein Notenheft
                     </h1>
-                    <div class="col-8 customBorder  pl-5  p-4 grey">
+                    <div class="col-12 col-lg-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
                             <div class="col-7">
                                 <h2 class="blockStartMarign">
@@ -586,7 +586,7 @@
 
                     </div>
 
-                    <div class="col-4 customBorder">
+                    <div class="col-12 col-lg-4 customBorder">
                         <div id="stickyBar" class="sticky-top">
                             <div class="p-4 green">
                                 <div class="row">

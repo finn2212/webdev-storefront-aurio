@@ -4,9 +4,9 @@
         <!--Sektion mit 3 Karten und Bider-->
         <section>
             <div class="container justify-content-center">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 customBorder p-0">
-                        <img src="@/assets/images/pic11.png" alt="Avatar" class="img">
+                <div class="row">
+                    <div class="col-12 col-xl-8 p-0 customBorder">
+                        <img src="@/assets/images/pic11.png" alt="Avatar" class="img" >
                     </div>
                     <div class="col customBorder red p-5">
                         <div class="row">
@@ -45,7 +45,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row mt-5 ">
-                    <div class="col-4 p-4 grey customBorder ">
+                    <div class="col-12 col-md-6 p-4 grey customBorder ">
                         <img src="@/assets/svg/history_edu.svg" style="margin-bottom: 25px;" alt="Avatar">
                         <h2>
                             Unser
@@ -74,7 +74,7 @@
                         </div>
 
                     </div>
-                    <div class="col-6 align-self-end">
+                    <div class="col-12 col-md-6 align-self-end">
                         <p class="thick m-0">
                             Notenpapier für Partitur & Stimmen
                         </p>
@@ -113,7 +113,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
-                    <div class="col-4 p-4 darkblue customBorder ">
+                    <div class="col-12 col-md-6 p-4 darkblue customBorder ">
                         <img src="@/assets/svg/print.svg" style="margin-bottom: 25px;" alt="Avatar">
                         <h2>
                             Unser
@@ -132,7 +132,7 @@
                         </div>
 
                     </div>
-                    <div class="col-6 align-self-end ">
+                    <div class="col-12 col-md-6 align-self-end ">
                         <p class="thick m-0">Schnell, effizient, erstklassig</p>
                         <p class=""> Mit diesen Worten kann man die Maschinen beschreiben, auf denen Ihre Partituren
                             entstehen
@@ -163,7 +163,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row mt-5 ">
-                    <div class="col-4 p-4 yellow customBorder ">
+                    <div class="col-12 col-md-6 p-4 yellow customBorder ">
                         <img src="@/assets/svg/iron.svg" style="margin-bottom: 25px;" alt="Avatar">
                         <h2>
                             Das
@@ -180,7 +180,7 @@
                         </div>
 
                     </div>
-                    <div class="col-6 align-self-end">
+                    <div class="col-12 col-md-6 align-self-end">
                         <p class="thick m-0">
                             Ein rechteckiger Buchrücken für Ihre Notenhefte
                         </p>
@@ -210,7 +210,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
-                    <div class="col-4 p-4 pink customBorder ">
+                    <div class="col-12 col-md-6 p-4 pink customBorder ">
                         <img src="@/assets/svg/content_cut.svg" style="margin-bottom: 25px;" alt="Avatar">
                         <h2>
                             Maßarbeit für Stimmen
@@ -220,7 +220,7 @@
                             <p class="thick">Frontanschnitt für exakt passende Stimmeneinleger</p>
                         </div>
                     </div>
-                    <div class="col-6 align-self-end">
+                    <div class="col-12 col-md-6 align-self-end">
                         <p class="thick m-0">
                             Instrumentalstimmen werden kleiner geschnitten
                         </p>
@@ -248,7 +248,7 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
-                    <div class="col-4 p-4 green customBorder ">
+                    <div class="col-12 col-md-6 p-4 green customBorder ">
                         <img src="@/assets/svg/surgical.svg" style="margin-bottom: 25px;" alt="Avatar">
 
                         <h2>
@@ -261,7 +261,7 @@
                         </div>
 
                     </div>
-                    <div class="col-6 align-self-end">
+                    <div class="col-12 col-md-6 align-self-end">
 
                         <p class="thick m-0">
                             Beschnitt und Toleranzen
