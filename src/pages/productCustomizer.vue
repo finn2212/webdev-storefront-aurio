@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="margin-top: 100px;">
+    <div class="container top">
         <div id="overlay">
             <div class="container justify-content-center">
                 <div class="spinner-border" role="status" style="margin-top: 30%; margin-left: 50%;">
@@ -74,20 +74,20 @@
                     </h1>
                     <div class="col-12 col-lg-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
-                            <div class="col-7">
+                            <div class="col-12 col-md-7">
                                 <h2 class="blockStartMarign">
                                     1. Projekttitel
                                 </h2>
                                 <p>Bitte vergib hier einen eindeutigen Projekttitel.</p>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md-7">
                                 <input placeholder="Projekttitel eingeben ..." class="grey p-3"
                                     style="border-width: 1px;  width: 300px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;"
                                     type="string" v-model="productName">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-7 pt-4">
+                            <div class="col-12 col-md-7 pt-4">
                                 <h2>2. Art des Projekts</h2>
                                 <p>Zu Beginn ist es notwendig, zu wissen, um welche Art von Notenprojekt es sich handelt.
                                 </p>
@@ -136,7 +136,7 @@
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>3. Ausrichtung des Hefts</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>4. Farbigkeit des Inhalts</h2>
                                 <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
 
@@ -198,7 +198,7 @@
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>5. Papierformat</h2>
                                 <p>Bitte wählen Sie das Format aus, das die Noten haben.
                                     Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
@@ -264,7 +264,7 @@
                                 <div class="row">
                                     <div class="col-8">
 
-                                        <p>Farbseiten im Inhalt</p>
+                                        <p>Dirigent (31,5 x 46 cm)</p>
                                     </div>
                                     <div class="col-1">
                                         <input type="radio" id="two" value="6" v-model="paperFormat" />
@@ -274,7 +274,7 @@
 
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Wähle die Seitenanzahl</h2>
                                 <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
                                     Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
@@ -304,7 +304,7 @@
 
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>7. Bindeart des Hefts</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
@@ -336,7 +336,7 @@
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>8. Wähle den Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 260g/m&#178; gibt Farben brillant wieder und besitzt
                                     ein
@@ -364,7 +364,7 @@
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-7">
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>9. Lade deine Noten hoch</h2>
                                 <p>Hier laden Sie nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Ihre Daten werden verschlüsselt übertragen.
@@ -446,7 +446,7 @@
                             </div>
                         </div>
                         <div class="row pt-5" v-if="projectType != 1">
-                            <div class="col-7">
+                            <div class="col-12 col-md-7">
                                 <h2 v-if="projectType == 2">10. Instrumentalstimmen</h2>
                                 <h2 v-if="projectType == 3">3. Instrumentalstimmen</h2>
                                 <p>Wenn Ihr Projekt Instrumentalstimmen enthält, können Sie diese hier konfigurieren.
@@ -467,7 +467,7 @@
                             </div>
                             <div class="w-100 pt-2"></div>
 
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <p class="blockStartMarign">
                                 <p class="thick inline"> Stimme benennen </p>(bspw. »Violine 1«)
                                 </p>
@@ -618,7 +618,7 @@
                                     </div>
                                     <div class="col">
                                         <p>Produktionsdauer:</p>
-                                        <h2>1–3 Tage</h2>
+                                        <h2>{{ productionTime }} </h2>
                                         <p style="font-size: x-small;">zzgl. Postlaufzeit</p>
                                     </div>
                                 </div>
@@ -636,7 +636,7 @@
                                             <tr>
                                                 <th scope="col">Auflage</th>
                                                 <th scope="col">Preis / Stck.</th>
-                                                <th scope="col">Du sparst:</th>
+                                                <th scope="col">Sie sparen:</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -722,7 +722,7 @@
             <header>
 
                 <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
-                    Bitte laden Sie eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen
+                    {{ errorMassage }}
                 </p>
                 <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
                     Schließen
@@ -750,6 +750,7 @@ export default {
     data() {
         return {
             price: 4.29,
+            productionTime: "1–3 Tage",
             isOpen: false,
             enveloped: false,
             discount: 1,
@@ -783,6 +784,7 @@ export default {
             color: false,
             voicePrice: 0,
             bindingType: "true",
+            errorMassage: "",
             voices: [
 
             ],
@@ -911,7 +913,7 @@ export default {
             document.getElementById("stickyBar").classList.remove('sticky-top');
         },
         createUuid() {
-            if (this.pdfData1) {
+            if (this.validate()) {
                 document.getElementById("overlay").style.display = "block";
                 axios({
                     url: 'https://www.uuidtools.com/api/generate/v1', // File URL Goes Here
@@ -923,8 +925,6 @@ export default {
                     document.getElementById("overlay").style.display = "none";
                     console.log(error.message)
                 });
-            } else {
-                this.isOpen = true;
             }
 
         },
@@ -1038,14 +1038,13 @@ export default {
             }).catch((error) => {
                 //try to fix the error or
                 document.getElementById("overlay").style.display = "none";
-                console.log(error.message)
+                console.log(error.message);
             });
         },
         setDiscountGroup: function (id) {
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
-                const elementToDelete = `discountgroup${i}`
-                debugger
+                const elementToDelete = `discountgroup${i}`;
                 document.getElementById(`discountgroup${i}`).classList.remove('activeDiscount');
             }
             document.getElementById(`discountgroup${id}`).classList.add('activeDiscount');
@@ -1055,7 +1054,7 @@ export default {
         },
         quantitiyInput: function () {
 
-            this.pagesQuantitiy = pages
+            this.pagesQuantitiy = pages;
             this.calculatePrice();
         },
         count(isAdd) {
@@ -1080,33 +1079,43 @@ export default {
         calculateDiscount: function () {
             if (this.quantitiy == 1) {
                 this.discount = 1
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(1);
             } else if (this.quantitiy > 1 && this.quantitiy < 9) {
                 this.discount = 0.45
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(2);
             } else if (this.quantitiy >= 9 && this.quantitiy < 24) {
                 this.discount = 0.55
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(3);
             } else if (this.quantitiy >= 24 && this.quantitiy < 49) {
                 this.discount = 0.63
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(4);
             } else if (this.quantitiy >= 49 && this.quantitiy < 74) {
                 this.discount = 0.68
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(5);
             } else if (this.quantitiy >= 74 && this.quantitiy < 99) {
                 this.discount = 0.70
+                this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(6);
             } else if (this.quantitiy >= 99 && this.quantitiy < 149) {
                 this.discount = 0.72
+                this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(7);
             } else if (this.quantitiy >= 149 && this.quantitiy < 199) {
                 this.discount = 0.74
+                this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(8);
             } else if (this.quantitiy >= 199 && this.quantitiy < 249) {
                 this.discount = 0.75
+                this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(9);
             } else if (this.quantitiy >= 249) {
                 this.discount = 0.76
+                this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(10);
             }
         },
@@ -1234,6 +1243,32 @@ export default {
         },
         removeVoice(n) {
             this.voices.splice(n, 1);
+        },
+        validate() {
+            if (this.projectType == 1) {
+                if (this.pdf1 == "" || this.productName == "") {
+                    this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
+                    this.isOpen = true;
+                    return false
+                } else {
+                    return true
+                }
+
+            } else if (this.projectType == 2) {
+                debugger
+                if (this.pdf1 == "" && this.pdf3 == null) {
+                    this.errorMassage = "Bitte laden Sie 2 eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen"
+                    this.isOpen = true;
+                } else if (this.voices.size == 0) {
+
+                    this.errorMassage = "Bitte fügen Sie eine Stimme hinzu, bevor Sie das Produkt in Ihren Warenkorb legen"
+                    this.isOpen = true;
+                }
+
+            } else {
+
+            }
+
         }
     },
     watch: {

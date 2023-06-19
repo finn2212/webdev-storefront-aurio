@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="margin-top: 100px;">
+    <div class="container top">
 
         <!--Sektion Heading-->
         <section>
