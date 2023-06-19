@@ -78,7 +78,7 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-5">
-               <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
+                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
@@ -102,7 +102,7 @@
             <div class="row justify-content-center">
               <div class="col customBorder  yellow">
                 <img src="@/assets/svg/format_quote.svg" alt="Avatar" class="ms-5 mt-5">
-                <div class="slideshow-container" >
+                <div class="slideshow-container">
                   <div class="mySlides">
                     <div class="ps-5">
                       <p class="p-grid">
@@ -202,7 +202,7 @@
             <h2 class="heading-grid">
               Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
-            
+
             <div class="row">
               <div class="col-auto">
                 <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar">
@@ -273,7 +273,7 @@
             </p>
             <NuxtLink class="a" to="/productCustomizer">
               <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-               <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
+                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
@@ -305,34 +305,36 @@
                 <div class="slideshow-container">
                   <div class="mySlides2">
                     <div style="padding: 15px">
-                     
-                      <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren das
+
+                      <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
+                        Ihren Partituren das
                         Optimum herauszuholen.«</h2>
                       <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
                         Alexander Mottok
                       </p>
                       – Chefdirigent, Deutsches Ärzteorchester
-                      
+
                     </div>
                   </div>
                   <div class="mySlides2">
-                    <div >
+                    <div>
                       <div style="padding: 15px">
-                        
-                        <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus Ihren Partituren
+
+                        <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
+                          Ihren Partituren
                           das Optimum herauszuholen.«</h2>
                         <p class="thick ps-5" style="margin:0px;  display: inline;">
                           Peter Meyer
                         </p>
                         – Testuser, Deutsches Ärzteorchester
-                        
+
                       </div>
                     </div>
                   </div>
                   <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
                   <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
                 </div>
-                
+
               </div>
             </div>
             <div class="row justify-content-center">
@@ -352,28 +354,30 @@
               Qualität unseres Notendrucks überzeugen können.
             </p>
             <div class="row justify-content-end">
-              <div class="col mt-3 ">
+              <div class="col mt-2 ">
                 <button type="button" class="btn btn-dark">
-                 <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
+                  <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
                 </button>
               </div>
             </div>
 
-            <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-5">
+            <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-4">
             <div class="accordion  accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item ">
+              <div class="accordion-item mt-3">
                 <h2 class="accordion-header thick">
-                  <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed"
-                    type="button" style="padding-bottom: 0px;"> <p class="thick"> Gehe ich ein Abonnement ein?</p>
-                   
+                  <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed" type="button"
+                    style="padding-bottom: 0px;">
+                    <p class="thick"> Gehe ich ein Abonnement ein?</p>
+
                   </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse open" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body"><p class="small">
-                    Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
-                    Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
-                  </p> 
+                  <div class="accordion-body">
+                    <p class="small">
+                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
+                      Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet
+                      Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -381,17 +385,16 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(2)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="thick">  Kann ich vorab Druckmuster bekommen?</p>
-                  
+                    <p class="thick"> Kann ich vorab Druckmuster bekommen?</p>
+
                   </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p class="small">
-                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte wenden
-                    Sie sich hierfür an info@capellaprint.com. Vielen Dank!
-                  </p> 
+                      Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte
+                      wenden Sie sich hierfür an info@capellaprint.com. Vielen Dank!
+                    </p>
                   </div>
                 </div>
               </div>
@@ -399,20 +402,17 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(3)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      <p class="thick">  Werden meine Druckdaten kontrolliert? </p>
+                    <p class="thick"> Werden meine Druckdaten kontrolliert? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p class="small">
-                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf. gleich
-                    korrigiert, um ein professionelles Druckbild zu gewährleisten. 
-                  </p>    <br> <p class="small">
-                    Sollten Datenfehler ein manuelles
-                    Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit Ihnen per
-                    E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
-                  </p> 
+                      Ja. Jede hochgeladene PDF-Datei wird von unseren Systemen standardisiert kontrolliert und ggf.
+                      gleich korrigiert, um ein professionelles Druckbild zu gewährleisten. Sollten Datenfehler ein
+                      manuelles Eingreifen notwendig machen, wird sich ein Mitarbeiter vor Ausführung der Produktion mit
+                      Ihnen per E-Mail in Verbindung setzen. Bitte beachten Sie unbedingt unsere Druckdatenvorgaben!
+                    </p>
                   </div>
                 </div>
               </div>
@@ -420,7 +420,7 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(4)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <p class="thick">    Wie erfolgt die Bestellung, was kostet es? </p>
+                    <p class="thick"> Wie erfolgt die Bestellung, was kostet es? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -428,11 +428,11 @@
                     Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
                     Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
                     selbstverständlich kostenfrei.</p>
-                    <br>
-                    <p class="small">
+                  <br>
+                  <p class="small">
                     Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
                     haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
-                  </p> 
+                  </p>
                   <div class="accordion-body">
                   </div>
                 </div>
@@ -441,17 +441,16 @@
                 <h2 class="accordion-header thick">
                   <button @click="open(5)" class="accordion-button bred collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFiv" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <p class="thick">  Kann ich gedruckte Noten zurückgeben? </p>
+                    <p class="thick"> Kann ich gedruckte Noten zurückgeben? </p>
                   </button>
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p class="small">
-                      Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                    Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
-                    deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
-                    liefern wir selbstverständlich kostenfrei Ersatz.
-                  </p> 
+                      Ihre Partituren werden nach Ihren Vorgaben individuell für Sie gefertigt. Ein Rückgaberecht ist
+                      deshalb leider nicht möglich. Sollten wir trotz korrekter Druckdaten von Ihnen fehlerhaft drucken,
+                      liefern wir selbstverständlich kostenfrei Ersatz.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -568,7 +567,7 @@
               <img class="card-img-top" src="@/assets/images/pic6.png" alt="Card image cap">
               <div class="card-body pink p-5 " style="min-height: 290px;">
                 <h2 class="card-title">Notenbuch DIN A4
-Spiralbindung hoch</h2>
+                  Spiralbindung hoch</h2>
 
                 <div class="row mt-5">
                   <div class="col-1">
@@ -947,9 +946,11 @@ export default {
 .dot:hover {
   background-color: #717171;
 }
-.accordion-button{
+
+.accordion-button {
   padding: 5px;
 }
+
 /* Fading animation */
 .fade {
   animation-name: fade;

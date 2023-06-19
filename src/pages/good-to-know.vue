@@ -27,10 +27,13 @@
                         </p>
                         <div class="row align-items-end">
                             <div class="col">
-                                <button type="button" class="btn btn-dark">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">Maßvorgaben
-                                    herunterladen (PDF)
+
+                                <button type="button" class="btn btn-dark p-2">
+                                    <img src="@/assets/svg/download.svg" alt="Avatar"
+                                        style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                    <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
+
                             </div>
                         </div>
 
@@ -43,8 +46,8 @@
             <div class="container justify-content-center">
                 <div class="row mt-5 ">
                     <div class="col-4 p-4 grey customBorder ">
-                        <img src="@/assets/svg/history_edu.svg" alt="Avatar">
-                        <h2 class="pt-3">
+                        <img src="@/assets/svg/history_edu.svg" style="margin-bottom: 25px;" alt="Avatar">
+                        <h2>
                             Unser
                         </h2>
                         <h2>
@@ -111,8 +114,8 @@
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
                     <div class="col-4 p-4 darkblue customBorder ">
-                        <img src="@/assets/svg/print.svg" alt="Avatar">
-                        <h2 class="pt-3">
+                        <img src="@/assets/svg/print.svg" style="margin-bottom: 25px;" alt="Avatar">
+                        <h2>
                             Unser
                         </h2>
                         <h2>
@@ -161,8 +164,8 @@
             <div class="container justify-content-center">
                 <div class="row mt-5 ">
                     <div class="col-4 p-4 yellow customBorder ">
-                        <img src="@/assets/svg/iron.svg" alt="Avatar">
-                        <h2 class="pt-3">
+                        <img src="@/assets/svg/iron.svg" style="margin-bottom: 25px;" alt="Avatar">
+                        <h2>
                             Das
 
                         </h2>
@@ -199,7 +202,7 @@
 
                     </div>
 
-                   
+
                 </div>
             </div>
         </section>
@@ -208,8 +211,8 @@
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
                     <div class="col-4 p-4 pink customBorder ">
-                        <img src="@/assets/svg/content_cut.svg" alt="Avatar">
-                        <h2 class="mt-2">
+                        <img src="@/assets/svg/content_cut.svg" style="margin-bottom: 25px;" alt="Avatar">
+                        <h2>
                             Maßarbeit für Stimmen
                         </h2>
                         <div class="row" style="padding-top: 100px;">
@@ -217,7 +220,8 @@
                             <p class="thick">Frontanschnitt für exakt passende Stimmeneinleger</p>
                         </div>
                     </div>
-                    <div class="col-6 align-self-end"><p class="thick m-0">
+                    <div class="col-6 align-self-end">
+                        <p class="thick m-0">
                             Instrumentalstimmen werden kleiner geschnitten
                         </p>
                         Tagtäglich werden bei uns unzählige Instrumentalstimmen in Notenhefte beigelegt; bspw. für
@@ -245,9 +249,9 @@
             <div class="container justify-content-center">
                 <div class="row  mt-5 ">
                     <div class="col-4 p-4 green customBorder ">
-                        <img src="@/assets/svg/surgical.svg" alt="Avatar">
+                        <img src="@/assets/svg/surgical.svg" style="margin-bottom: 25px;" alt="Avatar">
 
-                        <h2 class="mt-2">
+                        <h2>
                             Sitzt, passt, <br> wackelt? Passt.
                         </h2>
 

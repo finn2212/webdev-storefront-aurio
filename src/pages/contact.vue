@@ -23,16 +23,16 @@
                     </div>
                     <div class="col customBorder pl-5  p-4 green">
                         <div class="col-1">
-                            <img src="@/assets/svg/shopping_cart_checkout.svg" class="mr-2" alt="Avatar">
+                            <img src="@/assets/svg/shopping_cart_checkout.svg" class="mr-2" style="margin-bottom: 25px;" alt="Avatar">
                         </div>
 
                         <h2 class="heading-grid">
                             Fragen zur Bestellung?
                         </h2>
-                        <div class="row mt-5 pt-5">
+                        <div class="row mt-5 pt-3">
                             <p>
                                 Bei allgemeinen Fragen rund ums Thema Bestellung wenden Sie sich bitte an:
-                            <p class="thick"> fragen@capellaprint.com</p>
+                            <h5 > fragen@capellaprint.com</h5>
 
 
                             </p>
@@ -43,21 +43,22 @@
                     </div>
                     <div class="col customBorder pl-5  p-4  darkblue">
                         <div class="col-1">
-                            <img src="@/assets/svg/audio_file.svg" class="mr-2" alt="Avatar">
+                            <img src="@/assets/svg/audio_file.svg" class="mr-2" style="margin-bottom: 25px;" alt="Avatar">
                         </div>
 
                         <h2 class="heading-grid">
                             Fragen zu Ihren gedruckten Noten?
                         </h2>
-                        <div class="row mt-5 pt-3">
+                        <div class="row mt-3 pt-3">
 
                             <p>Falls Sie Fragen zur korrekten Vorbereitung Ihrer Noten zum Druck haben, möchten wir Sie
                                 bitten, sich zunächst unsere Druckdatenvorgaben herunterzuladen und aufmerksam durchzulesen:
 
                             </p>
-                            <button type="button" class="btn btn-dark">
-                                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Maßvorgaben herunterladen
-                                (PDF)
+                            <button type="button" class="btn btn-dark p-2">
+                                <img src="@/assets/svg/download.svg" alt="Avatar"
+                                    style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                <p class="inline mt-2">Maßvorgaben (PDF)</p>
                             </button>
                         </div>
                     </div>
@@ -70,9 +71,9 @@
                 <div class="row pt-4">
                     <div class="col-12 col-lg-4 pink customBorder p-4">
                         <div class="col-1">
-                            <img src="@/assets/svg/unknown_document.svg" class="mr-2" alt="Avatar">
+                            <img src="@/assets/svg/unknown_document.svg" class="mr-2" style="margin-bottom: 25px;" alt="Avatar">
                         </div>
-                        <h2 class="mt-5">
+                        <h2 >
                             Tipp: <br>
                             Nutzen Sie unsere capella-Vorlagen!
                         </h2>
@@ -86,8 +87,8 @@
                     <div class="col customBorder grey p-5">
                         <div class="row">
                             <div class="col">
-                                <img src="@/assets/svg/call_quality.svg" alt="Avatar" class="">
-                                <h2 class="pt-3">
+                                <img src="@/assets/svg/call_quality.svg" alt="Avatar" style="margin-bottom: 25px;">
+                                <h2 >
 
                                     Telefonkontakt
                                 </h2>
@@ -104,10 +105,10 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col">
-                                        <img src="@/assets/svg/local_post_office.svg" class="" alt="Avatar">
+                                        <img src="@/assets/svg/local_post_office.svg" style="margin-bottom: 25px;" alt="Avatar">
 
 
-                                        <h2 class="pt-3">
+                                        <h2>
 
                                             Postanschrift
                                         </h2>
@@ -139,7 +140,7 @@
         </section>
         <section>
             <div class="container justify-content-center">
-                <div class="row pt-4">
+                <div class="row" style="margin-top: 100px;">
                     <div class="col-4">
                         <h2>Impressum</h2>
                         <p>

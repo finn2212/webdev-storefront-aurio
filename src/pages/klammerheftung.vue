@@ -65,9 +65,10 @@
                                     der dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
-                                <button type="button" class="btn btn-dark mt-4 mt-xl-5">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Datenvorgaben
-                                    (PDF)
+                                <button type="button" class="btn btn-dark p-2">
+                                    <img src="@/assets/svg/download.svg" alt="Avatar"
+                                        style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                    <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
                             </div>
                             <div class="col">
@@ -121,7 +122,7 @@
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
                                     <div class="col">
-                                        <p class=""> 
+                                        <p class="">
                                             1–3 Werktage Produktionszeit
                                         </p>
                                     </div>
@@ -145,7 +146,8 @@
 
                             </h2>
                             <p>
-                                Starten Sie mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach her.
+                                Starten Sie mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich
+                                zigfach her.
                             </p>
 
                         </div>
@@ -334,7 +336,7 @@
                     <div class="col pl-5  p-4 customBorder pink">
                         <h2 class="heading-grid">
                             Notenheft 22,8 x 30,5 cm
-»Concert«
+                            »Concert«
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -469,5 +471,4 @@ export default {
     .btn {
         margin-top: 0%;
     }
-}
-</style>
+}</style>

@@ -687,9 +687,10 @@
                             Druckdaten korrekt angelegt sind.
                             Bitte laden Sie die Maßvorgaben herunter und legen Sie Ihre Druckdaten danach an.
                         </p>
-                        <button type="button" class="btn btn-dark">
-                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Maßvorgaben herunterladen
-                            (PDF)
+                        <button type="button" class="btn btn-dark p-2">
+                            <img src="@/assets/svg/download.svg" alt="Avatar"
+                                style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                            <p class="inline mt-2">Maßvorgaben (PDF)</p>
                         </button>
 
 

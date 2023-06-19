@@ -67,9 +67,10 @@
                                     sondern und vor allem auch durch leises Umblättern und dadurch bessere Nutzbarkeit im
                                     Konzert auszeichnet.
                                 </p>
-                                <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Datenvorgaben
-                                    (PDF)
+                                <button type="button" class="btn btn-dark p-2">
+                                    <img src="@/assets/svg/download.svg" alt="Avatar"
+                                        style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                    <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
                             </div>
                             <div class="col">
@@ -259,9 +260,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-8 mt-4 pt-3">
                                     <NuxtLink class="a" to="/productCustomizer">
-                                        <button type="button" class="btn btn-dark mt-3">
+                                        <button type="button" class="btn btn-dark mt-4">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                             drucken
                                         </button>
@@ -285,7 +286,7 @@
                                 <p style="color: #D95A4E">Hochformat</p>
                             </h2>
                             <p class="p-grid pb-4">
-                                Mit unserer hochwertigen Coilbindung für Musiknoten bist du größtmöglich flexibel.
+                                Mit unserer hochwertigen Coilbindung für Musiknoten sind Sie größtmöglich flexibel.
                             </p>
                         </div>
 
@@ -643,7 +644,7 @@
 
                         <h2 class="heading-grid">
                             Notenbuch DIN B4
-Spiralbindung quer
+                            Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -675,7 +676,7 @@ Spiralbindung quer
                             </div>
                             <div class="row">
                                 <div class="col-8 mt-2">
-                                    <button type="button" class="btn btn-dark mt-3">
+                                    <button type="button" class="btn btn-dark mt-4">
                                         <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                         drucken
                                     </button>
@@ -687,7 +688,7 @@ Spiralbindung quer
 
                         <h2 class="heading-grid">
                             Notenbuch DIN A3
-Spiralbindung quer
+                            Spiralbindung quer
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -739,7 +740,7 @@ Spiralbindung quer
                             <div class="col">
                                 <p>
                                     Format 46 x 31,5 cm quer
-                                    
+
                                 </p>
 
                             </div>
@@ -749,7 +750,7 @@ Spiralbindung quer
                             </div>
                             <div class="col">
                                 <p>Der Gigant für die großen Werke!
-                                   
+
                                 </p>
                             </div>
                             <div class="w-100 pt-2"></div>
@@ -763,7 +764,7 @@ Spiralbindung quer
                             </div>
                             <div class="row">
                                 <div class="col-8 mt-2">
-                                    <button type="button" class="btn btn-dark mt-3">
+                                    <button type="button" class="btn btn-dark mt-5">
                                         <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
                                         drucken
                                     </button>
