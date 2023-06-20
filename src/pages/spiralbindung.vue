@@ -797,8 +797,11 @@ export default {
         const { apiInstance } = getApplicationContext(root, "home")
     },
     mounted() {
+        const id = 2;
+
         window.addEventListener("resize", this.sizeHeights);
         this.sizeHeights();
+        document.getElementById(`menuBtn${id}`).classList.add('active');
     },
     unmounted() {
         window.removeEventListener("resize", this.sizeHeights);

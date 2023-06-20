@@ -207,7 +207,7 @@
             <div class="row">
               <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar" style="width: 5%;">
             </div>
-          
+
             <div class="row">
               <div class="col-7">
                 <p class="p-grid">
@@ -360,9 +360,11 @@
               </p>
               <div class="row justify-content-end">
                 <div class="col mt-2 ">
-                  <button type="button" class="btn btn-dark">
-                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft kostenfrei bestellen
+                  <button type="button" class="btn btn-dark" @click="addToCart">
+                    <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft
+                    kostenfrei bestellen
                   </button>
+
                 </div>
               </div>
 
@@ -625,6 +627,18 @@
         </div>
       </div>
     </section>
+    <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
+      aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
+      <header>
+
+        <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
+          {{ modalMessage }}
+        </p>
+        <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
+          Schließen
+        </SfButton>
+      </header>
+    </SfModal>
   </div>
 </template>
  
@@ -634,6 +648,9 @@ import SwButton from "@/components/atoms/SwButton.vue"
 import { invokePost } from "@shopware-pwa/shopware-6-client"
 import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios';
+
+import { SfModal, SfButton } from "@storefront-ui/vue"
 
 
 export default {
@@ -643,6 +660,10 @@ export default {
     const { apiInstance } = getApplicationContext(root, "home");
 
   },
+  components: {
+    SfModal,
+    SfButton,
+  },
   data() {
     return {
       isOpenOne: true,
@@ -650,13 +671,16 @@ export default {
       isOpenThree: false,
       isOpenFour: false,
       isOpenFive: false,
-      slideIndex: 1
+      slideIndex: 1,
+      modalMessage: "Kostenloses Musterheft wurde dem Warenkorb hinzugefügt",
+      isOpen: false
     }
   },
   mounted() {
     this.showSlides();
   },
   methods: {
+
     open: function (num) {
       if (num == 1) {
         if (this.isOpenOne) {
@@ -750,6 +774,47 @@ export default {
 
       }
 
+
+    },
+    close() {
+      this.isOpen = false;
+      window.location.reload();
+    },
+    cart() {
+      console.log("cart")
+    },
+    addToCart() {
+      debugger;
+      const contextToken = this.$cookies.get("sw-context-token") || "";
+
+      axios({
+        url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+        method: 'POST',
+        headers: {
+          "Accept": 'application/json',
+          "Content-Type": 'application/json',
+          "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
+          "sw-context-token": contextToken
+        },
+        data: {
+          "items": [
+            {
+              id: 'acbb28922d3542a1a9877d77b041f87d',
+              quantity: 1,
+              referencedId: 'acbb28922d3542a1a9877d77b041f87d',
+              type: "product",
+            }
+          ]
+        }
+      }).then((res) => {
+
+      
+        this.isOpen = true;
+      }).catch((error) => {
+        //try to fix the error or
+
+        console.log(error.message);
+      });
 
     },
     // Next/previous controls

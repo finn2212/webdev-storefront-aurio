@@ -6,29 +6,39 @@
     <div class="container justify-content-between menueBigScreen">
       <div class="row mt-2 mb-3">
         <div class=" col-1 col-xl-2">
-          <NuxtLink class="a" to="/">
-            <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 75%;">
-          </NuxtLink>
+          <button type="button" id="menuBtn0" class="btnMenu p-0 mt-2" @click="setActive(0)">
+            <NuxtLink class="a" to="/">
+              <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 75%;">
+            </NuxtLink>
+          </button>
         </div>
         <div class="col-auto mt-3 me-2 me-xl-5">
-          <NuxtLink class="a" to="/klammerheftung">
-            Noten mit Klammerheftung
-          </NuxtLink>
+          <button type="button" id="menuBtn1" class="btnMenu p-0" @click="setActive(1)">
+            <NuxtLink class="a" to="/klammerheftung">
+              Noten mit Klammerheftung
+            </NuxtLink>
+          </button>
         </div>
         <div class="col-auto mt-3 me-2 me-xl-5">
-          <NuxtLink class="a" to="/spiralbindung">
-            Noten mit Spiralbindung
-          </NuxtLink>
+          <button type="button" id="menuBtn2" class="btnMenu p-0" @click="setActive(2)">
+            <NuxtLink class="a" to="/spiralbindung">
+              Noten mit Spiralbindung
+            </NuxtLink>
+          </button>
         </div>
         <div class="col-auto mt-3  me-2 me-xl-5">
-          <NuxtLink class="a" to="/good-to-know">
-            Wissenswertes
-          </NuxtLink>
+          <button type="button" id="menuBtn3" class="btnMenu p-0" @click="setActive(3)">
+            <NuxtLink class="a" to="/good-to-know">
+              Wissenswertes
+            </NuxtLink>
+          </button>
         </div>
         <div class="col mt-3">
-          <NuxtLink class="a" to="/contact">
-            Kontakt
-          </NuxtLink>
+          <button type="button" id="menuBtn4" class="btnMenu p-0" @click="setActive(4)">
+            <NuxtLink class="a" to="/contact">
+              Kontakt
+            </NuxtLink>
+          </button>
         </div>
         <div class="col">
           <div class="sf-header__icons desktop-only" style="margin: 0px !important;">
@@ -171,6 +181,14 @@ export default {
     goToWishlist() {
       this.$router.push(this.$routing.getUrl(PAGE_WISHLIST))
     },
+    setActive(id) {
+      const element = `menuBtn${id}`
+      for (let i = 0; i < 5; i++) {
+        const elementToDelete = `menuBtn${i}`;
+        document.getElementById(`menuBtn${i}`).classList.remove('active');
+      }
+      document.getElementById(`menuBtn${id}`).classList.add('active');
+    }
   },
 }
 </script>
@@ -193,6 +211,9 @@ export default {
 
   .sw-overlay {
     --overlay-z-index: 1;
+  }
+  .active{
+    font-weight: bold;
   }
 
   @include for-desktop {
@@ -283,6 +304,7 @@ export default {
     margin-right: 3rem !important;
   }
 }
+
 @media (max-width: 1400px) {
   .me-xl-5 {
     margin-right: 0.5rem !important;

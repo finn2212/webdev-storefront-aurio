@@ -196,6 +196,10 @@ export default {
         // get the configured api client
         const { apiInstance } = getApplicationContext(root, "home")
     },
+    mounted() {
+        const id = 4
+        document.getElementById(`menuBtn${id}`).classList.add('active');
+    },
     methods: {
         getFile(file) {
             window.open("https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65" + "_blank");

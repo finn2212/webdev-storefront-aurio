@@ -68,7 +68,7 @@
                                     der dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
-                                <a  href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
+                                <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
                                     target="_blank">
                                     <button type="button" class="btn btn-dark p-2 mt-5" style="width: 100%;">
                                         <img src="@/assets/svg/download.svg" alt="Avatar"
@@ -406,8 +406,14 @@ export default {
         // get the configured api client
         const { apiInstance } = getApplicationContext(root, "home")
     },
-    data: {
-        image: '@/assets/images/Booklet_machine.png'
+    data() {
+        return {
+            image: '@/assets/images/Booklet_machine.png'
+        }
+    },
+    mounted() {
+        const id = 1
+        document.getElementById(`menuBtn${id}`).classList.add('active');
     }
 
 

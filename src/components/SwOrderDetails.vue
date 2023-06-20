@@ -104,16 +104,7 @@
             </div>
           </SfLoader>
           <!--- CANCEL ORDER -->
-          <SwButton
-            class="
-              sf-button sf-button--underlined sf-button--full-width
-              pay-button
-              color-danger
-            "
-            @click="cancelModalVisible = true"
-          >
-            {{ $t("Cancel the order") }}
-          </SwButton>
+         
           <SfBottomModal
             class="sw-order-details-modal sw-cancel-order-modal"
             :title="$t('Your order will be canceled')"

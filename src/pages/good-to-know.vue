@@ -300,6 +300,10 @@ export default {
     components: {
 
     },
+    mounted() {
+        const id = 3
+        document.getElementById(`menuBtn${id}`).classList.add('active');
+    }
 
 
 
