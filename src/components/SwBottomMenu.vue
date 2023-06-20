@@ -1,60 +1,46 @@
 <template>
-  <SfBottomModal
-    :is-open="true"
-    class="sw-bottom-menu"
-    @click:close="$emit('close')"
-  >
+  <SfBottomModal :is-open="true" class="sw-bottom-menu" @click:close="$emit('close')">
     <template>
       <div class="sw-bottom-menu__title" @click="goBack">
-        <SfIcon
-          v-if="categoryBreadcrumbs.length"
-          icon="chevron_left"
-          class="icon sf-chevron_left"
-          size="21px"
-          view-box="0 0 24 12"
-        />
+        <SfIcon v-if="categoryBreadcrumbs.length" icon="chevron_left" class="icon sf-chevron_left" size="21px"
+          view-box="0 0 24 12" />
         {{ currentCategoryName }}
       </div>
     </template>
 
     <transition :name="menuTransitionName" mode="out-in">
       <SfList :key="categoryBreadcrumbs.length" class="mobile-nav-list">
-        <SfListItem
-          v-for="category in categoriesList"
-          :key="getTranslatedProperty(category, 'name')"
-        >
-          <nuxt-link
-            class="sf-header__link"
-            :to="$routing.getUrl(getCategoryUrl(category))"
-            @click="toggleMobileNavigation"
-          >
-            {{ getTranslatedProperty(category, "name") }}
+        <SfListItem >
+          <nuxt-link class="navItem" to="/">
+            Home
           </nuxt-link>
-
-          <div
-            v-if="category.children && category.children.length"
-            class="sw-bottom-menu__subcategory"
-            @click="goDeeper(getTranslatedProperty(category, 'name'))"
-          >
-            <SfIcon
-              icon="chevron_right"
-              class="icon sf-chevron_right"
-              size="21px"
-              view-box="0 0 24 12"
-            />
-            ({{ category.children.length }})
-          </div>
+        </SfListItem>
+        <SfListItem>
+          <nuxt-link class="navItem" to="/klammerheftung">
+            Noten mit Klammerheftung
+          </nuxt-link>
+        </SfListItem>
+        <SfListItem>
+          <nuxt-link class="navItem" to="/spiralbindung">
+            Noten mit Spiralbindung
+          </nuxt-link>
+        </SfListItem>
+        <SfListItem>
+          <nuxt-link class="navItem" to="/good-to-know">
+            Wissenswertes
+          </nuxt-link>
+        </SfListItem>
+        <SfListItem>
+          <nuxt-link class="navItem" to="/contact">
+            Kontakt
+          </nuxt-link>
         </SfListItem>
       </SfList>
     </transition>
 
     <template v-slot:close-mobile>
-      <SfButton
-        class="sf-button--full-width sf-bottom-modal__cancel"
-        aria-label="Close"
-        @click="$emit('close')"
-        v-text="$t('Close')"
-      />
+      <SfButton class="sf-button--full-width sf-bottom-modal__cancel" aria-label="Close" @click="$emit('close')"
+        v-text="$t('Close')" />
     </template>
   </SfBottomModal>
 </template>
@@ -159,13 +145,19 @@ export default {
 .menu-slide-right-enter-active {
   transition: 0.25s;
 }
+
 .menu-slide-left-enter,
 .menu-slide-right-leave-to {
   transform: translate(100%, 0);
 }
+
 .menu-slide-left-leave-to,
 .menu-slide-right-enter {
   transform: translate(-100%, 0);
+}
+.navItem{
+  color: black; 
+  text-decoration: none;
 }
 
 .sw-bottom-menu {

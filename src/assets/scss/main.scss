@@ -14,8 +14,10 @@ body {
 #app {
   --font-family--primary: 'Noto Sans', sans-serif !important;
 }
+
 #__nuxt {
   --font-family-primary: 'Noto Sans', sans-serif !important;
+  --c-primary: #CCD96A;
 }
 .sf-heading__description{
   font-family: 'Noto Sans', sans-serif !important;
@@ -51,6 +53,16 @@ body {
 .sf-radio__label{
   font-family: 'Noto Sans', sans-serif !important;
 }
+.navItem{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sw-bottom-menu__title{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-bottom-navigation-item__label{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
 .btnMenu{
   border: 0px;
   background-color: transparent;
@@ -186,11 +198,19 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .colfreeKlammer {
-    margin-top: 10% !important;
+    margin-top: 150px !important;
     padding-right: 0px !important;
-    width: 305px
+
   }
 }
+@media only screen and (max-width: 991px) {
+  .colfreeKlammer {
+    padding-right: 10px !important;
+    margin-top: 5px !important;
+
+  }
+}
+
 
 .btn {
   background: #000000;

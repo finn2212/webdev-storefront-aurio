@@ -2,7 +2,7 @@
     <div class="grey" style="margin-top: 100px;">
         <div class="container justify-content-center">
             <div class="row pt-4">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <img src="@/assets/svg/phone_forwarded.svg" style="margin-right: 10px;" alt="Avatar">
                     <h5 class="thick pt-4">
                         Service-Hotline
@@ -21,7 +21,7 @@
                     Oder über unser Kontaktformular.
                     </p>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <img src="@/assets/svg/local_police.svg" style="margin-right: 10px;" alt="Avatar">
                     <h5 class="pt-4 thick">
                         Rechtliches
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-start">
-                        <div class="col align-self-start">
+                        <div class="col-12 col-md-4 align-self-start">
                             <NuxtLink class="a" to="/contact">
 
                                 Datenschutz
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-start">
-                        <div class="col align-self-start">
+                        <div class="col-12 col-md-4 align-self-start">
                             <NuxtLink class="a" to="/contact">
 
                                 Widerrufserklärung
@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <img src="@/assets/svg/award_star.svg" style="margin-right: 10px;" alt="Avatar">
                     <h5 class="pt-4">
                         Sicher einkaufen
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="row pt-4">
-                <div class="col">
+                <div class="col-12 col-md-4">
                     <div class="col">
                         <img src="@/assets/svg/local_shipping1.svg" style="margin-right: 10px;" alt="Avatar">
                         <h5 class="pt-2">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col-12 col-md-4">
                     <div class="col">
                         <img src="@/assets/svg/credit_score.svg" style="margin-right: 10px;" alt="Avatar">
                         <h5 class="pt-2">
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-4">
                     <div class="col">
                         <h5 class="mt-4 pt-4">Wir sind Mitglied im:</h5>
                         <img src="@/assets/svg/bvdm_logo_transparent 1.svg" style="margin-top: 10px;" alt="Avatar">

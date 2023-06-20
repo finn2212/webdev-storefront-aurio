@@ -70,27 +70,7 @@
           </SfBottomModal>
         </template>
       </SfBottomNavigationItem>
-      <SfBottomNavigationItem
-        :label="$t('More')"
-        class="menu-button"
-        data-testid="bottom-navigation-more"
-        @click.self="toggleMoreActions"
-      >
-        <template #icon>
-          <SfIcon
-            icon="tiles"
-            size="20px"
-            class="more-actions"
-            @click="toggleMoreActions"
-          />
-
-          <!-- TODO: Check / add transition after SFUI lib update to > 0.9.1 -->
-          <SwBottomMoreActions
-            v-if="moreActionsIsActive"
-            @close="moreActionsIsActive = false"
-          />
-        </template>
-      </SfBottomNavigationItem>
+    
       <transition name="sf-collapse-bottom" mode="out-in">
         <SfBottomNavigationItem
           v-if="!isSidebarOpen"

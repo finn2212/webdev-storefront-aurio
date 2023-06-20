@@ -145,7 +145,7 @@
             <div class="container justify-content-center">
                 <div class="row pt-4">
 
-                    <div class="col-4 customBorder blockStart">
+                    <div class="col-12 col-lg-4  customBorder blockStart">
                         <div class="row align-items-start">
                             <h2>
                                 Direkt zu den Topsellern
@@ -158,7 +158,8 @@
 
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
+                    <div class="col-12 col-lg-4  customBorder blue"
+                        style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
                             <img class="card-img-top" src="@/assets/images/pic4.png" alt="Card image cap">
                         </div>
@@ -197,7 +198,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-8 mt-1">
+                                    <div class="col-12 col-xl-9 mt-1">
                                         <NuxtLink class="a" to="/productCustomizer">
                                             <button type="button" class="btn btn-dark" style="margin-top: 55px !important">
                                                 <img src="@/assets/svg/plus.svg" alt="Avatar"
@@ -210,7 +211,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
+                    <div class="col-12 col-lg-4  customBorder blue"
+                        style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
                             <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
                         </div>
@@ -250,7 +252,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-12 col-xl-9  mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
@@ -269,7 +271,7 @@
         <section class="pt-5">
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col p-4" style="padding: 0px !important; margin-right:30px ">
+                    <div class="col-12 col-lg  p-4" style="padding: 0px !important; margin-right:30px ">
                         <div class="row pb-3">
                             <h2 class="heading-grid">
                                 Weitere Heftformate
@@ -278,17 +280,19 @@
                                 Sie können gängige Sonderformate für Musikalien produzieren lassen.
                             </p>
                         </div>
-                        <div class="row beige p-4 pt-5 colfreeKlammer">
-                            <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?</p>
-                            <div class="col-9">
-                                <h3>
-                                    Zu den
-                                    Notenheften mit Spiralbindung
-                                </h3>
+                        <div class="row  p-4 pt-2 pt-lg-5 colfreeKlammer">
+                            <div class="beige pt-4">
+                                <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?</p>
+                                <div class="col-12 col-lg-9">
+                                    <h3>
+                                        Zu den
+                                        Notenheften mit Spiralbindung
+                                    </h3>
 
-                            </div>
-                            <div class="col mb-2 align-self-end">
-                                <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
+                                </div>
+                                <div class="col mb-2 align-self-end">
+                                    <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
+                                </div>
                             </div>
                         </div>
 
@@ -328,7 +332,7 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-12 col-xl-9 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
@@ -372,7 +376,7 @@
                                 </p>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-8">
+                                <div class="col-12 col-xl-9 ">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt

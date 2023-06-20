@@ -72,7 +72,7 @@
                     <h1 class="">
                         Konfigurieren Sie ihr Notenheft
                     </h1>
-                    <div class="col-12 col-sm-8 customBorder  pl-5  p-4 grey">
+                    <div class="col-12 col-lg-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
                             <div class="col-12 col-md-7">
                                 <h2 class="blockStartMarign">
