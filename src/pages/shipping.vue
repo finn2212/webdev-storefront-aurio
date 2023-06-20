@@ -48,7 +48,7 @@
 
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row pt-5">
                             <div class="col-1">
                                 <img src="@/assets/svg/captive_portal.svg" alt="Avatar" class="">
 

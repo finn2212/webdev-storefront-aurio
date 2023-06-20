@@ -11,6 +11,46 @@ body {
 #app {
   font-family: 'Noto Sans', sans-serif !important;
 }
+#app {
+  --font-family--primary: 'Noto Sans', sans-serif !important;
+}
+#__nuxt {
+  --font-family-primary: 'Noto Sans', sans-serif !important;
+}
+.sf-heading__description{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+:root {
+  --font-family-primary: 'Noto Sans', sans-serif !important;
+}
+.sf-button{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-property__name{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-input__label{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-checkbox__label{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-price__regular{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-property__value{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-link{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.payment_description{
+  font-family: 'Noto Sans', sans-serif !important;
+}
+.sf-radio__label{
+  font-family: 'Noto Sans', sans-serif !important;
+}
 
 .h1,
 .h3,
@@ -249,7 +289,7 @@ h6 {
 }
 
 .top{
-  margin-top: 100px !important;
+  margin-top: 140px !important;
 }
 
 @media only screen and (max-width: 1024px) {

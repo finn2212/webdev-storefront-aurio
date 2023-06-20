@@ -46,10 +46,13 @@
                             Aufschlagverhalten.
                         </p>
                         <p>
+                        <p class="inline thick">
                             Da wir unzählige Hefte produzieren, sind die Kosten so gering, dass wir diese Art der Bindung
                             ohne
-                            Aufpreis anbieten können. Das macht das Notenbuch mit Klammerheftung zum absoluten
-                            Bestsellerprodukt!
+                        </p>
+
+                        Aufpreis anbieten können. Das macht das Notenbuch mit Klammerheftung zum absoluten
+                        Bestsellerprodukt!
                         </p>
 
                     </div>
@@ -65,11 +68,14 @@
                                     der dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
-                                <button type="button" class="btn btn-dark p-2">
-                                    <img src="@/assets/svg/download.svg" alt="Avatar"
-                                        style="height: 19px; margin-right: 10px; padding-left: 5px;">
-                                    <p class="inline mt-2">Maßvorgaben (PDF)</p>
-                                </button>
+                                <a  href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
+                                    target="_blank">
+                                    <button type="button" class="btn btn-dark p-2 mt-5" style="width: 100%;">
+                                        <img src="@/assets/svg/download.svg" alt="Avatar"
+                                            style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                        <p class="inline mt-2">Maßvorgaben (PDF)</p>
+                                    </button>
+                                </a>
                             </div>
                             <div class="col">
                                 <div class="row mt-4">
@@ -165,7 +171,7 @@
                                 </div>
                                 <div class="col">
                                     <p class="">
-                                        Umschlag aus matt-brillantem Chromokarton mit 240g Stärke
+                                        Umschlag aus matt-brillantem Chromokarton mit 260g Stärke
                                     </p>
                                 </div>
                             </div>
@@ -471,4 +477,5 @@ export default {
     .btn {
         margin-top: 0%;
     }
-}</style>
+}
+</style>

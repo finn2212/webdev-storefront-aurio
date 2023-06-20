@@ -70,25 +70,26 @@
 
                 <div class="row">
                     <h1 class="">
-                        Konfiguriere dein Notenheft
+                        Konfigurieren Sie ihr Notenheft
                     </h1>
-                    <div class="col-12 col-lg-8 customBorder  pl-5  p-4 grey">
+                    <div class="col-12 col-sm-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
                             <div class="col-12 col-md-7">
                                 <h2 class="blockStartMarign">
-                                    1. Projekttitel
+                                    1. Projekttitel*
                                 </h2>
                                 <p>Bitte vergib hier einen eindeutigen Projekttitel.</p>
                             </div>
-                            <div class="col-12 col-md-7">
+                            <div class="col">
                                 <input placeholder="Projekttitel eingeben ..." class="grey p-3"
                                     style="border-width: 1px;  width: 300px; border-radius:5px; border-style: solid; border-color: black; margin-top: 20px;"
                                     type="string" v-model="productName">
                             </div>
                         </div>
+                        <div v-if="projectType != 3" class="w-100 pt-5"></div>
                         <div class="row">
                             <div class="col-12 col-md-7 pt-4">
-                                <h2>2. Art des Projekts</h2>
+                                <h2>2. Art des Projekts*</h2>
                                 <p>Zu Beginn ist es notwendig, zu wissen, um welche Art von Notenprojekt es sich handelt.
                                 </p>
                                 <p>
@@ -137,7 +138,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>3. Ausrichtung des Hefts</h2>
+                                <h2>3. Ausrichtung des Hefts*</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
                                 </p>
@@ -167,7 +168,7 @@
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>4. Farbigkeit des Inhalts</h2>
+                                <h2>4. Farbigkeit des Inhalts*</h2>
                                 <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
 
 
@@ -199,7 +200,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>5. Papierformat</h2>
+                                <h2>5. Papierformat*</h2>
                                 <p>Bitte wählen Sie das Format aus, das die Noten haben.
                                     Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
 
@@ -275,7 +276,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>6. Wähle die Seitenanzahl</h2>
+                                <h2>6. Wählen Sie die Seitenanzahl*</h2>
                                 <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
                                     Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
                                     (Klammerheftung) teilbar sein.
@@ -305,7 +306,7 @@
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>7. Bindeart des Hefts</h2>
+                                <h2>7. Bindeart des Hefts*</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
 
@@ -337,7 +338,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>8. Wähle den Umschlag</h2>
+                                <h2>8. Wählen Sie den Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 260g/m&#178; gibt Farben brillant wieder und besitzt
                                     ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
@@ -365,7 +366,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>9. Lade deine Noten hoch</h2>
+                                <h2>9. Laden Sie Ihre Noten hoch*</h2>
                                 <p>Hier laden Sie nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Ihre Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns ggf. per E-Mail, falls etwas nicht
@@ -373,10 +374,10 @@
                             </div>
                             <div v-if="projectType != 3" class="col mt-4">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-auto">
                                         <p>Noten-PDF /Inhalt:</p>
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-auto">
                                         <div v-if="pdfData1 == null" class="row">
                                             <div>
                                                 <button class="btn btn uploadBtn" @click="click1"> <img
@@ -387,10 +388,10 @@
                                             </div>
                                         </div>
                                         <div v-if="pdfData1 != null && isUpload1 == false" class="row">
-                                            <div class="col-8">
+                                            <div class="col-auto">
                                                 {{ pdfData1.name }}
                                             </div>
-                                            <div class="col">
+                                            <div class="col-auto">
                                                 <button class="btn btn uploadBtn" @click="deletePdf"
                                                     style="margin-left:5px">
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
@@ -408,13 +409,13 @@
                                     </div>
                                 </div>
                                 <div class="row mt-5">
-                                    <div class="col">
-                                        <p>Noten-PDF /Inhalt:</p>
+                                    <div class="col-auto">
+                                        <p>ggf.  <br> Umschlagdatei:</p>
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-auto">
                                         <div v-if="pdfData2 == null" class="row">
                                             <div class="" v-if="pdfData2 == null">
-                                                <button class="btn btn uploadBtn" @click="click2"> <img
+                                                <button class="btn btn uploadBtn ms-0 ms-xl-3" @click="click2"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="margin-right: 5px;">Datei wählen
                                                 </button>
@@ -447,8 +448,8 @@
                         </div>
                         <div class="row pt-5" v-if="projectType != 1">
                             <div class="col-12 col-md-7">
-                                <h2 v-if="projectType == 2">10. Instrumentalstimmen</h2>
-                                <h2 v-if="projectType == 3">3. Instrumentalstimmen</h2>
+                                <h2 v-if="projectType == 2">10. Instrumentalstimmen*</h2>
+                                <h2 v-if="projectType == 3">3. Instrumentalstimmen*</h2>
                                 <p>Wenn Ihr Projekt Instrumentalstimmen enthält, können Sie diese hier konfigurieren.
                                 </p>
                                 <p>
@@ -547,8 +548,6 @@
                                 </div>
 
                             </div>
-
-
                         </div>
 
                         <div class="row" v-if="projectType != 1">
@@ -583,22 +582,25 @@
                                 </table>
                             </div>
                         </div>
-
+                        <button @click="createUuid" type="button" class="btn btn-dark mt-5">
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                            in den Warenkorb legen
+                        </button>
                     </div>
 
                     <div class="col-12 col-lg-4 customBorder">
-                        <div id="stickyBar" class="sticky-top">
+                        <div id="stickyBar" class="sticky-top" style="top: 120px" >
                             <div class="p-4 green">
                                 <div class="row">
                                     <div class="col">
-                                        <p>Dein Preis pro Stück:</p>
+                                        <p>Ihr Preis pro Stück:</p>
                                         <h2>€ {{ price.toFixed(2) }}</h2>
                                         <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <p>Deine Auflage:</p>
+                                        <p>Ihre Auflage:</p>
                                         <div class="input-group plus-minus-input">
                                             <div class="input-group-button">
                                                 <button @click="count(false)" type="button" class="button noborder green"
@@ -626,7 +628,7 @@
                                     <div class="col align-self-center">
                                         <button @click="createUuid" type="button" class="btn btn-dark mt-3">
                                             <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            In den Warenkorb legen
+                                            in den Warenkorb legen
                                         </button>
                                     </div>
                                 </div>
@@ -655,16 +657,16 @@
                             </div>
                             <div class="p-4 pink" style="margin-top: 20px;">
 
-                                <h1 class="heading-grid">
+                                <h1>
                                     Kostenfreier
                                     Versand
                                 </h1>
                                 <img src="@/assets/svg/local_shipping.svg" alt="Avatar"
                                     style=" margin-top: 150px; width: 10%; ">
-                                <h2 class="mt-2">
+                                <h1 class="mt-2">
                                     Ab 50,- Euro
                                     Einkaufswert
-                                </h2>
+                                </h1>
                             </div>
                         </div>
                     </div>
@@ -701,10 +703,10 @@
                             Sie benötigen Hilfe?
                             Schreiben Sie uns!
                         </h2>
-                        <p> Kommen SIe nicht weiter? Gerne sind wir für Sie da. Bitte schreiben Sie uns eine E-Mail:
+                        <p> Kommen Sie nicht weiter? Gerne sind wir für Sie da. Bitte schreiben Sie uns eine E-Mail:
                         </p>
-                        <p class="thick"> fragen@capellaprint.com
-                        </p>
+                        <h5> fragen@capellaprint.com
+                        </h5>
                         <p> Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
 
                     </div>
@@ -852,6 +854,119 @@ export default {
                 146,
                 148,
                 150,
+                162,
+                164,
+                166,
+                168,
+                170,
+                172,
+                174,
+                176,
+                178,
+                180,
+                182,
+                184,
+                186,
+                188,
+                190,
+                192,
+                194,
+                196,
+                198,
+                200,
+                102,
+                204,
+                206,
+                208,
+                220,
+                222,
+                224,
+                226,
+                228,
+                230,
+                220,
+                222,
+                224,
+                226,
+                228,
+                230,
+                232,
+                234,
+                236,
+                238,
+                240,
+                242,
+                244,
+                246,
+                248,
+                250,
+                262,
+                264,
+                266,
+                268,
+                270,
+                272,
+                274,
+                276,
+                278,
+                280,
+                282,
+                284,
+                286,
+                288,
+                290,
+                292,
+                294,
+                296,
+                298,
+                200,
+                300,
+                302,
+                304,
+                306,
+                308,
+                320,
+                322,
+                324,
+                326,
+                328,
+                330,
+                320,
+                322,
+                324,
+                326,
+                328,
+                330,
+                332,
+                334,
+                336,
+                338,
+                340,
+                342,
+                344,
+                346,
+                348,
+                350,
+                362,
+                364,
+                366,
+                368,
+                370,
+                372,
+                374,
+                376,
+                378,
+                380,
+                382,
+                384,
+                386,
+                388,
+                390,
+                392,
+                394,
+                396,
+                398,
+                400,
 
 
 
@@ -1172,6 +1287,7 @@ export default {
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
                         this.pdf1 = "Notendatei: " + url;
                         this.isUpload1 = false;
+                        console.log(url)
                     });
                 }
             );

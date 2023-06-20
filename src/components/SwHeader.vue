@@ -4,7 +4,7 @@
     <SwCookieBar />
     <SwTopBar />
     <div class="container justify-content-between menueBigScreen">
-      <div class="row mt-2">
+      <div class="row mt-2 mb-3">
         <div class=" col-1 col-xl-2">
           <NuxtLink class="a" to="/">
             <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 75%;">

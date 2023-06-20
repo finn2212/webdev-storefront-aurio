@@ -4,15 +4,15 @@
             <div class="row pt-4">
                 <div class="col-4">
                     <img src="@/assets/svg/phone_forwarded.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h5 class="pt-2 thick">
+                    <h5 class="thick pt-4">
                         Service-Hotline
                     </h5>
                     <p>
                         Unterstützung und Beratung unter:
                         <br>
-                    <p class="pt-2 thick">
+                    <h5 class="inline">
                         +49 180 - 000000
-                    </p>
+                    </h5>
                     <br>
 
                     Mo-Fr, 09:00 - 17:00 Uhr
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-4">
                     <img src="@/assets/svg/local_police.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h5 class="pt-2 thick">
+                    <h5 class="pt-4 thick">
                         Rechtliches
                     </h5>
                     <div class="row justify-content-start">
@@ -75,7 +75,7 @@
 
                 <div class="col-4">
                     <img src="@/assets/svg/award_star.svg" style="margin-right: 10px;" alt="Avatar">
-                    <h5 class="pt-2">
+                    <h5 class="pt-4">
                         Sicher einkaufen
                     </h5>
                     <p>

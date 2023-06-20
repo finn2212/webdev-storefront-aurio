@@ -21,22 +21,23 @@
                         </div>
 
                         <p class="p-grid mt-5">
-                            Bitte beachten Sie unbedingt unsere Druckdatenvorgaben, die Sie hier herunterladen können.In
+                            Bitte beachten Sie unbedingt unsere Druckdatenvorgaben, die Sie hier herunterladen können. <br> In
                             Ihrem capella-Notensatzprogramm finden Sie zusätzlich Mustervorlagen, mit denen beim Duck nichts
-                            mehr schiefgehen kann.Bei Nichtbeachtung kann keine Gewähr für Fehldrucke übernommen werden!
+                            mehr schiefgehen kann. <br> Bei Nichtbeachtung kann keine Gewähr für Fehldrucke übernommen werden!
                         </p>
                         <div class="row align-items-end">
-                            <div class="col">
+                           
 
-                                <button type="button" class="btn btn-dark p-2">
+                            <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
+                                target="_blank">
+                                <button type="button" class="btn btn-dark p-2" style="width: 100%;">
                                     <img src="@/assets/svg/download.svg" alt="Avatar"
                                         style="height: 19px; margin-right: 10px; padding-left: 5px;">
                                     <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
-
+                            </a>
+                   
                             </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -82,7 +83,7 @@
                             Bei AURIOPRINT legen wir Wert auf erprobte, klassische Notenpapiere mit leicht gelblicher
                             Färbung,
                             wie man sie aus der Musikverlagswelt kennt.
-                            Unser Notenpapier hat ein Flächengewicht von 90g/m2 und ist raschelarm beim Umblättern. Zudem
+                            Unser Notenpapier hat ein Flächengewicht von 90g/m&#178; und ist raschelarm beim Umblättern. Zudem
                             blendet es nicht im Bühnenlicht und ist somit ein hervorragendes »Arbeitspferd« für zigtausende
                             Notenausgaben, die jährlich gefertigt werden.
                         </p>
@@ -95,12 +96,12 @@
                             von uns verwendete hochweiße Umschlagkarton Farben brillant wieder und besitzt ein
                             hervorragendes
                             Aufschlagverhalten.
-                            Mit einem Flächengewicht von 240g/m2 verleiht er auch umfangreichen Partituren Stabilität. Die
+                            Mit einem Flächengewicht von 260g/m&#178; verleiht er auch umfangreichen Partituren Stabilität. Die
                             einseitig matte Oberfläche lässt sich hervorragend bedrucken und bricht auch bei starker
                             Beanspruchung nicht auf.
                         </p>
                         <p class="mt-2">
-                            Kurz: Der beste Karton, den du für deine Partituren bekommen kannst.
+                            Kurz: Der beste Karton, den Sie für Ihre Partituren bekommen kannst.
                         </p>
 
                     </div>
@@ -124,7 +125,7 @@
 
                         <div class="row" style="padding-top: 100px;">
                             <h2>
-                                120+
+                                100+
                             </h2>
                             <p class="thick">
                                 Druckseiten in Vollfarbe pro Minute
@@ -139,7 +140,7 @@
                             werden:
                             Wir produzieren auf hoch leistungsfähigen Tonerfarbmaschinen der Canon-Produktionsklasse, die
                             mit
-                            Druckgeschgwindigkeiten von über 120 Seiten pro Minute auch bei hohen Auflagen oder
+                            Druckgeschgwindigkeiten von über 100 Seiten pro Minute auch bei hohen Auflagen oder
                             zeitkritischen
                             Bestellungen nicht ansatzweise nervös werden.</p>
                         <p> Ein integriertes Spektralphotometer misst unermüdlich die ausgegebenen Farbwerte und justiert

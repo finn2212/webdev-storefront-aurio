@@ -45,7 +45,7 @@
             </h2>
             <p class="p-grid pt-3">
               capellaprint ist der Druckservice für capella-User: Eine Kooperation von capella-software und AURIOPRINT.
-              Günstig Notenhefte drucken – das ist das Motto dieses neuen Services.
+              Günstig Notenhefte drucken – das ist das Motto unseres neuen Services.
             </p>
 
           </div>
@@ -203,11 +203,13 @@
               Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
 
+
             <div class="row">
-              <div class="col-auto">
-                <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar">
-              </div>
-              <div class="col-7 mt-2">
+              <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar" style="width: 5%;">
+            </div>
+          
+            <div class="row">
+              <div class="col-7">
                 <p class="p-grid">
                   Für capellaprint haben sich capella-software und die spezialisierte Musikaliendruckerei AURIOPRINT aus
                   Bayern zusammengeschlossen. AURIOPRINT fertigt für Musikverlage, Orchester und Komponisten weltweit
@@ -218,6 +220,9 @@
               <div class="col">
 
               </div>
+
+
+
             </div>
 
             <div class="row justify-content-end">
@@ -285,7 +290,7 @@
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
       <div class="container justify-content-center">
-       
+
         <div class="row mt-4">
           <div class="col-12 col-xl-8">
             <div class="row">
@@ -299,9 +304,9 @@
                     <div class="mySlides2">
                       <div style="padding: 15px">
 
-                        <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
+                        <h4 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
                           Ihren Partituren das
-                          Optimum herauszuholen.«</h2>
+                          Optimum herauszuholen.«</h4>
                         <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
                           Alexander Mottok
                         </p>
@@ -313,10 +318,10 @@
                       <div>
                         <div style="padding: 15px">
 
-                          <h2 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um
+                          <h4 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um
                             aus
                             Ihren Partituren
-                            das Optimum herauszuholen.«</h2>
+                            das Optimum herauszuholen.«</h4>
                           <p class="thick ps-5" style="margin:0px;  display: inline;">
                             Peter Meyer
                           </p>
@@ -492,7 +497,7 @@
                   </div>
                   <div class="col">
                     <p class="card-text">
-                      Umschlag aus matt-brillantem Chromokarton mit 240g Stärke
+                      Umschlag aus matt-brillantem Chromokarton mit 260g Stärke
                     </p>
                   </div>
                 </div>
@@ -913,12 +918,6 @@ export default {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -974,4 +973,5 @@ export default {
   to {
     opacity: 1
   }
-}</style>
+}
+</style>
