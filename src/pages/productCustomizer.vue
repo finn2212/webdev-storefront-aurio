@@ -1395,7 +1395,8 @@ export default {
     },
     watch: {
         price: function () {
-            this.priceString == this.price.toFixed(2).toString().replace(".", ",");
+            
+            this.priceString = this.price.toFixed(2).toString().replace(".", ",");
             console.log( this.priceString);
         },
         enveloped: function (val) {
