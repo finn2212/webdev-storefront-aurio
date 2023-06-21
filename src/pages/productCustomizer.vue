@@ -377,7 +377,7 @@
                                     <div class="col-auto">
                                         <p>Noten-PDF /Inhalt:</p>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col">
                                         <div v-if="pdfData1 == null" class="row">
                                             <div>
                                                 <button class="btn btn uploadBtn" @click="click1"> <img
@@ -410,9 +410,9 @@
                                 </div>
                                 <div class="row mt-5">
                                     <div class="col-auto">
-                                        <p>ggf.  <br> Umschlagdatei:</p>
+                                        <p>ggf. <br> Umschlagdatei:</p>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col">
                                         <div v-if="pdfData2 == null" class="row">
                                             <div class="" v-if="pdfData2 == null">
                                                 <button class="btn btn uploadBtn ms-0 ms-xl-3" @click="click2"> <img
@@ -583,18 +583,18 @@
                             </div>
                         </div>
                         <button @click="createUuid" type="button" class="btn btn-dark mt-5">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            in den Warenkorb legen
+                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                            in den Warenkorb legen
                         </button>
                     </div>
 
                     <div class="col-12 col-lg-4 customBorder">
-                        <div id="stickyBar" class="sticky-top" style="top: 120px" >
+                        <div id="stickyBar" class="sticky-top" style="top: 120px">
                             <div class="p-4 green">
                                 <div class="row">
                                     <div class="col">
                                         <p>Ihr Preis pro Stück:</p>
-                                        <h2>€ {{ price.toFixed(2) }}</h2>
+                                        <h2>€ {{ priceString }}</h2>
                                         <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
                                     </div>
                                 </div>
@@ -752,6 +752,7 @@ export default {
     data() {
         return {
             price: 4.29,
+            priceString: '4,29',
             productionTime: "1–3 Tage",
             isOpen: false,
             enveloped: false,
@@ -1024,8 +1025,9 @@ export default {
             document.getElementById("stickyBar").classList.add('sticky-top');
         },
         open() {
-            this.isOpen = true;
             document.getElementById("stickyBar").classList.remove('sticky-top');
+            this.isOpen = true;
+        
         },
         createUuid() {
             if (this.validate()) {
@@ -1286,6 +1288,7 @@ export default {
                     this.uploadValue = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
                         this.pdf1 = "Notendatei: " + url;
+
                         this.isUpload1 = false;
                         console.log(url)
                     });
@@ -1353,7 +1356,7 @@ export default {
                 this.voiceQuantity = 4;
                 this.pdfData3 = null;
             } else {
-                this.isOpen = true;
+                this.open();
             }
 
         },
@@ -1364,7 +1367,8 @@ export default {
             if (this.projectType == 1) {
                 if (this.pdf1 == "" || this.productName == "") {
                     this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
-                    this.isOpen = true;
+                    this.open();
+                  
                     return false
                 } else {
                     return true
@@ -1374,11 +1378,13 @@ export default {
                 debugger
                 if (this.pdf1 == "" && this.pdf3 == null) {
                     this.errorMassage = "Bitte laden Sie 2 eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen"
-                    this.isOpen = true;
+                    this.open();
+                   
                 } else if (this.voices.size == 0) {
 
                     this.errorMassage = "Bitte fügen Sie eine Stimme hinzu, bevor Sie das Produkt in Ihren Warenkorb legen"
-                    this.isOpen = true;
+                    this.open();
+                  
                 }
 
             } else {
@@ -1388,6 +1394,10 @@ export default {
         }
     },
     watch: {
+        price: function () {
+            this.priceString == this.price.toFixed(2).toString().replace(".", ",");
+            console.log( this.priceString);
+        },
         enveloped: function (val) {
             if (val) {
                 if (val == "true") {
