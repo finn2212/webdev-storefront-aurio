@@ -208,7 +208,6 @@ export default {
                     "search": productNumber
                 }
             }).then((res) => {
-                debugger
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
                 this.add(res.data.elements[0]._uniqueIdentifier)

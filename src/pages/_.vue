@@ -106,7 +106,7 @@
                   <div class="mySlides">
                     <div class="ps-5">
                       <p class="p-grid">
-                      <h5>»Die Partituren sind übrigens sensationell in Haptik, Aussehen und Nutzbarkeit.«</h5>
+                      <h5>»Die Partituren sind übrigens sensationell in Haptik, <br> Aussehen und Nutzbarkeit.«</h5>
                       <p class="thick" style="margin:0px;  display: inline;">
                         Alexander Mottok
                       </p>
@@ -115,7 +115,7 @@
                     </div>
                   </div>
                   <div class="mySlides">
-                    <div style="padding-left: 20px">
+                    <div >
                       <div class="ps-5 ">
                         <p class="p-grid">
                         <h5>»Voll krasse Quailität.«</h5>
@@ -198,17 +198,15 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col customBorder pink p-3">
+          <div class="col customBorder pink p-4">
             <h2 class="heading-grid">
               Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
 
 
-            <div class="row">
-              <img src="@/assets/svg/music_note.svg" class="mr-2 mt-4" alt="Avatar" style="width: 5%;">
-            </div>
 
-            <div class="row">
+
+            <div class="row mt-3">
               <div class="col-7">
                 <p class="p-grid">
                   Für capellaprint haben sich capella-software und die spezialisierte Musikaliendruckerei AURIOPRINT aus
@@ -294,40 +292,43 @@
         <div class="row mt-4">
           <div class="col-12 col-xl-8">
             <div class="row">
-              <div class="col p-0">
+              <div class="col customBorder p-0">
                 <h2 class="heading-grid">
                   »Ein attraktiver Service für Musiker«
                 </h2>
-                <div class="yellow customBorder p-3">
+                <div class="yellow p-4">
                   <img src="@/assets/svg/format_quote.svg" alt="Avatar">
                   <div class="slideshow-container">
                     <div class="mySlides2">
                       <div style="padding: 15px">
-
-                        <h4 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
+                        <p class="p-grid">
+                          <div class="row ms-3 me-3">
+                        <h5 style="line-height: 1.5;">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
                           Ihren Partituren das
-                          Optimum herauszuholen.«</h4>
-                        <p class="thick ps-5 pe-3" style="margin:0px;  display: inline;">
-                          Alexander Mottok
-                        </p>
-                        – Chefdirigent, Deutsches Ärzteorchester
+                          Optimum herauszuholen.«</h5>
+                        </div>
 
+                        <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
+                          Dr. Dominik Hörnel,
+                        </p>
+                        Vorstandsvorsitzender, capella-software AG
+                        </p>
                       </div>
                     </div>
                     <div class="mySlides2">
                       <div>
                         <div style="padding: 15px">
-
-                          <h4 class="ps-5 pe-3">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um
-                            aus
-                            Ihren Partituren
-                            das Optimum herauszuholen.«</h4>
-                          <p class="thick ps-5" style="margin:0px;  display: inline;">
-                            Peter Meyer
-                          </p>
-                          – Testuser, Deutsches Ärzteorchester
-
+                        <p class="p-grid">
+                          <div class="row ms-3 me-3">
+                        <h5 style="line-height: 1.5;">»Es macht mich stolz, mit unserer Musikaliendruckerei einen echten Mehrwert für alle capella-Nutzer:innen bieten zu können.«</h5>
                         </div>
+
+                        <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
+                          Sebastian Gabriel, 
+                        </p>
+                        Geschäftsführer AURIOPRINT
+                        </p>
+                      </div>
                       </div>
                     </div>
                     <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
@@ -339,7 +340,15 @@
             </div>
             <div class="row justify-content-center">
               <div class="col p-0 customBorder">
-                <img src="@/assets/images/pic3.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+              
+                <div v-if="slideIndex == 1">
+                  <img src="@/assets/images/pic3.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+                </div>
+                <div v-if="slideIndex == 2">
+                  <img src="@/assets/images/sebastianQuote.jpeg" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+                </div>
+              
+              
               </div>
             </div>
           </div>
@@ -784,7 +793,6 @@ export default {
       console.log("cart")
     },
     addToCart() {
-      debugger;
       const contextToken = this.$cookies.get("sw-context-token") || "";
 
       axios({
@@ -808,7 +816,7 @@ export default {
         }
       }).then((res) => {
 
-      
+
         this.isOpen = true;
       }).catch((error) => {
         //try to fix the error or
@@ -823,7 +831,6 @@ export default {
     },
     // Thumbnail image controls
     currentSlide(n) {
-      debugger
       this.showSlides(this.slideIndex = n);
     },
     showSlides(n) {

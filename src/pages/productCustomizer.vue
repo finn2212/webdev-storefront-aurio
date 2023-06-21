@@ -70,7 +70,7 @@
 
                 <div class="row">
                     <h1 class="">
-                        Konfigurieren Sie ihr Notenheft
+                        Konfigurieren Sie Ihr Notenheft
                     </h1>
                     <div class="col-12 col-lg-8 customBorder  pl-5  p-4 grey">
                         <div class="row">
@@ -78,7 +78,7 @@
                                 <h2 class="blockStartMarign">
                                     1. Projekttitel*
                                 </h2>
-                                <p>Bitte vergib hier einen eindeutigen Projekttitel.</p>
+                                <p>Bitte vergeben Sie hier einen eindeutigen Projekttitel.</p>
                             </div>
                             <div class="col">
                                 <input placeholder="Projekttitel eingeben ..." class="grey p-3"
@@ -138,7 +138,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>3. Ausrichtung des Hefts*</h2>
+                                <h2>3. Ausrichtung*</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
                                 </p>
@@ -168,7 +168,7 @@
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>4. Farbigkeit des Inhalts*</h2>
+                                <h2>4. Farbigkeit Inhalt*</h2>
                                 <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
 
 
@@ -203,11 +203,6 @@
                                 <h2>5. Papierformat*</h2>
                                 <p>Bitte wählen Sie das Format aus, das die Noten haben.
                                     Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
-
-
-
-
-
                                 </p>
                                 <p> Bitte beachten Sie: Wenn Sie unterschiedliche Formate innerhalb eines Projekts haben
                                     (bspw. Partitur in DIN A3 und Stimmen in DIN A4), legen Sie bitte für jedes Format ein
@@ -276,7 +271,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>6. Wählen Sie die Seitenanzahl*</h2>
+                                <h2>6. Seitenanzahl*</h2>
                                 <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
                                     Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
                                     (Klammerheftung) teilbar sein.
@@ -287,26 +282,38 @@
                                 <p>Seitenanzahl Inhalt:</p>
                             </div>
                             <div v-if="projectType != 3" class="col pt-5">
-
-                                <select v-if="bindingType == 'true'" id="mySelect" class="custom-select selectBtn"
-                                    v-model="selectedPagesClip">
+                                <select id="mySelect" class="custom-select selectBtn" v-model="pagesQuantitiy">
                                     <option selected v-bind:value="4"> 4
                                     </option>
                                     <option v-for="item in pages" v-bind:value="item">{{ item }}
                                     </option>
                                 </select>
-                                <select v-if="bindingType == 'false'" id="mySelect" class="custom-select selectBtn"
-                                    v-model="selectedPagesSpiral">
-                                    <option selected v-bind:value="2"> 2
-                                    </option>
-                                    <option v-for="item in pages" v-bind:value="item">{{ item }}
-                                    </option>
-                                </select>
-
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>7. Bindeart des Hefts*</h2>
+                                <h2>7. Bindeart*</h2>
+                                <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
+                                <p>
+
+                                    Bitte beachten Sie, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
+                                    Querformaten und bei mehr als 88 Seiten Inhalt nur Spiralbindung verfügbar ist.</p>
+
+                                </p>
+                            </div>
+                            <div class="col pt-5">
+                                <div class="row mt-3" v-if="format == 'true'">
+                                    <div class="col-8">
+                                        <p v-if="bindingType == 'true'">Ihre Bindungs Art: Klammerheftung</p>
+                                        <p v-if="bindingType == 'false'">Ihre Bindungs Art: Spiralbindung</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
+                                <h2>7. Bindeart*</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
 
@@ -338,7 +345,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>8. Wählen Sie den Umschlag</h2>
+                                <h2>8. Umschlag</h2>
                                 <p>Unser hochweißer Umschlagkarton mit 260g/m&#178; gibt Farben brillant wieder und besitzt
                                     ein
                                     hervorragendes Aufschlagverhalten. Die einseitig matte Oberfläche lässt sich
@@ -366,7 +373,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>9. Laden Sie Ihre Noten hoch*</h2>
+                                <h2>9. Notenupload*</h2>
                                 <p>Hier laden Sie nun die Druckdaten als PDF auf unseren Server – ganz bequem und einfach.
                                     Ihre Daten werden verschlüsselt übertragen.
                                     Wir prüfen diese auf Druckbarkeit und melden uns ggf. per E-Mail, falls etwas nicht
@@ -582,10 +589,23 @@
                                 </table>
                             </div>
                         </div>
-                        <button @click="createUuid" type="button" class="btn btn-dark mt-5">
-                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                            in den Warenkorb legen
-                        </button>
+
+                        <div class="row pt-5">
+                            <div class="col-12 col-md-7">
+                                <h2 v-if="projectType == 1">10. In den Warenkorb*</h2>
+                                <h2 v-if="projectType == 2">11. In den Warenkorb*</h2>
+                                <h2 v-if="projectType == 3">4. In den Warenkorb*</h2>
+                                <p>Bitte legen Sie das Projekt nun in den Warenkorb. Sie können danach noch weitere Projekte
+                                    anlegen und gemeinsam in einer Lieferung versandkostenoptimiert bestellen.</p>
+
+                            </div>
+                            <div class="col-12 col-md">
+                                <button @click="createUuid" type="button" class="btn btn-dark mt-5">
+                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
+                                    in den Warenkorb legen
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12 col-lg-4 customBorder">
@@ -644,8 +664,11 @@
                                         <tbody>
 
                                             <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
-                                                v-for="discount in discounts" @click="setAmount(discount.amount)">
-                                                <th scope="row">Bis {{ discount.amount }}</th>
+                                                v-for="(discount, index) in discounts" @click="setAmount(discount.amount)">
+                                                <th v-if="discount.amount == 1" scope="row">1</th>
+                                                <th  v-if="discount.amount > 1" scope="row"> {{ discounts[index].amount - 1 }} – {{ discount.amount }}</th>
+                                                
+
                                                 <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
                                                 <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
                                             </tr>
@@ -684,7 +707,7 @@
                                 <h2>Maßvorgaben</h2>
                             </div>
                         </div>
-                        <p style="margin-top: 130px;">Um bestmögliche Qualität in der Druckproduktion zu gewährleisten, ist
+                        <p style="margin-top: 80px;">Um bestmögliche Qualität in der Druckproduktion zu gewährleisten, ist
                             es notwendig, dass die
                             Druckdaten korrekt angelegt sind.
                             Bitte laden Sie die Maßvorgaben herunter und legen Sie Ihre Druckdaten danach an.
@@ -726,9 +749,9 @@
                 <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
                     {{ errorMassage }}
                 </p>
-                <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
+                <button square variant="tertiary" class="absolute btn right-2 top-2" style="color: white;" @click="close">
                     Schließen
-                </SfButton>
+                </button>
             </header>
         </SfModal>
     </div>
@@ -751,22 +774,21 @@ export default {
     },
     data() {
         return {
-            price: 4.29,
-            priceString: '4,29',
+            price: 0,
+            priceString: '0',
             productionTime: "1–3 Tage",
             isOpen: false,
             enveloped: false,
             discount: 1,
             pagesQuantitiy: 4,
-            selectedPagesClip: 4,
-            selectedPagesSpiral: 2,
             voiceName: "",
             voicePages: 4,
             voiceQuantity: 4,
-            basePrice: 3.85,
+            handlingPrice: 1,
             singlePrice: 4.29,
-            pagePrice: 0.11,
+            pagePrice: 0.15,
             quantitiy: 1,
+            handlingVoice: 1,
             pdf1: '',
             pdf2: '',
             pdfData1: null,
@@ -776,6 +798,7 @@ export default {
             isUpload1: false,
             isUpload2: false,
             isUpload3: false,
+            voicePagePrice: 0.15,
             access_token: '',
             projectType: 1,
             uploadValue: 0,
@@ -784,194 +807,17 @@ export default {
             productName: "",
             format: 'true',
             paperFormat: 1,
-            color: false,
+            color: 'false',
             voicePrice: 0,
+
             bindingType: "true",
             errorMassage: "",
+            totalVoicePrice: 0,
+            bindingTypePrice: 0,
             voices: [
 
             ],
-            spiralPages: [
-                4, 6, 8, 10,
-                12,
-                14,
-                18,
-                20,
-                22,
-                24,
-                26,
-                28,
-                30,
-                32,
-                34,
-                36,
-                38,
-                40,
-                42,
-                44,
-                48,
-                50,
-                52,
-                54,
-                56,
-                58,
-                60,
-                62,
-                64,
-                68,
-                70,
-                82,
-                84,
-                86,
-                88,
-                90,
-                92,
-                94,
-                98,
-                100,
-                102,
-                104,
-                106,
-                108,
-                120,
-                122,
-                124,
-                126,
-                128,
-                130,
-                120,
-                122,
-                124,
-                126,
-                128,
-                130,
-                132,
-                134,
-                136,
-                138,
-                140,
-                142,
-                144,
-                146,
-                148,
-                150,
-                162,
-                164,
-                166,
-                168,
-                170,
-                172,
-                174,
-                176,
-                178,
-                180,
-                182,
-                184,
-                186,
-                188,
-                190,
-                192,
-                194,
-                196,
-                198,
-                200,
-                102,
-                204,
-                206,
-                208,
-                220,
-                222,
-                224,
-                226,
-                228,
-                230,
-                220,
-                222,
-                224,
-                226,
-                228,
-                230,
-                232,
-                234,
-                236,
-                238,
-                240,
-                242,
-                244,
-                246,
-                248,
-                250,
-                262,
-                264,
-                266,
-                268,
-                270,
-                272,
-                274,
-                276,
-                278,
-                280,
-                282,
-                284,
-                286,
-                288,
-                290,
-                292,
-                294,
-                296,
-                298,
-                200,
-                300,
-                302,
-                304,
-                306,
-                308,
-                320,
-                322,
-                324,
-                326,
-                328,
-                330,
-                320,
-                322,
-                324,
-                326,
-                328,
-                330,
-                332,
-                334,
-                336,
-                338,
-                340,
-                342,
-                344,
-                346,
-                348,
-                350,
-                362,
-                364,
-                366,
-                368,
-                370,
-                372,
-                374,
-                376,
-                378,
-                380,
-                382,
-                384,
-                386,
-                388,
-                390,
-                392,
-                394,
-                396,
-                398,
-                400,
 
-
-
-            ],
             clipPages: [
                 8,
                 12,
@@ -998,6 +844,8 @@ export default {
                 88
             ],
             pages: [
+                8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400
+
 
             ],
             discounts: [
@@ -1017,9 +865,25 @@ export default {
     },
     mounted() {
         this.calculatePrice();
-        this.pages = this.clipPages;
     },
     methods: {
+        reset() {
+            this.productionTime = "1–3 Tage";
+            this.enveloped = false;
+            this.discount = 1;
+            this.pdf1 = '';
+            this.pdf2 = '';
+            this.pdfData1 = null;
+            this.pdfData2 = null;
+            this.projectTypeproductName = "";
+            this.format = 'true'
+            this.paperFormat = 1;
+            this.color = 'false';
+            this.bindingType = "true";
+            this.bindingTypePrice = 0;
+            this.calculatePrice();
+
+        },
         close() {
             this.isOpen = false;
             document.getElementById("stickyBar").classList.add('sticky-top');
@@ -1027,7 +891,7 @@ export default {
         open() {
             document.getElementById("stickyBar").classList.remove('sticky-top');
             this.isOpen = true;
-        
+
         },
         createUuid() {
             if (this.validate()) {
@@ -1125,8 +989,6 @@ export default {
                 document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });
-
-
         },
         add(id) {
             const contextToken = this.$cookies.get("sw-context-token") || "";
@@ -1151,6 +1013,7 @@ export default {
                 }
             }).then((res) => {
                 document.getElementById("overlay").style.display = "none";
+                this.reset();
                 window.location.reload();
             }).catch((error) => {
                 //try to fix the error or
@@ -1170,8 +1033,6 @@ export default {
             this.quantitiy = amount;
         },
         quantitiyInput: function () {
-
-            this.pagesQuantitiy = pages;
             this.calculatePrice();
         },
         count(isAdd) {
@@ -1186,11 +1047,21 @@ export default {
         },
         calculatePrice: function () {
             this.calculateDiscount();
-            this.price = this.basePrice + (this.pagePrice * (this.pagesQuantitiy));
+            this.setPagePrice();
+            this.setBinding();
+            this.setBindingPrice();
+            this.caluclateVoicePrices();
+            this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice;
             if (this.discount != 1) {
-                this.price = this.price * (1 - this.discount);
+                this.price = this.price * (1 - this.discount) + this.bindingTypePrice;
             }
-            this.singlePrice = this.basePrice + (this.pagePrice * (this.pagesQuantitiy));
+            this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice;
+            console.log('Seitenanzahl: ' + this.pagesQuantitiy);
+            console.log('Seiten Preis: ' + this.pagePrice);
+            console.log('Handling Preis: ' + this.handlingPrice);
+            console.log('Bindungpreis: ' + this.bindingTypePrice);
+            console.log('Gesamt Preis: ' + this.price);
+            console.log("totalVoicePrice" + this.totalVoicePrice)
 
         },
         calculateDiscount: function () {
@@ -1247,6 +1118,63 @@ export default {
         deletePdf3: function () {
             db.storage().ref(`uploads/${this.pdfData3.name}`).delete();
             this.pdfData3 = null;
+        },
+        caluclateVoicePrices() {
+            this.totalVoicePrice = 0;
+
+            if (this.voices.length > 0) {
+
+                this.voices.forEach(voice => {
+                    console.log(this.totalVoicePrice);
+                    console.log('Handling Voice Preis: ' + this.handlingVoice);
+                    console.log('Stimme Seiten Zahl: ' + voice.pages);
+                    console.log('Stimme Seiten Preis: ' +  this.voicePagePrice);
+                    console.log('Stimme Anzahl: ' + voice.quantitiy);
+                    this.totalVoicePrice = this.totalVoicePrice + (this.handlingVoice + (voice.pages * this.voicePagePrice) * voice.quantity)
+                });
+            }
+
+
+
+        },
+        setBinding() {
+            if (this.pagesQuantitiy >= 88 || this.format == 'false' || this.paperFormat > 3) {
+                this.bindingType = 'false'
+            } else {
+                this.bindingType = 'true'
+            }
+        },
+        setBindingPrice() {
+            if (this.bindingType == 'true') {
+                this.bindingTypePrice = 0;
+            } else {
+                if (this.paperFormat < 4) {
+                    this.bindingTypePrice = 3.5;
+
+                } else {
+                    this.bindingTypePrice = 4.5;
+                }
+            }
+        },
+        setPagePrice() {
+            if (this.color == 'false') {
+                if (this.paperFormat < 4) {
+                    this.pagePrice = 0.15
+
+                } else {
+                    this.pagePrice = 0.25
+                }
+
+            } else {
+
+                if (this.paperFormat < 4) {
+                    this.pagePrice = 0.20
+
+                } else {
+                    this.pagePrice = 0.30
+                }
+
+            }
         },
         click1() {
             this.$refs.input1.click()
@@ -1351,6 +1279,7 @@ export default {
                         uploadName: this.pdfData3.name
                     }
                 )
+                this.calculatePrice();
                 this.voiceName = "";
                 this.voicePages = 4;
                 this.voiceQuantity = 4;
@@ -1362,31 +1291,26 @@ export default {
         },
         removeVoice(n) {
             this.voices.splice(n, 1);
+            this.calculatePrice();
         },
         validate() {
             if (this.projectType == 1) {
                 if (this.pdf1 == "" || this.productName == "") {
                     this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
-                  
                     return false
                 } else {
                     return true
                 }
-
             } else if (this.projectType == 2) {
-                debugger
                 if (this.pdf1 == "" && this.pdf3 == null) {
                     this.errorMassage = "Bitte laden Sie 2 eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
-                   
-                } else if (this.voices.size == 0) {
 
+                } else if (this.voices.size == 0) {
                     this.errorMassage = "Bitte fügen Sie eine Stimme hinzu, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
-                  
                 }
-
             } else {
 
             }
@@ -1394,62 +1318,39 @@ export default {
         }
     },
     watch: {
+        projectType() {
+            this.reset();
+        },
+        color() {
+            this.calculatePrice();
+        },
+        paperFormat() {
+            this.calculatePrice();
+        },
         price: function () {
-            
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
-            console.log( this.priceString);
         },
         enveloped: function (val) {
             if (val) {
                 if (val == "true") {
-                    this.price = this.price + 0.23
+                    this.price = this.price + 1.5
                 } if (val == "false") {
-                    this.price = this.price - 0.23
+                    this.price = this.price - 1.5
                 }
 
             }
         },
-        selectedPagesClip: function (pages) {
-            if (pages == 4) {
-                this.pagesQuantitiy = 4;
-                this.calculatePrice();
-            }
-            else {
-                this.pagesQuantitiy = pages;
-                this.calculatePrice();
-            }
-        },
-        selectedPagesSpiral: function (pages) {
-            if (pages == 2) {
-                this.pagesQuantitiy = 2;
-                this.calculatePrice();
-            }
-            else {
-                this.pagesQuantitiy = pages;
-                this.calculatePrice();
-            }
+        pagesQuantitiy(val) {
+            this.calculatePrice();
         },
         quantitiy: function () {
             this.calculatePrice();
         },
         format: function (val) {
-            if (val == "false") {
-                this.bindingType = false;
-            }
+            this.calculatePrice();
         },
         bindingType: function (val) {
-            console.log(val);
-            if (val == "true") {
-                this.pages = this.clipPages;
-                this.pagesQuantitiy = 4;
-                this.calculatePrice();
-            }
-            else {
-                this.pages = this.spiralPages;
-                this.pagesQuantitiy = 2;
-                this.calculatePrice();
-
-            }
+            this.calculatePrice();
         }
     }
 }
