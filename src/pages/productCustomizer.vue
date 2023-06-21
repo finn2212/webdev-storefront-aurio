@@ -666,8 +666,8 @@
                                             <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
                                                 v-for="(discount, index) in discounts" @click="setAmount(discount.amount)">
                                                 <th v-if="discount.amount == 1" scope="row">1</th>
-                                                <th  v-if="discount.amount > 1" scope="row"> {{ discounts[index].amount - 1 }} – {{ discount.amount }}</th>
-                                                
+                                                <th  v-if="discount.amount > 1  && discount.amount <= 200" scope="row">{{ discount.amount }}  – {{ discounts[index + 1].amount - 1 }}</th>
+                                                <th  v-if="discount.amount > 200" scope="row">Ab 250</th>
 
                                                 <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
                                                 <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
