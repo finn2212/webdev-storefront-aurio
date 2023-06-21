@@ -501,9 +501,9 @@
                                         </p>
                                         <p>
                                             <select id="mySelect" class="custom-select selectBtn" v-model="voiceQuantity">
-                                                <option selected v-bind:value="4"> 4
+                                                <option selected v-bind:value="1"> 1
                                                 </option>
-                                                <option v-for="item in pages" v-bind:value="item">{{ item }}
+                                                <option v-for="item in voiceAmount" v-bind:value="item">{{ item }}
                                                 </option>
                                             </select>
                                         </p>
@@ -608,7 +608,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-4 customBorder">
+                    <div class="col-12 col-lg-4 p-0 customBorder">
                         <div id="stickyBar" class="sticky-top" style="top: 120px">
                             <div class="p-4 green">
                                 <div class="row">
@@ -783,7 +783,7 @@ export default {
             pagesQuantitiy: 4,
             voiceName: "",
             voicePages: 4,
-            voiceQuantity: 4,
+            voiceQuantity: 1,
             handlingPrice: 1,
             singlePrice: 4.29,
             pagePrice: 0.15,
@@ -817,31 +817,8 @@ export default {
             voices: [
 
             ],
-
-            clipPages: [
-                8,
-                12,
-                14,
-                18,
-                22,
-                24,
-                28,
-                32,
-                36,
-                40,
-                44,
-                48,
-                52,
-                54,
-                58,
-                62,
-                64,
-                68,
-                72,
-                76,
-                80,
-                84,
-                88
+            voiceAmount: [
+             2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
             ],
             pages: [
                 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400
@@ -1266,8 +1243,8 @@ export default {
                 } else {
                     _pages = this.voicePages
                 }
-                if (this.voiceQuantity == 4) {
-                    _quantity = 4
+                if (this.voiceQuantity == 1) {
+                    _quantity = 1
                 } else {
                     _quantity = this.voiceQuantity
                 }
@@ -1282,9 +1259,10 @@ export default {
                 this.calculatePrice();
                 this.voiceName = "";
                 this.voicePages = 4;
-                this.voiceQuantity = 4;
+                this.voiceQuantity = 1;
                 this.pdfData3 = null;
             } else {
+                this.errorMassage = "Vergeben Sie der Stimme einen Namen und und Laden Sie eine Notendatei für die Stimme hoch, bevor Sie die Stimme dem Projekt hinzufügen"
                 this.open();
             }
 
@@ -1294,6 +1272,7 @@ export default {
             this.calculatePrice();
         },
         validate() {
+            debugger
             if (this.projectType == 1) {
                 if (this.pdf1 == "" || this.productName == "") {
                     this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
