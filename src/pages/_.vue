@@ -807,9 +807,9 @@ export default {
         data: {
           "items": [
             {
-              id: 'acbb28922d3542a1a9877d77b041f87d',
+              id: 'edbbd21060624c8ab41b6a6187dbec79',
               quantity: 1,
-              referencedId: 'acbb28922d3542a1a9877d77b041f87d',
+              referencedId: 'edbbd21060624c8ab41b6a6187dbec79',
               type: "product",
             }
           ]

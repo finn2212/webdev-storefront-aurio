@@ -309,39 +309,9 @@
                                 </div>
                             </div>
 
-                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>7. Bindeart*</h2>
-                                <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
-                                <p>
-
-                                    Bitte beachten Sie, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
-                                    Querformaten und bei mehr als 88 Seiten Inhalt nur Spiralbindung verfügbar ist.</p>
-
-                                </p>
-                            </div>
-                            <div v-if="projectType != 3" class="col pt-5">
-                                <div class="row mt-3" v-if="format == 'true'">
-                                    <div class="col-8">
-                                        <p v-if="format == 'true'">Klammerheftung</p>
-
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="one" value="true" v-model="bindingType" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8">
-
-                                        <p>Spiralbindung</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="two" value="false" v-model="bindingType" />
-                                    </div>
-                                </div>
-                            </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
@@ -666,8 +636,9 @@
                                             <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
                                                 v-for="(discount, index) in discounts" @click="setAmount(discount.amount)">
                                                 <th v-if="discount.amount == 1" scope="row">1</th>
-                                                <th  v-if="discount.amount > 1  && discount.amount <= 200" scope="row">{{ discount.amount }}  – {{ discounts[index + 1].amount - 1 }}</th>
-                                                <th  v-if="discount.amount > 200" scope="row">Ab 250</th>
+                                                <th v-if="discount.amount > 1 && discount.amount <= 200" scope="row">{{
+                                                    discount.amount }} – {{ discounts[index + 1].amount - 1 }}</th>
+                                                <th v-if="discount.amount > 200" scope="row">Ab 250</th>
 
                                                 <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
                                                 <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
@@ -784,7 +755,7 @@ export default {
             voiceName: "",
             voicePages: 4,
             voiceQuantity: 1,
-            handlingPrice: 1,
+            handlingPrice: 3.8,
             singlePrice: 4.29,
             pagePrice: 0.15,
             quantitiy: 1,
@@ -818,7 +789,7 @@ export default {
 
             ],
             voiceAmount: [
-             2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+                2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
             ],
             pages: [
                 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400
@@ -888,6 +859,8 @@ export default {
         },
         createNewProductInStore(productNumber) {
             // const productNumber = 'xxx'
+            const propertieIds = this.getProperties();
+            const desc = this.getDesc();
             axios({
                 url: 'https://s23511.creoline.cloud/api/oauth/token', // File URL Goes Here
                 method: 'POST',
@@ -909,16 +882,20 @@ export default {
                     data: {
                         "name": this.productName,
                         "productNumber": productNumber,
-                        "properties": [
-                            { "id": "4ddf6e278920458cba821346e53b04e9" },
-                            { "id": "6f9359239c994b48b7de282ee19a714d" },
-                            { "id": "c53fa30db00e4a84b4516f6b07c02e8d" }
-                        ],
+                        "properties": propertieIds,
                         "stock": 10,
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
                         "keywords": "2212",
-                        "description": this.pdf1 + ' \n ' + this.pdf2,
+                        "description": desc,
+                        "media": [{
+                            "id": "6bd19a84161f44e3b7efb37e835c5ec2", // random UUID selfgenerated will be used as "coverId"
+
+                            "mediaId": "b1c75efd9ff24aee9fc6338c6b175cdc",
+                            "position": 0,
+                            "url": "https://s23511.creoline.cloud/media/9b/e6/96/1687422934/capellaProduct.jpeg",
+                        }],
+                        "coverId": "6bd19a84161f44e3b7efb37e835c5ec2",
                         "price": [
                             {
                                 "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
@@ -1028,11 +1005,18 @@ export default {
             this.setBinding();
             this.setBindingPrice();
             this.caluclateVoicePrices();
-            this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice;
-            if (this.discount != 1) {
-                this.price = this.price * (1 - this.discount) + this.bindingTypePrice;
+            if (this.projectType == 3) {
+                this.price = this.totalVoicePrice + 10
+                this.singlePrice = this.totalVoicePrice + 10
+            } else {
+                this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice;
+                if (this.discount != 1) {
+                    this.price = this.price * (1 - this.discount) + this.bindingTypePrice;
+                }
+                this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice;
             }
-            this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice;
+
+
             console.log('Seitenanzahl: ' + this.pagesQuantitiy);
             console.log('Seiten Preis: ' + this.pagePrice);
             console.log('Handling Preis: ' + this.handlingPrice);
@@ -1105,13 +1089,27 @@ export default {
                     console.log(this.totalVoicePrice);
                     console.log('Handling Voice Preis: ' + this.handlingVoice);
                     console.log('Stimme Seiten Zahl: ' + voice.pages);
-                    console.log('Stimme Seiten Preis: ' +  this.voicePagePrice);
+                    console.log('Stimme Seiten Preis: ' + this.voicePagePrice);
                     console.log('Stimme Anzahl: ' + voice.quantitiy);
                     this.totalVoicePrice = this.totalVoicePrice + (this.handlingVoice + (voice.pages * this.voicePagePrice) * voice.quantity)
                 });
             }
 
 
+
+        },
+        getDesc() {
+            debugger;
+            let desc = '';
+            desc = 'Proejekt Name:' + this.productName + '\n Downloadlink Notenheft: ' + this.pdf1 +
+                + ' \n Downloadlink Umschlag:' + this.pdf2 + ' \n';
+            if (this.voices.length > 0) {
+                desc = desc + '\n Stimmen: '
+                this.voices.forEach((voice, i) => {
+                    desc = desc + ' \n Stimme: ' + voice.name + ' ' + '\n Nummer: ' + (i + 1) + '\n Downloadlink: ' + voice.url
+                });
+            }
+            return desc
 
         },
         setBinding() {
@@ -1192,7 +1190,7 @@ export default {
                 () => {
                     this.uploadValue = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
-                        this.pdf1 = "Notendatei: " + url;
+                        this.pdf1 = url;
 
                         this.isUpload1 = false;
                         console.log(url)
@@ -1211,7 +1209,7 @@ export default {
                 () => {
                     this.uploadValue2 = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
-                        this.pdf2 = "Umschlagdatei: " + url;
+                        this.pdf2 = url;
                         this.isUpload2 = false;
                     });
                 }
@@ -1228,7 +1226,7 @@ export default {
                 () => {
                     this.uploadValue3 = 100;
                     storageRef.snapshot.ref.getDownloadURL().then((url) => {
-                        this.pdf3 = "Umschlagdatei: " + url;
+                        this.pdf3 = url;
                         this.isUpload3 = false;
                     });
                 }
@@ -1253,7 +1251,8 @@ export default {
                         name: this.voiceName,
                         pages: _pages,
                         quantity: _quantity,
-                        uploadName: this.pdfData3.name
+                        uploadName: this.pdfData3.name,
+                        url: this.pdf3
                     }
                 )
                 this.calculatePrice();
@@ -1271,8 +1270,58 @@ export default {
             this.voices.splice(n, 1);
             this.calculatePrice();
         },
+        getProperties() {
+            let ids = [];
+
+            if (this.projectType == 1) {
+                ids.push({ "id": 'a2dcd3008de644c784d2cdfec32d91d0' })
+            } else if (this.projectType == 2) {
+                ids.push({ "id": '92c1ed6e0a11440aa5c544d87fc780c9' })
+            } else if (this.projectType == 3) {
+                ids.push({ "id": '587a3d6981404ed4b9de471d120e14ad' })
+            }
+
+            if (this.format == 'false') {
+                ids.push({ "id": 'e1d6ac670a3442448644bc34a7f0d469' })
+            } else if (this.format == 'true') {
+                ids.push({ "id": 'bb3741f73af54d46b1d0808f74f3923d' })
+            }
+            if (this.color == 'true') {
+                ids.push({ "id": 'cfdae0f64bf240a6ae5202db7579f8a0' })
+            } else if (this.color == 'false') {
+                ids.push({ "id": '7c2ad08862fb4011ae45d912c1ca4c3d' })
+            }
+
+            if (this.paperFormat == 1) {
+                ids.push({ "id": '6753f984ea17467794b4068f294053be' })
+            } else if (this.paperFormat == 2) {
+                ids.push({ "id": 'afe5b55949fc41d399ac39e5ff24f4b6' })
+            } else if (this.paperFormat == 3) {
+                ids.push({ "id": '6753f984ea17467794b4068f294053be' })
+            } else if (this.paperFormat == 4) {
+                ids.push({ "id": '4ddf6e278920458cba821346e53b04e9' })
+            } else if (this.paperFormat == 5) {
+                ids.push({ "id": '2866e65da9a749cd88a84412e212f12a' })
+            } else if (this.paperFormat == 6) {
+                ids.push({ "id": '378502b6aa384914b27369996fabd0bc' })
+            }
+
+            if (this.bindingType == 'true') {
+                ids.push({ "id": 'd5e18caaadd34f70877e38b742ad22ff' })
+            } else if (this.bindingType == 'false') {
+                ids.push({ "id": 'b5559576c3634ab0ba178c92194b5691' })
+            }
+
+            if (this.enveloped == 'true') {
+                ids.push({ "id": '28e2313979804380b8f303e0f21ffcad' })
+            } else if (this.enveloped == 'false') {
+                ids.push({ "id": '242e68c2dfde4ec2afe3fd478e2a0f85' })
+            }
+
+            return ids
+
+        },
         validate() {
-            debugger
             if (this.projectType == 1) {
                 if (this.pdf1 == "" || this.productName == "") {
                     this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
@@ -1285,13 +1334,24 @@ export default {
                 if (this.pdf1 == "" && this.pdf3 == null) {
                     this.errorMassage = "Bitte laden Sie 2 eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
+                    return false
 
                 } else if (this.voices.size == 0) {
                     this.errorMassage = "Bitte fügen Sie eine Stimme hinzu, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
+                    return false
+                } else {
+                    return true
                 }
-            } else {
-
+            } else if (this.projectType == 3) {
+                debugger
+                if (this.voices.length == 0) {
+                    this.errorMassage = "Bitte fügen Sie Stimmen zum Projekt hinzu bevor Sie das Projekt in den Warenkorb hinzufügen"
+                    this.open();
+                    return false
+                } else {
+                    return true
+                }
             }
 
         }
