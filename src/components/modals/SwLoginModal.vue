@@ -1,60 +1,38 @@
 <template>
   <div id="sw-login-modal" data-testid="login-modal">
-    <SfModal
-      class="sw-modal"
-      :title="modalTitle"
-      :visible="isModalOpen"
-      @close="toggleModal"
-    >
+    <SfModal class="sw-modal" :title="modalTitle" :visible="isModalOpen" @close="toggleModal">
       <transition name="fade" mode="out-in">
         <div class="sw-login-modal__wrapper">
           <component :is="component" :key="key" @success="toggleModal" />
           <div v-if="component !== 'SwResetPassword'" class="action">
-            <SwButton
-              class="sf-button--text button--muted"
-              @click="component = 'SwResetPassword'"
-              data-testid="forgotten-password-button"
-            >
+            <SwButton class="sf-button--text button--muted" @click="component = 'SwResetPassword'"
+              data-testid="forgotten-password-button">
               {{ $t("Forgotten password?") }}
             </SwButton>
           </div>
 
           <div class="bottom">
             <template v-if="component !== 'SwRegister'">
-              <SfHeading
-                :title="$t('Don\'t have an account yet?')"
-                :level="4"
-                class="bottom__heading"
-              />
-              <SwButton
-                class="sf-button--text bottom__element"
-                @click="component = 'SwRegister'"
-                data-testid="go-to-register-button"
-              >
+              <SfHeading :title="$t('Don\'t have an account yet?')" :level="4" class="bottom__heading" />
+              <SwButton class="sf-button--text bottom__element" @click="component = 'SwRegister'"
+                data-testid="go-to-register-button">
                 {{ $t("Register today!") }}
               </SwButton>
             </template>
           </div>
           <div v-if="component !== 'SwLogin'" class="action">
-            <SwButton
-              class="sf-button--text button--muted"
-              @click="component = 'SwLogin'"
-              data-testid="go-to-login-button"
-            >
+            <SwButton class="sf-button--text button--muted" @click="component = 'SwLogin'"
+              data-testid="go-to-login-button">
               {{ $t("or try to log in again.") }}
             </SwButton>
           </div>
           <div class="smartphone-only bottom bottom__close">
-            <SwButton
-              class="
+            <SwButton class="
                 sf-button
                 sf-select__cancel
                 sf-button--full-width
                 close-button
-              "
-              @click="toggleModal()"
-              data-testid="toggle-modal-button"
-            >
+              " @click="toggleModal()" data-testid="toggle-modal-button">
               {{ $t("Cancel") }}
             </SwButton>
           </div>
@@ -126,6 +104,15 @@ export default {
   watch: {
     isModalOpen: {
       handler(oldVal, newVal) {
+
+        if (document.getElementById("headerNav")) {
+          if (newVal) {
+            document.getElementById("headerNav").classList.add('fixed-top');
+          } else {
+            document.getElementById("headerNav").classList.remove('fixed-top');
+          }
+
+        }
         if (oldVal === true) {
           // enforce rerender dynamic component
           this.key = "modal-closed"
@@ -138,7 +125,7 @@ export default {
   },
   methods: {
     closeHandler() {
-      ;(typeof this.onClose !== "undefined" && this.onClose()) ||
+      ; (typeof this.onClose !== "undefined" && this.onClose()) ||
         this.isModalOpen()
     },
   },
@@ -151,11 +138,13 @@ export default {
 #sw-login-modal {
   box-sizing: border-box;
   --modal-index: 4;
+
   @include for-desktop {
-    & > * {
+    &>* {
       --modal-width: unset;
       --modal-content-padding: var(--spacer-xl) var(--spacer-base);
     }
+
     ::v-deep .sf-modal__container {
       min-width: 400px;
     }
@@ -177,13 +166,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__heading {
     --heading-title-color: var(--c-primary);
     padding: var(--spacer-sm) 0;
   }
+
   &__close {
     padding-top: var(--spacer-lg);
   }
+
   &:last-child {
     padding-bottom: var(--spacer-lg);
   }
