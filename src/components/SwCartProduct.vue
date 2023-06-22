@@ -188,7 +188,7 @@ export default {
         if (id == 'cfdae0f64bf240a6ae5202db7579f8a0') {
            this.propertieStrings.push({ "id": 'Farbigkeit', 'name': 'Farbig' })
         }
-        if (id == '6753f984ea17467794b4068f294053be') {
+        if (id == 'bdac9a79733341129bdc32cceaa29ddb') {
            this.propertieStrings.push({ "id": 'Format', 'name': 'DIN A4 (21 x 29,7 cm)' })
         }
         if (id == 'afe5b55949fc41d399ac39e5ff24f4b6') {
