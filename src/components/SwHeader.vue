@@ -1,7 +1,7 @@
 <template>
   <div class="sw-top-navigation fixed-top" id="headerNav" data-testid="main-header" style="background-color: white;">
     <SfOverlay :visible="isOpen" class="sw-overlay" />
-    <SwCookieBar />
+
     <SwTopBar />
     <div class="container justify-content-between menueBigScreen">
       <div class="row mt-2 mb-3">

@@ -5,7 +5,7 @@ export default extendNuxtConfig({
   head: {
     title: "Shopware PWA",
     script: [
-      { src: 'https://cdn.consentmanager.net/delivery/autoblocking/64f17ad2414dc.js' } // load script in your static folder
+     
     ],
     meta: [{ hid: "description", name: "description", content: "" }],
      link: [

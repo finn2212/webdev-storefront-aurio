@@ -115,7 +115,7 @@
                     </div>
                   </div>
                   <div class="mySlides">
-                    <div >
+                    <div>
                       <div class="ps-5 ">
                         <p class="p-grid">
                         <h5>»Voll krasse Quailität.«</h5>
@@ -302,10 +302,11 @@
                     <div class="mySlides2">
                       <div style="padding: 15px">
                         <p class="p-grid">
-                          <div class="row ms-3 me-3">
-                        <h5 style="line-height: 1.5;">»capellaprint ist ein attraktiver Service und hervorragend geeignet, um aus
-                          Ihren Partituren das
-                          Optimum herauszuholen.«</h5>
+                        <div class="row ms-3 me-3">
+                          <h5 style="line-height: 1.5;">»capellaprint ist ein attraktiver Service und hervorragend
+                            geeignet, um aus
+                            Ihren Partituren das
+                            Optimum herauszuholen.«</h5>
                         </div>
 
                         <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
@@ -318,17 +319,18 @@
                     <div class="mySlides2">
                       <div>
                         <div style="padding: 15px">
-                        <p class="p-grid">
+                          <p class="p-grid">
                           <div class="row ms-3 me-3">
-                        <h5 style="line-height: 1.5;">»Es macht mich stolz, mit unserer Musikaliendruckerei einen echten Mehrwert für alle capella-Nutzer:innen bieten zu können.«</h5>
-                        </div>
+                            <h5 style="line-height: 1.5;">»Es macht mich stolz, mit unserer Musikaliendruckerei einen
+                              echten Mehrwert für alle capella-Nutzer:innen bieten zu können.«</h5>
+                          </div>
 
-                        <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
-                          Sebastian Gabriel, 
-                        </p>
-                        Geschäftsführer AURIOPRINT
-                        </p>
-                      </div>
+                          <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
+                            Sebastian Gabriel,
+                          </p>
+                          Geschäftsführer AURIOPRINT
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
@@ -340,15 +342,16 @@
             </div>
             <div class="row justify-content-center">
               <div class="col p-0 customBorder">
-              
+
                 <div v-if="slideIndex == 1">
                   <img src="@/assets/images/pic3.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
                 </div>
                 <div v-if="slideIndex == 2">
-                  <img src="@/assets/images/sebastianQuote.jpeg" alt="Avatar" class="img" style="width: 100%; height: 100%;">
+                  <img src="@/assets/images/sebastianQuote.jpeg" alt="Avatar" class="img"
+                    style="width: 100%; height: 100%;">
                 </div>
-              
-              
+
+
               </div>
             </div>
           </div>
@@ -672,6 +675,12 @@ export default {
   components: {
     SfModal,
     SfButton,
+  },
+  head() {
+    return {
+
+
+    }
   },
   data() {
     return {
@@ -1045,5 +1054,4 @@ export default {
   to {
     opacity: 1
   }
-}
-</style>
+}</style>
