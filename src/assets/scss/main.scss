@@ -123,6 +123,14 @@ h6 {
 .p-5 {
   padding: 35px !important;
 }
+.my-account{
+  margin-top: 150px !important;
+}
+@media only screen and (max-width: 1024px) {
+  .my-account {
+    margin-top: 0px !important;
+  }
+}
 
 
 .img {
