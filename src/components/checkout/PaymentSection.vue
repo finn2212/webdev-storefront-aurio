@@ -1,46 +1,48 @@
 <template>
   <div>
-    <SfHeading
-      :title="$t('Payment methods')"
-      :description="$t('Choose your payment method')"
-      class="sf-heading--left sf-heading--no-underline title"
-    />
+    <SfHeading :title="$t('Payment methods')" :description="$t('Choose your payment method')"
+      class="sf-heading--left sf-heading--no-underline title" />
     <div class="sw-form">
       <div class="form__element payment-methods">
         <SfLoader :loading="isLoading">
           <div class="payment-methods__container">
-            <SfRadio
-              v-for="paymentMethod in paymentMethods"
-              :key="paymentMethod.id"
-              v-model="activePaymentMethod"
-              :label="paymentMethod.name"
-              :value="paymentMethod.id"
-              name="paymentMethod"
-              :description="paymentMethod.description"
-              class="sw-form__radio payment-method"
-              :data-testid="`checkout-payment-method-${simplifyString(
+            <SfRadio v-for="paymentMethod in paymentMethods" :key="paymentMethod.id" v-model="activePaymentMethod"
+              :label="paymentMethod.name" :value="paymentMethod.id" name="paymentMethod"
+              :description="paymentMethod.description" class="sw-form__radio payment-method" :data-testid="`checkout-payment-method-${simplifyString(
                 paymentMethod.name
-              )}`"
-            >
+              )}`">
+
               <template #description="{ description }">
-                <div class="sf-radio__description">
-                  <div class="payment_description">
-                    <p>{{ description }}</p>
-                  </div>
-                  <transition name="sf-fade">
-                    <div
-                      v-if="activePaymentMethod === paymentMethod.id"
-                      class="shipping__info"
-                    >
-                      <SwPluginSlot
-                        :name="`checkout-payment-method-${simplifyString(
-                          paymentMethod.name
-                        )}`"
-                        :slot-context="paymentMethod"
-                      />
+                <div class="row">
+
+                  <div class="col-auto" style="padding: 0px !important">
+                    <div class="sf-radio__description">
+                      <div class="payment_description">
+                        <p>{{ description }}</p>
+                      </div>
+
+                      <transition name="sf-fade">
+                        <div v-if="activePaymentMethod === paymentMethod.id" class="shipping__info">
+                          <SwPluginSlot :name="`checkout-payment-method-${simplifyString(
+                            paymentMethod.name
+                          )}`" :slot-context="paymentMethod" />
+                        </div>
+                      </transition>
+                      <div v-if="paymentMethod.name == 'Kreditkarte (via Stripe)'" class="col-auto" style="padding: 0px !important">
+                        <img src="@/assets/svg/Rectangle (6).svg" alt="Avatar">
+                      </div>
+                      <div v-if="paymentMethod.name == 'Klarna (via Stripe)'" class="col-auto" style="padding: 0px !important">
+                        <img src="@/assets/svg/Rectangle (3).svg" alt="Avatar">
+                      </div>
+                      <div v-if="paymentMethod.name == 'Apple Pay / Google Pay (via Stripe)'" class="col-auto" style="padding: 0px !important">
+                        <img src="@/assets/svg/Rectangle (4).svg" alt="Avatar">
+                      </div>
                     </div>
-                  </transition>
+                  </div>
+
+                 
                 </div>
+
               </template>
             </SfRadio>
           </div>
@@ -102,6 +104,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "@/assets/scss/forms";
+
 .sw-form {
   &__action {
     width: 100%;
@@ -110,18 +113,22 @@ export default {
     button {
       display: table-cell;
       width: 100%;
+
       @include for-desktop {
         width: 50%;
       }
     }
   }
 }
+
 .title {
   --heading-padding: var(--spacer-base) 0;
   --heading-description-margin: 0;
+
   @include for-desktop {
     --heading-title-font-size: var(--h3-font-size);
     --heading-padding: var(--spacer-lg) 0 var(--spacer-base) 0;
+
     &:last-of-type {
       --heading-padding: var(--spacer-xs) 0 var(--spacer-base) 0;
     }
