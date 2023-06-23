@@ -5,19 +5,26 @@ export default extendNuxtConfig({
   head: {
     title: "Shopware PWA",
     script: [
-     
+      {
+        type: "text/javascript",
+        ab: "1",
+        src: "https://cdn.consentmanager.net/delivery/autoblocking/64f17ad2414dc.js",
+        host: "d.delivery.consentmanager.net",
+        cdn: "cdn.consentmanager.net",
+        codesrc: "0"
+      }
     ],
     meta: [{ hid: "description", name: "description", content: "" }],
-     link: [
+    link: [
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap'
       }
-     ],
-     plugins: [
+    ],
+    plugins: [
       '~plugins/bootstrap.js',
     ],
-     build: {
+    build: {
       /*
       ** You can extend webpack config here
       */

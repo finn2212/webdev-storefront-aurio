@@ -780,7 +780,7 @@ export default {
             paperFormat: 1,
             color: 'false',
             voicePrice: 0,
-
+            envelopedPrice: 0,
             bindingType: "true",
             errorMassage: "",
             totalVoicePrice: 0,
@@ -1009,11 +1009,11 @@ export default {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
             } else {
-                this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice;
+                this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice + this.envelopedPrice;
                 if (this.discount != 1) {
                     this.price = this.price * (1 - this.discount) + this.bindingTypePrice;
                 }
-                this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice;
+                this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice + this.envelopedPrice;
             }
 
 
@@ -1370,14 +1370,15 @@ export default {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
         },
         enveloped: function (val) {
+          
             if (val) {
                 if (val == "true") {
-                    this.price = this.price + 1.5
+                    this.envelopedPrice =  1.5
                 } if (val == "false") {
-                    this.price = this.price - 1.5
+                    this.envelopedPrice = 0
                 }
-
             }
+            this.calculatePrice();
         },
         pagesQuantitiy(val) {
             this.calculatePrice();
