@@ -10,11 +10,6 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Noten mit Klammerheftung
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
                 </div>
             </div>
 
@@ -24,24 +19,6 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Noten mit Spiralbindung
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="dropdown ">
-                    <button class="btn btn-secondary dropdown-toggle dropdownStyle" type="button" id="dropdownMenuBtn3"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Noten mit Layflatbindung
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
                 </div>
             </div>
             

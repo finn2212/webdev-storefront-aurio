@@ -4,6 +4,9 @@ const webpack = require('webpack');
 export default extendNuxtConfig({
   head: {
     title: "Shopware PWA",
+    script: [
+     
+    ],
     meta: [{ hid: "description", name: "description", content: "" }],
      link: [
       {

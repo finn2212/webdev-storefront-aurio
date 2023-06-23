@@ -1,26 +1,26 @@
 <template>
-    <div class="container">
+    <div class="container top">
 
         <!--Sektion Heading-->
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-2 p-4 darkblue customBorder">
+                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 midNightBlue customBorder">
                         <h1 style="color: white;">
                             Nacht-
                             eule?
                         </h1>
-                        <img src="@/assets/svg/auto_awesome.svg" alt="Avatar" class="pt-5">
+                        <img src="@/assets/svg/auto_awesome.svg" alt="Avatar" class="pt-1 pt-md-5">
                         <h2 style="color: white;">
                             10% Rabatt
                             19–24 Uhr
                         </h2>
                     </div>
-                    <div class="col customBorder "
+                    <div class="col customBorder" style="min-height: 300px;"
                         v-bind:style="{ 'background-image': 'url(' + require('../assets/images/Booklet_machine.png') + ')' }">
                         <div class="row align-items-end" style="height: 100%">
                             <div class="col align-self-end">
-                                <h1 style="color: white;" class="pb-3">
+                                <h1 style="color: white;" class="pb-3 ms-4">
                                     Notenheft mit Klammerheftung
                                 </h1>
                             </div>
@@ -34,10 +34,10 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row pt-4">
-                    <div class="col-4 customBorder blockStart">
-                        <h1>
+                    <div class="col-12 col-xl-4 customBorder blockStart">
+                        <h2>
                             Notenheft mit Klammerheftung günstig drucken lassen
-                        </h1>
+                        </h2>
                         <p>
                             Der Klassiker: Notenhefte mit Klammerheftung sind der alltägliche Begleiter von Musikern in
                             aller
@@ -46,30 +46,36 @@
                             Aufschlagverhalten.
                         </p>
                         <p>
+                        <p class="inline thick">
                             Da wir unzählige Hefte produzieren, sind die Kosten so gering, dass wir diese Art der Bindung
                             ohne
-                            Aufpreis anbieten können. Das macht das Notenbuch mit Klammerheftung zum absoluten
-                            Bestsellerprodukt!
+                        </p>
+
+                        Aufpreis anbieten können. Das macht das Notenbuch mit Klammerheftung zum absoluten
+                        Bestsellerprodukt!
                         </p>
 
                     </div>
                     <div class="col customBorder yellow p-4">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <h1 class="pb-3">
                                     <img src="@/assets/svg/info.svg" alt="Avatar" class="pr-3">
                                     Eigenschaften
                                 </h1>
-                                <p>
-                                    Dein Notenheft wird mit einem Squarefold, einem rechteckigen Broschürenrücken versehen,
-                                    der
-                                    dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
+                                <p class="mt-5">
+                                    Ihr Notenheft wird mit einem Squarefold, einem rechteckigen Broschürenrücken versehen,
+                                    der dem Heft das Aussehen eines klebegebundenen Buchs verleiht.
                                     Der Qualitätsunterschied zur normalen Heftung ist enorm!
                                 </p>
-                                <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                                    <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 5px;">Datenvorgaben
-                                    (PDF)
-                                </button>
+                                <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
+                                    target="_blank">
+                                    <button type="button" class="btn btn-dark p-2 mt-5" style="width: 100%;">
+                                        <img src="@/assets/svg/download.svg" alt="Avatar"
+                                            style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                        <p class="inline mt-2">Maßvorgaben (PDF)</p>
+                                    </button>
+                                </a>
                             </div>
                             <div class="col">
                                 <div class="row mt-4">
@@ -81,7 +87,7 @@
                                             Formate: DIN A4 / 19 x 27 cm / 22,8 x 30,5 (»Concertformat«)
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -90,7 +96,7 @@
                                             Für Notenhefte als Broschüre im Hochformat mit und ohne Umschlag
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -99,7 +105,7 @@
                                             Seitenumfang bis 88 Seiten + Umschlag machbar
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -108,7 +114,7 @@
                                             Hervorragendes Aufschlagverhalten
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -117,7 +123,7 @@
                                             Auflage 1 bis 250 Exemplare günstig drucken
                                         </p>
                                     </div>
-                                    <div class="w-100 pt-3"></div>
+                                    <div class="w-100 pt-1"></div>
                                     <div class="col-1">
                                         <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
                                     </div>
@@ -139,22 +145,23 @@
             <div class="container justify-content-center">
                 <div class="row pt-4">
 
-                    <div class="col-4 customBorder blockStart">
+                    <div class="col-12 col-lg-4  customBorder blockStart">
                         <div class="row align-items-start">
-                            <h1>
+                            <h2>
                                 Direkt zu den Topsellern
 
-                            </h1>
+                            </h2>
                             <p>
-                                Starte mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich zigfach
-                                her.
+                                Starten Sie mit unseren meistgefragten Druckprodukten – diese Formate stellen wir täglich
+                                zigfach her.
                             </p>
 
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
+                    <div class="col-12 col-lg-4  customBorder blue"
+                        style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
-                            <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
+                            <img class="card-img-top" src="@/assets/images/pic4.png" alt="Card image cap">
                         </div>
                         <div class="row p-4">
                             <h2 class="mb-4">Notenheft DIN A4
@@ -165,7 +172,7 @@
                                 </div>
                                 <div class="col">
                                     <p class="">
-                                        Umschlag aus matt-brillantem Chromokarton mit 240g Stärke
+                                        Umschlag aus matt-brillantem Chromokarton mit 260g Stärke
                                     </p>
                                 </div>
                             </div>
@@ -191,12 +198,12 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-8 mt-1">
+                                    <div class="col-12 col-xl-9 mt-1">
                                         <NuxtLink class="a" to="/productCustomizer">
-                                            <button type="button" class="btn btn-dark mt-3">
+                                            <button type="button" class="btn btn-dark" style="margin-top: 55px !important">
                                                 <img src="@/assets/svg/plus.svg" alt="Avatar"
                                                     style="margin-right: 10px;">Jetzt
-                                                Drucken
+                                                drucken
                                             </button>
                                         </NuxtLink>
                                     </div>
@@ -204,7 +211,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col customBorder blue" style="padding-left: 0px !important; padding-right: 0px !important;">
+                    <div class="col-12 col-lg-4  customBorder blue"
+                        style="padding-left: 0px !important; padding-right: 0px !important;">
                         <div class="row">
                             <img class="card-img-top" src="@/assets/images/pic5.png" alt="Card image cap">
                         </div>
@@ -244,11 +252,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-12 col-xl-9  mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -263,26 +271,28 @@
         <section class="pt-5">
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col p-4" style="padding: 0px !important; margin-right:30px ">
+                    <div class="col-12 col-lg  p-4" style="padding: 0px !important; margin-right:30px ">
                         <div class="row pb-3">
                             <h2 class="heading-grid">
                                 Weitere Heftformate
                             </h2>
                             <p class="p-grid pb-4">
-                                Du kannst gängige Sonderformate für Musikalien produzieren lassen.
+                                Sie können gängige Sonderformate für Musikalien produzieren lassen.
                             </p>
                         </div>
-                        <div class="row grey p-4 pt-4 colfreeKlammer">
-                            <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?Í</p>
-                            <div class="col-8">
-                                <h3>
-                                    Zu den
-                                    Notenheften mit Spiralbindung
-                                </h3>
+                        <div class="row  p-4 pt-2 pt-lg-5 colfreeKlammer">
+                            <div class="beige pt-4">
+                                <p>Mehr als 88 Seiten Inhalt? Querformat gesucht? Notenheft in DIN A3 oder größer?</p>
+                                <div class="col-12 col-lg-9">
+                                    <h3>
+                                        Zu den
+                                        Notenheften mit Spiralbindung
+                                    </h3>
 
-                            </div>
-                            <div class="col mb-2 align-self-end">
-                                <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
+                                </div>
+                                <div class="col mb-2 align-self-end">
+                                    <img src="@/assets/svg/arrow_circle_right.svg" alt="Avatar" style="margin-left: 10px;">
+                                </div>
                             </div>
                         </div>
 
@@ -309,7 +319,7 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Innenteil mit klassisch gelblichem Notenpapier
+                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
                                 </p>
                             </div>
                             <div class="w-100 pt-3"></div>
@@ -318,15 +328,15 @@
                             </div>
                             <div class="col">
                                 <p>
-                                    Das bekannte Format der Klavierauszüge der EDITION PETERS
+                                    Innenteil mit klassisch gelblichem Notenpapier
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-4">
+                                <div class="col-12 col-xl-9 mt-4">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -335,8 +345,8 @@
                     </div>
                     <div class="col pl-5  p-4 customBorder pink">
                         <h2 class="heading-grid">
-                            Notenheft 19 x 27 cm
-                            »Peters«
+                            Notenheft 22,8 x 30,5 cm
+                            »Concert«
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
@@ -365,12 +375,12 @@
                                     Bekannt von EDITION PETERS, SCHOTT Music u.v.a.
                                 </p>
                             </div>
-                            <div class="row">
-                                <div class="col-8">
+                            <div class="row mt-4">
+                                <div class="col-12 col-xl-9 ">
                                     <NuxtLink class="a" to="/productCustomizer">
                                         <button type="button" class="btn btn-dark mt-3">
-                                            <img src="@/assets/svg/plus.svg" alt="Avatar" style="margin-right: 10px;">Jetzt
-                                            Drucken
+                                            <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Jetzt
+                                            drucken
                                         </button>
                                     </NuxtLink>
                                 </div>
@@ -400,10 +410,14 @@ export default {
         // get the configured api client
         const { apiInstance } = getApplicationContext(root, "home")
     },
-    data: {
-        image: '@/assets/images/Booklet_machine.png'
-
-
+    data() {
+        return {
+            image: '@/assets/images/Booklet_machine.png'
+        }
+    },
+    mounted() {
+        const id = 1
+        document.getElementById(`menuBtn${id}`).classList.add('active');
     }
 
 
@@ -430,6 +444,9 @@ export default {
     }
 }
 
+.p-5 {
+    padding: 35px !important;
+}
 
 .btn-primary {
     border-color: black;
@@ -437,6 +454,14 @@ export default {
 
 .card-img-top {
     border-radius: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .card-img-top {
+        margin-top: 0%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 
