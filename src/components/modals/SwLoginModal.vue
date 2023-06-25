@@ -14,7 +14,7 @@
           <div class="bottom">
             <template v-if="component !== 'SwRegister'">
               <SfHeading :title="$t('Don\'t have an account yet?')" :level="4" class="bottom__heading" />
-              <SwButton class="sf-button--text bottom__element" @click="component = 'SwRegister'"
+              <SwButton class="sf-button--text bottom__element btn" @click="component = 'SwRegister'"
                 data-testid="go-to-register-button">
                 {{ $t("Register today!") }}
               </SwButton>

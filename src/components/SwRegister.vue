@@ -6,7 +6,7 @@
       @invokeRegister="invokeRegister"
     />
     <SwButton
-      class="sw-form__button sf-button--full-width"
+      class="sw-form__button sf-button--full-width btn"
       @click="invokeRegister"
       data-testid="register-button"
     >

@@ -23,7 +23,7 @@
     <TotalsSummary />
     <SwPromoCode class="promo-code" />
     <SwButton
-      class="sw-form__button sf-button--full-width"
+      class="sw-form__button sf-button--full-width btn"
       @click="
         ;(isDoubleOptInRegistrationRequired &&
           pushWarning(
