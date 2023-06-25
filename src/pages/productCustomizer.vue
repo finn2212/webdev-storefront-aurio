@@ -88,7 +88,7 @@
                         </div>
                         <div v-if="projectType != 3" class="w-100 pt-5"></div>
                         <div class="row">
-                            <div class="col-12 col-md-7 pt-4">
+                            <div class="col-12 col-md-7">
                                 <h2>2. Art des Projekts*</h2>
                                 <p>Zu Beginn ist es notwendig, zu wissen, um welche Art von Notenprojekt es sich handelt.
                                 </p>
@@ -181,7 +181,7 @@
                             <div v-if="projectType != 3" class="col pt-5">
                                 <div class="row mt-3">
                                     <div class="col-8">
-                                        <p>Nur Schwarzweiß</p>
+                                        <p>Inhalt schwarzweiß</p>
                                     </div>
                                     <div class="col-1">
                                         <input type="radio" id="one" value="false" v-model="color" />
@@ -190,7 +190,7 @@
                                 <div class="row">
                                     <div class="col-8">
 
-                                        <p>Farbseiten im Inhalt</p>
+                                        <p>Inhalt farbig</p>
                                     </div>
                                     <div class="col-1">
                                         <input type="radio" id="two" value="true" v-model="color" />
@@ -272,11 +272,10 @@
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Seitenanzahl*</h2>
-                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an.
-                                    Aus produktionstechnischen Gründen muss diese immer durch 2 (Spiralbindung) bzw. 4
-                                    (Klammerheftung) teilbar sein.
+                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
                                 </p>
-                                <p>Sie können zwischen 2 und 400 Seiten Umfang wählen.</p>
+                                <p>Sie können zwischen 4 und 400 Seiten Umfang wählen.
+                                </p>
                             </div>
                             <div v-if="projectType != 3" class="col-3 pt-5">
                                 <p>Seitenanzahl Inhalt:</p>
@@ -291,7 +290,7 @@
                             </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>7. Bindeart*</h2>
+                                <h2>7. Bindung*</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
 
@@ -303,16 +302,15 @@
                             <div class="col pt-5">
                                 <div class="row mt-3" v-if="format == 'true'">
                                     <div class="col-8">
-                                        <p v-if="bindingType == 'true'">Ihre Bindungs Art: Klammerheftung</p>
-                                        <p v-if="bindingType == 'false'">Ihre Bindungs Art: Spiralbindung</p>
+                                        <p v-if="bindingType == 'true'">Bindung: Klammerheftung</p>
+                                        <p v-if="bindingType == 'false'">Bindung: Spiralbindung</p>
                                     </div>
                                 </div>
                             </div>
 
 
 
-                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
-
+                           
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>8. Umschlag</h2>
@@ -1324,7 +1322,7 @@ export default {
         validate() {
             if (this.projectType == 1) {
                 if (this.pdf1 == "" || this.productName == "") {
-                    this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen"
+                    this.errorMassage = "Bitte laden Sie eine Notendatei hoch und vergeben Sie einen Projektnamen, bevor Sie das Produkt in Ihren Warenkorb legen."
                     this.open();
                     return false
                 } else {
@@ -1346,7 +1344,7 @@ export default {
             } else if (this.projectType == 3) {
                 debugger
                 if (this.voices.length == 0) {
-                    this.errorMassage = "Bitte fügen Sie Stimmen zum Projekt hinzu bevor Sie das Projekt in den Warenkorb hinzufügen"
+                    this.errorMassage = "Bitte vergeben Sie eine Stimmenbezeichnung und und laden Sie eine Notendatei hoch, bevor Sie die Stimme dem Projekt hinzufügen."
                     this.open();
                     return false
                 } else {
