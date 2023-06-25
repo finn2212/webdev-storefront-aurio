@@ -7,7 +7,8 @@ module.exports = {
   },
   shopwareDomainsAllowList: [
     "http://192.168.2.119",
-    "https://home-5013243924.app-ionos.space",
+    "home-5013243924.app-ionos.space",
+    "home-5013137490.app-ionos.space",
     "https://s23511.creoline.cloud"
   ],
   defaultLanguageCode: "de-DE",
