@@ -355,9 +355,9 @@
                                     <div class="col">
                                         <div v-if="pdfData1 == null" class="row">
                                             <div>
-                                                <button class="btn btn uploadBtn" @click="click1"> <img
-                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
-                                                        style="margin-right: 5px;">Datei wählen</button>
+                                                 <button class="btn btn uploadBtn" style="color: black !important;" @click="click1"> <img
+                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar" style=" margin-right: 5px;"
+                                                        >Datei wählen</button>
                                                 <input type="file" ref="input1" style="display: none" @change="previewImage"
                                                     accept="application/pdf">
                                             </div>
@@ -367,8 +367,8 @@
                                                 {{ pdfData1.name }}
                                             </div>
                                             <div class="col-auto">
-                                                <button class="btn btn uploadBtn" @click="deletePdf"
-                                                    style="margin-left:5px">
+                                                 <button class="btn btn uploadBtn" style="color: black !important; margin-left:5px" @click="deletePdf"
+                                                   >
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -390,7 +390,7 @@
                                     <div class="col">
                                         <div v-if="pdfData2 == null" class="row">
                                             <div class="" v-if="pdfData2 == null">
-                                                <button class="btn btn uploadBtn ms-0 ms-xl-3" @click="click2"> <img
+                                                <button class="btn btn uploadBtn ms-0 ms-xl-3" style="color: black !important;" @click="click2"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="margin-right: 5px;">Datei wählen
                                                 </button>
@@ -403,8 +403,8 @@
                                                 {{ pdfData2.name }}
                                             </div>
                                             <div class="col">
-                                                <button class="btn btn uploadBtn" @click="deletePdf2"
-                                                    style="margin-left:5px">
+                                                 <button class="btn btn uploadBtn" style="color: black !important;  margin-left:5px " @click="deletePdf2"
+                                                    >
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -478,7 +478,7 @@
                                         <p>
                                         <div v-if="pdfData3 == null" class="row">
                                             <div class="" v-if="pdfData3 == null">
-                                                <button class="btn btn uploadBtn" @click="voiceUpload"> <img
+                                                 <button class="btn btn uploadBtn" style="color: black !important" @click="voiceUpload"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="margin-right: 5px;">Datei wählen
                                                 </button>
@@ -491,8 +491,8 @@
                                                 {{ pdfData3.name }}
                                             </div>
                                             <div class="col">
-                                                <button class="btn btn uploadBtn" @click="deletePdf3"
-                                                    style="margin-left:5px">
+                                                 <button class="btn btn uploadBtn" style="color: black !important; margin-left:5px" @click="deletePdf3"
+                                                    >
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -508,9 +508,9 @@
                                         </p>
 
                                     </div>
-                                    <button class="btn btn uploadBtn" @click="addVoice()"
-                                        style="background-color: black !important;"> <img src="@/assets/svg/iconWhite.svg"
-                                            alt="Avatar" style="margin-right: 5px;  ">
+                                     <button class="btn btn uploadBtn"  @click="addVoice()"
+                                        style="background-color: black !important; margin-right: 5px;"> <img src="@/assets/svg/iconWhite.svg"
+                                            alt="Avatar">
                                         <p class="inline mt-1" style="color: white;">
                                             Stimme
                                             Hinzufügen
