@@ -197,8 +197,7 @@ export default {
       changePaymentMethod: doChangePaymentMethod,
     } = useOrderDetails({
       order: {
-        id: props.orderId, finishUrl: "https://home-5013243924.app-ionos.space/",
-        errorUrl: "https://home-5013243924.app-ionos.space/"
+        id: props.orderId
       }
     })
 
@@ -233,7 +232,10 @@ export default {
 
     onMounted(() => {
       loadOrderDetails()
-      handlePayment()
+      handlePayment({
+        finishUrl: "https://home-5013243924.app-ionos.space/",
+        errorUrl: "https://home-5013243924.app-ionos.space/"
+      })
     })
 
     return {
