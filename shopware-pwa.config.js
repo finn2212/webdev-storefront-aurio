@@ -6,7 +6,7 @@ module.exports = {
     timeout: 5000, // timeout limit in ms
   },
   shopwareDomainsAllowList: [
-    'home-5013243924.app-ionos.space'
+    'https://home-5013243924.app-ionos.space'
   ],
   defaultLanguageCode: "de-DE",
 };
