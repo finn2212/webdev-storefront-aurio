@@ -71,7 +71,7 @@ export default {
     SwButton,
     SfRadio,
     SwPluginSlot,
-    SfLoader,
+    SfLoader
   },
   setup(props) {
     const { getPaymentMethods, paymentMethods } = useCheckout()

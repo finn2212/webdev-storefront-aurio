@@ -14,6 +14,7 @@ export default extendNuxtConfig({
         codesrc: "0"
       }
     ],
+    target: 'static',
     meta: [{ hid: "description", name: "description", content: "" }],
     link: [
       {
