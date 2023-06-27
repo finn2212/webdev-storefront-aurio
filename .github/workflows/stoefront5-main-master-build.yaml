@@ -38,8 +38,7 @@ jobs:
           SITE_URL: ${{ inputs.site-url }}
         run: |
           npm install --global yarn
-          npx @shopware-pwa/cli init --ci --finn.stolle --capella2023!
-          npx @shopware-pwa/cli domains --finn.stolle -capella2023!
+          npx @shopware-pwa/cli init --ci --username=finn.stolle --password=capella2023!
           yarn build
           yarn generate
 
