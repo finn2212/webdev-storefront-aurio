@@ -100,8 +100,8 @@
                             einseitig matte Oberfläche lässt sich hervorragend bedrucken und bricht auch bei starker
                             Beanspruchung nicht auf.
                         </p>
-                        <p class="mt-2">
-                            Kurz: Der beste Karton, den Sie für Ihre Partituren bekommen kannst.
+                        <p class="mt-2 thick">
+                            Kurz: Der beste Karton, den Sie für Ihre Partituren bekommen können.
                         </p>
 
                     </div>

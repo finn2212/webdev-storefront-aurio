@@ -272,7 +272,8 @@
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Seitenanzahl*</h2>
-                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
+                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen
+                                    muss diese immer durch 4 teilbar sein.
                                 </p>
                                 <p>Sie können zwischen 4 und 400 Seiten Umfang wählen.
                                 </p>
@@ -310,7 +311,7 @@
 
 
 
-                           
+
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>8. Umschlag</h2>
@@ -355,9 +356,9 @@
                                     <div class="col">
                                         <div v-if="pdfData1 == null" class="row">
                                             <div>
-                                                 <button class="btn btn uploadBtn" style="color: black !important;" @click="click1"> <img
-                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar" style=" margin-right: 5px;"
-                                                        >Datei wählen</button>
+                                                <button class="btn btn uploadBtn" style="color: black !important;"
+                                                    @click="click1"> <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                        style=" margin-right: 5px;">Datei wählen</button>
                                                 <input type="file" ref="input1" style="display: none" @change="previewImage"
                                                     accept="application/pdf">
                                             </div>
@@ -367,8 +368,8 @@
                                                 {{ pdfData1.name }}
                                             </div>
                                             <div class="col-auto">
-                                                 <button class="btn btn uploadBtn" style="color: black !important; margin-left:5px" @click="deletePdf"
-                                                   >
+                                                <button class="btn btn uploadBtn"
+                                                    style="color: black !important; margin-left:5px" @click="deletePdf">
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -390,7 +391,8 @@
                                     <div class="col">
                                         <div v-if="pdfData2 == null" class="row">
                                             <div class="" v-if="pdfData2 == null">
-                                                <button class="btn btn uploadBtn ms-0 ms-xl-3" style="color: black !important;" @click="click2"> <img
+                                                <button class="btn btn uploadBtn ms-0 ms-xl-3"
+                                                    style="color: black !important;" @click="click2"> <img
                                                         src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="margin-right: 5px;">Datei wählen
                                                 </button>
@@ -403,8 +405,8 @@
                                                 {{ pdfData2.name }}
                                             </div>
                                             <div class="col">
-                                                 <button class="btn btn uploadBtn" style="color: black !important;  margin-left:5px " @click="deletePdf2"
-                                                    >
+                                                <button class="btn btn uploadBtn"
+                                                    style="color: black !important;  margin-left:5px " @click="deletePdf2">
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -478,8 +480,8 @@
                                         <p>
                                         <div v-if="pdfData3 == null" class="row">
                                             <div class="" v-if="pdfData3 == null">
-                                                 <button class="btn btn uploadBtn" style="color: black !important" @click="voiceUpload"> <img
-                                                        src="@/assets/svg/plusBlack.svg" alt="Avatar"
+                                                <button class="btn btn uploadBtn" style="color: black !important"
+                                                    @click="voiceUpload"> <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="margin-right: 5px;">Datei wählen
                                                 </button>
                                                 <input type="file" ref="input3" style="display: none"
@@ -491,8 +493,8 @@
                                                 {{ pdfData3.name }}
                                             </div>
                                             <div class="col">
-                                                 <button class="btn btn uploadBtn" style="color: black !important; margin-left:5px" @click="deletePdf3"
-                                                    >
+                                                <button class="btn btn uploadBtn"
+                                                    style="color: black !important; margin-left:5px" @click="deletePdf3">
                                                     <img src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                         style="transform: rotate(45deg);">
                                                 </button>
@@ -508,9 +510,9 @@
                                         </p>
 
                                     </div>
-                                     <button class="btn btn uploadBtn"  @click="addVoice()"
-                                        style="background-color: black !important; margin-right: 5px;"> <img src="@/assets/svg/iconWhite.svg"
-                                            alt="Avatar">
+                                    <button class="btn btn uploadBtn" @click="addVoice()"
+                                        style="background-color: black !important; margin-right: 5px;"> <img
+                                            src="@/assets/svg/iconWhite.svg" alt="Avatar">
                                         <p class="inline mt-1" style="color: white;">
                                             Stimme
                                             Hinzufügen
@@ -665,6 +667,14 @@
                 </div>
             </div>
         </section>
+
+        <div
+          v-for="product in products"
+          :key="product.id"
+        >
+        <SwProductDetails :product="product" />
+        </div>
+
         <!--Sektion mit 3 Karten und Bider-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -734,16 +744,20 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { db } from '../firebaseDb';
 import axios from 'axios';
 import { SfModal, SfButton } from "@storefront-ui/vue"
+import SwProductDetails from "@/components/SwProductDetails.vue"
 
 
 export default {
     components: {
         SfModal,
         SfButton,
+        SwProductDetails
     },
+  
     data() {
         return {
             price: 0,
+            products: [],
             priceString: '0',
             productionTime: "1–3 Tage",
             isOpen: false,
@@ -811,6 +825,8 @@ export default {
     },
     mounted() {
         this.calculatePrice();
+
+
     },
     methods: {
         reset() {
@@ -932,16 +948,20 @@ export default {
                 data: {
                     "search": productNumber
                 }
-            }).then((res) => {
+            }).then(async (res) => {
+                
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
-                this.add(res.data.elements[0]._uniqueIdentifier)
+                this.products.push( res.data.elements[0])
+                document.getElementById("overlay").style.display = "none";
+                this.reset();
             }).catch((error) => {
                 //try to fix the error or
                 document.getElementById("overlay").style.display = "none";
                 console.log(error.message)
             });
         },
+        //Not Used Anymore
         add(id) {
             const contextToken = this.$cookies.get("sw-context-token") || "";
             axios({
@@ -964,13 +984,9 @@ export default {
                     ]
                 }
             }).then((res) => {
-                document.getElementById("overlay").style.display = "none";
-                this.reset();
-                window.location.reload();
+
             }).catch((error) => {
-                //try to fix the error or
-                document.getElementById("overlay").style.display = "none";
-                console.log(error.message);
+               
             });
         },
         setDiscountGroup: function (id) {
@@ -1097,7 +1113,6 @@ export default {
 
         },
         getDesc() {
-            debugger;
             let desc = '';
             desc = 'Proejekt Name:' + this.productName + '\n Downloadlink Notenheft: ' + this.pdf1 +
                 + ' \n Downloadlink Umschlag:' + this.pdf2 + ' \n';
@@ -1342,7 +1357,6 @@ export default {
                     return true
                 }
             } else if (this.projectType == 3) {
-                debugger
                 if (this.voices.length == 0) {
                     this.errorMassage = "Bitte vergeben Sie eine Stimmenbezeichnung und und laden Sie eine Notendatei hoch, bevor Sie die Stimme dem Projekt hinzufügen."
                     this.open();
@@ -1368,10 +1382,10 @@ export default {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
         },
         enveloped: function (val) {
-          
+
             if (val) {
                 if (val == "true") {
-                    this.envelopedPrice =  1.5
+                    this.envelopedPrice = 1.5
                 } if (val == "false") {
                     this.envelopedPrice = 0
                 }

@@ -121,7 +121,6 @@ export default {
   },
   watch: {
     isSidebarOpen(val) {
-      debugger
       if (!val) {
         if (document.getElementById("stickyBar")) {
           document.getElementById("stickyBar").classList.add('sticky-top');
