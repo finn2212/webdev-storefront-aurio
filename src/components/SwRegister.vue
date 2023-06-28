@@ -1,15 +1,8 @@
 <template>
   <div class="sw-register">
     <SwErrorsList :list="apiErrors" />
-    <SwRegistrationForm
-      v-model="registrationFormData"
-      @invokeRegister="invokeRegister"
-    />
-    <SwButton
-      class="sw-form__button sf-button--full-width"
-      @click="invokeRegister"
-      data-testid="register-button"
-    >
+    <SwRegistrationForm v-model="registrationFormData" @invokeRegister="invokeRegister" />
+    <SwButton class="sw-form__button sf-button--full-width" @click="invokeRegister" data-testid="register-button">
       {{ $t("Create an account") }}
     </SwButton>
   </div>
