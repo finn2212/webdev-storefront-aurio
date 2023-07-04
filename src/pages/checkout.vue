@@ -5,7 +5,7 @@
         <div class="log-in" v-if="!isLoggedIn">
           <div class="log-in__buttons-container">
             <SwButton
-              class="log-in__button color-secondary"
+              class="log-in__button color-secondary btn"
               @click="switchLoginModalState(true)"
             >
               {{ $t("Log in to your account") }}
@@ -193,8 +193,12 @@ export default {
         // 1. place an order
         const order = await invokeCreateOrder()
         // 2. call handle-payment endpoint for further actions
-        const finishUrl = 'https://home-5013243924.app-ionos.space'
-        const errorUrl = 'https://home-5013243924.app-ionos.space'
+        const finishUrl = routing.getAbsoluteUrl(
+          `${PAGE_ORDER_SUCCESS}?orderId=${order.id}`
+        )
+        const errorUrl = routing.getAbsoluteUrl(
+          `${PAGE_ORDER_PAYMENT_FAILURE}?orderId=${order.id}`
+        )
 
         const handledPaymentResponse = await handlePayment(
           {

@@ -232,10 +232,7 @@ export default {
 
     onMounted(() => {
       loadOrderDetails()
-      handlePayment({
-        finishUrl: "https://home-5013243924.app-ionos.space/",
-        errorUrl: "https://home-5013243924.app-ionos.space/"
-      })
+      handlePayment()
     })
 
     return {
