@@ -3,8 +3,9 @@ module.exports = {
   shopwareAccessToken: "SWSCUHZMWDM2TTLINJFXMKG3TW",
   pwaHost:"https://home-5013243924.app-ionos.space",
   shopwareDomainsAllowList: [
-    'https://home-5013243924.app-ionos.space',
-    'http://192.168.1.210'
+    "http://localhost:3000",
+    "https://home-5013137490.app-ionos.space",
+    "https://home-5013243924.app-ionos.space"
   ],
   defaultLanguageCode: "de-DE",
 };
