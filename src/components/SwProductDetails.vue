@@ -1,70 +1,5 @@
 <template>
   <div>
-
-
-    <div
-      class="flex flex-col min-w-[325px] max-w-[375px] lg:w-[496px] relative border border-neutral-200 rounded-md hover:shadow-xl">
-      <div class="flex flex-wrap gap-4 lg:gap-6 lg:flex-nowrap">
-
-        <a class="absolute inset-0 z-1 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-md"
-          href="/" />
-
-        <div class="flex flex-col items-start p-4 grow">
-          <p class="font-medium typography-text-base">Titel</p>
-          <p class="mt-1 mb-4 font-normal typography-text-sm text-neutral-700">beschreibung</p>
-          <SwButton size="sm" variant="tertiary" class="relative mt-auto">Button</SwButton>
-        </div>
-
-      </div>
-      <div class="sw-product-details" v-if="product">
-        <div class="product-details__mobile-top">
-          <SwProductHeading class="product-details__heading" :product="product" />
-        </div>
-        <div class="product-details__mobile-top">
-          <SwProductHeading class="product-details__heading" :product="product" />
-        </div>
-        <div v-if="product.optionIds && product.optionIds.length" class="product-details__section">
-
-          <div v-for="config in getOptionGroups" :key="config.id">
-            <SwPluginSlot name="product-details-option-select" :slot-context="{ config, product }">
-              <SwProductSelect v-if="getSelectedOptions[getTranslatedProperty(config, 'name')]"
-                :value="getSelectedOptions[getTranslatedProperty(config, 'name')]"
-                :options="getProductOptions({ product: config })" :label="getTranslatedProperty(config, 'name')" @change="handleChange(
-                    getTranslatedProperty(config, 'name'),
-                    $event,
-                    onOptionChanged($event)
-                  )
-                  " />
-            </SwPluginSlot>
-          </div>
-        </div>
-        <div class="product-details__section">
-          <SfAlert :message="$t('Low in stock')" type="warning" class="product-details__alert smartphone-only" />
-          <SfAddToCart v-model="quantity" :stock="stock" class="product-details__add-to-cart" @click="addToCart">
-            <template #quantity-select-input v-if="purchaseStepsOptions">
-              <SfComponentSelect v-model="quantity"
-                class="sw-select sf-add-to-cart__select-quantity sw-select sw-form__input">
-                <SfComponentSelectOption v-for="step in purchaseStepsOptions" :key="step" :value="step">
-                  {{ step }}
-                </SfComponentSelectOption>
-              </SfComponentSelect>
-            </template>
-            <template #add-to-cart-btn>
-              <SwButton class="sf-button--full-width" @click="addToCart" data-testid="button-addToCart">
-                {{ $t("Add To Cart") }}
-              </SwButton>
-            </template>
-          </SfAddToCart>
-          <SwPluginSlot name="product-page-add-to-cart-button-after" :slot-context="product" />
-          <div v-if="getProductNumber(product)" class="product-details__product-number">
-            <p>
-              {{ $t("Product number") }}:
-              <span>{{ getProductNumber(product) }}</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -107,63 +42,15 @@ export default {
     const { product } = toRefs(props)
     const { addToCart, quantity } = useAddToCart({ product })
     const { pushInfo } = useNotifications()
-    const {
-      isLoadingOptions,
-      handleChange,
-      getOptionGroups,
-      getSelectedOptions,
-      findVariantForSelectedOptions,
-    } = useProductConfigurator({ product })
+ 
+   
 
-    const description = computed(() =>
-      getTranslatedProperty(product.value, "description")
-    )
-
-    const stock = computed(() => product.value.stock)
-
-    // find the best matching variant for current options
-    // use it as a callback in handleChange -> onChangeHandled argument
-    const onOptionChanged = async (optionId) => {
-      // get always the newest options - getSelectedOptions is obsolete for a moment - this is why watch is used
-      watch(getSelectedOptions, async (options, prevOptions) => {
-        // look for variant with the selected options and perform a redirect to the found product's URL
-        const variantFound = await findVariantForSelectedOptions(options)
-        if (variantFound) {
-          root.$router.push(root.$routing.getUrl(getProductUrl(variantFound)))
-        } else {
-          // if no product was found - reset other options and try to find a first matching product
-          const simpleOptionVariant = await findVariantForSelectedOptions({
-            option: optionId,
-          })
-          if (simpleOptionVariant) {
-            root.$router.push(
-              root.$routing.getUrl(getProductUrl(simpleOptionVariant))
-            )
-          } else {
-            pushInfo(
-              root.$t("There is no available product for selected options")
-            )
-          }
-        }
-      })
-    }
-
-    const purchaseStepsOptions = computed(() => getProductQtySteps(product.value))
+    addToCart()
 
     return {
-      stock,
-      description,
-      quantity,
+      
       addToCart,
-      getProductNumber,
-      getOptionGroups,
-      getSelectedOptions,
-      handleChange,
-      isLoadingOptions,
-      getProductOptions,
-      onOptionChanged,
-      getTranslatedProperty,
-      purchaseStepsOptions
+      getProductNumber
     }
   },
 

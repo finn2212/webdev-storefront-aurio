@@ -129,7 +129,7 @@
 
                   </div>
                   <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
-                  <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
+                  <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❯</a>
                 </div>
 
               </div>
@@ -334,7 +334,7 @@
                       </div>
                     </div>
                     <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
-                    <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(1)">❯</a>
+                    <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❯</a>
                   </div>
 
                 </div>
@@ -397,24 +397,6 @@
                         Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies
                         verpflichtet
                         Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header thick">
-                    <button @click="open(2)" class="accordion-button bred collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                      aria-controls="flush-collapseTwo">
-                      <p class="thick"> Kann ich vorab Druckmuster bekommen?</p>
-
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                      <p class="small">
-                        Ja natürlich. Gerne senden wir Ihnen Muster unserer exzellenten Notendrucke per Post zu. Bitte
-                        wenden Sie sich hierfür an info@capellaprint.com. Vielen Dank!
                       </p>
                     </div>
                   </div>
@@ -706,7 +688,6 @@ export default {
           this.isOpenOne = false;
         } else {
           document.getElementById("flush-collapseOne").classList.replace('collapse', 'open');
-          document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFive").classList.replace('open', 'collapse');
@@ -724,7 +705,7 @@ export default {
           document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
           this.isOpenTwo = false;
         } else {
-          document.getElementById("flush-collapseTwo").classList.replace('collapse', 'open');
+         
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
@@ -743,7 +724,7 @@ export default {
           this.isOpenThree = false;
         } else {
           document.getElementById("flush-collapseThree").classList.replace('collapse', 'open');
-          document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
+        
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFive").classList.replace('open', 'collapse');
@@ -761,7 +742,7 @@ export default {
           this.isOpenFour = false;
         } else {
           document.getElementById("flush-collapseFour").classList.replace('collapse', 'open');
-          document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
+        
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFive").classList.replace('open', 'collapse');
@@ -779,7 +760,7 @@ export default {
           this.isOpenFive = false;
         } else {
           document.getElementById("flush-collapseFive").classList.replace('collapse', 'open');
-          document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
+        
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');

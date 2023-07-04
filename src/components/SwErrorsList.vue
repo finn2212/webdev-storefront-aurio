@@ -21,6 +21,7 @@ const FIELD_RELATED_ERRORS = [
   "VIOLATION::IS_BLANK_ERROR",
   "VIOLATION::TOO_LOW_ERROR",
   "VIOLATION::STRICT_CHECK_FAILED_ERROR",
+  "VIOLATION::CUSTOMER_EMAIL_NOT_UNIQUE"
 ]
 
 export default {
@@ -32,7 +33,7 @@ export default {
       default: () => [],
     },
   },
-  setup(props, {}) {
+  setup(props, {root}) {
     // enables to check whether error should also contain the field name
     const isFieldRelatedError = (errorCode) =>
       FIELD_RELATED_ERRORS.includes(errorCode)

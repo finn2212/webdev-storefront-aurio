@@ -18,7 +18,7 @@
         </SwPluginSlot>
       </div>
       <div style="margin-top: -20px;">
-        <p class="m-0" style="font-size: 12px;" v-for="el in propertieStrings">{{ el.id }}:  {{ el.name }} </p>
+        <p class="m-0" style="font-size: 12px;" v-for="el in propertieStrings">{{ el.id }}: {{ el.name }} </p>
       </div>
       <button @click="removeItem(product)"
         style=" border: 0px; background-color: black; color: white;  border-radius: 15px;">
@@ -159,72 +159,72 @@ export default {
       purchaseStepsOptions: getProductQtySteps
     }
   },
-  
+
   mounted() {
     this.getPropertieNames();
   },
   methods: {
     getPropertieNames() {
       this.propertieStrings = [];
-      this.propertyIds.forEach(id => {
-        if (id == 'a2dcd3008de644c784d2cdfec32d91d0') {
-          this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Notenheft ohne Instrumentalstimmen' })
-        }
-        if (id == '92c1ed6e0a11440aa5c544d87fc780c9') {
-           this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Notenheft mit Instrumentalstimmen' })
-        }
-        if (id == '587a3d6981404ed4b9de471d120e14ad') {
-           this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Stimmensatz / Chorsatz' })
-        }
-        if (id == 'bb3741f73af54d46b1d0808f74f3923d') {
-           this.propertieStrings.push({ "id": 'Ausrichtung', 'name': 'Hochformat' })
-        }
-        if (id == 'e1d6ac670a3442448644bc34a7f0d469') {
-           this.propertieStrings.push({ "id": 'Ausrichtung', 'name': 'Querformat' })
-        }
-        if (id == '7c2ad08862fb4011ae45d912c1ca4c3d') {
-           this.propertieStrings.push({ "id": 'Farbigkeit', 'name': 'Schwarz Weiß' })
-        }
-        if (id == 'cfdae0f64bf240a6ae5202db7579f8a0') {
-           this.propertieStrings.push({ "id": 'Farbigkeit', 'name': 'Farbig' })
-        }
-        if (id == 'bdac9a79733341129bdc32cceaa29ddb') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'DIN A4 (21 x 29,7 cm)' })
-        }
-        if (id == 'afe5b55949fc41d399ac39e5ff24f4b6') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'Klavierauszug (19 x 27 cm)' })
-        }
-        if (id == '6753f984ea17467794b4068f294053be') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'Concert (22,8 x 30,5 cm)' })
-        }
-        if (id == '4ddf6e278920458cba821346e53b04e9') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'DIN B4 (25 x 35,3 cm)' })
-        }
-        if (id == '2866e65da9a749cd88a84412e212f12a') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'DIN A3 (29,7 x 42 cm)' })
-        }
-        if (id == '378502b6aa384914b27369996fabd0bc') {
-           this.propertieStrings.push({ "id": 'Format', 'name': 'Dirigent (31,5 x 46 cm)' })
-        }
-        if (id == 'd5e18caaadd34f70877e38b742ad22ff') {
-           this.propertieStrings.push({ "id": 'Bindungsart', 'name': 'Klammerheftung' })
-        }
-        if (id == 'b5559576c3634ab0ba178c92194b5691') {
-           this.propertieStrings.push({ "id": 'Bindungsart', 'name': 'Spiralbindung' })
-        }
-        if (id == '242e68c2dfde4ec2afe3fd478e2a0f85') {
-           this.propertieStrings.push({ "id": 'Umschlag', 'name': 'Ohne' })
-        }
-        if (id == '28e2313979804380b8f303e0f21ffcad') {
-           this.propertieStrings.push({ "id": 'Umschlag', 'name': 'Mit' })
-        }
-        this.propertieStrings.forEach(element => {
-          console.log(element)
+      if (this.propertyIds) {
+        this.propertyIds.forEach(id => {
+          if (id == 'a2dcd3008de644c784d2cdfec32d91d0') {
+            this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Notenheft ohne Instrumentalstimmen' })
+          }
+          if (id == '92c1ed6e0a11440aa5c544d87fc780c9') {
+            this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Notenheft mit Instrumentalstimmen' })
+          }
+          if (id == '587a3d6981404ed4b9de471d120e14ad') {
+            this.propertieStrings.push({ "id": 'Projekt Typ', 'name': 'Stimmensatz / Chorsatz' })
+          }
+          if (id == 'bb3741f73af54d46b1d0808f74f3923d') {
+            this.propertieStrings.push({ "id": 'Ausrichtung', 'name': 'Hochformat' })
+          }
+          if (id == 'e1d6ac670a3442448644bc34a7f0d469') {
+            this.propertieStrings.push({ "id": 'Ausrichtung', 'name': 'Querformat' })
+          }
+          if (id == '7c2ad08862fb4011ae45d912c1ca4c3d') {
+            this.propertieStrings.push({ "id": 'Farbigkeit', 'name': 'Schwarz Weiß' })
+          }
+          if (id == 'cfdae0f64bf240a6ae5202db7579f8a0') {
+            this.propertieStrings.push({ "id": 'Farbigkeit', 'name': 'Farbig' })
+          }
+          if (id == 'bdac9a79733341129bdc32cceaa29ddb') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'DIN A4 (21 x 29,7 cm)' })
+          }
+          if (id == 'afe5b55949fc41d399ac39e5ff24f4b6') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'Klavierauszug (19 x 27 cm)' })
+          }
+          if (id == '6753f984ea17467794b4068f294053be') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'Concert (22,8 x 30,5 cm)' })
+          }
+          if (id == '4ddf6e278920458cba821346e53b04e9') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'DIN B4 (25 x 35,3 cm)' })
+          }
+          if (id == '2866e65da9a749cd88a84412e212f12a') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'DIN A3 (29,7 x 42 cm)' })
+          }
+          if (id == '378502b6aa384914b27369996fabd0bc') {
+            this.propertieStrings.push({ "id": 'Format', 'name': 'Dirigent (31,5 x 46 cm)' })
+          }
+          if (id == 'd5e18caaadd34f70877e38b742ad22ff') {
+            this.propertieStrings.push({ "id": 'Bindungsart', 'name': 'Klammerheftung' })
+          }
+          if (id == 'b5559576c3634ab0ba178c92194b5691') {
+            this.propertieStrings.push({ "id": 'Bindungsart', 'name': 'Spiralbindung' })
+          }
+          if (id == '242e68c2dfde4ec2afe3fd478e2a0f85') {
+            this.propertieStrings.push({ "id": 'Umschlag', 'name': 'Ohne' })
+          }
+          if (id == '28e2313979804380b8f303e0f21ffcad') {
+            this.propertieStrings.push({ "id": 'Umschlag', 'name': 'Mit' })
+          }
+
+
+
         });
+      }
 
-     
-
-      });
 
 
     }

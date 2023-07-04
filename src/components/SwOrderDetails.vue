@@ -1,176 +1,93 @@
 <template>
   <SfLoader :loading="isOrderDetailsLoading" class="sw-order-details-loader">
     <div v-if="order" class="sw-order-details">
-      <SfHeading
-        class="sw-order-details__header full-width"
-        :level="3"
-        :title="`${$t('Order no.')} ${order.orderNumber}`"
-      />
+      <SfHeading class="sw-order-details__header full-width" :level="3"
+        :title="`${$t('Order no.')} ${order.orderNumber}`" />
       <div class="sw-order-details__totals">
         <SfTable class="sf-table--bordered table">
           <SfTableHeading class="table__row">
-            <SfTableHeader
-              v-for="tableHeader in tableHeaders"
-              :key="tableHeader"
-              class="table__header"
-              :class="{
-                table__description: tableHeader === 'Item',
-                table__quantity: tableHeader === 'Quantity',
-                table__amount: tableHeader === 'Amount',
-                table__price: tableHeader === 'Price',
-              }"
-              >{{ tableHeader }}</SfTableHeader
-            >
+            <SfTableHeader v-for="tableHeader in tableHeaders" :key="tableHeader" class="table__header" :class="{
+              table__description: tableHeader === 'Item',
+              table__quantity: tableHeader === 'Quantity',
+              table__amount: tableHeader === 'Amount',
+              table__price: tableHeader === 'Price',
+            }">{{ tableHeader }}</SfTableHeader>
           </SfTableHeading>
-          <SwOrderDetailsItem
-            v-for="item in order.lineItems"
-            :key="item.id"
-            :product="item"
-          />
+          <SwOrderDetailsItem v-for="item in order.lineItems" :key="item.id" :product="item" />
         </SfTable>
-        <SfHeading
-          :title="$t('Totals')"
-          :level="2"
-          class="sf-heading--left sf-heading--no-underline sw-totals__title"
-        />
-        <SwTotals
-          :shipping="shippingCosts"
-          :total="total"
-          :subtotal="subtotal"
-        />
+        <SfHeading :title="$t('Totals')" :level="2" class="sf-heading--left sf-heading--no-underline sw-totals__title" />
+        <SwTotals :shipping="shippingCosts" :total="total" :subtotal="subtotal" />
       </div>
       <div class="sw-order-details__sidebar">
-        <SwPersonalDetails
-          :personal-details="personalDetails"
-          class="content"
-        />
-        <SwAddress
-          v-if="billingAddress"
-          :address="billingAddress"
-          :address-title="$t('Billing address')"
-          class="content"
-        />
+        <SwPersonalDetails :personal-details="personalDetails" class="content" />
+        <SwAddress v-if="billingAddress" :address="billingAddress" :address-title="$t('Billing address')"
+          class="content" />
 
-        <SwAddress
-          v-if="shippingAddress"
-          :address="shippingAddress"
-          :address-title="$t('Shipping address')"
-          class="content"
-        />
+        <SwAddress v-if="shippingAddress" :address="shippingAddress" :address-title="$t('Shipping address')"
+          class="content" />
 
-        <SwPluginSlot
-          name="order-details-payment-method"
-          :slot-context="paymentMethod"
-        >
-          <SwCheckoutMethod
-            v-if="paymentMethod"
-            :method="paymentMethod"
-            :label="$t('Payment method')"
-            class="content"
-          />
+        <SwPluginSlot name="order-details-payment-method" :slot-context="paymentMethod">
+          <SwCheckoutMethod v-if="paymentMethod" :method="paymentMethod" :label="$t('Payment method')" class="content" />
         </SwPluginSlot>
 
-        <SwPluginSlot
-          name="order-details-shipping-method"
-          :slot-context="shippingMethod"
-        >
-          <SwCheckoutMethod
-            v-if="shippingMethod"
-            :method="shippingMethod"
-            :label="$t('Shipping method')"
-            class="content"
-          />
+        <SwPluginSlot name="order-details-shipping-method" :slot-context="shippingMethod">
+          <SwCheckoutMethod v-if="shippingMethod" :method="shippingMethod" :label="$t('Shipping method')"
+            class="content" />
         </SwPluginSlot>
         <SfProperty :name="$t('Order status')" :value="status" />
 
-        <div
-          class="sw-order-details__sidebar--actions"
-          v-if="!isOrderCancelled"
-        >
+        <div class="sw-order-details__sidebar--actions" v-if="!isOrderCancelled">
           <h4 class="sw-order-details__title">{{ $t("Actions") }}</h4>
-          <SfLoader
-            :loading="isPaymentButtonLoading"
-            class="sw-order-details__loader"
-          >
+          <SfLoader :loading="isPaymentButtonLoading" class="sw-order-details__loader">
             <template #loader>{{ $t("Checking payment status...") }}</template>
             <div v-if="paymentUrl">
               <a :href="paymentUrl">
-                <SwButton
-                  class="sf-button sf-button--full-width pay-button color-info"
-                >
+                <SwButton class="sf-button sf-button--full-width pay-button color-info">
                   {{ $t("Pay for your order") }}
                 </SwButton>
               </a>
             </div>
           </SfLoader>
           <!--- CANCEL ORDER -->
-         
-          <SfBottomModal
-            class="sw-order-details-modal sw-cancel-order-modal"
-            :title="$t('Your order will be canceled')"
-            :is-open="cancelModalVisible"
-            @click:close="cancelModalVisible = false"
-          >
+
+          <SfBottomModal class="sw-order-details-modal sw-cancel-order-modal" :title="$t('Your order will be canceled')"
+            :is-open="cancelModalVisible" @click:close="cancelModalVisible = false">
             <div class="center-content sw-cancel-order-modal__actions">
               <SwButton @click="cancelOrder" class="sf-button color-secondary">
                 {{
                   cancelLoader
-                    ? $t("In progress...")
-                    : $t("Yes, cancel the order")
+                  ? $t("In progress...")
+                  : $t("Yes, cancel the order")
                 }}
               </SwButton>
-              <SwButton
-                @click="cancelModalVisible = false"
-                :disabled="cancelLoader"
-                class="sf-button color-light"
-              >
+              <SwButton @click="cancelModalVisible = false" :disabled="cancelLoader" class="sf-button color-light">
                 {{ $t("No, thanks") }}
               </SwButton>
             </div>
           </SfBottomModal>
           <!--- CHANGE PAYMENT METHOD -->
-          <SwButton
-            class="
+          <SwButton class="
               sf-button sf-button--underlined sf-button--full-width
               pay-button
               color-danger
-            "
-            @click="openChangePaymentMethodModal"
-          >
+            " @click="openChangePaymentMethodModal">
             {{ $t("Change payment method") }}
           </SwButton>
-          <SfBottomModal
-            class="sw-change-payment-method-modal"
-            :title="$t('Choose a new payment method')"
-            :is-open="changePaymentMethodModalVisible"
-            @click:close="changePaymentMethodModalVisible = false"
-          >
+          <SfBottomModal class="sw-change-payment-method-modal" :title="$t('Choose a new payment method')"
+            :is-open="changePaymentMethodModalVisible" @click:close="changePaymentMethodModalVisible = false">
             <div class="center-content sw-order-details-modal__actions">
-              <SfSelect
-                class="payment-methods-select"
-                v-model="selectedPaymentMethod"
-              >
-                <SfSelectOption
-                  v-for="option in availablePaymentMethods"
-                  :key="option.id"
-                  :value="option.id"
-                >
+              <SfSelect class="payment-methods-select" v-model="selectedPaymentMethod">
+                <SfSelectOption v-for="option in availablePaymentMethods" :key="option.id" :value="option.id">
                   {{ option.name }}
-                  <span
-                    class="payment-methods-select__current"
-                    v-if="paymentMethod.id === option.id"
-                    >({{ $t("current") }})</span
-                  >
+                  <span class="payment-methods-select__current" v-if="paymentMethod.id === option.id">({{ $t("current")
+                  }})</span>
                 </SfSelectOption>
               </SfSelect>
-              <SwButton
-                @click="changePaymentMethod"
-                class="sf-button color-secondary"
-              >
+              <SwButton @click="changePaymentMethod" class="sf-button color-secondary">
                 {{
                   isChangePaymentMethodLoading
-                    ? $t("In progress...")
-                    : $t("Apply")
+                  ? $t("In progress...")
+                  : $t("Apply")
                 }}
               </SwButton>
             </div>
@@ -278,7 +195,11 @@ export default {
       handlePayment,
       cancel,
       changePaymentMethod: doChangePaymentMethod,
-    } = useOrderDetails({ order: { id: props.orderId } })
+    } = useOrderDetails({
+      order: {
+        id: props.orderId
+      }
+    })
 
     const cancelModalVisible = ref(false)
     const changePaymentMethodModalVisible = ref(false)
@@ -345,9 +266,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
 .sw-order-details-loader {
   max-width: 70vw;
 }
+
 .sw-order-details {
   padding: 1rem;
   display: flex;
@@ -388,6 +311,7 @@ export default {
 
     .sw-totals {
       margin-top: var(--spacer-base);
+
       @include for-desktop {
         margin-left: auto;
         width: 50%;
@@ -403,11 +327,12 @@ export default {
     background-color: #f1f2f3;
     padding: var(--spacer-xl);
     margin-bottom: var(--spacer-base);
+
     &:last-child {
       margin-bottom: 0;
     }
 
-    & > .content {
+    &>.content {
       margin-bottom: var(--spacer-base);
     }
   }
@@ -424,10 +349,11 @@ export default {
   @include for-mobile {
     max-width: 95%;
   }
+
   &__row {
     flex-wrap: nowrap;
 
-    & > th {
+    &>th {
       order: unset;
     }
   }
@@ -436,6 +362,7 @@ export default {
     flex: 1;
     order: unset;
     text-align: center;
+
     &:last-of-type {
       text-align: right;
     }
@@ -490,6 +417,7 @@ export default {
     &__current {
       font-size: 0.8rem;
     }
+
     .sf-select__label {
       font-size: 2rem;
     }

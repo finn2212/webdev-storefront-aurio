@@ -29,7 +29,7 @@
       />
       <SwPluginSlot name="login-form-button">
         <SwButton
-          class="sf-button--full-width sw-form__button"
+          class="sf-button--full-width sw-form__button btn"
           :disabled="isLoading"
           data-testid="submit-login-button"
           @click="invokeLogin"

@@ -28,7 +28,7 @@
       <SwPluginSlot name="order-summary-actions">
         <SwButton
           :disabled="loadings.createOrder"
-          class="actions__button sw-form__button"
+          class="actions__button sw-form__button btn"
           data-testid="place-my-order"
           @click="$emit('create-order')"
         >

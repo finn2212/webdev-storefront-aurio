@@ -33,12 +33,12 @@
                 <SfPrice :regular="filterPrice(totalPrice)" class="sf-price--big" />
               </template>
             </SfProperty>
-            <SwButton class="sf-button--full-width color-secondary" data-testid="goToCheckout-button"
+            <SwButton class="sf-button--full-width color-secondary btn" data-testid="goToCheckout-button"
               @click="goToCheckout()">{{ $t("Go to checkout") }}</SwButton>
             <SwPluginSlot name="sidecart-checkout-button-after" />
           </div>
           <div v-else>
-            <SwButton class="sf-button--full-width color-primary" @click="toggleSidebar()">
+            <SwButton class="sf-button--full-width color-primary btn" @click="toggleSidebar()">
               {{ $t("Start shopping") }}
             </SwButton>
           </div>
@@ -121,7 +121,6 @@ export default {
   },
   watch: {
     isSidebarOpen(val) {
-      debugger
       if (!val) {
         if (document.getElementById("stickyBar")) {
           document.getElementById("stickyBar").classList.add('sticky-top');
