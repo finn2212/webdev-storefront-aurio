@@ -5,28 +5,12 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 midNightBlue customBorder">
-                        <h1 style="color: white;">
-                            Nacht-
-                            eule?
-                        </h1>
-                        <img src="@/assets/svg/auto_awesome.svg" alt="Avatar" class="pt-1 pt-md-5">
-                        <h2 style="color: white;">
-                            10% Rabatt
-                            19–24 Uhr
-                        </h2>
+                    <div class="col" style="max-height: 350px;">
+                        <img src="@/assets/images/Booklet_machine.png" alt="Avatar" class="img" style="height: 100%;">
                     </div>
-                    <div class="col customBorder" style="min-height: 300px;"
-                        v-bind:style="{ 'background-image': 'url(' + require('../assets/images/Booklet_machine.png') + ')' }">
-                        <div class="row align-items-end" style="height: 100%">
-                            <div class="col align-self-end">
-                                <h1 style="color: white;" class="pb-3 ms-4">
-                                    Notenheft mit Klammerheftung
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+                
             </div>
         </section>
         <!--Sektion Heading-->

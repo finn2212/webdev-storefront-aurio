@@ -5,6 +5,12 @@
         <section>
             <div class="container justify-content-center">
                 <div class="row">
+                    <div class="col" style="max-height: 350px;">
+                        <img src="@/assets/images/spiralheader.png" alt="Avatar" class="img" style="height: 100%;">
+                    </div>
+
+                </div>
+                <!--  <div class="row">
                     <div class="col-12 col-md-3 col-xl-2 p-2 p-md-4 pink customBorder">
                         <h1>
                             Carpe diem!
@@ -25,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!--Sektion Heading-->
@@ -68,13 +74,13 @@
                                     Konzert auszeichnet.
                                 </p>
                                 <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
-                                target="_blank">
-                                <button type="button" class="btn btn-dark p-2" style="width: 100%;">
-                                    <img src="@/assets/svg/download.svg" alt="Avatar"
-                                        style="height: 19px; margin-right: 10px; padding-left: 5px;">
-                                    <p class="inline mt-2">Maßvorgaben (PDF)</p>
-                                </button>
-                            </a>
+                                    target="_blank">
+                                    <button type="button" class="btn btn-dark p-2" style="width: 100%;">
+                                        <img src="@/assets/svg/download.svg" alt="Avatar"
+                                            style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                        <p class="inline mt-2">Maßvorgaben (PDF)</p>
+                                    </button>
+                                </a>
                             </div>
                             <div class="col">
                                 <div class="row mt-4">

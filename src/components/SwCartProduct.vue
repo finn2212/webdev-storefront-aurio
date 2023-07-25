@@ -17,13 +17,17 @@
           <SfPrice v-if="regularPrice" :regular="filterPrice(regularPrice)" :special="filterPrice(specialPrice)" />
         </SwPluginSlot>
       </div>
-      <div style="margin-top: -20px;">
+      <div v-if="product.label != 'capellaprint Musterheft mit kostenfreiem Versand in Deutschland'"
+        style="margin-top: -20px;">
         <p class="m-0" style="font-size: 12px;" v-for="el in propertieStrings">{{ el.id }}: {{ el.name }} </p>
       </div>
+
       <button @click="removeItem(product)"
         style=" border: 0px; background-color: black; color: white;  border-radius: 15px;">
         Entfernen
       </button>
+
+
 
 
     </template>

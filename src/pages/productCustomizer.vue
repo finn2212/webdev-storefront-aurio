@@ -668,11 +668,8 @@
             </div>
         </section>
 
-        <div
-          v-for="product in products"
-          :key="product.id"
-        >
-        <SwProductDetails :product="product" />
+        <div v-for="product in products" :key="product.id">
+            <SwProductDetails :product="product" />
         </div>
 
         <!--Sektion mit 3 Karten und Bider-->
@@ -753,7 +750,7 @@ export default {
         SfButton,
         SwProductDetails
     },
-  
+
     data() {
         return {
             price: 0,
@@ -949,10 +946,10 @@ export default {
                     "search": productNumber
                 }
             }).then(async (res) => {
-                
+
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
-                this.products.push( res.data.elements[0])
+                this.products.push(res.data.elements[0])
                 document.getElementById("overlay").style.display = "none";
                 this.reset();
             }).catch((error) => {
@@ -986,7 +983,7 @@ export default {
             }).then((res) => {
 
             }).catch((error) => {
-               
+
             });
         },
         setDiscountGroup: function (id) {

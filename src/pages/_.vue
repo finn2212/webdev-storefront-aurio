@@ -621,6 +621,10 @@
         </div>
       </div>
     </section>
+    <div v-for="product in products" :key="product.id">
+      <SwProductDetails :product="product" />
+    </div>
+
     <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
       aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
       <header>
@@ -642,6 +646,7 @@ import SwButton from "@/components/atoms/SwButton.vue"
 import { invokePost } from "@shopware-pwa/shopware-6-client"
 import { onMounted, ref } from "@vue/composition-api"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import SwProductDetails from "@/components/SwProductDetails.vue"
 import axios from 'axios';
 
 import { SfModal, SfButton } from "@storefront-ui/vue"
@@ -657,6 +662,7 @@ export default {
   components: {
     SfModal,
     SfButton,
+    SwProductDetails
   },
   head() {
     return {
@@ -671,6 +677,7 @@ export default {
       isOpenThree: false,
       isOpenFour: false,
       isOpenFive: false,
+      products: [],
       slideIndex: 1,
       modalMessage: "Kostenloses Musterheft wurde dem Warenkorb hinzugefügt",
       isOpen: false
@@ -705,7 +712,7 @@ export default {
           document.getElementById("flush-collapseTwo").classList.replace('open', 'collapse');
           this.isOpenTwo = false;
         } else {
-         
+
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
@@ -724,7 +731,7 @@ export default {
           this.isOpenThree = false;
         } else {
           document.getElementById("flush-collapseThree").classList.replace('collapse', 'open');
-        
+
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFive").classList.replace('open', 'collapse');
@@ -742,7 +749,7 @@ export default {
           this.isOpenFour = false;
         } else {
           document.getElementById("flush-collapseFour").classList.replace('collapse', 'open');
-        
+
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFive").classList.replace('open', 'collapse');
@@ -760,7 +767,7 @@ export default {
           this.isOpenFive = false;
         } else {
           document.getElementById("flush-collapseFive").classList.replace('collapse', 'open');
-        
+
           document.getElementById("flush-collapseOne").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseFour").classList.replace('open', 'collapse');
           document.getElementById("flush-collapseThree").classList.replace('open', 'collapse');
@@ -784,34 +791,27 @@ export default {
     },
     addToCart() {
       const contextToken = this.$cookies.get("sw-context-token") || "";
+      
 
       axios({
-        url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+        url: 'https://s23511.creoline.cloud/store-api/search', // File URL Goes Here
         method: 'POST',
         headers: {
           "Accept": 'application/json',
           "Content-Type": 'application/json',
-          "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
-          "sw-context-token": contextToken
+          "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW'
         },
         data: {
-          "items": [
-            {
-              id: 'edbbd21060624c8ab41b6a6187dbec79',
-              quantity: 1,
-              referencedId: 'edbbd21060624c8ab41b6a6187dbec79',
-              type: "product",
-            }
-          ]
+          "search": "capellaprint Musterheft mit kostenfreiem Versand in Deutschland"
         }
-      }).then((res) => {
-
-
-        this.isOpen = true;
+      }).then(async (res) => {
+debugger;
+        this.products.push(res.data.elements[0])
+ 
       }).catch((error) => {
         //try to fix the error or
-
-        console.log(error.message);
+      
+        console.log(error.message)
       });
 
     },
@@ -1035,4 +1035,5 @@ export default {
   to {
     opacity: 1
   }
-}</style>
+}
+</style>
