@@ -11,7 +11,7 @@
                         Unterstützung und Beratung unter:
                         <br>
                     <h5 class="inline">
-                        +49 180 - 000000
+                        08294 / 8601888
                     </h5>
                     <br>
 
