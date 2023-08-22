@@ -1016,13 +1016,14 @@ export default {
             this.setBinding();
             this.setBindingPrice();
             this.caluclateVoicePrices();
+            debugger;
             if (this.projectType == 3) {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
             } else {
                 this.price = (this.pagePrice * this.pagesQuantitiy) + this.handlingPrice + this.bindingTypePrice + this.totalVoicePrice + this.envelopedPrice;
                 if (this.discount != 1) {
-                    this.price = this.price * (1 - this.discount) + this.bindingTypePrice;
+                    this.price = this.price * (1 - this.discount);
                 }
                 this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice + this.envelopedPrice;
             }
