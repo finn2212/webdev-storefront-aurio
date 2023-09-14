@@ -840,7 +840,6 @@ export default {
             this.color = 'false';
             this.bindingType = "true";
             this.bindingTypePrice = 0;
-            this.products = [];
             this.calculatePrice();
 
         },
@@ -953,7 +952,8 @@ export default {
                 this.products.push({
                     product: res.data.elements[0],
                     quantitiy: this.quantitiy
-                })
+                });
+                
                
                 document.getElementById("overlay").style.display = "none";
                 this.reset();

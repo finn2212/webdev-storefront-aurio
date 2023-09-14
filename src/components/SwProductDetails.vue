@@ -46,7 +46,7 @@ export default {
     const { addToCart, quantity } = useAddToCart({ product })
     const { pushInfo } = useNotifications()
     quantity.value = Number(props.quantityInput)
-
+debugger
     addToCart()
 
     return {
