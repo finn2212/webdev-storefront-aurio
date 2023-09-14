@@ -37,13 +37,15 @@ export default {
     product: {
       type: Object,
     },
+    quantityInput: {
+      type: Number,
+    }
   },
   setup(props, { root }) {
     const { product } = toRefs(props)
     const { addToCart, quantity } = useAddToCart({ product })
     const { pushInfo } = useNotifications()
- 
-   
+    quantity.value = Number(props.quantityInput)
 
     addToCart()
 

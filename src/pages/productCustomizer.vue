@@ -669,7 +669,7 @@
         </section>
 
         <div v-for="product in products" :key="product.id">
-            <SwProductDetails :product="product" />
+            <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
         </div>
 
         <!--Sektion mit 3 Karten und Bider-->
@@ -840,6 +840,7 @@ export default {
             this.color = 'false';
             this.bindingType = "true";
             this.bindingTypePrice = 0;
+            this.products = [];
             this.calculatePrice();
 
         },
@@ -949,7 +950,11 @@ export default {
 
                 console.log('res.data.elements[0]._uniqueIdentifier');
                 console.log(res.data.elements[0]._uniqueIdentifier);
-                this.products.push(res.data.elements[0])
+                this.products.push({
+                    product: res.data.elements[0],
+                    quantitiy: this.quantitiy
+                })
+               
                 document.getElementById("overlay").style.display = "none";
                 this.reset();
             }).catch((error) => {
@@ -1016,7 +1021,6 @@ export default {
             this.setBinding();
             this.setBindingPrice();
             this.caluclateVoicePrices();
-            debugger;
             if (this.projectType == 3) {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
