@@ -79,8 +79,8 @@
                         Sicher einkaufen
                     </h5>
                     <p>
-                        Bei capellaprint kaufst du sicher ein. Dies wird ermöglicht durch SSL Verschlüsselung,
-                        bei der eine sichere Verbindung zwischen dem Webserver und deinem Browser aufgebaut wird.
+                        Bei capellaprint kaufen Sie sicher ein. Dies wird ermöglicht durch SSL-Verschlüsselung, bei der eine
+                        sichere Verbindung zwischen unserem Server und Ihrem Browser aufgebaut wird.
                     </p>
                     <p class="thick">
                         Sicheres Einkaufen nach DSGVO Standards

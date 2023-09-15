@@ -95,10 +95,10 @@
                                 <p>
                                     Wählen Sie zwischen den gebräuchlichsten Formen: </p>
                                 <ul>
-                                    <li>Partitur ohne Instrumentalstimmen</li>
-                                    <li>Partitur mit Stimmeneinlegern (oder mit Stimmenset, bspw. bei Dirigierpartituren +
-                                        Orchestermaterial)</li>
-                                    <li> Reiner Stimmensatz ohne Partitur, bspw. Chorsätze</li>
+                                    <li>Partitur/Notenheft ohne separate Stimmauszüge / Instrumentalstimmen</li>
+                                    <li>Partitur mit separaten Stimmauszügen / Instrumentalstimmen</li>
+                                    <li> Stimmauszüge / Instrumentalstimmen ohne Partitur"
+                                        ggf. lässt sich das durch Piktogramme unterstützen.</li>
                                 </ul>
                             </div>
                             <div class="col pt-5">
@@ -134,68 +134,6 @@
 
 
 
-                            </div>
-
-                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>3. Ausrichtung*</h2>
-                                <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
-
-                                </p>
-                                <p>
-                                    Bitte beachten Sie, dass Sie innerhalb eines Projekts die Ausrichtungen nicht mischen
-                                    können.
-                                </p>
-                            </div>
-                            <div v-if="projectType != 3" class="col pt-5">
-                                <div class="row mt-3">
-                                    <div class="col-8">
-                                        <p>Notenheft Hochformat</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="one" value="true" v-model="format" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8">
-
-                                        <p>Notenheft Querformat</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="two" value="false" v-model="format" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
-                            <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>4. Farbigkeit Inhalt*</h2>
-                                <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
-
-
-                                </p>
-                                <p>
-                                    Falls Ihr Notenprojekt einen Umschlag hat, wird dieser ohne Aufpreis farbig gedruckt.
-                                    Instrumentalstimmen werden generell schwarzweiß gedruckt.
-                                </p>
-                            </div>
-                            <div v-if="projectType != 3" class="col pt-5">
-                                <div class="row mt-3">
-                                    <div class="col-8">
-                                        <p>Inhalt schwarzweiß</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="one" value="false" v-model="color" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8">
-
-                                        <p>Inhalt farbig</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <input type="radio" id="two" value="true" v-model="color" />
-                                    </div>
-                                </div>
                             </div>
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
@@ -268,7 +206,67 @@
                                 </div>
                             </div>
 
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
+                                <h2>4. Ausrichtung*</h2>
+                                <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
 
+                                </p>
+                                <p>
+                                    Bitte beachten Sie, dass Sie innerhalb eines Projekts die Ausrichtungen nicht mischen
+                                    können.
+                                </p>
+                            </div>
+                            <div v-if="projectType != 3" class="col pt-5">
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Notenheft Hochformat</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="radio" id="one" value="true" v-model="format" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Notenheft Querformat</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="radio" id="two" value="false" v-model="format" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="projectType != 3" class="w-100 pt-5"></div>
+                            <div v-if="projectType != 3" class="col-12 col-md-7">
+                                <h2>5. Farbigkeit Inhalt*</h2>
+                                <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
+
+
+                                </p>
+                                <p>
+                                    Falls Ihr Notenprojekt einen Umschlag hat, wird dieser ohne Aufpreis farbig gedruckt.
+                                    Instrumentalstimmen werden generell schwarzweiß gedruckt.
+                                </p>
+                            </div>
+                            <div v-if="projectType != 3" class="col pt-5">
+                                <div class="row mt-3">
+                                    <div class="col-8">
+                                        <p>Inhalt schwarzweiß</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="radio" id="one" value="false" v-model="color" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+
+                                        <p>Inhalt farbig</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="radio" id="two" value="true" v-model="color" />
+                                    </div>
+                                </div>
+                            </div>
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Seitenanzahl*</h2>
@@ -590,6 +588,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
+                                        <p>Projekt Preis:</p>
+                                        <h2>€ {{ projectPriceString }}</h2>
+                                        <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
                                         <p>Ihre Auflage:</p>
                                         <div class="input-group plus-minus-input">
                                             <div class="input-group-button">
@@ -598,7 +603,7 @@
                                                     <img src="@/assets/svg/remove.svg" alt="Avatar">
                                                 </button>
                                             </div>
-                                            <input class="input" max="300" type="number" v-model="quantitiy">
+                                            <input class="input" max="300" type="number" min="0" v-model="quantitiy">
 
                                             <div class="input-group-button">
                                                 <button @click="count(true)" type="button" class="button noborder green"
@@ -688,11 +693,15 @@
                             Druckdaten korrekt angelegt sind.
                             Bitte laden Sie die Maßvorgaben herunter und legen Sie Ihre Druckdaten danach an.
                         </p>
-                        <button type="button" class="btn btn-dark p-2">
-                            <img src="@/assets/svg/download.svg" alt="Avatar"
-                                style="height: 19px; margin-right: 10px; padding-left: 5px;">
-                            <p class="inline mt-2">Maßvorgaben (PDF)</p>
-                        </button>
+                        <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
+                            target="_blank">
+                            <button type="button" class="btn btn-dark p-2" style="width: 100%;">
+                                <img src="@/assets/svg/download.svg" alt="Avatar"
+                                    style="height: 19px; margin-right: 10px; padding-left: 5px;">
+                                <p class="inline mt-2">Maßvorgaben (PDF)</p>
+                            </button>
+                        </a>
+
 
 
                     </div>
@@ -756,6 +765,7 @@ export default {
             price: 0,
             products: [],
             priceString: '0',
+            projectPriceString: '0',
             productionTime: "1–3 Tage",
             isOpen: false,
             enveloped: false,
@@ -953,8 +963,8 @@ export default {
                     product: res.data.elements[0],
                     quantitiy: this.quantitiy
                 });
-                
-               
+
+
                 document.getElementById("overlay").style.display = "none";
                 this.reset();
             }).catch((error) => {
@@ -964,33 +974,33 @@ export default {
             });
         },
         //Not Used Anymore
-        add(id) {
-            const contextToken = this.$cookies.get("sw-context-token") || "";
-            axios({
-                url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
-                method: 'POST',
-                headers: {
-                    "Accept": 'application/json',
-                    "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
-                    "sw-context-token": contextToken
-                },
-                data: {
-                    "items": [
-                        {
-                            id: id,
-                            quantity: this.quantitiy,
-                            referencedId: id,
-                            type: "product",
-                        }
-                    ]
-                }
-            }).then((res) => {
+        // add(id) {
+        //     const contextToken = this.$cookies.get("sw-context-token") || "";
+        //     axios({
+        //         url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+        //         method: 'POST',
+        //         headers: {
+        //             "Accept": 'application/json',
+        //             "Content-Type": 'application/json',
+        //             "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
+        //             "sw-context-token": contextToken
+        //         },
+        //         data: {
+        //             "items": [
+        //                 {
+        //                     id: id,
+        //                     quantity: this.quantitiy,
+        //                     referencedId: id,
+        //                     type: "product",
+        //                 }
+        //             ]
+        //         }
+        //     }).then((res) => {
 
-            }).catch((error) => {
+        //     }).catch((error) => {
 
-            });
-        },
+        //     });
+        // },
         setDiscountGroup: function (id) {
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
@@ -1046,39 +1056,39 @@ export default {
                 this.discount = 1
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(1);
-            } else if (this.quantitiy > 1 && this.quantitiy < 9) {
+            } else if (this.quantitiy > 1 && this.quantitiy < 10) {
                 this.discount = 0.45
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(2);
-            } else if (this.quantitiy >= 9 && this.quantitiy < 24) {
+            } else if (this.quantitiy > 9 && this.quantitiy < 24) {
                 this.discount = 0.55
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(3);
-            } else if (this.quantitiy >= 24 && this.quantitiy < 49) {
+            } else if (this.quantitiy > 24 && this.quantitiy < 50) {
                 this.discount = 0.63
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(4);
-            } else if (this.quantitiy >= 49 && this.quantitiy < 74) {
+            } else if (this.quantitiy > 49 && this.quantitiy < 75) {
                 this.discount = 0.68
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(5);
-            } else if (this.quantitiy >= 74 && this.quantitiy < 99) {
+            } else if (this.quantitiy > 74 && this.quantitiy < 100) {
                 this.discount = 0.70
                 this.productionTime = "1–3 Tage"
                 this.setDiscountGroup(6);
-            } else if (this.quantitiy >= 99 && this.quantitiy < 149) {
+            } else if (this.quantitiy > 99 && this.quantitiy < 150) {
                 this.discount = 0.72
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(7);
-            } else if (this.quantitiy >= 149 && this.quantitiy < 199) {
+            } else if (this.quantitiy > 149 && this.quantitiy < 200) {
                 this.discount = 0.74
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(8);
-            } else if (this.quantitiy >= 199 && this.quantitiy < 249) {
+            } else if (this.quantitiy > 199 && this.quantitiy < 250) {
                 this.discount = 0.75
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(9);
-            } else if (this.quantitiy >= 249) {
+            } else if (this.quantitiy > 250) {
                 this.discount = 0.76
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(10);
@@ -1102,11 +1112,11 @@ export default {
             if (this.voices.length > 0) {
 
                 this.voices.forEach(voice => {
-                    console.log(this.totalVoicePrice);
-                    console.log('Handling Voice Preis: ' + this.handlingVoice);
-                    console.log('Stimme Seiten Zahl: ' + voice.pages);
-                    console.log('Stimme Seiten Preis: ' + this.voicePagePrice);
-                    console.log('Stimme Anzahl: ' + voice.quantitiy);
+                    // console.log(this.totalVoicePrice);
+                    // console.log('Handling Voice Preis: ' + this.handlingVoice);
+                    // console.log('Stimme Seiten Zahl: ' + voice.pages);
+                    // console.log('Stimme Seiten Preis: ' + this.voicePagePrice);
+                    // console.log('Stimme Anzahl: ' + voice.quantitiy);
                     this.totalVoicePrice = this.totalVoicePrice + (this.handlingVoice + (voice.pages * this.voicePagePrice) * voice.quantity)
                 });
             }
@@ -1382,6 +1392,11 @@ export default {
         },
         price: function () {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
+            if (this.quantitiy === 0){
+                this.projectPriceString = this.priceString
+            } else {
+                this.projectPriceString = (this.price * this.quantitiy).toFixed(2).toString().replace(".", ",");
+            } 
         },
         enveloped: function (val) {
 
@@ -1398,6 +1413,9 @@ export default {
             this.calculatePrice();
         },
         quantitiy: function () {
+            if (this.quantitiy < 0) {
+                this.quantitiy = 0;
+            }
             this.calculatePrice();
         },
         format: function (val) {
@@ -1620,6 +1638,17 @@ export default {
             appearance: none;
         }
     }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 #overlay {

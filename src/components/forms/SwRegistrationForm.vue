@@ -145,6 +145,9 @@
   
         <div class="sw-form" v-if="isDifferentShippingAddress">
           <div class="inputs-group">
+            <h2 class="heading-grid">
+              Rechnungsadresse
+                        </h2>
             <SfSelect
               v-model="alternativeSalutationId"
               :label="$t('Salutation')"

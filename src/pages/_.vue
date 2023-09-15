@@ -33,60 +33,57 @@
         </div>
       </div>
     </section>
-
-    <!--Sektion mit 3 Karten und Bider-->
-    <section class="pt-5">
+   <!--Sektion mit 3 Karten und Bider-->
+   <section class="pt-5">
       <div class="container justify-content-center">
-        <div class="row">
-          <div class="col customBorder blockStartMarign">
-
-            <h2 class="heading-grid">
-              Ihr Druckservice für capella-Musiknoten
+        <div class="row mt-4">
+          <div class="col-8">
+            <h2>
+              So einfach geht’s
             </h2>
-            <p class="p-grid pt-3">
-              capellaprint ist der Druckservice für capella-User: Eine Kooperation von capella-software und AURIOPRINT.
-              Günstig Notenhefte drucken – das ist das Motto unseres neuen Services.
-            </p>
-
           </div>
-          <div class="col customBorder pl-5  p-5 blue">
-            <img src="@/assets/svg/audio_file.svg" alt="Avatar" style="margin-bottom: 25px;">
+        </div>
+
+        <div class="row mt-4">
+          <div class="col customBorder p-5 grey">
+            <img src="@/assets/svg/function.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
-              Noten mit Klammerheftung
-              drucken
+              Schritt 1:
+              Notenprojekt kalkulieren.
             </h2>
             <p class="p-grid">
-              Der Klassiker: Die am meisten verwendete Bindung für Notenhefte bis 23 x 31 cm und 88 Seiten Inhalt.
+              Es ist ganz einfach: Mit unserem Konfigurator stellen Sie sich die perfekte Notenausgabe zusammen.
             </p>
             <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-5 pt-2">
+              <button type="button" class="btn btn-dark mt-xl-3">
                 <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
                 <i18n path="start now" :tag="false"> </i18n>
               </button>
             </NuxtLink>
           </div>
-          <div class="col pl-5  p-5 brwon customBorder">
-            <img src="@/assets/svg/animation.svg" alt="Avatar" style="margin-bottom: 25px;">
+          <div class="col customBorder pl-5  p-5 grey">
+            <img src="@/assets/svg/backup.svg" alt="Avatar" style="margin-bottom: 25px;">
             <h2 class="heading-grid">
-              Noten mit
-              Spiralbindung
-              drucken
+              Schritt 2:
+              Laden Sie Ihre Noten-PDF hoch.
             </h2>
             <p class="p-grid">
-              Für die großen Werke: Unsere Coilbindung lässt sich fast geräuschlos umblättern und fasst 400 Seiten bis zu
-              DIN A3+.
+              Als zweiten Schritt übermitteln Sie uns die PDF-Datei(en) Ihres Werks, die Sie in capella erstellt haben.
             </p>
-            <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
-                <i18n path="start now" :tag="false"> </i18n>
-              </button>
-            </NuxtLink>
+          </div>
+          <div class="col pl-5  p-5 grey customBorder">
+            <img src="@/assets/svg/flight.svg" alt="Avatar" style="margin-bottom: 25px;">
+            <h2 class="heading-grid">
+              Schritt 3:
+              Bestellen – schon fertig!
+            </h2>
+            <p class="p-grid">
+              Zuletzt bestellen Sie Ihre Noten ganz bequem online. Ein paar Tage später ist die Musikpost schon da!
+            </p>
           </div>
         </div>
       </div>
     </section>
-
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
       <div class="container justify-content-center">
@@ -233,57 +230,7 @@
       </div>
     </section>
 
-    <!--Sektion mit 3 Karten und Bider-->
-    <section class="pt-5">
-      <div class="container justify-content-center">
-        <div class="row mt-4">
-          <div class="col-8">
-            <h2>
-              So einfach geht’s
-            </h2>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col customBorder p-5 grey">
-            <img src="@/assets/svg/function.svg" alt="Avatar" style="margin-bottom: 25px;">
-            <h2 class="heading-grid">
-              Schritt 1:
-              Notenprojekt kalkulieren.
-            </h2>
-            <p class="p-grid">
-              Es ist ganz einfach: Mit unserem Kalkulator stellen Sie sich die perfekte Notenausgabe zusammen.
-            </p>
-          </div>
-          <div class="col customBorder pl-5  p-5 grey">
-            <img src="@/assets/svg/backup.svg" alt="Avatar" style="margin-bottom: 25px;">
-            <h2 class="heading-grid">
-              Schritt 2:
-              Laden Sie Ihre Noten-PDF hoch.
-            </h2>
-            <p class="p-grid">
-              Als zweiten Schritt übermitteln Sie uns die PDF-Datei(en) Ihres Werks, die Sie in capella erstellt haben.
-            </p>
-          </div>
-          <div class="col pl-5  p-5 grey customBorder">
-            <img src="@/assets/svg/flight.svg" alt="Avatar" style="margin-bottom: 25px;">
-            <h2 class="heading-grid">
-              Schritt 3:
-              Bestellen – schon fertig!
-            </h2>
-            <p class="p-grid">
-              Zuletzt bestellen Sie Ihre Noten ganz bequem online. Ein paar Tage später ist die Musikpost schon da!
-            </p>
-            <NuxtLink class="a" to="/productCustomizer">
-              <button type="button" class="btn btn-dark mt-2 mt-xl-5">
-                <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">
-                <i18n path="start now" :tag="false"> </i18n>
-              </button>
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </section>
+ 
 
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
