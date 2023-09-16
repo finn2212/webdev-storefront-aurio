@@ -264,7 +264,7 @@
                                 </div>
                                 <div class="col">
                                     <p class="">
-                                        Noch ein weiteres zweizeiliges tolles Alleinstellungsmerkmal
+                                        2–400 Seiten Inhalt + Deckblatt und Rückwand möglich
                                     </p>
                                 </div>
                             </div>
