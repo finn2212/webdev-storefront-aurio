@@ -582,14 +582,14 @@
                                     <div class="col">
                                         <p>Ihr Preis pro Exemplar:</p>
                                         <h2>€ {{ priceString }}</h2>
-                                        <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
+                                        <p style="font-size: x-small;">Preis inkl. 7% MwSt., ggf. zzgl. Versandkosten</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
                                         <p>Ihr Preis für die gewünschte Auflagenhöhe:</p>
                                         <h2>€ {{ projectPriceString }}</h2>
-                                        <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
+                                        <p style="font-size: x-small;">APreis inkl. 7% MwSt., ggf. zzgl. Versandkosten</p>
                                     </div>
                                 </div>
                                 <div class="row">
