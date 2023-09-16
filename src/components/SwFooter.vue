@@ -15,7 +15,7 @@
                     </h5>
                     <br>
 
-                    Mo-Fr, 09:00 - 17:00 Uhr
+                    Mo-Fr, 10:00 - 14:00 Uhr
 
                     <br>
                     Oder über unser Kontaktformular.

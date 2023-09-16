@@ -138,7 +138,7 @@
 
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
-                                <h2>5. Papierformat*</h2>
+                                <h2>3. Papierformat*</h2>
                                 <p>Bitte wählen Sie das Format aus, das die Noten haben.
                                     Sie können zwischen gebräuchlichen musikalientypischen Papierformaten wählen.
                                 </p>
@@ -270,10 +270,9 @@
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Seitenanzahl*</h2>
-                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen
-                                    muss diese immer durch 4 teilbar sein.
+                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
                                 </p>
-                                <p>Sie können zwischen 4 und 400 Seiten Umfang wählen.
+                                <p>Sie können zwischen 4 und 400 Seiten Umfang wählen. Bitte beachten Sie, dass wir Ihr Heft in den Formaten DIN A4, Klavierauszug und Concert bei weniger als 88 Seiten Inhalt standardmäßig klammerheften.
                                 </p>
                             </div>
                             <div v-if="projectType != 3" class="col-3 pt-5">
@@ -581,14 +580,14 @@
                             <div class="p-4 green">
                                 <div class="row">
                                     <div class="col">
-                                        <p>Ihr Preis pro Stück:</p>
+                                        <p>Ihr Preis pro Exemplar:</p>
                                         <h2>€ {{ priceString }}</h2>
                                         <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <p>Projekt Preis:</p>
+                                        <p>Ihr Preis für die gewünschte Auflagenhöhe:</p>
                                         <h2>€ {{ projectPriceString }}</h2>
                                         <p style="font-size: x-small;">Alle Preise inkl. 7% MwSt., zzgl. Versandkosten</p>
                                     </div>
