@@ -956,14 +956,11 @@ export default {
                 }
             }).then(async (res) => {
 
-                console.log('res.data.elements[0]._uniqueIdentifier');
-                console.log(res.data.elements[0]._uniqueIdentifier);
+               
                 this.products.push({
                     product: res.data.elements[0],
                     quantitiy: this.quantitiy
                 });
-
-
                 document.getElementById("overlay").style.display = "none";
                 this.reset();
             }).catch((error) => {

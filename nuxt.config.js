@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 export default extendNuxtConfig({
   head: {
-    title: "Shopware PWA",
+    title: "Capella Print",
     script: [
       {
         type: "text/javascript",
