@@ -1084,7 +1084,7 @@ export default {
                 this.discount = 0.75
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(9);
-            } else if (this.quantitiy > 250) {
+            } else if (this.quantitiy >= 250) {
                 this.discount = 0.76
                 this.productionTime = "3–5 Tage"
                 this.setDiscountGroup(10);

@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 export default extendNuxtConfig({
   head: {
-    title: "Capella Print",
+    title: "capellaprint - günstig Musiknoten drucken lassen",
     script: [
       {
         type: "text/javascript",
