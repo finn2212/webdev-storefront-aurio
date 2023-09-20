@@ -767,7 +767,7 @@ export default {
             projectPriceString: '0',
             productionTime: "1–3 Tage",
             isOpen: false,
-            enveloped: false,
+            enveloped: 'false',
             discount: 1,
             pagesQuantitiy: 4,
             voiceName: "",
@@ -837,7 +837,7 @@ export default {
     methods: {
         reset() {
             this.productionTime = "1–3 Tage";
-            this.enveloped = false;
+            this.enveloped = 'false';
             this.discount = 1;
             this.pdf1 = '';
             this.pdf2 = '';
