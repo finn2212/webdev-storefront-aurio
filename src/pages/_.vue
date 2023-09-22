@@ -111,6 +111,20 @@
                       </p>
                     </div>
                   </div>
+                  <div class="mySlides">
+                    <div>
+                      <div class="ps-5 ">
+                        <p class="p-grid">
+                        <h5>»Spitzenqualität zu hervorragenden Preisen. Wir drucken nur noch hier..«</h5>
+                        <p class="thick" style="margin:0px;  display: inline;">
+                          Dieter Viehweider
+                        </p>
+                        – Munodi Edition
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
                   <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
                   <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❯</a>
                 </div>
