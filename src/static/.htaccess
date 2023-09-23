@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.capellaprint\.com [NC]
+RewriteRule ^(.*)$ https://capellaprint.com/$1 [L,R=301]
