@@ -534,7 +534,7 @@
                                             <th>Seitenanzahl Inhalt:</th>
                                             <th>Exemplare pro Set:</th>
                                             <th>Datei Name:</th>
-                                            <th>Aktion:</th>
+                                            <th>Löschen:</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -546,7 +546,7 @@
                                                 <td>{{ voice.uploadName }}</td>
                                                 <td>
                                                     <button @click.prevent="removeVoice(index)" class="btn"
-                                                        style="background-color: transparent; padding: 0; margin: 0"><img
+                                                        style="background-color: transparent !important; padding: 0; margin: 0"><img
                                                             src="@/assets/svg/plusBlack.svg" alt="Avatar"
                                                             style="transform: rotate(45deg);"></button>
                                                 </td>
