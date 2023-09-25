@@ -603,7 +603,6 @@
                                                 </button>
                                             </div>
                                             <input class="input" max="300" type="number" min="0" v-model="quantitiy">
-
                                             <div class="input-group-button">
                                                 <button @click="count(true)" type="button" class="button noborder green"
                                                     data-quantity="plus" data-field="quantity">
@@ -803,6 +802,7 @@ export default {
             errorMassage: "",
             totalVoicePrice: 0,
             bindingTypePrice: 0,
+            weight: 0,
             voices: [
 
             ],
@@ -831,8 +831,8 @@ export default {
     },
     mounted() {
         this.calculatePrice();
-
-
+        const id = 1
+        document.getElementById(`menuBtn${id}`).classList.add('active');
     },
     methods: {
         reset() {
@@ -907,7 +907,8 @@ export default {
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
                         "keywords": "2212",
-                        "description": desc,
+                        "description": desc + 'Seitenzahl: ' + this.pagesQuantitiy,
+                        "weight": this.weight,
                         "media": [{
                             "id": "6bd19a84161f44e3b7efb37e835c5ec2", // random UUID selfgenerated will be used as "coverId"
 
@@ -1018,7 +1019,6 @@ export default {
                 if (this.quantitiy > 1)
                     this.quantitiy--
             }
-
             this.calculatePrice();
         },
         calculatePrice: function () {
@@ -1027,6 +1027,8 @@ export default {
             this.setBinding();
             this.setBindingPrice();
             this.caluclateVoicePrices();
+            this.calculateWeight();
+            this.calculateProjectPrice();
             if (this.projectType == 3) {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
@@ -1037,14 +1039,31 @@ export default {
                 }
                 this.singlePrice = this.handlingPrice + (this.pagePrice * (this.pagesQuantitiy)) + this.bindingTypePrice + this.totalVoicePrice + this.envelopedPrice;
             }
-
-
-            console.log('Seitenanzahl: ' + this.pagesQuantitiy);
-            console.log('Seiten Preis: ' + this.pagePrice);
-            console.log('Handling Preis: ' + this.handlingPrice);
-            console.log('Bindungpreis: ' + this.bindingTypePrice);
-            console.log('Gesamt Preis: ' + this.price);
-            console.log("totalVoicePrice" + this.totalVoicePrice)
+        },
+        calculateWeight: function () {
+            let weightPerPage = 3;
+            let envelopedWeight = 0;
+            let formatWeight = 0;
+            if (this.paperFormat === 6 || this.paperFormat === 5) {
+                this.weightPerPage = 6;
+            }
+            if (this.enveloped && (this.paperFormat === 6 || this.paperFormat === 5)) {
+                envelopedWeight = 80;
+            } else if (this.enveloped) {
+                envelopedWeight = 40;
+            } 
+            if (!this.bindingType) {
+                formatWeight = 50;
+            }
+            this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeight) / 1000;
+        },
+        calculateProjectPrice: function() {
+            this.priceString = this.price.toFixed(2).toString().replace(".", ",");
+            if (this.quantitiy === 0){
+                this.projectPriceString = this.priceString
+            } else {
+                this.projectPriceString = (this.price * this.quantitiy).toFixed(2).toString().replace(".", ",");
+            } 
 
         },
         calculateDiscount: function () {
@@ -1104,21 +1123,11 @@ export default {
         },
         caluclateVoicePrices() {
             this.totalVoicePrice = 0;
-
             if (this.voices.length > 0) {
-
                 this.voices.forEach(voice => {
-                    // console.log(this.totalVoicePrice);
-                    // console.log('Handling Voice Preis: ' + this.handlingVoice);
-                    // console.log('Stimme Seiten Zahl: ' + voice.pages);
-                    // console.log('Stimme Seiten Preis: ' + this.voicePagePrice);
-                    // console.log('Stimme Anzahl: ' + voice.quantitiy);
                     this.totalVoicePrice = this.totalVoicePrice + (this.handlingVoice + (voice.pages * this.voicePagePrice) * voice.quantity)
                 });
             }
-
-
-
         },
         getDesc() {
             let desc = '';
@@ -1131,7 +1140,6 @@ export default {
                 });
             }
             return desc
-
         },
         setBinding() {
             if (this.pagesQuantitiy >= 88 || this.format == 'false' || this.paperFormat > 3) {
@@ -1146,7 +1154,6 @@ export default {
             } else {
                 if (this.paperFormat < 4) {
                     this.bindingTypePrice = 3.5;
-
                 } else {
                     this.bindingTypePrice = 4.5;
                 }
@@ -1156,20 +1163,16 @@ export default {
             if (this.color == 'false') {
                 if (this.paperFormat < 4) {
                     this.pagePrice = 0.15
-
                 } else {
                     this.pagePrice = 0.25
                 }
-
             } else {
 
                 if (this.paperFormat < 4) {
                     this.pagePrice = 0.20
-
                 } else {
                     this.pagePrice = 0.30
                 }
-
             }
         },
         click1() {
@@ -1199,7 +1202,6 @@ export default {
             this.pdfData3 = event.target.files[0];
             this.onUpload3()
         },
-
         onUpload() {
             this.pdf1 = null;
             this.isUpload1 = true;
@@ -1285,7 +1287,6 @@ export default {
                 this.errorMassage = "Vergeben Sie der Stimme einen Namen und und Laden Sie eine Notendatei für die Stimme hoch, bevor Sie die Stimme dem Projekt hinzufügen"
                 this.open();
             }
-
         },
         removeVoice(n) {
             this.voices.splice(n, 1);
@@ -1301,7 +1302,6 @@ export default {
             } else if (this.projectType == 3) {
                 ids.push({ "id": '587a3d6981404ed4b9de471d120e14ad' })
             }
-
             if (this.format == 'false') {
                 ids.push({ "id": 'e1d6ac670a3442448644bc34a7f0d469' })
             } else if (this.format == 'true') {
@@ -1312,7 +1312,6 @@ export default {
             } else if (this.color == 'false') {
                 ids.push({ "id": '7c2ad08862fb4011ae45d912c1ca4c3d' })
             }
-
             if (this.paperFormat == 1) {
                 ids.push({ "id": '6753f984ea17467794b4068f294053be' })
             } else if (this.paperFormat == 2) {
@@ -1326,19 +1325,16 @@ export default {
             } else if (this.paperFormat == 6) {
                 ids.push({ "id": '378502b6aa384914b27369996fabd0bc' })
             }
-
             if (this.bindingType == 'true') {
                 ids.push({ "id": 'd5e18caaadd34f70877e38b742ad22ff' })
             } else if (this.bindingType == 'false') {
                 ids.push({ "id": 'b5559576c3634ab0ba178c92194b5691' })
             }
-
             if (this.enveloped == 'true') {
                 ids.push({ "id": '28e2313979804380b8f303e0f21ffcad' })
             } else if (this.enveloped == 'false') {
                 ids.push({ "id": '242e68c2dfde4ec2afe3fd478e2a0f85' })
             }
-
             return ids
 
         },
@@ -1387,12 +1383,7 @@ export default {
             this.calculatePrice();
         },
         price: function () {
-            this.priceString = this.price.toFixed(2).toString().replace(".", ",");
-            if (this.quantitiy === 0){
-                this.projectPriceString = this.priceString
-            } else {
-                this.projectPriceString = (this.price * this.quantitiy).toFixed(2).toString().replace(".", ",");
-            } 
+            this.calculateProjectPrice();
         },
         enveloped: function (val) {
 

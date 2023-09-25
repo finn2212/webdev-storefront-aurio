@@ -400,7 +400,7 @@ export default {
         }
     },
     mounted() {
-        const id = 1
+        const id = 2
         document.getElementById(`menuBtn${id}`).classList.add('active');
     }
 

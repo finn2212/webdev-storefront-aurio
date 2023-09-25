@@ -12,35 +12,42 @@
             </NuxtLink>
           </button>
         </div>
-        <div class="col-auto mt-3 me-2 me-xl-5">
+        <div class="col-auto mt-3">
           <button type="button" id="menuBtn1" class="btnMenu p-0" @click="setActive(1)">
+            <NuxtLink class="a" to="/productCustomizer">
+              Notenheft konfigurieren
+            </NuxtLink>
+          </button>
+        </div>
+        <div class="col-auto mt-3">
+          <button type="button" id="menuBtn2" class="btnMenu p-0" @click="setActive(2)">
             <NuxtLink class="a" to="/klammerheftung">
               Noten mit Klammerheftung
             </NuxtLink>
           </button>
         </div>
-        <div class="col-auto mt-3 me-2 me-xl-5">
-          <button type="button" id="menuBtn2" class="btnMenu p-0" @click="setActive(2)">
+        <div class="col-auto mt-3 me-1">
+          <button type="button" id="menuBtn3" class="btnMenu p-0" @click="setActive(3)">
             <NuxtLink class="a" to="/spiralbindung">
               Noten mit Spiralbindung
             </NuxtLink>
           </button>
         </div>
-        <div class="col-auto mt-3  me-2 me-xl-5">
-          <button type="button" id="menuBtn3" class="btnMenu p-0" @click="setActive(3)">
+        <div class="col-auto mt-3">
+          <button type="button" id="menuBtn4" class="btnMenu p-0" @click="setActive(4)">
             <NuxtLink class="a" to="/good-to-know">
               Wissenswertes
             </NuxtLink>
           </button>
         </div>
-        <div class="col mt-3">
-          <button type="button" id="menuBtn4" class="btnMenu p-0" @click="setActive(4)">
+        <div class="col-auto mt-3">
+          <button type="button" id="menuBtn5" class="btnMenu p-0" @click="setActive(5)">
             <NuxtLink class="a" to="/contact">
               Kontakt
             </NuxtLink>
           </button>
         </div>
-        <div class="col">
+        <div class="col-auto">
           <div class="sf-header__icons desktop-only" style="margin: 0px !important;">
             <div class="sw-header__icons">
               <SwPluginSlot name="top-header-icons-before" />
@@ -183,7 +190,7 @@ export default {
     },
     setActive(id) {
       const element = `menuBtn${id}`
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 6; i++) {
         const elementToDelete = `menuBtn${i}`;
         document.getElementById(`menuBtn${i}`).classList.remove('active');
       }
@@ -300,13 +307,13 @@ export default {
 }
 
 @media (min-width: 1400px) {
-  .me-xl-5 {
+  .me-1 {
     margin-right: 3rem !important;
   }
 }
 
 @media (max-width: 1400px) {
-  .me-xl-5 {
+  .me-1 {
     margin-right: 0.5rem !important;
   }
 }

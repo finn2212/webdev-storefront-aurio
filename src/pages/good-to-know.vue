@@ -301,7 +301,7 @@ export default {
 
     },
     mounted() {
-        const id = 3
+        const id = 4
         document.getElementById(`menuBtn${id}`).classList.add('active');
     }
 
