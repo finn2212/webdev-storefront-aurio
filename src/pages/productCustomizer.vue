@@ -520,8 +520,10 @@
                                         Instrumentalstimmen hinzufügen.
                                     </p>
                                 </div>
-
                             </div>
+                            <p class="hidden red-font" id="error-voice">
+                                Vergeben Sie der Stimme einen Namen und laden Sie eine Notendatei für die Stimme hoch, bevor Sie die Stimme dem Projekt hinzufügen
+                            </p>
                         </div>
 
                         <div class="row" v-if="projectType != 1">
@@ -1029,6 +1031,10 @@ export default {
             this.caluclateVoicePrices();
             this.calculateWeight();
             this.calculateProjectPrice();
+            if (document.getElementById("error-voice")) {
+                document.getElementById("error-voice").classList.add("hidden");
+            }
+            
             if (this.projectType == 3) {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
@@ -1256,6 +1262,8 @@ export default {
             );
         },
         addVoice() {
+           let voiceError = document.getElementById("error-voice");
+           voiceError.classList.add("hidden");
             if (this.pdfData3 != null && this.voiceName != "") {
                 let _pages = 0,
                     _quantity = 0;
@@ -1284,8 +1292,7 @@ export default {
                 this.voiceQuantity = 1;
                 this.pdfData3 = null;
             } else {
-                this.errorMassage = "Vergeben Sie der Stimme einen Namen und und Laden Sie eine Notendatei für die Stimme hoch, bevor Sie die Stimme dem Projekt hinzufügen"
-                this.open();
+                voiceError.classList.remove("hidden");
             }
         },
         removeVoice(n) {
