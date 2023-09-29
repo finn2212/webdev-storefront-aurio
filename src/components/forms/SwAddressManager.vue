@@ -5,13 +5,13 @@
       :description="subtitleText || $t('Choose address')"
       class="sf-heading--left sf-heading--no-underline address-manager__title"
     />
-    <div class="address-manager__address" v-if="activeAddress">
+    <div class="address-manager__address" v-if="addresses[0]">
       <div>
-        <span>{{ activeAddress.firstName }} {{ activeAddress.lastName }}</span>
-        <p>{{ activeAddress.street }}</p>
-        <p>{{ activeAddress.zipcode }} {{ activeAddress.city }}</p>
-        <p>{{ activeAddress.country ? activeAddress.country.name : "" }}</p>
-        <p>{{ activeAddress.phoneNumber }}</p>
+        <span>{{ addresses[0].firstName }} {{ addresses[0].lastName }}</span>
+        <p>{{ addresses[0].street }}</p>
+        <p>{{ addresses[0].zipcode }} {{ addresses[0].city }}</p>
+        <p>{{ addresses[0].country ? addresses[0].country.name : "" }}</p>
+        <p>{{ addresses[0].phoneNumber }}</p>
       </div>
       <SwButton
         class="sf-button sf-button--small address-manager__add-new btn"
@@ -46,9 +46,10 @@
           class="address-manager__list-item"
         >
           <SfAddressPicker
-            :selected="activeAddress.id"
+            :selected="addresses[0].id"
             @change="onAddressChange"
           >
+          <div class="address-manager__address" v-if="addresses[0]">
             <SfAddress :name="address.id">
               <span>{{ address.firstName }} {{ address.lastName }}</span>
               <p>{{ address.street }}</p>
@@ -56,6 +57,7 @@
               <span>{{ address.country ? address.country.name : "" }}</span>
               <span>{{ address.phoneNumber }}</span>
             </SfAddress>
+        </div>
           </SfAddressPicker>
         </div>
         <div class="sf-button-container">
@@ -86,7 +88,7 @@
         v-if="!isAddNew"
         @success="onAddressSave"
         @cancel="isModalOpen = false"
-        :address="activeAddress"
+        :address="addresses[0]"
       />
       <SwAddressForm
         v-if="isAddNew"
