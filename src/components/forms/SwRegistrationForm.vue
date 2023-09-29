@@ -46,14 +46,14 @@
             @blur="$v.lastName.$touch()"
           />
         </div>
-        <SwCheckbox
+        <!-- <SwCheckbox
           v-if="allowGuestRegistration"
           v-model="doNotCreateAccount"
           name="doNotCreateAccount"
           :label="$t('Do not create a customer account')"
           class="sw-form__input form__element form__element--small"
           data-testid="guest-registration-checkbox"
-        />
+        /> -->
         <div class="inputs-group">
           <SwInput
             v-model="email"
@@ -314,7 +314,7 @@
       const { routing } = getApplicationContext()
   
       // form data
-      const doNotCreateAccount: Ref<boolean> = ref(false)
+      const doNotCreateAccount: Ref<boolean> = ref(true)
       const isDifferentShippingAddress: Ref<boolean> = ref(false)
   
       const state = reactive({
