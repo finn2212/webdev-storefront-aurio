@@ -19,7 +19,7 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build webdev-storefront-capella
+    name: build webdev-storefront-aurio
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -52,5 +52,5 @@ jobs:
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
-          config-file: .deploy-now/webdev-storefront-capella/config.yaml
+          config-file: .deploy-now/webdev-storefront-aurio/config.yaml
           action: upload

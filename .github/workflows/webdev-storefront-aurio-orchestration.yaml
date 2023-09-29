@@ -4,7 +4,7 @@
 # version: 2022-07-21
 
 name: "Deploy Now: Orchestration"
-run-name: "Deploy Now: Build webdev-storefront-capella · ${{ github.event.head_commit.message || format('Triggered by {0}', github.triggering_actor) }}"
+run-name: "Deploy Now: Build webdev-storefront-aurio · ${{ github.event.head_commit.message || format('Triggered by {0}', github.triggering_actor) }}"
 
 on:
   - push
@@ -32,7 +32,7 @@ jobs:
     name: build
     needs: retrieve-project
     if: ${{ needs.retrieve-project.outputs.deployment-enabled == 'true' }}
-    uses: ./.github/workflows/webdev-storefront-capella-build.yaml
+    uses: ./.github/workflows/webdev-storefront-aurio-build.yaml
     with:
       site-url: https://IONOS_DEPLOY_NOW_SITE_URL
       branch-id: ${{ needs.retrieve-project.outputs.branch-id }}
