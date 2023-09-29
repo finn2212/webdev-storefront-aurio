@@ -348,7 +348,7 @@
                             <div v-if="projectType != 3" class="col mt-4">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <p>Noten-PDF /Inhalt:</p>
+                                        <p>Noten-PDF /Inhalt:*</p>
                                     </div>
                                     <div class="col">
                                         <div v-if="pdfData1 == null" class="row">
