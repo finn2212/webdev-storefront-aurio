@@ -713,7 +713,7 @@
                         </h2>
                         <p> Kommen Sie nicht weiter? Gerne sind wir für Sie da. Bitte schreiben Sie uns eine E-Mail:
                         </p>
-                        <h5> fragen@capellaprint.com
+                        <h5>office@aurio.com
                         </h5>
                         <p> Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
 
