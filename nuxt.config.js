@@ -25,7 +25,7 @@ export default extendNuxtConfig({
     plugins: [
       '~plugins/bootstrap.js',
     ],
-    
+    target: 'static',
     build: {
       /*
       ** You can extend webpack config here
