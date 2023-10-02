@@ -1,12 +1,11 @@
 <template>
     <div class="container top">
-
         <!--Sektion mit 3 Karten und Bider-->
         <section>
             <div class="container justify-content-center">
                 <div class="row">
                     <div class="col-12 col-xl-8 p-0 customBorder">
-                        <img src="@/assets/images/pic11.png" alt="Avatar" class="img" >
+                        <img src="@/assets/images/pic11.png" alt="Avatar" class="img">
                     </div>
                     <div class="col customBorder red p-5">
                         <div class="row">
@@ -19,15 +18,11 @@
                                 </h2>
                             </div>
                         </div>
-
-                        <p class="p-grid mt-5">
-                            Bitte beachten Sie unbedingt unsere Druckdatenvorgaben, die Sie hier herunterladen können. <br> In
-                            Ihrem capella-Notensatzprogramm finden Sie zusätzlich Mustervorlagen, mit denen beim Duck nichts
-                            mehr schiefgehen kann. <br> Bei Nichtbeachtung kann keine Gewähr für Fehldrucke übernommen werden!
+                        <p class="p-grid mt-5 mb-5">
+                            Bitte beachten Sie unbedingt unsere Druckdatenvorgaben, die Sie hier herunterladen können. <br><br>
+                            Bei Nichtbeachtung kann keine Gewähr für Fehldrucke übernommen werden!
                         </p>
                         <div class="row align-items-end">
-                           
-
                             <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
                                 target="_blank">
                                 <button type="button" class="btn btn-dark p-2" style="width: 100%;">
@@ -36,8 +31,7 @@
                                     <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
                             </a>
-                   
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +48,6 @@
                         <h2>
                             Notenpapier
                         </h2>
-
                         <div class="row" style="padding-top: 110px;">
                             <div class="col">
                                 <h2>
@@ -73,7 +66,6 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
                     <div class="col-12 col-md-6 align-self-end">
                         <p class="thick m-0">
@@ -83,7 +75,8 @@
                             Bei AURIOPRINT legen wir Wert auf erprobte, klassische Notenpapiere mit leicht gelblicher
                             Färbung,
                             wie man sie aus der Musikverlagswelt kennt.
-                            Unser Notenpapier hat ein Flächengewicht von 90g/m&#178; und ist raschelarm beim Umblättern. Zudem
+                            Unser Notenpapier hat ein Flächengewicht von 90g/m&#178; und ist raschelarm beim Umblättern.
+                            Zudem
                             blendet es nicht im Bühnenlicht und ist somit ein hervorragendes »Arbeitspferd« für zigtausende
                             Notenausgaben, die jährlich gefertigt werden.
                         </p>
@@ -96,16 +89,15 @@
                             von uns verwendete hochweiße Umschlagkarton Farben brillant wieder und besitzt ein
                             hervorragendes
                             Aufschlagverhalten.
-                            Mit einem Flächengewicht von 260g/m&#178; verleiht er auch umfangreichen Partituren Stabilität. Die
+                            Mit einem Flächengewicht von 260g/m&#178; verleiht er auch umfangreichen Partituren Stabilität.
+                            Die
                             einseitig matte Oberfläche lässt sich hervorragend bedrucken und bricht auch bei starker
                             Beanspruchung nicht auf.
                         </p>
                         <p class="mt-2 thick">
                             Kurz: Der beste Karton, den Sie für Ihre Partituren bekommen können.
                         </p>
-
                     </div>
-
                     <div class="w-100"></div>
                 </div>
             </div>
@@ -122,7 +114,6 @@
                         <h2>
                             Druckverfahren
                         </h2>
-
                         <div class="row" style="padding-top: 100px;">
                             <h2>
                                 100+
@@ -131,7 +122,6 @@
                                 Druckseiten in Vollfarbe pro Minute
                             </p>
                         </div>
-
                     </div>
                     <div class="col-12 col-md-6 align-self-end ">
                         <p class="thick m-0">Schnell, effizient, erstklassig</p>
@@ -147,16 +137,10 @@
                             ggf.
                             automatisch nach, sodass Sie auch bei hohen Auflagen stets konsistent hohe Qualität erhalten.
                         </p>
-
-
                         <p> Der exzellente Consistently-Vivid-Toner lässt die Druckfarben dabei leuchtend zur Geltung
                             kommen.</p>
-
                     </div>
-
                     <div class="w-100"></div>
-
-
                 </div>
             </div>
         </section>
@@ -318,5 +302,4 @@ export default {
         padding: 35px !important;
     }
 
-}
-</style>
+}</style>

@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 export default extendNuxtConfig({
   head: {
-    title: "Aurioprint - günstig Musiknoten drucken lassen",
+    title: "Ihre Musiknoten, wunderschön gedruckt.",
     script: [
       {
         type: "text/javascript",

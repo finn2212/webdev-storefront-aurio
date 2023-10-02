@@ -14,9 +14,7 @@
                         08294 / 8601888
                     </h5>
                     <br>
-
                     Mo-Fr, 10:00 - 14:00 Uhr
-
                     <br>
                     Oder über unser Kontaktformular.
                     </p>
@@ -29,57 +27,46 @@
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
                             <NuxtLink class="a" to="/contact">
-
                                 Impressum
-
                             </NuxtLink>
                         </div>
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
                             <NuxtLink class="a" to="/contact">
-
                                 AGB & Widerruf
-
                             </NuxtLink>
                         </div>
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
                             <NuxtLink class="a" to="/shipping">
-
                                 Zahlung & Versand
-
                             </NuxtLink>
                         </div>
                     </div>
                     <div class="row justify-content-start">
                         <div class="col-12 col-md-4 align-self-start">
                             <NuxtLink class="a" to="/contact">
-
                                 Datenschutz
-
                             </NuxtLink>
                         </div>
                     </div>
                     <div class="row justify-content-start">
                         <div class="col-12 col-md-4 align-self-start">
                             <NuxtLink class="a" to="/contact">
-
                                 Widerrufserklärung
-
                             </NuxtLink>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <img src="@/assets/svg/award_star.svg" style="margin-right: 10px;" alt="Avatar">
                     <h5 class="pt-4">
                         Sicher einkaufen
                     </h5>
                     <p>
-                        Bei capellaprint kaufen Sie sicher ein. Dies wird ermöglicht durch SSL-Verschlüsselung, bei der eine
+                        Bei AURIOPRINT kaufen Sie sicher ein. Dies wird ermöglicht durch SSL-Verschlüsselung, bei der eine
                         sichere Verbindung zwischen unserem Server und Ihrem Browser aufgebaut wird.
                     </p>
                     <p class="thick">
@@ -107,7 +94,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <div class="col">
                         <img src="@/assets/svg/credit_score.svg" style="margin-right: 10px;" alt="Avatar">
@@ -145,7 +131,6 @@
                     <div class="col">
                         <h5 class="mt-4 pt-4">Wir sind Mitglied im:</h5>
                         <img src="@/assets/svg/bvdm_logo_transparent 1.svg" style="margin-top: 10px;" alt="Avatar">
-
                     </div>
                 </div>
             </div>
@@ -154,12 +139,10 @@
                     * Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. Versandkosten, wenn nicht anders angegeben.
                     © 2023 AURIOPRINT – Alle Rechte vorbehalten.
                 </div>
-
             </div>
         </div>
     </div>
 </template>
-  
 <script>
 import SwPluginSlot from "sw-plugins/SwPluginSlot.vue"
 import SwFooterNavigation from "@/components/organisms/SwFooterNavigation.vue"

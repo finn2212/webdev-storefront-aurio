@@ -4,7 +4,7 @@
       class="sf-header__logo"
       data-testid="header-logo"
     >
-    <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg"  alt="Avatar">
+    <img src="@/assets/images/AURIOPRINT_Logo.png"  alt="Avatar">
     </nuxt-link>
   </template>
   

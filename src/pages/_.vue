@@ -14,10 +14,11 @@
             </h2>
             <p class="p-grid">
             <p class="thick" style="margin:0px">
-              Jetzt neu:
+              AURIOPRINT
             </p>
-            Mit Ihrer capella-Software sind Sie es gewohnt, Partituren in bester Notensatzmanier erstellen zu können; mit
-            capellaprint lassen Sie diese künftig auch in Musikverlagsqualität drucken.
+            ist Ihre Spezialdruckerei für Musiknoten. Unsere Partituren liegen auf den Pulten der Berliner Philharmoniker,
+            in der Elbphilharmonie, beim London Symphony Orchestra und vielen weiteren Verlagen, Komponisten und Ensembles
+            aller Kontinente.
             </p>
             <div class="row align-items-end">
               <div class="col">
@@ -33,17 +34,16 @@
         </div>
       </div>
     </section>
-   <!--Sektion mit 3 Karten und Bider-->
-   <section class="pt-5">
+    <!--Sektion mit 3 Karten und Bider-->
+    <section class="pt-5">
       <div class="container justify-content-center">
         <div class="row mt-4">
           <div class="col-8">
             <h2>
-              So einfach geht’s
+              Gerne fertigen wir auch Ihre Partituren in bester Musikverlagsqualität.
             </h2>
           </div>
         </div>
-
         <div class="row mt-4">
           <div class="col customBorder p-5 grey">
             <img src="@/assets/svg/function.svg" alt="Avatar" style="margin-bottom: 25px;">
@@ -68,7 +68,7 @@
               Laden Sie Ihre Noten-PDF hoch.
             </h2>
             <p class="p-grid">
-              Als zweiten Schritt übermitteln Sie uns die PDF-Datei(en) Ihres Werks, die Sie in capella erstellt haben.
+              Als zweiten Schritt übermitteln Sie uns die PDF-Datei(en) Ihres Werks.
             </p>
           </div>
           <div class="col pl-5  p-5 grey customBorder">
@@ -90,7 +90,7 @@
         <div class="row mt-4">
           <div class="col blockStart customBorder">
             <h2>
-              Was ist capellaprint?
+              Was ist AURIOPRINT?
             </h2>
           </div>
         </div>
@@ -123,19 +123,15 @@
                         </p>
                       </div>
                     </div>
-
                   </div>
                   <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
                   <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❯</a>
                 </div>
-
               </div>
             </div>
             <div class="row justify-content-center" style="min-height: fit-content;">
               <div class="col  p-0 customBorder">
-
                 <img src="@/assets/images/pic2.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
-
               </div>
             </div>
           </div>
@@ -187,7 +183,7 @@
               <div class="col">
                 <p class="thick" style="margin: 0px;">Kauf auf Rechnung & Lastschrift</p>
                 <p>
-                  Die beliebteste Zahlart in Deutschland – natürlich auch bei capellaprint! Mit unserem Paymentpartner
+                  Die beliebteste Zahlart in Deutschland – natürlich auch bei AURIOPRINT! Mit unserem Paymentpartner
                   genießen Sie 14 Tage Zahlungsziel nach Warenerhalt.
                 </p>
               </div>
@@ -199,51 +195,43 @@
             <h2 class="heading-grid">
               Beste Druckqualität für Ihre Noten – made in Germany.
             </h2>
-
-
-
-
             <div class="row mt-3">
-              <div class="col-7">
+              <div class="col-10">
                 <p class="p-grid">
-                  Für capellaprint haben sich capella-software und die spezialisierte Musikaliendruckerei AURIOPRINT aus
-                  Bayern zusammengeschlossen. AURIOPRINT fertigt für Musikverlage, Orchester und Komponisten weltweit
-                  Noten. Unter der Marke capellaprint bieten wir Ihnen gemeinsam ab sofort die bestmögliche Druckqualität
-                  für Ihre eigenen Partituren.
+                  Wir sind eine der einzigen auf Musikaliendruck spezialisierten Druckereien in Europa. AURIOPRINT fertigt
+                  für renommierteste Musikverlage, Orchester und Komponisten Noten.
+                </p>
+                <p class="p-grid">
+                  Für Verlage aus Übersee sind wir beliebter Druckpartner für deren Europageschäft.
+                  Wir sind vollständig integriert in die Logistikstrecke eines der wichtigsten europäischen
+                  Musikaliengroßhändler und fertigen hierbei im Print-on-DEmand-Verfahren über Nacht Notentitel
+                  verschiedenster Art und Auflage, sodass diese schnell an den Musikalienhandel ausgeliefert werden
+                  können.
+                </p>
+                <p class="p-grid">
+                  Als Partner für Druckereien übernehmen wir mit unserer Expertise Aufträge im Bereich Musikaliendruck.
+                  Schnell, günstig und stets mit dem Spezialwissen, wie Musiknoten korrekt gedruckt werden müssen.
                 </p>
               </div>
               <div class="col">
-
               </div>
-
-
-
             </div>
-
             <div class="row justify-content-end">
               <div class="col">
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
- 
-
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
       <div class="container justify-content-center">
-
         <div class="row mt-4">
           <div class="col-12 col-xl-8">
             <div class="row">
               <div class="col customBorder p-0">
-                <h2 class="heading-grid">
-                  »Ein attraktiver Service für Musiker«
-                </h2>
-                <div class="yellow p-4">
+                <div class="yellow p-4 mt-5">
                   <img src="@/assets/svg/format_quote.svg" alt="Avatar">
                   <div class="slideshow-container">
                     <div class="mySlides2">
@@ -255,7 +243,6 @@
                             Ihren Partituren das
                             Optimum herauszuholen.«</h5>
                         </div>
-
                         <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
                           Dr. Dominik Hörnel,
                         </p>
@@ -271,7 +258,6 @@
                             <h5 style="line-height: 1.5;">»Es macht mich stolz, mit unserer Musikaliendruckerei einen
                               echten Mehrwert für alle capella-Nutzer:innen bieten zu können.«</h5>
                           </div>
-
                           <p class="thick ms-4 ps-1" style="margin:0px;  display: inline;">
                             Sebastian Gabriel,
                           </p>
@@ -283,13 +269,11 @@
                     <a class="prev" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❮</a>
                     <a class="next" style="color: black; font-size: 15px;" @click="plusSlides(-1)">❯</a>
                   </div>
-
                 </div>
               </div>
             </div>
             <div class="row justify-content-center">
               <div class="col p-0 customBorder">
-
                 <div v-if="slideIndex == 1">
                   <img src="@/assets/images/pic3.png" alt="Avatar" class="img" style="width: 100%; height: 100%;">
                 </div>
@@ -297,8 +281,6 @@
                   <img src="@/assets/images/sebastianQuote.jpeg" alt="Avatar" class="img"
                     style="width: 100%; height: 100%;">
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -307,7 +289,6 @@
               Unser Tipp
             </h2>
             <div class="customBorder blue p-4">
-
               <img src="@/assets/svg/redeem.svg" alt="Avatar">
               <h1 class="mt-5" style="font-size: 60px;">
                 Musterheft
@@ -323,10 +304,8 @@
                     <img src="@/assets/svg/plus.svg" alt="Avatar" class="plusBtn">Musterheft
                     kostenfrei bestellen
                   </button>
-
                 </div>
               </div>
-
               <img src="@/assets/svg/contact_support.svg" alt="Avatar" class="mt-4">
               <div class="accordion  accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item mt-3">
@@ -334,16 +313,14 @@
                     <button @click="open(1)" id="flush-collapseOneBtn" class="accordion-button bred collapsed"
                       type="button" style="padding-bottom: 0px;">
                       <p class="thick"> Gehe ich ein Abonnement ein?</p>
-
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse open" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                       <p class="small">
-                        Nein, capellaprint ist nicht mit einem Abonnement verbunden. Für den
-                        Bestellprozess können Sie auf Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies
-                        verpflichtet
-                        Sie aber zu nichts und ist jederzeit wieder deaktivierbar.
+                        Nein, AURIOPRINT ist nicht mit einem Abonnement verbunden. Für den Bestellprozess können Sie auf
+                        Wunsch zwar ein kostenfreies Kundenkonto erstellen, dies verpflichtet Sie aber zu nichts und ist
+                        jederzeit wieder deaktivierbar.
                       </p>
                     </div>
                   </div>
@@ -379,16 +356,14 @@
                   <div id="flush-collapseFour" class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample">
                     <p class="small">
-                      Transparenz für unsere Kunden ist unser Leitmotiv. capellaprint garantiert
-                      Ihnen dauerhaft niedrige Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist
-                      selbstverständlich kostenfrei.</p>
-                    <br>
+                      Transparenz für unsere Kunden ist unser Leitmotiv. AURIOPRINT garantiert Ihnen dauerhaft niedrige
+                      Preise ohne versteckte Zusatzkosten. Die Nutzung unseres Druckportals ist selbstverständlich
+                      kostenfrei.
+                    </p>
                     <p class="small">
                       Sie bezahlen, wie im normalen Online-Shopping auch, bei der Bestellung Ihrer Notenausgaben. Hierfür
                       haben Sie die Wahl zwischen den sicheren Zahlungsarten PayPal, Klarna Rechnung und Kreditkarte.
                     </p>
-                    <div class="accordion-body">
-                    </div>
                   </div>
                 </div>
                 <div class="accordion-item">
@@ -416,7 +391,6 @@
         </div>
       </div>
     </section>
-
     <!--Sektion mit 3 Karten und Bider-->
     <section class="pt-5">
       <div class="container justify-content-center">
@@ -525,7 +499,6 @@
               <div class="card-body pink p-5 " style="min-height: 290px;">
                 <h2 class="card-title">Notenbuch DIN A4
                   Spiralbindung hoch</h2>
-
                 <div class="row mt-5">
                   <div class="col-1">
                     <img src="@/assets/svg/heart_plus.svg" class="mr-2" alt="Avatar">
@@ -571,11 +544,9 @@
     <div v-for="product in products" :key="product.id">
       <SwProductDetails :product="product" />
     </div>
-
     <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
       aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
       <header>
-
         <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
           {{ modalMessage }}
         </p>
@@ -586,7 +557,6 @@
     </SfModal>
   </div>
 </template>
- 
 <script>
 import { getApplicationContext } from "@shopware-pwa/composables"
 import SwButton from "@/components/atoms/SwButton.vue"
@@ -738,7 +708,7 @@ export default {
     },
     addToCart() {
       const contextToken = this.$cookies.get("sw-context-token") || "";
-      
+
 
       axios({
         url: 'https://s23511.creoline.cloud/store-api/search', // File URL Goes Here
@@ -752,12 +722,12 @@ export default {
           "search": "capellaprint Musterheft mit kostenfreiem Versand in Deutschland"
         }
       }).then(async (res) => {
-debugger;
+        debugger;
         this.products.push(res.data.elements[0])
- 
+
       }).catch((error) => {
         //try to fix the error or
-      
+
         console.log(error.message)
       });
 

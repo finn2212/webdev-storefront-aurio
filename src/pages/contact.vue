@@ -11,50 +11,38 @@
                                 Herzlich willkommen! </h2>
                         </div>
                         <div>
-                            <p class="mt-5">Vielen Dank für Ihr Interesse an capellaprint. Wir bieten Ihnen nicht nur
-                                erstklassige
-                                Druckqualität, sondern sind auch bei Fragen und Anregungen rund um das Thema Musikaliendruck
-                                gerne Ihre Gesprächspartner.
+                            <p class="mt-5">Vielen Dank für Ihr Interesse an AURIOPRINT. Wir bieten Ihnen nicht nur
+                                erstklassige Druckqualität, sondern sind auch bei Fragen und Anregungen rund um das Thema
+                                Musikaliendruck gerne Ihre Gesprächspartner.
                             </p>
-
                         </div>
-
-
                     </div>
                     <div class="col customBorder pl-5  p-4 green">
                         <div class="col-1">
                             <img src="@/assets/svg/shopping_cart_checkout.svg" class="mr-2" style="margin-bottom: 25px;"
                                 alt="Avatar">
                         </div>
-
                         <h2 class="heading-grid">
                             Fragen zur Bestellung?
                         </h2>
                         <div class="row mt-5 pt-3">
                             <p>
                                 Bei allgemeinen Fragen rund ums Thema Bestellung wenden Sie sich bitte an:
-                            <h5> fragen@capellaprint.com</h5>
-
-
+                            <h5> office@aurioprint.com</h5>
                             </p>
                             <p>
                                 Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
-
                         </div>
                     </div>
                     <div class="col customBorder pl-5  p-4  darkblue">
                         <div class="col-1">
                             <img src="@/assets/svg/audio_file.svg" class="mr-2" style="margin-bottom: 25px;" alt="Avatar">
                         </div>
-
                         <h2 class="heading-grid">
-                            Fragen zu Ihren gedruckten Noten?
+                            FRAGEN ZUR BESTELLUNG?
                         </h2>
                         <div class="row mt-3 pt-3">
-
-                            <p>Falls Sie Fragen zur korrekten Vorbereitung Ihrer Noten zum Druck haben, möchten wir Sie
-                                bitten, sich zunächst unsere Druckdatenvorgaben herunterzuladen und aufmerksam durchzulesen:
-
+                            <p>Vielen Dank für Ihr Interesse an AURIOPRINT. Wir bieten Ihnen nicht nur erstklassige Druckqualität, sondern sind auch bei Fragen und Anregungen rund um das Thema Musikaliendruck gerne Ihre Gesprächspartner.
                             </p>
                             <a href=" https://firebasestorage.googleapis.com/v0/b/pocselfpublish.appspot.com/o/uploads%2FDruckdaten_Print_data_2023.pdf?alt=media&token=e8196ae8-3679-4f5a-9445-48d46724fc65"
                                 target="_blank">
@@ -64,74 +52,40 @@
                                     <p class="inline mt-2">Maßvorgaben (PDF)</p>
                                 </button>
                             </a>
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section>
             <div class="container justify-content-center">
                 <div class="row pt-4">
-                    <div class="col-12 col-lg-4 pink customBorder p-4">
-                        <div class="col-1">
-                            <img src="@/assets/svg/unknown_document.svg" class="mr-2" style="margin-bottom: 25px;"
-                                alt="Avatar">
-                        </div>
-                        <h2>
-                            Tipp: <br>
-                            Nutzen Sie unsere capella-Vorlagen!
-                        </h2>
-                        <p>
-                            Wir haben für Sie in capella fertige Mustervorlagen erstellt, die exakt auf die Vorgaben für
-                            capellaprint abgestimmt sind. Diese Vorlagen finden Sie direkt in Ihrer capella Software.
-                        </p>
-
-
-                    </div>
+                    
                     <div class="col customBorder grey p-5">
                         <div class="row">
                             <div class="col">
                                 <img src="@/assets/svg/call_quality.svg" alt="Avatar" style="margin-bottom: 25px;">
                                 <h2>
-
                                     Telefonkontakt
                                 </h2>
-                                <p class="pt-5 mt-3">Für den Fall, dass jetzt noch Fragen offen sind, steht Ihnen unser
-                                    Partner AURIOPRINT aus
-                                    gerne telefonisch zur Verfügung:
+                                <p class="pt-5 mt-3">Für den Fall, dass jetzt noch Fragen offen sind, stehen wir Ihnen gerne telefonisch zur Verfügung:
                                 </p>
                                 <h5>+49 (0)8294 – 8601888
-
                                 </h5>
                                 <p>Mo–Do, 10–16 Uhr</p>
-
                             </div>
                             <div class="col">
                                 <div class="row">
                                     <div class="col">
                                         <img src="@/assets/svg/local_post_office.svg" style="margin-bottom: 25px;"
                                             alt="Avatar">
-
-
                                         <h2>
-
                                             Postanschrift
                                         </h2>
-
-
-                                        <p class="pt-5 mt-3">Wir freuen uns auch über einen Brief von Ihnen. Diesen senden
-                                            Sie
-                                            bitte an:
-
-                                            capellaprint
-
+                                        <p class="pt-5 mt-3 mb-4">Wir freuen uns auch über einen Brief von Ihnen. Diesen senden Sie bitte an:
                                         </p>
                                         <p class="thick m-0">
-                                            capellaprint
-                                            <br>
-                                            c/o AURIOPRINT
+                                            AURIOPRINT
                                         </p>
                                         <p class="m-0">
                                             Augsburger Straße 9
