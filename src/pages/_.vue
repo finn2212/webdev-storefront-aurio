@@ -17,7 +17,7 @@
               AURIOPRINT
             </p>
             ist Ihre Spezialdruckerei für Musiknoten. Unsere Partituren liegen auf den Pulten der Berliner Philharmoniker,
-            in der Elbphilharmonie, beim London Symphony Orchestra und vielen weiteren Verlagen, Komponisten und Ensembles
+            in der Elbphilharmonie, beim London Symphony Orchestra und vielen Verlagen, Komponisten und Ensembles
             aller Kontinente.
             </p>
             <div class="row align-items-end">
