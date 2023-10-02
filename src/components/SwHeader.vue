@@ -6,9 +6,9 @@
     <div class="container justify-content-between menueBigScreen">
       <div class="row mt-2 mb-3">
         <div class=" col-1 col-xl-2">
-          <button type="button" id="menuBtn0" class="btnMenu p-0 mt-2" @click="setActive(0)">
+          <button type="button" id="menuBtn0" class="btnMenu p-0 mt-3" @click="setActive(0)">
             <NuxtLink class="a" to="/">
-              <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 75%;">
+              <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar" style="width: 75%;">
             </NuxtLink>
           </button>
         </div>
@@ -91,7 +91,7 @@
     </div>
     <div class="container justify-content-between menueSmallScreen">
       <NuxtLink class="a" to="/">
-        <img src="@/assets/svg/capella_AURIOPRINT_Logo 1.svg" alt="Avatar" style="width: 100;">
+        <img src="@/assets/images/AURIOPRINT_Logo.png" alt="Avatar" style="width: 100;">
       </NuxtLink>
     </div>
   </div>

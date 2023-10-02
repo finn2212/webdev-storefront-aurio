@@ -14,7 +14,7 @@
                     <div class="col-12 col-lg-4 customBorder p-4 blue">
                         <img src="@/assets/svg/verified.svg" class="mr-2" alt="Avatar">
                         <h2 class="heading-grid mt-3">
-                            Ihre Vorteile bei capellaprint
+                            Ihre Vorteile bei AURIOPRINT
                         </h2>
                         <div class="row mt-4">
                             <div class="col-1">
