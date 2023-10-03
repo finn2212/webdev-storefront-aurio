@@ -204,7 +204,7 @@
                 <p class="p-grid">
                   Für Verlage aus Übersee sind wir beliebter Druckpartner für deren Europageschäft.
                   Wir sind vollständig integriert in die Logistikstrecke eines der wichtigsten europäischen
-                  Musikaliengroßhändler und fertigen hierbei im Print-on-DEmand-Verfahren über Nacht Notentitel
+                  Musikaliengroßhändler und fertigen hierbei im Print-on-Demand-Verfahren über Nacht Notentitel
                   verschiedenster Art und Auflage, sodass diese schnell an den Musikalienhandel ausgeliefert werden
                   können.
                 </p>
