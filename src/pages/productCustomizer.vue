@@ -270,9 +270,12 @@
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>6. Seitenanzahl*</h2>
-                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen muss diese immer durch 4 teilbar sein.
+                                <p>Bitte geben Sie die Gesamtseitenanzahl Ihrer Datei an. Aus produktionstechnischen Gründen
+                                    muss diese immer durch 4 teilbar sein.
                                 </p>
-                                <p>Sie können zwischen 4 und 400 Seiten Umfang wählen. Bitte beachten Sie, dass wir Ihr Heft in den Formaten DIN A4, Klavierauszug und Concert bei weniger als 88 Seiten Inhalt standardmäßig klammerheften.
+                                <p>Sie können zwischen 4 und 400 Seiten Umfang wählen. Bitte beachten Sie, dass wir Ihr Heft
+                                    in den Formaten DIN A4, Klavierauszug und Concert bei weniger als 88 Seiten Inhalt
+                                    standardmäßig klammerheften.
                                 </p>
                             </div>
                             <div v-if="projectType != 3" class="col-3 pt-5">
@@ -522,7 +525,8 @@
                                 </div>
                             </div>
                             <p class="hidden red-font" id="error-voice">
-                                Vergeben Sie der Stimme einen Namen und laden Sie eine Notendatei für die Stimme hoch, bevor Sie die Stimme dem Projekt hinzufügen
+                                Vergeben Sie der Stimme einen Namen und laden Sie eine Notendatei für die Stimme hoch, bevor
+                                Sie die Stimme dem Projekt hinzufügen
                             </p>
                         </div>
 
@@ -930,7 +934,7 @@ export default {
                         ],
                         'visibilities': [
                             {
-                                'salesChannelId': 'fac913bddf1244098e07a811fd301f75',
+                                'salesChannelId': '9b0f2ae9856642dbbeb9f5cc8ee76511',
                                 'visibility': 30
                             }
 
@@ -952,14 +956,12 @@ export default {
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW'
+                    "sw-access-key": 'SWSCRZFKNNVIMJUZV2FIRFDTTG'
                 },
                 data: {
                     "search": productNumber
                 }
             }).then(async (res) => {
-
-               
                 this.products.push({
                     product: res.data.elements[0],
                     quantitiy: this.quantitiy
@@ -1034,7 +1036,7 @@ export default {
             if (document.getElementById("error-voice")) {
                 document.getElementById("error-voice").classList.add("hidden");
             }
-            
+
             if (this.projectType == 3) {
                 this.price = this.totalVoicePrice + 10
                 this.singlePrice = this.totalVoicePrice + 10
@@ -1057,19 +1059,19 @@ export default {
                 envelopedWeight = 80;
             } else if (this.enveloped) {
                 envelopedWeight = 40;
-            } 
+            }
             if (!this.bindingType) {
                 formatWeight = 50;
             }
             this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeight) / 1000;
         },
-        calculateProjectPrice: function() {
+        calculateProjectPrice: function () {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
-            if (this.quantitiy === 0){
+            if (this.quantitiy === 0) {
                 this.projectPriceString = this.priceString
             } else {
                 this.projectPriceString = (this.price * this.quantitiy).toFixed(2).toString().replace(".", ",");
-            } 
+            }
 
         },
         calculateDiscount: function () {
@@ -1137,12 +1139,24 @@ export default {
         },
         getDesc() {
             let desc = '';
-            desc = 'Proejekt Name:' + this.productName + '\n Downloadlink Notenheft: ' + this.pdf1 +
-                + ' \n Downloadlink Umschlag:' + this.pdf2 + ' \n';
+            desc = 
+            '<p>\n Projekt Name:' + this.productName +  '</p>' + 
+            '<p>\n' + `<a href="${this.pdf1}">Downloadlink Notenheft</a></p>`+
+            `Hello, ${this.pdf1}`
+            '<p> <a href="url">link text</a>\n Downloadlink Notenheft: ' + this.pdf1 + '</p>' + 
+            '<p>\n Downloadlink Umschlag:' + this.pdf2 + '</p>' +
+            '<p>\n</p>'
             if (this.voices.length > 0) {
                 desc = desc + '\n Stimmen: '
                 this.voices.forEach((voice, i) => {
-                    desc = desc + ' \n Stimme: ' + voice.name + ' ' + '\n Nummer: ' + (i + 1) + '\n Downloadlink: ' + voice.url
+                    desc = desc + 
+                    '<p>\n Stimme: ' + voice.name + '</p>'+ 
+                    '<p>\n Nummer: ' + (i + 1) + '</p>'+ 
+                    '<p>\n' + `<a href="${voice.url}">Downloadlink</a></p>`+
+                    '<p>\n Downloadlink: '  + voice.url + '</p>'+ 
+                    '<p>\n Seitenanzahl Inhalt: ' + voice.pages + '</p>'+ 
+                    '<p>\n Exemplare pro Set:' + voice.quantity + '</p>'+
+                    '<p>\n</p>'
                 });
             }
             return desc
@@ -1262,8 +1276,8 @@ export default {
             );
         },
         addVoice() {
-           let voiceError = document.getElementById("error-voice");
-           voiceError.classList.add("hidden");
+            let voiceError = document.getElementById("error-voice");
+            voiceError.classList.add("hidden");
             if (this.pdfData3 != null && this.voiceName != "") {
                 let _pages = 0,
                     _quantity = 0;
@@ -1367,9 +1381,9 @@ export default {
                 } else {
                     return true
                 }
-            } else if (this.projectType == 3) {
+            } else if (this.projectType == 3 || this.productName == "") {
                 if (this.voices.length == 0) {
-                    this.errorMassage = "Bitte vergeben Sie eine Stimmenbezeichnung und und laden Sie eine Notendatei hoch, bevor Sie die Stimme dem Projekt hinzufügen."
+                    this.errorMassage = "Bitte vergeben Sie eine Stimmenbezeichnung und einen Projekttitel und und laden Sie eine Notendatei hoch, bevor Sie die Stimme dem Projekt hinzufügen."
                     this.open();
                     return false
                 } else {
