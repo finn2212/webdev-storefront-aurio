@@ -57,13 +57,11 @@
                         <img class="card-img-top img" src="@/assets/images/pic9.png" alt="Card image cap">
                     </div>
                     <div class="col-12 col-lg-4 customBorder p-0">
-
                         <img class="card-img-top img" src="@/assets/images/pic10.png" alt="Card image cap">
                     </div>
                 </div>
             </div>
         </section>
-
         <!--Prouct Cusomizer Sections-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -113,7 +111,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Notenheft mit
                                             Instrumentalstimmen</p>
                                     </div>
@@ -123,19 +120,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Stimmensatz / Chorsatz</p>
                                     </div>
                                     <div class="col-1">
                                         <input type="radio" id="one" value="3" v-model="projectType" />
                                     </div>
                                 </div>
-
-
-
-
                             </div>
-
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>3. Papierformat*</h2>
@@ -161,7 +152,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Klavierauszug (19 x 27 cm)</p>
                                     </div>
                                     <div class="col-1">
@@ -170,7 +160,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Concert (22,8 x 30,5 cm)</p>
                                     </div>
                                     <div class="col-1">
@@ -179,7 +168,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>DIN B4 (25 x 35,3 cm)</p>
                                     </div>
                                     <div class="col-1">
@@ -197,7 +185,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Dirigent (31,5 x 46 cm)</p>
                                     </div>
                                     <div class="col-1">
@@ -205,12 +192,10 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>4. Ausrichtung*</h2>
                                 <p>Bitte geben Sie nun an, ob die Noten im Hoch– oder im Querformat angelegt sind.
-
                                 </p>
                                 <p>
                                     Bitte beachten Sie, dass Sie innerhalb eines Projekts die Ausrichtungen nicht mischen
@@ -228,7 +213,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Notenheft Querformat</p>
                                     </div>
                                     <div class="col-1">
@@ -240,8 +224,6 @@
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>5. Farbigkeit Inhalt*</h2>
                                 <p>Ihre Noten können im Innenteil entweder schwarzweiß oder farbig gedruckt werden.
-
-
                                 </p>
                                 <p>
                                     Falls Ihr Notenprojekt einen Umschlag hat, wird dieser ohne Aufpreis farbig gedruckt.
@@ -294,10 +276,8 @@
                                 <h2>7. Bindung*</h2>
                                 <p>Hier haben Sie die Möglicheit, zwischen den verfügbaren Bindearten zu wählen.
                                 <p>
-
                                     Bitte beachten Sie, dass bei den Formaten DIN B4, DIN A3 und Dirigent sowie bei allen
                                     Querformaten und bei mehr als 88 Seiten Inhalt nur Spiralbindung verfügbar ist.</p>
-
                                 </p>
                             </div>
                             <div class="col pt-5">
@@ -308,10 +288,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>8. Umschlag</h2>
@@ -331,7 +307,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-8">
-
                                         <p>Ohne Umschlag:</p>
                                     </div>
                                     <div class="col-1">
@@ -339,7 +314,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div v-if="projectType != 3" class="w-100 pt-5"></div>
                             <div v-if="projectType != 3" class="col-12 col-md-7">
                                 <h2>9. Notenupload*</h2>
@@ -430,10 +404,7 @@
                                 <p>Wenn Ihr Projekt Instrumentalstimmen enthält, können Sie diese hier konfigurieren.
                                 </p>
                                 <p>
-
-
                                     Bitte geben Sie an, wie viele Seiten die Stimmeneinleger haben.
-
                                 </p>
                                 <p>Wählen Sie bitte zusätzlich aus, wie viele Exemplare von jeder Stimme pro Set enthalten
                                     sein sollen (bspw. Orchestermusik: 8 Erste Violinen, 6 Zweite Violinen, etc.).
@@ -444,7 +415,6 @@
                                 </p>
                             </div>
                             <div class="w-100 pt-2"></div>
-
                             <div class="col-12 col-md-6">
                                 <p class="blockStartMarign">
                                 <p class="thick inline"> Stimme benennen </p>(bspw. »Violine 1«)
@@ -508,7 +478,6 @@
                                             </div>
                                         </div>
                                         </p>
-
                                     </div>
                                     <button class="btn btn uploadBtn" @click="addVoice()"
                                         style="background-color: black !important; margin-right: 5px;"> <img
@@ -529,7 +498,6 @@
                                 Sie die Stimme dem Projekt hinzufügen
                             </p>
                         </div>
-
                         <div class="row" v-if="projectType != 1">
                             <div class="col-md-12 pt-4 ">
                                 <h3 class="ps-2">Hinzugefügte Stimmen:</h3>
@@ -562,7 +530,6 @@
                                 </table>
                             </div>
                         </div>
-
                         <div class="row pt-5">
                             <div class="col-12 col-md-7">
                                 <h2 v-if="projectType == 1">10. In den Warenkorb*</h2>
@@ -570,7 +537,6 @@
                                 <h2 v-if="projectType == 3">4. In den Warenkorb*</h2>
                                 <p>Bitte legen Sie das Projekt nun in den Warenkorb. Sie können danach noch weitere Projekte
                                     anlegen und gemeinsam in einer Lieferung versandkostenoptimiert bestellen.</p>
-
                             </div>
                             <div class="col-12 col-md">
                                 <button @click="createUuid" type="button" class="btn btn-dark mt-5">
@@ -580,7 +546,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-lg-4 p-0 customBorder">
                         <div id="stickyBar" class="sticky-top" style="top: 120px">
                             <div class="p-4 green">
@@ -641,7 +606,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <tr style="cursor: pointer;" :id="'discountgroup' + discount.id"
                                                 v-for="(discount, index) in discounts" @click="setAmount(discount.amount)">
                                                 <th v-if="discount.amount == 1" scope="row">1</th>
@@ -652,14 +616,12 @@
                                                 <td>€ {{ (singlePrice * (1 - discount.discount)).toFixed(2) }}</td>
                                                 <td>{{ (discount.discount * 100).toFixed(0) }} %</td>
                                             </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
                                 <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                             </div>
                             <div class="p-4 pink" style="margin-top: 20px;">
-
                                 <h1>
                                     Kostenfreier
                                     Versand
@@ -676,11 +638,9 @@
                 </div>
             </div>
         </section>
-
         <div v-for="product in products" :key="product.id">
             <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
         </div>
-
         <!--Sektion mit 3 Karten und Bider-->
         <section class="pt-5">
             <div class="container justify-content-center">
@@ -705,9 +665,6 @@
                                 <p class="inline mt-2">Maßvorgaben (PDF)</p>
                             </button>
                         </a>
-
-
-
                     </div>
                     <div class="col customBorder  pl-5  p-4 yellow">
                         <img src="@/assets/svg/mark_email_read.svg" class="mr-2" alt="Avatar">
@@ -720,21 +677,16 @@
                         <h5>office@aurio.com
                         </h5>
                         <p> Wir melden uns baldmöglichst bei Ihnen zurück. Gemeinsam finden wir eine Lösung!</p>
-
                     </div>
                     <div class="col-4">
-
                     </div>
-
                 </div>
             </div>
         </section>
         <!--TSektion Schrift mit 2 Karten-->
-
         <SfModal v-model="isOpen" class="max-w-[90%] md:max-w-lg" tag="section" role="alertdialog"
             aria-labelledby="promoModalTitle" aria-describedby="promoModalDesc">
             <header>
-
                 <p id="promoModalTitle" class="font-bold typography-headline-4 md:typography-headline-3">
                     {{ errorMassage }}
                 </p>
@@ -745,7 +697,6 @@
         </SfModal>
     </div>
 </template>
-   
 <script>
 import { getApplicationContext } from "@shopware-pwa/composables"
 import { invokePost } from "@shopware-pwa/shopware-6-client"
@@ -756,14 +707,12 @@ import axios from 'axios';
 import { SfModal, SfButton } from "@storefront-ui/vue"
 import SwProductDetails from "@/components/SwProductDetails.vue"
 
-
 export default {
     components: {
         SfModal,
         SfButton,
         SwProductDetails
     },
-
     data() {
         return {
             price: 0,
@@ -810,15 +759,12 @@ export default {
             bindingTypePrice: 0,
             weight: 0,
             voices: [
-
             ],
             voiceAmount: [
                 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
             ],
             pages: [
                 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400
-
-
             ],
             discounts: [
                 { id: 1, discount: 0, amount: 1 },
@@ -831,7 +777,6 @@ export default {
                 { id: 8, discount: 0.74, amount: 150 },
                 { id: 9, discount: 0.75, amount: 200 },
                 { id: 10, discount: 0.76, amount: 250 }
-
             ]
         }
     },
@@ -855,8 +800,8 @@ export default {
             this.color = 'false';
             this.bindingType = "true";
             this.bindingTypePrice = 0;
+            this.voices = [];
             this.calculatePrice();
-
         },
         close() {
             this.isOpen = false;
@@ -865,7 +810,6 @@ export default {
         open() {
             document.getElementById("stickyBar").classList.remove('sticky-top');
             this.isOpen = true;
-
         },
         createUuid() {
             if (this.validate()) {
@@ -881,7 +825,6 @@ export default {
                     console.log(error.message)
                 });
             }
-
         },
         createNewProductInStore(productNumber) {
             // const productNumber = 'xxx'
@@ -930,14 +873,12 @@ export default {
                                 "net": this.price,
                                 "linked": false
                             }
-
                         ],
                         'visibilities': [
                             {
                                 'salesChannelId': '9b0f2ae9856642dbbeb9f5cc8ee76511',
                                 'visibility': 30
                             }
-
                         ]
                     },
                 })
@@ -974,34 +915,6 @@ export default {
                 console.log(error.message)
             });
         },
-        //Not Used Anymore
-        // add(id) {
-        //     const contextToken = this.$cookies.get("sw-context-token") || "";
-        //     axios({
-        //         url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
-        //         method: 'POST',
-        //         headers: {
-        //             "Accept": 'application/json',
-        //             "Content-Type": 'application/json',
-        //             "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
-        //             "sw-context-token": contextToken
-        //         },
-        //         data: {
-        //             "items": [
-        //                 {
-        //                     id: id,
-        //                     quantity: this.quantitiy,
-        //                     referencedId: id,
-        //                     type: "product",
-        //                 }
-        //             ]
-        //         }
-        //     }).then((res) => {
-
-        //     }).catch((error) => {
-
-        //     });
-        // },
         setDiscountGroup: function (id) {
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
@@ -1072,7 +985,6 @@ export default {
             } else {
                 this.projectPriceString = (this.price * this.quantitiy).toFixed(2).toString().replace(".", ",");
             }
-
         },
         calculateDiscount: function () {
             if (this.quantitiy == 1) {
@@ -1139,24 +1051,24 @@ export default {
         },
         getDesc() {
             let desc = '';
-            desc = 
-            '<span>Projekt Name: ' + this.productName +  '</span><br/>' + 
-            '<span>' + 'Link: ' + `<a href="${this.pdf1}">Downloadlink Notenheft</a></span><br/>`;
+            desc =
+                '<span>Projekt Name: ' + this.productName + '</span><br/>' +
+                '<span>' + 'Link: ' + `<a href="${this.pdf1}">Downloadlink Notenheft</a></span><br/>`;
             if (this.pdf2) {
                 desc = desc + '<span>' + 'Link: ' + `<a href="${this.pdf2}">Downloadlink Umschlag</a></span><br/>`
             };
             desc = desc +
-            '<span>Seitenzahl: ' + this.pagesQuantitiy +  '</span><br/>' 
+                '<span>Seitenzahl: ' + this.pagesQuantitiy + '</span><br/>'
             '<p>\n</p>';
             if (this.voices.length > 0) {
                 desc = desc + '<p><big>Stimmen</big></p>'
                 this.voices.forEach((voice, i) => {
-                    desc = desc + 
-                    '<span>Stimmenbezeichnung: ' + voice.name + '</span><br/>'+
-                    '<span>' +'Link: ' + `<a href="${voice.url}">Downloadlink</a></span><br/>`+
-                    '<span>Seitenanzahl Inhalt: ' + voice.pages + '</span><br/>'+ 
-                    '<span>Exemplare pro Set: ' + voice.quantity + '</span><br/>'+
-                    '<p>\n</p>'
+                    desc = desc +
+                        '<span>Stimmenbezeichnung: ' + voice.name + '</span><br/>' +
+                        '<span>' + 'Link: ' + `<a href="${voice.url}">Downloadlink</a></span><br/>` +
+                        '<span>Seitenanzahl Inhalt: ' + voice.pages + '</span><br/>' +
+                        '<span>Exemplare pro Set: ' + voice.quantity + '</span><br/>' +
+                        '<p>\n</p>'
                 });
             }
             return desc
@@ -1369,13 +1281,8 @@ export default {
                     return true
                 }
             } else if (this.projectType == 2) {
-                if (this.pdf1 == "" && this.pdf3 == null) {
+                if (this.pdf1 == "" || this.productName == "" || this.voices.length === 0) {
                     this.errorMassage = "Bitte laden Sie 2 eine Notendatei hoch, bevor Sie das Produkt in Ihren Warenkorb legen"
-                    this.open();
-                    return false
-
-                } else if (this.voices.size == 0) {
-                    this.errorMassage = "Bitte fügen Sie eine Stimme hinzu, bevor Sie das Produkt in Ihren Warenkorb legen"
                     this.open();
                     return false
                 } else {
@@ -1390,7 +1297,6 @@ export default {
                     return true
                 }
             }
-
         }
     },
     watch: {
@@ -1407,7 +1313,6 @@ export default {
             this.calculateProjectPrice();
         },
         enveloped: function (val) {
-
             if (val) {
                 if (val == "true") {
                     this.envelopedPrice = 1.5
