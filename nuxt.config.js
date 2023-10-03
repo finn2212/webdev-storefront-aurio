@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 export default extendNuxtConfig({
   head: {
-    title: "Ihre Musiknoten, wunderschön gedruckt.",
+    title: "AURIOPRINT - günstig Musiknoten drucken lassen",
     script: [
       {
         type: "text/javascript",
@@ -15,7 +15,37 @@ export default extendNuxtConfig({
       }
     ],
     target: 'static',
-    meta: [{ hid: "description", name: "description", content: "" }],
+    meta: [
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Eigene Komposition veröffentlichen und Klavierstück drucken lassen'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Eigene Komposition veröffentlichen und Klavierstück drucken lassen'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '@/assets/svg/favicon.svg'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://aurioprint.com/'
+      },
+      {
+        property: 'og:locale',
+        content: 'de_DE'
+      }
+    ],
     link: [
       {
         rel: 'stylesheet',
