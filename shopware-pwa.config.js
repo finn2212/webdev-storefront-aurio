@@ -3,9 +3,8 @@ module.exports = {
   shopwareAccessToken: "SWSCRZFKNNVIMJUZV2FIRFDTTG",
   pwaHost:"https://home-5013243924.app-ionos.space",
   shopwareDomainsAllowList: [
-    "https://capellaprint.com",
-    "https://home-5013137490.app-ionos.space",
-    "https://home-5013243924.app-ionos.space"
+    "http://192.168.1.131:3000",
+    "https://home-5014601030.app-ionos.space/"
   ],
   defaultLanguageCode: "de-DE",
 };

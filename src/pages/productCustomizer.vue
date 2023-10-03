@@ -913,7 +913,7 @@ export default {
                         "taxId": "49ad39168485457a836441d13c6bd473",
                         "active": true,
                         "keywords": "2212",
-                        "description": desc + 'Seitenzahl: ' + this.pagesQuantitiy,
+                        "description": desc,
                         "weight": this.weight,
                         "media": [{
                             "id": "6bd19a84161f44e3b7efb37e835c5ec2", // random UUID selfgenerated will be used as "coverId"
@@ -1140,22 +1140,22 @@ export default {
         getDesc() {
             let desc = '';
             desc = 
-            '<p>\n Projekt Name:' + this.productName +  '</p>' + 
-            '<p>\n' + `<a href="${this.pdf1}">Downloadlink Notenheft</a></p>`+
-            `Hello, ${this.pdf1}`
-            '<p> <a href="url">link text</a>\n Downloadlink Notenheft: ' + this.pdf1 + '</p>' + 
-            '<p>\n Downloadlink Umschlag:' + this.pdf2 + '</p>' +
-            '<p>\n</p>'
+            '<span>Projekt Name: ' + this.productName +  '</span><br/>' + 
+            '<span>' + 'Link: ' + `<a href="${this.pdf1}">Downloadlink Notenheft</a></span><br/>`;
+            if (this.pdf2) {
+                desc = desc + '<span>' + 'Link: ' + `<a href="${this.pdf2}">Downloadlink Umschlag</a></span><br/>`
+            };
+            desc = desc +
+            '<span>Seitenzahl: ' + this.pagesQuantitiy +  '</span><br/>' 
+            '<p>\n</p>';
             if (this.voices.length > 0) {
-                desc = desc + '\n Stimmen: '
+                desc = desc + '<p><big>Stimmen</big></p>'
                 this.voices.forEach((voice, i) => {
                     desc = desc + 
-                    '<p>\n Stimme: ' + voice.name + '</p>'+ 
-                    '<p>\n Nummer: ' + (i + 1) + '</p>'+ 
-                    '<p>\n' + `<a href="${voice.url}">Downloadlink</a></p>`+
-                    '<p>\n Downloadlink: '  + voice.url + '</p>'+ 
-                    '<p>\n Seitenanzahl Inhalt: ' + voice.pages + '</p>'+ 
-                    '<p>\n Exemplare pro Set:' + voice.quantity + '</p>'+
+                    '<span>Stimmenbezeichnung: ' + voice.name + '</span><br/>'+
+                    '<span>' +'Link: ' + `<a href="${voice.url}">Downloadlink</a></span><br/>`+
+                    '<span>Seitenanzahl Inhalt: ' + voice.pages + '</span><br/>'+ 
+                    '<span>Exemplare pro Set: ' + voice.quantity + '</span><br/>'+
                     '<p>\n</p>'
                 });
             }
