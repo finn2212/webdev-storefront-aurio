@@ -115,7 +115,7 @@
                     <div>
                       <div class="ps-5 ">
                         <p class="p-grid">
-                        <h5>»Spitzenqualität zu hervorragenden Preisen. Wir drucken nur noch hier«</h5>
+                        <h5>»Spitzenqualität zu hervorragenden Preisen. Wir drucken nur noch hier.«</h5>
                         <p class="thick" style="margin:0px;  display: inline;">
                           Dieter Viehweider
                         </p>
