@@ -8,9 +8,6 @@
                 <div v-for="product in products" :key="product.id">
                     <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
                 </div>
-                <div v-for="product in products" :key="product.id">
-                    <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
-                </div>
             </div>
         </div>
         <!--Sektion mit 3 Karten und Bider-->
@@ -1068,7 +1065,7 @@ export default {
                     voiceWeight = voiceWeight + (voice.pages * 3)
                 });
             }
-            this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeigh + voiceWeight ) / 1000;
+            this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeight + voiceWeight ) / 1000;
         },
         calculateProjectPrice: function () {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
