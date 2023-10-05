@@ -101,7 +101,7 @@
                                     <li>Partitur/Notenheft ohne separate Stimmauszüge / Instrumentalstimmen</li>
                                     <li>Partitur mit separaten Stimmauszügen / Instrumentalstimmen</li>
                                     <li> Stimmauszüge / Instrumentalstimmen ohne Partitur"
-                                        ggf. lässt sich das durch Piktogramme unterstützen.</li>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col pt-5">
