@@ -4,9 +4,9 @@
             <div class="container justify-content-center">
                 <div class="spinner-border" role="status" style="margin-top: 30%; margin-left: 50%;">
                     <span class="sr-only"></span>
-                    <div v-for="product in products" :key="product.id">
-                    <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
                 </div>
+                <div v-for="product in products" :key="product.id">
+                    <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
                 </div>
                 <div v-for="product in products" :key="product.id">
                     <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
