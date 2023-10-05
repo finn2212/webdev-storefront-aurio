@@ -11,7 +11,7 @@
           name="firstName"
           :label="$t('First name')"
           :error-message="$t('First name is required')"
-          :valid="!$v.address.firstName.$error"
+         
           required
           class="sw-form__input"
           @blur="$v.address.firstName.$touch()"
@@ -21,7 +21,7 @@
           name="lastName"
           :label="$t('Last name')"
           :error-message="$t('Last name is required')"
-          :valid="!$v.address.lastName.$error"
+   
           required
           class="sw-form__input"
           @blur="$v.address.lastName.$touch()"
@@ -33,7 +33,7 @@
           :label="$t('Salutation')"
           :error-message="$t('Salutation must be selected')"
           required
-          :valid="!$v.address.salutation.$error"
+          
           class="sw-select sf-select--underlined sw-form__input sf-input--has-text sf-component-select--underlined"
           @blur="$v.address.salutation.$touch()"
         >
@@ -50,7 +50,7 @@
           name="street"
           :label="$t('Street and house number')"
           :error-message="$t('Street is required')"
-          :valid="!$v.address.street.$error"
+     
           required
           class="sw-form__input"
           @blur="$v.address.street.$touch()"
@@ -63,7 +63,7 @@
           name="city"
           :label="$t('City')"
           :error-message="$t('City is required')"
-          :valid="!$v.address.city.$error"
+
           required
           class="sw-form__input"
           @blur="$v.address.city.$touch()"
@@ -74,7 +74,7 @@
           name="state"
           :label="$t('State/Province')"
           :error-message="$t('State is required')"
-          :valid="!$v.address.state.$error"
+
           class="sw-form__input"
           :required="forceState"
           @blur="$v.address.state.$touch()"
@@ -86,7 +86,7 @@
           name="zipcode"
           :label="$t('Zip code')"
           :error-message="$t('Zip code is required')"
-          :valid="!$v.address.zipcode.$error"
+         
           required
           class="sw-form__input"
           @blur="$v.address.zipcode.$touch()"
@@ -96,7 +96,7 @@
           v-model="addressModel.countryId"
           :label="$t('Country')"
           :error-message="$t('Country must be selected')"
-          :valid="!$v.address.countryId.$error"
+          
           required
           class="sf-select--underlined sw-form__input sf-component-select--underlined sw-select"
           @blur="$v.address.countryId.$touch()"
@@ -115,7 +115,7 @@
         name="phoneNumber"
         :label="$t('Phone number')"
         :error-message="$t('Wrong phone number')"
-        :valid="!$v.address.phoneNumber.$error"
+
         required
         class="sw-form__input"
         @blur="$v.address.phoneNumber.$touch()"
@@ -228,11 +228,13 @@ export default {
   },
   methods: {
     async updateAddress() {
+      
       this.$v.$reset()
-      const isFormCorrect = await this.$v.$validate()
-      if (!isFormCorrect) {
-        return
-      }
+      // const isFormCorrect = await this.$v.$validate()
+      // if (!isFormCorrect) {
+      //   debugger
+      // }
+      // debugger
       const addressId = await this.saveAddress()
       if (this.formErrors?.length) {
         return this.pushError(

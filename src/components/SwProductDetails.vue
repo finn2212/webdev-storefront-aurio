@@ -1,5 +1,6 @@
 <template>
   <div>
+    Erstelltes Produkt: {{ product.name }}
   </div>
 </template>
 <script>
@@ -49,7 +50,7 @@ export default {
     addToCart()
 
     return {
-      
+
       addToCart,
       getProductNumber
     }
