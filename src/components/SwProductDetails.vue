@@ -1,6 +1,6 @@
 <template>
-  <div v-if="product" style="display: none;">
-   Erstelltes Produkt: {{ product.name }}
+  <div>
+    Erstelltes Produkt: {{ product.name }}
   </div>
 </template>
 <script>
@@ -50,7 +50,7 @@ export default {
     addToCart()
 
     return {
-      
+
       addToCart,
       getProductNumber
     }

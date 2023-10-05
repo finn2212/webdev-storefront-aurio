@@ -8,9 +8,6 @@
                 <div v-for="product in products" :key="product.id">
                     <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
                 </div>
-                <div v-for="product in products" :key="product.id">
-                    <SwProductDetails :product="product.product" :quantityInput="product.quantitiy" />
-                </div>
             </div>
         </div>
         <!--Sektion mit 3 Karten und Bider-->
