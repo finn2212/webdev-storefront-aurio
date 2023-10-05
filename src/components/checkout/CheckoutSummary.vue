@@ -1,22 +1,17 @@
 <template>
   <div class="sw-checkout-summary">
     <div class="sw-checkout-summary__addresses">
-      <SwAddressManager
-        :title-text="$t('Shipping address')"
-        class="sw-checkout-summary__addresses-wrapper"
-        :addresses="addresses"
-        :active-address="activeShippingAddress"
-        @change="changeActiveShippingAddress"
-        @added="addedActiveShippingAddress"
-      />
-      <SwAddressManager
-        :title-text="$t('Billing address')"
-        class="sw-checkout-summary__addresses-wrapper"
-        :addresses="addresses"
-        :active-address="activeBillingAddress"
-        @change="changeActiveBillingAddress"
-        @added="addedActiveBillingAddress"
-      />
+      <SwAddressManager v-if="shippingAddress" :title-text="$t('Shipping address')"
+        class="sw-checkout-summary__addresses-wrapper" :addresses="addresses" :active-address="shippingAddress"
+        @change="changeActiveShippingAddress" @added="changeActiveShippingAddress" />
+
+      <SwAddressManager v-if="sessionContext" :title-text="$t('Billing address')"
+        class="sw-checkout-summary__addresses-wrapper" :addresses="addresses" :active-address="sessionContext.customer.defaultBillingAddress"
+        @change="changeActiveBillingAddress" @added="addedActiveBillingAddress" />
+
+      <SwAddressManager v-else :title-text="$t('Billing address')" class="sw-checkout-summary__addresses-wrapper"
+        :addresses="addresses" :active-address=" shippingAddress " @change="changeActiveBillingAddress"
+        @added="addedActiveBillingAddress" />
     </div>
     <PaymentSection class="sw-checkout-summary__payment" />
     <ShippingSection class="sw-checkout-summary__shipping" />
@@ -33,7 +28,10 @@ import {
   useCustomerAddresses,
   useSessionContext,
   useUser,
+  useOrderDetails,
+  useCheckout
 } from "@shopware-pwa/composables"
+import {  ref, computed } from "@vue/composition-api"
 
 export default {
   name: "CheckoutSummary",
@@ -44,40 +42,48 @@ export default {
     SwAddressManager,
   },
   setup() {
-    const { addresses, loadAddresses } = useCustomerAddresses()
+    const { addresses, loadAddresses, markAddressAsDefault} = useCustomerAddresses()
     loadAddresses()
+    const {  shippingAddress, billingAddress } = useCheckout()  
 
     const {
       activeShippingAddress,
       setActiveShippingAddress,
       activeBillingAddress,
       setActiveBillingAddress,
+      sessionContext
     } = useSessionContext()
 
     const changeActiveShippingAddress = async (addressId) => {
-      await setActiveShippingAddress({ id: addressId })
+      loadAddresses()
+      setActiveShippingAddress({ id: addressId });
     }
     const addedActiveShippingAddress = async (addressId) => {
-      setActiveShippingAddress({ id: addressId })
+      setActiveShippingAddress({ id: addressId });
       loadAddresses()
     }
 
     const changeActiveBillingAddress = async (addressId) => {
-      await setActiveBillingAddress({ id: addressId })
+      loadAddresses()
+      await setActiveShippingAddress({ id: addressId });
+
     }
     const addedActiveBillingAddress = async (addressId) => {
-      setActiveBillingAddress({ id: addressId })
       loadAddresses()
+      setActiveBillingAddress({ id: addressId })
     }
 
     return {
       addresses,
+      sessionContext,
       activeShippingAddress,
       changeActiveShippingAddress,
       addedActiveShippingAddress,
       activeBillingAddress,
       changeActiveBillingAddress,
       addedActiveBillingAddress,
+      billingAddress,
+      shippingAddress
     }
   },
   computed: {
@@ -93,7 +99,7 @@ export default {
     paymentMethod() {
       return { label: "" }
     },
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -108,10 +114,12 @@ export default {
         }
       }
     }
+
     @include for-desktop {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+
       &-wrapper {
         width: 48%;
       }
@@ -119,3 +127,4 @@ export default {
   }
 }
 </style>
+A

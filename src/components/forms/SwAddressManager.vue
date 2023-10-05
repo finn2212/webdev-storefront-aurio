@@ -5,13 +5,13 @@
       :description="subtitleText || $t('Choose address')"
       class="sf-heading--left sf-heading--no-underline address-manager__title"
     />
-    <div class="address-manager__address" v-if="addresses[0]">
+    <div class="address-manager__address" v-if="activeAddress">
       <div>
-        <span>{{ addresses[0].firstName }} {{ addresses[0].lastName }}</span>
-        <p>{{ addresses[0].street }}</p>
-        <p>{{ addresses[0].zipcode }} {{ addresses[0].city }}</p>
-        <p>{{ addresses[0].country ? addresses[0].country.name : "" }}</p>
-        <p>{{ addresses[0].phoneNumber }}</p>
+        <span>{{ activeAddress.firstName }} {{ activeAddress.lastName }}</span>
+        <p>{{ activeAddress.street }}</p>
+        <p>{{ activeAddress.zipcode }} {{ activeAddress.city }}</p>
+        <p>{{ activeAddress.country ? activeAddress.country.name : "" }}</p>
+        <p>{{ activeAddress.phoneNumber }}</p>
       </div>
       <SwButton
         class="sf-button sf-button--small address-manager__add-new btn"
@@ -46,10 +46,10 @@
           class="address-manager__list-item"
         >
           <SfAddressPicker
-            :selected="addresses[0].id"
+            :selected="activeAddress.id"
             @change="onAddressChange"
           >
-          <div class="address-manager__address" v-if="addresses[0]">
+          <div class="address-manager__address" v-if="activeAddress">
             <SfAddress :name="address.id">
               <span>{{ address.firstName }} {{ address.lastName }}</span>
               <p>{{ address.street }}</p>
@@ -83,12 +83,11 @@
           </SwButton>
         </div>
       </div>
-
       <SwAddressForm
         v-if="!isAddNew"
         @success="onAddressSave"
         @cancel="isModalOpen = false"
-        :address="addresses[0]"
+        :address="activeAddress"
       />
       <SwAddressForm
         v-if="isAddNew"
@@ -145,16 +144,15 @@ export default {
     const isModalOpen = ref(false)
     const isEditModeOpen = ref(false)
     const isAddNew = ref(false)
-
     const onAddressSave = (addressId) => {
       isModalOpen.value = false
       emit("added", addressId)
     }
 
     function onAddressChange(value) {
+      isModalOpen.value = false
       emit("change", value)
     }
-
     return {
       isModalOpen,
       onAddressSave,
@@ -162,7 +160,7 @@ export default {
       onAddressChange,
       isAddNew,
     }
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>

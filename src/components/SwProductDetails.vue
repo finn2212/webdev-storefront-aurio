@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div v-if="product" style="display: none;">
+   Erstelltes Produkt: {{ product.name }}
   </div>
 </template>
 <script>
