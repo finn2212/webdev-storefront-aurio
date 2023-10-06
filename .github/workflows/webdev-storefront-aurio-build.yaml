@@ -42,7 +42,7 @@ jobs:
           if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
               echo "Setting environment variables for the main branch..."
               export shopwareEndpoint="https://s23511.creoline.cloud"
-            elif [[ "$GITHUB_REF" == "refs/heads/stage" ]]; then
+            elif [[ "$GITHUB_REF" == "refs/heads/Stage" ]]; then
               echo "Setting environment variables for the stage branch..."
               export shopwareEndpoint="https://s23511.creoline.cloud/stage"
             else
