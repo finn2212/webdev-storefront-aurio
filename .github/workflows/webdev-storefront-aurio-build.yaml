@@ -38,7 +38,7 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
-          shopwareEndpoint: "${{ env.SHOPWARE_ENDPOINT }}"
+          shopwareEndpoint: 'https://s23511.creoline.cloud/webdev-staging'
         run: |
           npm install --global yarn
           npx @shopware-pwa/cli init --ci --username=finn.stolle --password=capella2023!

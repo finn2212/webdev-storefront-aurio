@@ -1,6 +1,6 @@
 module.exports = {
-  shopwareEndpoint: process.env.SHOPWARE_ENDPOINT,
-  shopwareAccessToken: process.env.SHOPWARE_ACCESSTOKEN,
+  shopwareEndpoint: process.env.shopwareEndpoint,
+  shopwareAccessToken: "SWSCRZFKNNVIMJUZV2FIRFDTTG",
   pwaHost: process.env.PWA_HOST,
   shopwareDomainsAllowList: [
     "http://192.168.1.131:3000",
