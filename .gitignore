@@ -92,7 +92,3 @@ sw.*
 yalc.lock
 .shopware-pwa
 /static
-
-
-# Vim swap files
-.github
