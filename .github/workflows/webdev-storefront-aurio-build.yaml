@@ -15,6 +15,7 @@ on:
 
 env:
   DEPLOYMENT_FOLDER: dist
+  shopwareEndpoint: ${{ github.ref == 'refs/heads/main' && 'https://s23511.creoline.cloud' || 'https://s23511.creoline.cloud/stage' }}
 
 jobs:
 # Please do not rename this job
@@ -33,21 +34,10 @@ jobs:
           node-version: v16.x
 
       - name: Set Environment Variables
-        env:
-          CI: true
-          SITE_URL: ${{ inputs.site-url }}
         run: |
-          if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
-              echo "Setting environment variables for the main branch..."
-              export shopwareEndpoint="https://s23511.creoline.cloud"
-            elif [[ "$GITHUB_REF" == "refs/heads/Stage" ]]; then
-              echo "Setting environment variables for the stage branch..."
-              export shopwareEndpoint="https://s23511.creoline.cloud/stage"
-            else
-              echo "Using default environment variables..."
-              export SITE_URL="https://default-site-url.com"
-              export shopwareEndpoint="https://s23511.creoline.cloud/stage"
-            fi
+          export CI=true
+          export SITE_URL="${{ inputs.site-url }}"
+          export shopwareEndpoint="${{ env.shopwareEndpoint }}"
 
       - name: Build Node assets
         run: |
