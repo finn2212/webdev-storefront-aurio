@@ -45,8 +45,11 @@ jobs:
               export SITE_URL="https://default-site-url.com"
               export shopwareEndpoint="https://s23511.creoline.cloud/stage"
             fi
-            export CI=true
-            export SITE_URL: ${{ inputs.site-url }}
+         
+            shopwareEndpoint: 'https://s23511.creoline.cloud/webdev-staging'
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
 
       - name: Build Node assets
         run: |
