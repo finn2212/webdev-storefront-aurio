@@ -39,17 +39,15 @@ jobs:
         run: |
           if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
               echo "Setting environment variables for the main branch..."
-              export shopwareEndpoint:"https://s23511.creoline.cloud"
+              export shopwareEndpoint="https://s23511.creoline.cloud"
             elif [[ "$GITHUB_REF" == "refs/heads/Stage" ]]; then
               echo "Setting environment variables for the stage branch..."
-              export shopwareEndpoint:"https://s23511.creoline.cloud/stage"
+              export shopwareEndpoint="https://s23511.creoline.cloud/stage"
             else
               echo "Using default environment variables..."
               export SITE_URL="https://default-site-url.com"
-              export shopwareEndpoint:"https://s23511.creoline.cloud/stage"
+              export shopwareEndpoint="https://s23511.creoline.cloud/stage"
             fi
-         
-         
 
       - name: Build Node assets
         run: |
