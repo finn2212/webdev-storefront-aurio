@@ -21,15 +21,10 @@
         style="margin-top: -20px;">
         <p class="m-0" style="font-size: 12px;" v-for="el in propertieStrings">{{ el.id }}: {{ el.name }} </p>
       </div>
-
       <button @click="removeItem(product)"
         style=" border: 0px; background-color: black; color: white;  border-radius: 15px;">
         Entfernen
       </button>
-
-
-
-
     </template>
     <template #image>
       <SwImage v-if="!isPromotion" :src="productImage" :alt="product.label" :width="140" :height="200" />
@@ -44,24 +39,18 @@
         </div>
       </div>
     </template>
-
     <template #input>
       <div class="sf-collected-product__quantity-wrapper">
-
         <SfComponentSelect v-if="purchaseStepsOptions" v-model="quantity"
           class="sf-collected-product__quantity-selector sw-select sf-select-quantity sw-select sw-form__input">
           <SfComponentSelectOption v-for="step in purchaseStepsOptions" :key="step" :value="step">
             {{ step }}
           </SfComponentSelectOption>
         </SfComponentSelect>
-
         <SfQuantitySelector v-else :qty="quantity" class="sf-collected-product__quantity-selector"
           @input="$emit('input', $event)" />
-
       </div>
     </template>
-
-
   </SfCollectedProduct>
 </template>
 <script>
@@ -223,14 +212,8 @@ export default {
           if (id == '28e2313979804380b8f303e0f21ffcad') {
             this.propertieStrings.push({ "id": 'Umschlag', 'name': 'Mit' })
           }
-
-
-
         });
       }
-
-
-
     }
   }
 }
