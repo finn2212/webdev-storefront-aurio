@@ -33,14 +33,11 @@ jobs:
         with:
           node-version: v16.x
 
-      - name: Set Environment Variables
-        run: |
-          export CI=true
-          export SITE_URL="${{ inputs.site-url }}"
-          export shopwareEndpoint="${{ env.shopwareEndpoint }}"
-          
-
       - name: Build Node assets
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
+          shopwareEndpoint: "${{ env.shopwareEndpoint }}"
         run: |
           npm install --global yarn
           npx @shopware-pwa/cli init --ci --username=finn.stolle --password=capella2023!
