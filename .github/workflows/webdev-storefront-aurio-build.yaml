@@ -33,6 +33,9 @@ jobs:
           node-version: v16.x
 
       - name: Set Environment Variables
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
         run: |
           if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
               echo "Setting environment variables for the main branch..."
@@ -46,10 +49,7 @@ jobs:
               export shopwareEndpoint="https://s23511.creoline.cloud/stage"
             fi
          
-            shopwareEndpoint: 'https://s23511.creoline.cloud/webdev-staging'
-        env:
-          CI: true
-          SITE_URL: ${{ inputs.site-url }}
+         
 
       - name: Build Node assets
         run: |
