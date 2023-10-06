@@ -15,7 +15,7 @@ on:
 
 env:
   DEPLOYMENT_FOLDER: dist
-  shopwareEndpoint: ${{ github.ref == 'refs/heads/main' && 'https://s23511.creoline.cloud' || 'https://s23511.creoline.cloud/stage' }}
+  shopwareEndpoint: ${{ github.ref == 'refs/heads/main' && 'https://s23511.creoline.cloud' || 'https://s23511.creoline.cloud/webdev-staging' }}
 
 jobs:
 # Please do not rename this job
