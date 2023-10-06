@@ -1305,6 +1305,7 @@ export default {
         },
         getProperties() {
             let ids = [];
+            let metaDesc = '';
 
             if (this.projectType == 1) {
                 ids.push({ "id": 'a2dcd3008de644c784d2cdfec32d91d0' })
