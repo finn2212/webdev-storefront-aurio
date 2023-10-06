@@ -38,6 +38,7 @@ jobs:
           export CI=true
           export SITE_URL="${{ inputs.site-url }}"
           export shopwareEndpoint="${{ env.shopwareEndpoint }}"
+          
 
       - name: Build Node assets
         run: |
