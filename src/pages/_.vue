@@ -575,6 +575,7 @@ export default {
     // get the configured api client
     const { apiInstance } = getApplicationContext(root, "home");
 
+
   },
   components: {
     SfModal,
@@ -602,6 +603,7 @@ export default {
   },
   mounted() {
     this.showSlides();
+   // console.log(this.$config)
   },
   methods: {
 
@@ -707,22 +709,20 @@ export default {
       console.log("cart")
     },
     addToCart() {
-      const contextToken = this.$cookies.get("sw-context-token") || "";
-
+      const swEndPoint = this.$config.swEnvironment.shopware_endpoint
 
       axios({
-        url: 'https://s23511.creoline.cloud/store-api/search', // File URL Goes Here
+        url: swEndPoint + '/store-api/search', // File URL Goes Here
         method: 'POST',
         headers: {
           "Accept": 'application/json',
           "Content-Type": 'application/json',
-          "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW'
+          "sw-access-key": this.$config.swEnvironment.shopware_accesstoken,
         },
         data: {
           "search": "capellaprint Musterheft mit kostenfreiem Versand in Deutschland"
         }
       }).then(async (res) => {
-        debugger;
         this.products.push(res.data.elements[0])
 
       }).catch((error) => {

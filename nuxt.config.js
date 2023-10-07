@@ -2,6 +2,20 @@ import extendNuxtConfig from "@shopware-pwa/nuxt-module/config"
 const webpack = require('webpack');
 
 export default extendNuxtConfig({
+  publicRuntimeConfig:{
+    swEnvironment:{
+      shopware_endpoint: process.env.SHOPWARE_ENDPOINT,
+      shopware_accesstoken: process.env.SHOPWARE_ACCESSTOKEN,
+      bothTest: "public"
+
+    }
+  },
+  privateRuntimeConfig:{
+    swInvironment:{
+      privateTest: "private",
+      bothTest: "private",
+    }
+  },
   head: {
     title: "AURIOPRINT - günstig Musiknoten drucken lassen",
     script: [
