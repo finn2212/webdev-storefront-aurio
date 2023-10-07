@@ -6,6 +6,7 @@ export default extendNuxtConfig({
     swEnvironment:{
       shopware_endpoint: process.env.SHOPWARE_ENDPOINT,
       shopware_accesstoken: process.env.SHOPWARE_ACCESSTOKEN,
+      bothTest: "public"
 
     }
   },
