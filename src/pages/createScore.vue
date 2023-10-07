@@ -212,7 +212,7 @@ export default {
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCRZFKNNVIMJUZV2FIRFDTTG'
+                    "sw-access-key": this.accesstoken
                 },
                 data: {
                     "search": productNumber
@@ -233,7 +233,7 @@ export default {
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCRZFKNNVIMJUZV2FIRFDTTG',
+                    "sw-access-key": this.accesstoken,
                     "sw-context-token": contextToken
                 },
                 data: {
