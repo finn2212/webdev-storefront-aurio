@@ -38,7 +38,11 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
+<<<<<<< HEAD
           shopwareEndpoint: "${{ env.SHOPWARE_ENDPOINT }}"
+=======
+          shopwareEndpoint: "${{ env.shopwareEndpoint }}"
+>>>>>>> main
         run: |
           npm install --global yarn
           npx @shopware-pwa/cli init --ci --username=finn.stolle --password=capella2023!
