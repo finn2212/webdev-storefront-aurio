@@ -15,7 +15,8 @@ on:
 
 env:
   DEPLOYMENT_FOLDER: dist
-  shopwareEndpoint: ${{ github.ref == 'refs/heads/main' && 'https://s23511.creoline.cloud' || 'https://s23511.creoline.cloud/webdev-staging' }}
+  SHOPWARE_ENDPOINT: ${{ github.ref == 'refs/heads/main' && 'https://s23511.creoline.cloud' || 'https://s23511.creoline.cloud/webdev-staging' }}
+  SHOPWARE_ACCESSTOKEN: ${{ github.ref == 'refs/heads/main' && 'SWSCRZFKNNVIMJUZV2FIRFDTTG' || 'SWSCMFDMY0THA1NNZGR3CTDSEQ' }}
 
 jobs:
 # Please do not rename this job
@@ -37,7 +38,11 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
+<<<<<<< HEAD
+          shopwareEndpoint: "${{ env.SHOPWARE_ENDPOINT }}"
+=======
           shopwareEndpoint: "${{ env.shopwareEndpoint }}"
+>>>>>>> main
         run: |
           npm install --global yarn
           npx @shopware-pwa/cli init --ci --username=finn.stolle --password=capella2023!

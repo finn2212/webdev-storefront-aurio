@@ -803,6 +803,8 @@ export default {
             totalVoicePrice: 0,
             bindingTypePrice: 0,
             weight: 0,
+            swEndPoint: "",
+            accesstoken: "",
             voices: [
 
             ],
@@ -829,10 +831,17 @@ export default {
             ]
         }
     },
+    setup() {
+
+       
+    },
     mounted() {
         this.calculatePrice();
         const id = 1
         document.getElementById(`menuBtn${id}`).classList.add('active');
+        const swEnvironment = this.$config.swEnvironment
+        this.swEndPoint = swEnvironment.shopware_endpoint
+        this.accesstoken = swEnvironment.shopware_accesstoken
     },
     methods: {
         reset() {
@@ -862,6 +871,7 @@ export default {
 
         },
         createUuid() {
+            debugger
             if (this.validate()) {
                 document.getElementById("overlay").style.display = "block";
                 axios({
@@ -882,7 +892,7 @@ export default {
             const propertieIds = this.getProperties();
             const desc = this.getDesc();
             axios({
-                url: 'https://s23511.creoline.cloud/api/oauth/token', // File URL Goes Here
+                url: this.swEndPoint + '/api/oauth/token', // File URL Goes Here
                 method: 'POST',
                 data: {
                     grant_type: 'client_credentials',
@@ -892,7 +902,7 @@ export default {
             }).then((res) => {
                 console.log(res.data.access_token)
                 axios({
-                    url: 'https://s23511.creoline.cloud/api/product',
+                    url: this.swEndPoint + '/api/product',
                     headers: {
                         "Accept": 'application/json',
                         "Authorization": res.data.access_token,
@@ -945,12 +955,12 @@ export default {
         },
         getCreatedProduct(productNumber) {
             axios({
-                url: 'https://s23511.creoline.cloud/store-api/search', // File URL Goes Here
+                url: this.swEndPoint + '/store-api/search', // File URL Goes Here
                 method: 'POST',
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCRZFKNNVIMJUZV2FIRFDTTG'
+                    "sw-access-key": this.accesstoken
                 },
                 data: {
                     "search": productNumber

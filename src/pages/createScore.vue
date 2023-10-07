@@ -112,6 +112,17 @@ export default {
         }
 
     },
+    setup() {
+        const swEnvironment = this.$config.swEnvironment
+        const swEndPoint = swEnvironment.shopware_endpoint
+        const accesstoken = swEnvironment.shopware_accesstoken
+
+        return{
+            swEndPoint,
+            accesstoken
+        }
+       
+    },
     created() {
         db.firestore().collection('users').onSnapshot((snapshotChange) => {
             this.Users = [];
@@ -144,9 +155,8 @@ export default {
 
         },
         createNewProductInStore(productNumber) {
-            // const productNumber = 'xxx'
             axios({
-                url: 'https://26485.s15269.creoline.cloud/api/oauth/token', // File URL Goes Here
+                url: this.swEndPoint + '/api/oauth/token', // File URL Goes Here
                 method: 'POST',
                 data: {
                     grant_type: 'client_credentials',
@@ -156,7 +166,7 @@ export default {
             }).then((res) => {
                 console.log(res.data.access_token)
                 axios({
-                    url: 'https://26485.s15269.creoline.cloud/api/product',
+                    url: this.swEndPoint + '/api/product',
                     headers: {
                         "Accept": 'application/json',
                         "Authorization": res.data.access_token,
@@ -197,12 +207,12 @@ export default {
         },
         getCreatedProduct(productNumber) {
             axios({
-                url: 'https://26485.s15269.creoline.cloud/store-api/search', // File URL Goes Here
+                url: this.swEndPoint + '/store-api/search', // File URL Goes Here
                 method: 'POST',
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW'
+                    "sw-access-key": this.accesstoken
                 },
                 data: {
                     "search": productNumber
@@ -218,12 +228,12 @@ export default {
         add(id) {
             const contextToken = this.$cookies.get("sw-context-token") || "";
             axios({
-                url: 'https://26485.s15269.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
+                url: this.swEndPoint + '/checkout/cart/line-item', // File URL Goes Here
                 method: 'POST',
                 headers: {
                     "Accept": 'application/json',
                     "Content-Type": 'application/json',
-                    "sw-access-key": 'SWSCZNPHTKX6VHMYYJK3UZDGRW',
+                    "sw-access-key": this.accesstoken,
                     "sw-context-token": contextToken
                 },
                 data: {
