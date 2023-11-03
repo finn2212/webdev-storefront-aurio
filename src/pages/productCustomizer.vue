@@ -833,7 +833,7 @@ export default {
     },
     setup() {
 
-       
+
     },
     mounted() {
         this.calculatePrice();
@@ -953,61 +953,43 @@ export default {
                 console.log(error.message)
             });
         },
-        getCreatedProduct(productNumber) {
-            axios({
-                url: this.swEndPoint + '/store-api/search', // File URL Goes Here
-                method: 'POST',
-                headers: {
-                    "Accept": 'application/json',
-                    "Content-Type": 'application/json',
-                    "sw-access-key": this.accesstoken
-                },
-                data: {
-                    "search": productNumber
-                }
-            }).then(async (res) => {
-                //this.changeProduct(res.data.elements[0]);
-
-                this.products.push({
-                    product: res.data.elements[0],
-                    quantitiy: this.quantitiy
+        async getCreatedProduct(productNumber, retries = 5) {
+            console.log("tries left: " + retries)
+            try {
+                const response = await this.$axios({
+                    url: this.swEndPoint + '/store-api/search',
+                    headers: {
+                        "Accept": 'application/json',
+                        "Content-Type": 'application/json',
+                        "sw-access-key": this.accesstoken
+                    },
+                    data: {
+                        "search": productNumber
+                    }
                 });
-                document.getElementById("overlay").style.display = "none";
-                this.reset();
-            }).catch((error) => {
-                //try to fix the error or
-                document.getElementById("overlay").style.display = "none";
-                console.log(error.message)
-            });
+
+                if (response.data.elements && response.data.elements.length) {
+                    this.products.push({
+                        product: response.data.elements[0],
+                        quantity: this.quantity
+                    });
+                    document.getElementById("overlay").style.display = "none"; // Assuming you have a ref="overlay" in your template
+                    this.reset();
+                } else if (retries > 0) {
+                    setTimeout(() => {
+                        this.getCreatedProduct(productNumber, retries - 1);
+                    }, 2000); // Delay for 2 seconds before retrying
+                } else {
+                    console.error('Product data is empty after maximum retries.');
+                }
+            } catch (error) {
+                document.getElementById("overlay").style.display = "none";// Handle the overlay hiding
+                console.error(error.message);
+                if (retries <= 0) {
+                    console.error('Failed to load product after several attempts.'); // Using some toast plugin for error messages
+                }
+            }
         },
-        //Not Used Anymore
-        // add(id) {
-        //     const contextToken = this.$cookies.get("sw-context-token") || "";
-        //     axios({
-        //         url: 'https://s23511.creoline.cloud/store-api/checkout/cart/line-item', // File URL Goes Here
-        //         method: 'POST',
-        //         headers: {
-        //             "Accept": 'application/json',
-        //             "Content-Type": 'application/json',
-        //             "sw-access-key": 'SWSCUHZMWDM2TTLINJFXMKG3TW',
-        //             "sw-context-token": contextToken
-        //         },
-        //         data: {
-        //             "items": [
-        //                 {
-        //                     id: id,
-        //                     quantity: this.quantitiy,
-        //                     referencedId: id,
-        //                     type: "product",
-        //                 }
-        //             ]
-        //         }
-        //     }).then((res) => {
-
-        //     }).catch((error) => {
-
-        //     });
-        // },
         setDiscountGroup: function (id) {
             const element = `discountgroup${id}`
             for (let i = 1; i < 11; i++) {
@@ -1075,7 +1057,7 @@ export default {
                     voiceWeight = voiceWeight + (voice.pages * 3)
                 });
             }
-            this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeight + voiceWeight ) / 1000;
+            this.weight = (weightPerPage * this.pagesQuantitiy + envelopedWeight + formatWeight + voiceWeight) / 1000;
         },
         calculateProjectPrice: function () {
             this.priceString = this.price.toFixed(2).toString().replace(".", ",");
@@ -1315,8 +1297,6 @@ export default {
         },
         getProperties() {
             let ids = [];
-            let metaDesc = '';
-
             if (this.projectType == 1) {
                 ids.push({ "id": 'a2dcd3008de644c784d2cdfec32d91d0' })
             } else if (this.projectType == 2) {
@@ -1324,18 +1304,21 @@ export default {
             } else if (this.projectType == 3) {
                 ids.push({ "id": '587a3d6981404ed4b9de471d120e14ad' })
             }
+
             if (this.format == 'false') {
                 ids.push({ "id": 'e1d6ac670a3442448644bc34a7f0d469' })
             } else if (this.format == 'true') {
                 ids.push({ "id": 'bb3741f73af54d46b1d0808f74f3923d' })
             }
+
             if (this.color == 'true') {
                 ids.push({ "id": 'cfdae0f64bf240a6ae5202db7579f8a0' })
             } else if (this.color == 'false') {
                 ids.push({ "id": '7c2ad08862fb4011ae45d912c1ca4c3d' })
             }
+
             if (this.paperFormat == 1) {
-                ids.push({ "id": '6753f984ea17467794b4068f294053be' })
+                ids.push({ "id": 'bdac9a79733341129bdc32cceaa29ddb' })
             } else if (this.paperFormat == 2) {
                 ids.push({ "id": 'afe5b55949fc41d399ac39e5ff24f4b6' })
             } else if (this.paperFormat == 3) {
@@ -1347,18 +1330,19 @@ export default {
             } else if (this.paperFormat == 6) {
                 ids.push({ "id": '378502b6aa384914b27369996fabd0bc' })
             }
+
             if (this.bindingType == 'true') {
                 ids.push({ "id": 'd5e18caaadd34f70877e38b742ad22ff' })
             } else if (this.bindingType == 'false') {
                 ids.push({ "id": 'b5559576c3634ab0ba178c92194b5691' })
             }
+
             if (this.enveloped == 'true') {
                 ids.push({ "id": '28e2313979804380b8f303e0f21ffcad' })
             } else if (this.enveloped == 'false') {
                 ids.push({ "id": '242e68c2dfde4ec2afe3fd478e2a0f85' })
             }
             return ids
-
         },
         validate() {
             if (this.projectType == 1) {

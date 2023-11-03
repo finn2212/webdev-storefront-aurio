@@ -20,7 +20,7 @@
                       <div class="payment_description">
                         <p>{{ description }}</p>
                       </div>
-
+                      <img :src="paymentMethod.media.url" alt="Avatar">
                       <transition name="sf-fade">
                         <div v-if="activePaymentMethod === paymentMethod.id" class="shipping__info">
                           <SwPluginSlot :name="`checkout-payment-method-${simplifyString(
@@ -28,21 +28,9 @@
                           )}`" :slot-context="paymentMethod" />
                         </div>
                       </transition>
-                      <div v-if="paymentMethod.name == 'Kreditkarte (via Stripe)'" class="col-auto" style="padding: 0px !important">
-                        <img src="@/assets/svg/Rectangle (6).svg" alt="Avatar">
-                      </div>
-                      <div v-if="paymentMethod.name == 'Klarna (via Stripe)'" class="col-auto" style="padding: 0px !important">
-                        <img src="@/assets/svg/Rectangle (3).svg" alt="Avatar">
-                      </div>
-                      <div v-if="paymentMethod.name == 'Apple Pay / Google Pay (via Stripe)'" class="col-auto" style="padding: 0px !important">
-                        <img src="@/assets/svg/Rectangle (4).svg" alt="Avatar">
-                      </div>
                     </div>
                   </div>
-
-                 
                 </div>
-
               </template>
             </SfRadio>
           </div>
