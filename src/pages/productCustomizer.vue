@@ -958,6 +958,7 @@ export default {
             try {
                 const response = await this.$axios({
                     url: this.swEndPoint + '/store-api/search',
+                    method: 'POST',
                     headers: {
                         "Accept": 'application/json',
                         "Content-Type": 'application/json',
