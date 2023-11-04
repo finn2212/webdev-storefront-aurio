@@ -14,7 +14,7 @@
   
 <script>
 export default {
-    name: 'agbs',
+    name: 'agb',
     data() {
         return {
             // AGB sections content will be defined here
