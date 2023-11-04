@@ -1,5 +1,5 @@
 <template>
-  <div class="sw-reset-password" @keyup.enter="invokeResetPassword">
+  <div class="sw-reset-password" @keyup.enter="invokeResetPassword" style="margin-top: 80px;">
     <SwErrorsList :list="resetPasswordErrors" />
     <div v-if="!emailSent" class="form sw-reset-password__form">
       <SwInput

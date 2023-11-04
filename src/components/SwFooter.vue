@@ -33,7 +33,7 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/agbs">
+                            <NuxtLink class="a" to="/agb">
                                 AGBs
                             </NuxtLink>
                         </div>
