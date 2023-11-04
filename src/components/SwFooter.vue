@@ -33,8 +33,8 @@
                     </div>
                     <div class="row justify-content-start">
                         <div class="col align-self-start">
-                            <NuxtLink class="a" to="/contact">
-                                AGB & Widerruf
+                            <NuxtLink class="a" to="/agbs">
+                                AGBs
                             </NuxtLink>
                         </div>
                     </div>
@@ -45,16 +45,16 @@
                             </NuxtLink>
                         </div>
                     </div>
-                    <div class="row justify-content-start">
+                    <!-- <div class="row justify-content-start">
                         <div class="col-12 col-md-4 align-self-start">
                             <NuxtLink class="a" to="/contact">
                                 Datenschutz
                             </NuxtLink>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row justify-content-start">
                         <div class="col-12 col-md-4 align-self-start">
-                            <NuxtLink class="a" to="/contact">
+                            <NuxtLink class="a" to="/wiederrufsrecht">
                                 Widerrufserklärung
                             </NuxtLink>
                         </div>
